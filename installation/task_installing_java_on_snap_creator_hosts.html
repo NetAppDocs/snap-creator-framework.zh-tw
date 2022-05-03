@@ -1,0 +1,3445 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>在Snap Creator主機上安裝Java</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="在Snap Creator主機上安裝Java" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" />
+	<meta property="og:description" content="OpenJDK和Oracle Java執行時間環境（JRE）1.8 Update 72或更新版本必須安裝在任何Snap Creator Server和Agent主機上。為了避免傳輸層安全性（TLS）弱點、最好在Snap Creator Server和Agent主機上安裝任何較新版本的JRE 1.8 Update 72。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/snap-creator-framework/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="OpenJDK和Oracle Java執行時間環境（JRE）1.8 Update 72或更新版本必須安裝在任何Snap Creator Server和Agent主機上。為了避免傳輸層安全性（TLS）弱點、最好在Snap Creator Server和Agent主機上安裝任何較新版本的JRE 1.8 Update 72。">
+  <meta name="keywords" content=" installing, install, java, snap, creator, hosts"><!-- Icons -->
+  <link rel="icon" href="/zh-tw/snap-creator-framework/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snap-creator-framework/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snap-creator-framework/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snap-creator-framework/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snap-creator-framework/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-tw/snap-creator-framework/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-tw/snap-creator-framework/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/snap-creator-framework/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/snap-creator-framework/js/na-search.js'></script><script src='/zh-tw/snap-creator-framework/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snap-creator-framework/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-tw/snap-creator-framework/js/na-utility.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/clouddocs.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-tw/snap-creator-framework/js/toc.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/zh-tw/snap-creator-framework/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/jszip.min.js'></script>
+  <script src='/zh-tw/snap-creator-framework/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[在Snap Creator主機上安裝Java](https://docs.netapp.com/zh-tw/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/installation/task_installing_java_on_snap_creator_hosts.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/edit-sm.svg" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/snap-creator-framework/images/article-sm.svg" class="github-icon" />瞭解如何作出貢獻</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此頁面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">產品與解決方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支援與訓練</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社群</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">部落格</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客戶成功案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-tw/snap-creator-framework/search.html"
+          data-type="widget" 
+          data-placeholder="搜尋文件" 
+          data-no-results-found="找不到符合 {query} 的相關結果。" 
+          data-did-you-mean="搜尋 {suggestion}。" 
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
+          data-results-found="找到 {hitCount} 筆結果"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">繁體中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/zh-tw/snap-creator-framework/pdfs/fullsite-sidebar/SnapCreator_Framework_4_3_3.pdf" >
+          <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            安裝
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            Snap Creator Framework的功能
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator架構.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SnapCreator架構
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator的預先安裝需求.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            Snap Creator的預先安裝需求
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立SnapCreator使用者Data_ONTAP_以供參考.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            建立SnapCreator使用者Data ONTAP 以供參考
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-tw/snap-creator-framework/pdfs/pages/installation/task_installing_java_on_snap_creator_hosts.pdf" >
+    <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定Domino外掛程式的設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            設定Domino外掛程式的設定
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定UNIX特定設定_建立符號連結.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            設定UNIX特定設定：建立符號連結
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝Snap_Creator伺服器.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            安裝Snap Creator伺服器
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/在Windows主機上安裝Snap_Creator_Server.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            在Windows主機上安裝Snap Creator Server
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝Snap_Creator代理程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            安裝Snap Creator代理程式
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/在Windows上安裝Snap_Creator_Agent.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            在Windows上安裝Snap Creator Agent
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/正在升級Snap_Creator.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            正在升級Snap Creator
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_3_6_x升級.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            從Snap Creator 3.6.x升級
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_4_4_x升級.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            從Snap Creator 4.4.x升級
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_4_1_x升級.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            從Snap Creator 4.1.x升級
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/正在解除安裝Snap_Creator.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            正在解除安裝Snap Creator
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/在UNIX上解除安裝Snap_Creator.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            在UNIX上解除安裝Snap Creator
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI參考.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            CLI參考
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI命令_可在叢集Data_ONTAP_式的功能表中為Snap_Creator使用者建立角色.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/IBM_Domino_外掛程式作業.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            IBM®Domino®外掛程式作業
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/IBM_Domino外掛程式總覽.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            IBM Domino外掛程式總覽
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/準備IBM_Domino備份與還原.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            準備IBM Domino備份與還原
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapMirror與SnapVault_SnapMirror設定.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SnapMirror與SnapVault SnapMirror設定
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立備份與還原組態.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            建立備份與還原組態
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/新增命令至備份與還原組態.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            新增命令至備份與還原組態
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/備份資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            備份資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            還原資料庫
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/在SAN環境中執行單一檔案還原.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            在SAN環境中執行單一檔案還原
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/檢視工作狀態和記錄.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            檢視工作狀態和記錄
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA_外掛作業.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SAP HANA®外掛作業
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA備份與還原解決方案總覽.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SAP HANA備份與還原解決方案總覽
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝及設定必要的軟體元件.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            安裝及設定必要的軟體元件
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定資料備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            設定資料備份
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/開始SnapVault_建立不穩固的關係.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            開始SnapVault 建立不穩固的關係
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定記錄備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            設定記錄備份
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/執行資料庫備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            執行資料庫備份
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA檔案型備份與資料庫完整性檢查.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SAP HANA檔案型備份與資料庫完整性檢查
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原及還原SAP_HANA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            還原及還原SAP HANA資料庫
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原後恢復SnapVault_不還原關係.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            還原後恢復SnapVault 不還原關係
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/在主儲存設備故障後還原資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            在主儲存設備故障後還原資料庫
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/系統管理.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            系統管理
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            Snap Creator Framework的功能
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator架構.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SnapCreator架構
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理Snap_Creator伺服器.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理Snap Creator伺服器
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理Snap_Creator代理程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理Snap Creator代理程式
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator代理程式安全性.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SnapCreator代理程式安全性
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/備份與還原工作流程.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            備份與還原工作流程
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立保留政策.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            建立保留政策
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立複本.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            建立複本
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/執行還原作業.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            執行還原作業
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理使用者存取.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理使用者存取
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理設定檔.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理設定檔
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理組態檔案.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理組態檔案
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理保留政策.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理保留政策
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理備份
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理排程工作.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理排程工作
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理複本.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            管理複本
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定Snap_Creator所需的外掛程式資訊.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            設定Snap Creator所需的外掛程式資訊
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/VMware_VIBE外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            VMware VIBE外掛程式
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator問題.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            疑難排解Snap Creator問題
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/錯誤訊息類型和疑難排解記錄.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            錯誤訊息類型和疑難排解記錄
+          </a>
+          
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator_GUI錯誤.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            疑難排解Snap Creator GUI錯誤
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解安全性問題.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            疑難排解安全性問題
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator伺服器或Snap_Creator代理程式問題.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            疑難排解Snap Creator伺服器或Snap Creator代理程式問題
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI命令錯誤疑難排解.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            CLI命令錯誤疑難排解
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/錯誤訊息.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            錯誤訊息
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator組態檔案變數_參數和命令.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            SnapCreator組態檔案變數、參數和命令
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snap-creator-framework/pdfs/sidebar/使用Snap_Creator命令列介面的準則.pdf" 
+            
+          >
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            使用Snap Creator命令列介面的準則
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-tw/snap-creator-framework/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/index.html">
+        主頁
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/releasenotes.html">
+        版本資訊
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/index.html">
+        <div class="na-navbar-padding"> 安裝</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_what_snap_creator_does.html">
+        <div class="na-navbar-padding"> Snap Creator Framework的功能</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_snap_creator_architecture.html">
+        <div class="na-navbar-padding"> SnapCreator架構</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_scf_component_server.html">
+        SnapCreator伺服器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_scf_component_agent.html">
+        SnapCreator代理程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_plug_ins_for_application_integration.html">
+        用於應用程式整合的外掛程式
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_preinstallation_requirements_for_snap_creator.html">
+        <div class="na-navbar-padding"> Snap Creator的預先安裝需求</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_snap_creator_installation_and_configuration_requirements.html">
+        SnapCreator安裝與組態需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_downloading_the_snap_creator_software.html">
+        正在下載Snap Creator軟體
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_creating_a_snap_creator_user_for_data_ontap.html">
+        <div class="na-navbar-padding"> 建立SnapCreator使用者Data ONTAP 以供參考</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html">
+        建立Snap Creator使用者、以便Data ONTAP 在7-Mode中運作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_creating_a_snap_creator_user_for_clustered_ontap.html">
+        為叢集Data ONTAP 式的功能建立SnapCreator使用者
+      </a></li></ul></li><li class="  active "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_installing_java_on_snap_creator_hosts.html">
+        在Snap Creator主機上安裝Java
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html">
+        在Snap Creator伺服器和代理主機上同步時間
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_configuring_settings_for_the_domino_plug_in.html">
+        <div class="na-navbar-padding"> 設定Domino外掛程式的設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html">
+        設定Windows特定設定：新增環境變數路徑
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html">
+        <div class="na-navbar-padding"> 設定UNIX特定設定：建立符號連結</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_creating_symbolic_links_for_domino_plug_in_on_linux_and_solaris_hosts.html">
+        在Linux和Solaris主機上建立Domino外掛程式的符號連結
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html">
+        在AIX主機上建立Domino外掛程式的符號連結
+      </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_installing_the_snap_creator_server.html">
+        <div class="na-navbar-padding"> 安裝Snap Creator伺服器</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/task_installing_the_snap_creator_server_on_a_windows_host.html">
+        <div class="na-navbar-padding"> 在Windows主機上安裝Snap Creator Server</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_starting_the_server_from_a_command_prompt.html">
+        從命令提示字元啟動伺服器
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_installing_the_snap_creator_server_on_unix.html">
+        在UNIX系統上安裝Snap Creator Server
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_install_snap_creator_agent.html">
+        <div class="na-navbar-padding"> 安裝Snap Creator代理程式</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/task_installing_snap_creator_agent_on_windows.html">
+        <div class="na-navbar-padding"> 在Windows上安裝Snap Creator Agent</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_starting_the_agent_from_a_command_prompt.html">
+        從命令提示字元啟動代理程式
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_installing_the_snap_creator_agent_on_unix.html">
+        在UNIX系統上安裝Snap Creator Agent
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_changing_the_snap_creator_agent_port_after_installation.html">
+        安裝後變更Snap Creator代理程式連接埠
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_upgrading_snap_creator.html">
+        <div class="na-navbar-padding"> 正在升級Snap Creator</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_checking_job_monitor_size.html">
+        正在檢查工作監視器大小
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_upgrading_from_releases_earlier_than_snap_creator_3_6.html">
+        從早於Snap Creator 3.6的版本升級
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_upgrading_from_snap_creator_3_6_x.html">
+        <div class="na-navbar-padding"> 從Snap Creator 3.6.x升級</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html">
+        升級Windows上的Snap Creator Server 3.6.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_server_3_6_x_on_unix.html">
+        升級UNIX系統上的Snap Creator Server 3.6.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_windows.html">
+        升級Windows上的Snap Creator Agent 3.6.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_unix.html">
+        升級UNIX上的Snap Creator Agent 3.6.x
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_upgrading_from_snap_creator_4_0_x.html">
+        <div class="na-navbar-padding"> 從Snap Creator 4.4.x升級</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_server_4_0_x_on_windows.html">
+        升級Windows上的Snap Creator Server 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html">
+        升級UNIX系統上的Snap Creator Server 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_windows.html">
+        升級Windows上的Snap Creator Agent 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_unix.html">
+        升級UNIX上的Snap Creator Agent 4.1.x
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_upgrading_from_snap_creator_4_1.html">
+        <div class="na-navbar-padding"> 從Snap Creator 4.1.x升級</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_snap_creator_server_4_1_x_on_windows.html">
+        升級Windows上的Snap Creator Server 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_snap_creator_server_4_1_x_on_unix_based_systems.html">
+        升級UNIX系統上的Snap Creator Server 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html">
+        升級Windows上的Snap Creator Agent 4.1.x
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html">
+        升級UNIX系統上的Snap Creator Agent 4.1.x
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/concept_upgrading_from_snap_creator_4_3_x.html">
+        從Snap Creator 4.3.x升級
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_uninstalling_snap_creator.html">
+        <div class="na-navbar-padding"> 正在解除安裝Snap Creator</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_uninstalling_snap_creator_on_windows.html">
+        在Windows上解除安裝Snap Creator
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_uninstalling_snap_creator_on_unix.html">
+        <div class="na-navbar-padding"> 在UNIX上解除安裝Snap Creator</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_uninstalling_snap_creator_agent_from_unix.html">
+        在UNIX上解除安裝Snap Creator Agent
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/task_uninstalling_snap_creator_server_on_unix.html">
+        在UNIX上解除安裝Snap Creator Server
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/concept_cli_reference.html">
+        <div class="na-navbar-padding"> CLI參考</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/installation/reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.html">
+        <div class="na-navbar-padding"> CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/reference_cli_command_for_creating_cluster_roles.html">
+        用於建立叢集角色的CLI命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/installation/reference_cli_commands_for_creating_svm_roles.html">
+        用於建立SVM角色的CLI命令
+      </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/index.html">
+        <div class="na-navbar-padding"> IBM®Domino®外掛程式作業</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_ibm_domino_plug_in_overview.html">
+        <div class="na-navbar-padding"> IBM Domino外掛程式總覽</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_backup_operations_using_domino_plug_in.html">
+        瞭解IBM Domino外掛程式備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_restore_operations_using_domino_plug_in.html">
+        瞭解IBM Domino外掛程式還原作業
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_ibm_domino_backup_and_recovery_workflow.html">
+        IBM Domino備份與還原工作流程
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html">
+        <div class="na-navbar-padding"> 準備IBM Domino備份與還原</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/reference_storage_layout_requirements.html">
+        儲存配置需求
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_snapmirror_and_snapvault_setup.html">
+        <div class="na-navbar-padding"> SnapMirror與SnapVault SnapMirror設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_preparing_storage_systems_for_snapmirror_replication.html">
+        準備儲存系統以進行SnapMirror複寫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_preparing_storage_systems_for_snapvault_replication.html">
+        準備儲存系統SnapVault 以進行資訊複寫
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html">
+        <div class="na-navbar-padding"> 建立備份與還原組態</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_general_configuration_file_information.html">
+        登入SnapCreator GUI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_using_the_gui_to_create_a_configuration_file.html">
+        建立組態檔
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html">
+        <div class="na-navbar-padding"> 新增命令至備份與還原組態</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_allowing_additional_commands_through_the_snap_creator_agent.html">
+        允許對Snap Creator Agent執行補充命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html">
+        新增輔助命令至組態
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html">
+        清除Domino交易記錄的歸檔複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html">
+        備份changeinfo目錄
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_create_a_domino_backup_using_snap_creator.html">
+        <div class="na-navbar-padding"> 備份資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html">
+        隨需備份資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html">
+        排程備份
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_domino_database_restore_overview.html">
+        <div class="na-navbar-padding"> 還原資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_performing_point_in_time_volume_restore.html">
+        執行Volume還原
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html">
+        執行單一檔案還原
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_single_file_restore_in_fc_iscsi_environments.html">
+        <div class="na-navbar-padding"> 在SAN環境中執行單一檔案還原</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html">
+        使用SnapDrive 功能表來掛載Snapshot複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_copying_files_to_restore_location.html">
+        將檔案複製到資料還原目錄
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_running_snap_creator_by_using_the_custom_action.html">
+        使用SnapCreator自訂動作來完成還原處理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_disconnecting_snapshot_copy.html">
+        中斷Snapshot複本連線
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/domino-ops/concept_accessing_snap_creator_log_files.html">
+        <div class="na-navbar-padding"> 檢視工作狀態和記錄</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html">
+        在工作監控器中檢視工作狀態和記錄
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html">
+        在「報告」窗格中檢視記錄
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html">
+        使用scdump以壓縮格式收集記錄
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/reference_domino_plug_in_specific_errors.html">
+        疑難排解Domino外掛程式特定錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/domino-ops/reference_references.html">
+        下一步
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/index.html">
+        <div class="na-navbar-padding"> SAP HANA®外掛作業</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_sap_hana_backup_and_restore_solution_overview.html">
+        <div class="na-navbar-padding"> SAP HANA備份與還原解決方案總覽</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_considerations_for_backing_up_sap_hana_systems.html">
+        備份SAP HANA系統的考量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_the_netapp_solution.html">
+        NetApp解決方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_backup_solution_components.html">
+        備份解決方案元件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_sap_hana_plug_in_overview.html">
+        SAP HANA外掛程式總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_requirements.html">
+        需求
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/task_installing_and_configuring_required_software_components.html">
+        <div class="na-navbar-padding"> 安裝及設定必要的軟體元件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_setup_assumptions_in_this_guide.html">
+        本指南中的設定假設
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html">
+        與叢集Data ONTAP 式的不一樣
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_configuring_data_backups.html">
+        <div class="na-navbar-padding"> 設定資料備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_configuring_the_backup_user_and_hdbuserstore.html">
+        設定備份使用者和hdbuserstore
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_configuring_snapvault_relationships.html">
+        設定SnapVault 相互關係
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_starting_the_snapvault_relationships.html">
+        <div class="na-navbar-padding"> 開始SnapVault 建立不穩固的關係</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_starting_the_snapvault_relationships_with_data_ontap_operating_in_7_mode.html">
+        利用以7-Mode運作的功能來啟動SnapVault 不支援的功能Data ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_starting_the_snapvault_relationships_with_clustered_data_ontap.html">
+        使用SnapVault 叢集Data ONTAP 式的等化功能來建立不一樣的關係
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_configuring_the_snap_creator_framework_and_sap_hana_database_backup.html">
+        設定SnapCreator Framework和SAP HANA資料庫備份
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_configuring_sap_hana_for_san_environments.html">
+        為SAN環境設定SAP HANA
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/task_configuring_log_backups.html">
+        <div class="na-navbar-padding"> 設定記錄備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_housekeeping_of_log_backups.html">
+        記錄備份的管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html">
+        修改記錄備份的內部管理
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_executing_database_backups.html">
+        <div class="na-navbar-padding"> 執行資料庫備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_overview_of_database_backups.html">
+        資料庫備份總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_backing_up_the_database_with_the_snap_creator_gui.html">
+        使用Snap Creator GUI備份資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html">
+        使用Snap Creator命令列備份資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_reviewing_available_backups_in_sap_hana_studio.html">
+        檢閱SAP HANA Studio中的可用備份
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html">
+        <div class="na-navbar-padding"> SAP HANA檔案型備份與資料庫完整性檢查</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_modifying_configuration_for_file_based_backup.html">
+        修改檔案型備份的組態
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html">
+        修改資料庫完整性檢查的組態
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_scheduling_file_based_backup.html">
+        排程檔案型備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_scheduling_database_integrity_checks.html">
+        排程資料庫完整性檢查
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_performing_file_based_backup_from_the_snap_creator_gui.html">
+        從Snap Creator GUI執行檔案型備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_performing_file_based_backup_from_snap_creator_command_line.html">
+        從Snap Creator命令列執行檔案型備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html">
+        從Snap Creator GUI執行資料庫完整性檢查
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_performing_database_integrity_checks_from_snap_creator_command_line.html">
+        從Snap Creator命令列執行資料庫完整性檢查
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html">
+        <div class="na-navbar-padding"> 還原及還原SAP HANA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_restoring_and_recovering_databases_from_primary_storage.html">
+        從主要儲存設備還原及還原資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_restoring_and_recovering_database_from_secondary_storage.html">
+        從二線儲存設備還原及還原資料庫
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html">
+        <div class="na-navbar-padding"> 還原後恢復SnapVault 不還原關係</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_resuming_a_snapvault_relationship_with_data_ontap_operating_in_7_mode.html">
+        恢復SnapVault 以Data ONTAP 7-Mode運作的支援功能與支援功能之間的不正常關係
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_resuming_a_snapvault_relationship_with_clustered_data_ontap.html">
+        使用SnapVault 叢集Data ONTAP 式的不一樣功能恢復不一樣的關係
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html">
+        <div class="na-navbar-padding"> 在主儲存設備故障後還原資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_data_ontap_operating_in_7_mode.html">
+        在主儲存設備故障後還原資料庫、Data ONTAP 以7-Mode運作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html">
+        使用叢集Data ONTAP 式的功能來還原資料庫、因為主要儲存設備故障
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/reference_sap_hana_plug_in_parameters.html">
+        SAP HANA外掛程式參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/reference_troubleshooting.html">
+        疑難排解
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/sap-hana-ops/reference_where_to_go_next_sap_hana.html">
+        下一步
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/index.html">
+        <div class="na-navbar-padding"> 系統管理</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_what_snap_creator_does.html">
+        <div class="na-navbar-padding"> Snap Creator Framework的功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_benefits_of_using_snap_creator.html">
+        使用Snap Creator的優點
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_snap_creator_architecture.html">
+        <div class="na-navbar-padding"> SnapCreator架構</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_what_snap_creator_server_overview.html">
+        SnapCreator伺服器總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_what_snap_creator_agent_is.html">
+        SnapCreator Agent總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_scf_component_plug_ins_ag.html">
+        用於應用程式整合的外掛程式
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_snap_creator_server.html">
+        <div class="na-navbar-padding"> 管理Snap Creator伺服器</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html">
+        在Windows上啟動、驗證及停止Snap Creator Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_unix.html">
+        在UNIX上啟動、驗證及停止Snap Creator Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_changing_the_snap_creator_server_port.html">
+        安裝後變更Snap Creator伺服器連接埠
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_setting_snap_creator_server_credentials.html">
+        設定Snap Creator伺服器認證
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_snap_creator_agent.html">
+        <div class="na-navbar-padding"> 管理Snap Creator代理程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html">
+        在Windows上啟動、驗證及停止Snap Creator Agent
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_unix.html">
+        在UNIX上啟動、驗證及停止Snap Creator Agent
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_changing_the_snap_creator_agent_port_after_installation.html">
+        安裝後變更Snap Creator代理程式連接埠
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_snap_creator_agent_security.html">
+        <div class="na-navbar-padding"> SnapCreator代理程式安全性</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_managing_snap_creator_agent_security.html">
+        管理Snap Creator代理程式安全性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_customizing_the_default_keystore.html">
+        自訂預設的Keystore
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_backup_and_recovery_workflow_with_plug_ins.html">
+        <div class="na-navbar-padding"> 備份與還原工作流程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_profiles.html">
+        建立設定檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_global_configuration_files.html">
+        建立全域組態檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_configuration_files_using_sc_gui.html">
+        正在建立組態檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_backups_using_the_snap_creator_gui.html">
+        建立備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_monitoring_jobs_using_the_gui.html">
+        監控工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_monitoring_logs_by_using_the_snap_creator_gui.html">
+        監控記錄
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_scheduled_jobs_using_sc_gui.html">
+        建立排程工作
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_creating_retention_policies.html">
+        <div class="na-navbar-padding"> 建立保留政策</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_guidelines_to_define_snap_creator_policies.html">
+        定義Snap Creator原則的準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_backup_types.html">
+        建立備份類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_policy_schedules.html">
+        建立原則排程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_policies.html">
+        建立原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_assigning_policies.html">
+        指派原則
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_creating_clones.html">
+        <div class="na-navbar-padding"> 建立複本</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_clones_from_a_new_backup.html">
+        從新備份建立複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_clones_using_a_mounted_backup.html">
+        從現有備份建立複本
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_performing_restore_operations.html">
+        <div class="na-navbar-padding"> 執行還原作業</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_performing_volume_restore_using_the_gui.html">
+        執行Volume還原
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_performing_single_file_restore_using_the_gui.html">
+        執行單一檔案還原作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_performing_application_defined_restore_operations.html">
+        執行應用程式定義的還原作業
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_user_access.html">
+        <div class="na-navbar-padding"> 管理使用者存取</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_users.html">
+        建立SnapCreator使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_assigning_profiles_to_snap_creator_users.html">
+        指派設定檔給Snap Creator使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_a_list_of_users_with_profiles_by_using_the_cli.html">
+        使用CLI檢視SnapCreator使用者和指派的設定檔清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_snap_creator_roles.html">
+        建立Snap Creator角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_assigning_roles_to_snap_creator_users.html">
+        指派角色給Snap Creator使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_a_list_of_snap_creator_users_by_using_the_gui.html">
+        檢視SnapCreator使用者和指派角色的清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_user_names_assigned_to_a_role_by_using_the_cli.html">
+        使用CLI檢視指派給角色的Snap Creator使用者
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_snap_creator_permissions.html">
+        使用CLI建立Snap Creator權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_assigning_permissions_to_snap_creator_roles.html">
+        指派對Snap Creator角色的權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html">
+        使用CLI建立所有Snap Creator權限的清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html">
+        檢視指派給角色的Snap Creator權限
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_profiles.html">
+        <div class="na-navbar-padding"> 管理設定檔</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_profiles.html">
+        建立設定檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_snap_creator_profiles.html">
+        檢視設定檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_snap_creator_profiles.html">
+        刪除設定檔
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_configuration_files.html">
+        <div class="na-navbar-padding"> 管理組態檔案</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_configuration_files_using_sc_gui.html">
+        正在建立組態檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html">
+        透過下載現有的組態檔來建立新的組態檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html">
+        透過複製現有的組態檔來建立新的組態檔
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_assigned_configuration_files_for_a_profile.html">
+        檢視指派給設定檔的組態檔清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_configuration_files.html">
+        從設定檔刪除組態檔
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_policies.html">
+        <div class="na-navbar-padding"> 管理保留政策</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_backup_types.html">
+        建立備份類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_policy_schedules.html">
+        建立原則排程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_policies.html">
+        建立原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_assigning_policies.html">
+        指派原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_policies.html">
+        檢視保留政策
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_retention_policies.html">
+        刪除保留原則
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_backups.html">
+        <div class="na-navbar-padding"> 管理備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_what_you_should_back_up.html">
+        應該備份哪些Snap Creator資訊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_backups_using_the_snap_creator_gui.html">
+        建立備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_a_list_of_backup_copies_of_a_configuration_file.html">
+        檢視組態檔的備份複本清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_backups.html">
+        刪除備份
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_scheduled_jobs.html">
+        <div class="na-navbar-padding"> 管理排程工作</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_scheduled_jobs_using_sc_gui.html">
+        建立排程工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_running_a_scheduled_job.html">
+        執行排程工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_viewing_a_list_of_scheduled_jobs.html">
+        檢視排程工作的清單
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_editing_scheduled_jobs.html">
+        編輯排程工作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_scheduled_jobs.html">
+        刪除排程的工作
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_managing_clones.html">
+        <div class="na-navbar-padding"> 管理複本</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_clones_from_a_new_backup.html">
+        從新備份建立複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_creating_clones_using_a_mounted_backup.html">
+        從現有備份建立複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_deleting_clones.html">
+        卸載複本
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_information_required_to_configure_snap_creator.html">
+        <div class="na-navbar-padding"> 設定Snap Creator所需的外掛程式資訊</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_archive_log_plug_in.html">
+        歸檔記錄外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_citrix_xen_plug_in.html">
+        Citrix XenServer外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_db2_plug_in.html">
+        DB2外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_ibm_domino_plug_in.html">
+        IBM Domino外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_maxdb_plug_in.html">
+        MaxDB外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html">
+        MySQL外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_oracle_plug_in.html">
+        Oracle外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_red_hat_kvm_plug_in.html">
+        Red Hat KVM外掛準則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_sap_hana_plug_in.html">
+        SAP HANA外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snapmanager_for_microsoft_exchange_plug_in.html">
+        適用於Microsoft Exchange外掛程式SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snapmanager_for_microsoft_sql_server_plug_in.html">
+        適用於Microsoft SQL Server外掛程式SnapManager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_sybase_plug_in.html">
+        Sybase ASE外掛程式
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_vmware_vibe_plug_in.html">
+        <div class="na-navbar-padding"> VMware VIBE外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html">
+        vCloud vApp使用VMware外掛程式進行備份與還原作業的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_vm_backup_and_restore_using_vmware_plug_in.html">
+        使用VMware外掛程式進行虛擬機器備份與還原
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html">
+        使用外掛程式架構來建立自訂外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_configuring_snap_creator_for_multilevel_application_quiesce_operations.html">
+        使用Hypervisor外掛程式時、將Snap Creator設定為多層應用程式靜止作業
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_troubleshooting_snap_creator_issues.html">
+        <div class="na-navbar-padding"> 疑難排解Snap Creator問題</div>
+      </a>
+      <ul><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_logs.html">
+        <div class="na-navbar-padding"> 錯誤訊息類型和疑難排解記錄</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/task_running_a_snap_creator_dump.html">
+        執行SnapCreator傾印
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_troubleshooting_snap_creator_gui_errors.html">
+        <div class="na-navbar-padding"> 疑難排解Snap Creator GUI錯誤</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cannot_connect_to_the_gui.html">
+        無法連線至SnapCreator GUI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_error_starting_the_gui.html">
+        啟動Snap Creator GUI時發生錯誤
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_troubleshooting_network_issues.html">
+        疑難排解網路問題
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_troubleshooting_security_issues.html">
+        <div class="na-navbar-padding"> 疑難排解安全性問題</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_transport_layer_security_tls.html">
+        傳輸層安全性的密碼編譯瑕疵
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_self_signed_ssl_certificate.html">
+        自我簽署的SSL憑證與URL不符
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_ca_signed_ssl_certificate.html">
+        Snap Creator Framework需要CA簽署SSL憑證
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_troubleshooting_snap_creator_server_or_agent_issues.html">
+        <div class="na-navbar-padding"> 疑難排解Snap Creator伺服器或Snap Creator代理程式問題</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_server_or_agent_not_starting.html">
+        SnapCreator伺服器或代理程式未啟動
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_agent_not_responding.html">
+        SnapCreator代理程式沒有回應
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_password_reset.html">
+        SnapCreator密碼重設
+      </a></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/concept_troubleshooting_cli_command_errors.html">
+        <div class="na-navbar-padding"> CLI命令錯誤疑難排解</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cli_command_results_in_403_forbidden_error.html">
+        CLI命令會導致403 Forbidbid禁 用錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cli_command_results_in_404_not_found_error.html">
+        CLI命令會導致找不到404錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cli_command_results_in_500_cannot_locate_object_error.html">
+        CLI命令導致500找不到物件錯誤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cli_command_results_in_500_connect_failed_error.html">
+        CLI命令導致500 Connect失敗錯誤
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_clonevol_reports_that_aggregate_does_not_exist.html">
+        clonewal報告不存在Aggregate
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_error_messages.html">
+        <div class="na-navbar-padding"> 錯誤訊息</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_framework_error_messages.html">
+        SnapCreator Framework錯誤訊息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_agent_error_messages.html">
+        SnapCreator Agent錯誤訊息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_repository_error_messages.html">
+        儲存庫錯誤訊息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_storage_error_messages.html">
+        儲存錯誤訊息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_gui_error_messages.html">
+        SnapCreator GUI錯誤訊息
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_configuration_file_variables.html">
+        <div class="na-navbar-padding"> SnapCreator組態檔案變數、參數和命令</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_variable_and_parameter_descriptions.html">
+        SnapCreator變數與參數說明
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_used_to_configure_the_client_and_server.html">
+        用於設定Snap Creator Agent主機用戶端和Snap Creator伺服器的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html">
+        連接至vFiler單元和介面的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_cloning.html">
+        設定複製作業的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_event_management.html">
+        設定事件管理的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_operations_manager_console.html">
+        設定Operations Manager主控台的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_ossv.html">
+        設定OSSV的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_snapmirror.html">
+        設定SnapMirror的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_a_snapshot_copy.html">
+        設定Snapshot複本的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_snapvault.html">
+        設定SnapVault 參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_parameters_to_set_up_netapp_management_console_data_protection_capability.html">
+        設定NetApp管理主控台資料保護功能的參數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_app_commands.html">
+        應用程式命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_mount_and_unmount_commands.html">
+        掛載和卸載命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_pre_commands.html">
+        預先命令
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_post_commands.html">
+        POST命令
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_terminology.html">
+        SnapCreator術語
+      </a></li><li class="subfolders "><a href="/zh-tw/snap-creator-framework/administration/reference_guidelines_for_using_the_snap_creator_command_line.html">
+        <div class="na-navbar-padding"> 使用Snap Creator命令列介面的準則</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_snap_creator_cli_commands_for_workflow_actions.html">
+        SnapCreator CLI命令、以執行工作流程動作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/administration/reference_cli_command_for_snap_creator_rbac_actions.html">
+        用於管理Snap Creator使用者存取的命令
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/reference_legal_notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-tw/snap-creator-framework/">Snap&nbsp;Creator&nbsp;Framework</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">在Snap Creator主機上安裝Java</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-03 11:05:17 +0000">05/03/2022</time>
+    
+  
+
+
+</p>
+
+<div class="paragraph lead">
+<p>OpenJDK和Oracle Java執行時間環境（JRE）1.8 Update 72或更新版本必須安裝在任何Snap Creator Server和Agent主機上。為了避免傳輸層安全性（TLS）弱點、最好在Snap Creator Server和Agent主機上安裝任何較新版本的JRE 1.8 Update 72。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>在每個Snap Creator Server或Snap Creator Agent主機上下載並安裝JRE。</p>
+<div class="paragraph">
+<p>Java和Snap Creator的位元層級（32位元或64位元）必須相同。</p>
+</div>
+<div class="paragraph">
+<p>如有必要、請從下載Java <a href="http://www.java.com/en/download/manual.jsp">"適用於所有作業系統的Java下載"</a> 頁面。</p>
+</div>
+</li>
+<li>
+<p>安裝完JRE後、請確認Java的版本和位元層級：Java版本</p>
+<div class="listingblock">
+<div class="content">
+<pre>C:\Documents and Settings\Administrator&gt;java -version
+java version "1.7.0_04-ea"
+Java(TM) SE Runtime Environment (build 1.7.0_04-ea-b01)
+Java HotSpot(TM) Client VM (build 23.0-b03, mixed mode, sharing)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>命令的輸出會顯示已安裝的Java版本。如果未顯示位元層級（如上例所示）、則安裝為32位元。</p>
+</div>
+</li>
+</ol>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">cookie-settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
+              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/snap-creator-framework/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/snap-creator-framework/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/snap-creator-framework/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/snap-creator-framework/js/www-ntap.js'></script>
+    <script src='/zh-tw/snap-creator-framework/js/tabbed-blocks.js'></script>
+  </body></html>
