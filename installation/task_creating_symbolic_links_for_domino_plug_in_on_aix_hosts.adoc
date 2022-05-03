@@ -1,0 +1,53 @@
+---
+permalink: installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html 
+sidebar: sidebar 
+keywords: creating, create, symbolic, links, domino, plug-in, aix, hosts 
+summary: 您必須執行此程序、才能在AIX主機上新增Domino外掛程式的符號連結。 
+---
+= 在AIX主機上建立Domino外掛程式的符號連結
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須執行此程序、才能在AIX主機上新增Domino外掛程式的符號連結。
+
+您不應直接從本文件複製及貼上命令、否則可能會產生錯誤（例如換行和硬回傳所造成的字元傳輸不正確）。複製命令並貼到文字編輯器中、確認命令、然後在CLI主控台中輸入。
+
+
+NOTE: 下列步驟所提供的路徑是指32位元系統；64位元系統必須建立指向/usr/lib64的simlinks、而非/usr/Lib。
+
+. 新增下列檔案的/usr/lib連結：
++
+** libxmlproc_r.a
+** libnDGTS _r.a
+** libnots_r.a
+** libgsk8iccs_r.a（僅限Domino 9.0或更新版本）建立符號連結的典型方法是使用ln命令：
+
+
++
+ln -s /path/to/source_file /usr/lib/linked_file
+
++
++其中：
+
++
+** s指示作業系統建立符號連結。
+** /path/to/sour_file是Domino程式庫檔案之一的路徑、包括檔案名稱。
+** Linked_file是要連結的檔案名稱。
++
+[listing]
+----
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libxmlproc_r.a /usr/lib/libxmlproc_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libndgts_r.a /usr/lib/libndgts_r.a
+ln -s /opt/ibm/domino/notes/latest/ibmpow/libnotes_r.a /usr/lib/libnotes_r.a
+ln -s /opt/ibm/domino/notes/latest/linux/libgsk8iccs.so /usr/lib/libgsk8iccs_r.a
+----
+
+
+. 確認步驟1所列檔案的路徑。
++
+本範例中的命令使用AIX的預設路徑、但安裝可能有所不同。
+
+

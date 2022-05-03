@@ -1,0 +1,49 @@
+---
+permalink: administration/reference_parameters_to_set_up_netapp_management_console_data_protection_capability.html 
+sidebar: sidebar 
+keywords: parameter, netapp, management, console, protection, capability, ntap, update, set, backup, format 
+summary: 設定NetApp管理主控台資料保護功能需要多個參數。 
+---
+= 設定NetApp管理主控台資料保護功能的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定NetApp管理主控台資料保護功能需要多個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+ntap_PM_update
+ a| 
+（是
+| n） 
+
+
+ a| 
+可讓您開啟和關閉NetApp管理主控台資料保護功能更新、此更新會在NetApp管理主控台資料保護功能中登錄Snap Creator Snapshot複本。*附註：*如果啟用NTAP_PM_update、您必須設定NTAP_DFM資料集。
+ a| 
+ntap_dfm_data_set
+ a| 
+
+
+
+ a| 
+列出儲存系統和NetApp管理主控台資料保護功能資料集、以建立磁碟區關聯；也就是控制器1：dataset1/vol1、vol2；控制器1：dataset2/vol3。
+ a| 
+ntap_PM_run備份
+ a| 
+（是
+
+
+
+| n）  a| 
+啟動NetApp管理主控台資料保護功能備份、檢查進度和狀態、並等待其完成。
+ a| 
+ntap_dfm_snapshot格式
+
+|===

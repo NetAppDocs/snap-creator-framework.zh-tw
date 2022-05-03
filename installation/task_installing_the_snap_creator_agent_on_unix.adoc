@@ -1,0 +1,148 @@
+---
+permalink: installation/task_installing_the_snap_creator_agent_on_unix.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent, unix 
+summary: Snap Creator Agent可在任何開放式系統平台（AIX、HP-UX、Linux及Solaris）上執行。 
+---
+= 在UNIX系統上安裝Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Agent可在任何開放式系統平台（AIX、HP-UX、Linux及Solaris）上執行。
+
+必須安裝JRE 1.8 Update 72或更新版本。如需詳細資訊、請參閱有關在Snap Creator伺服器上安裝Java的相關連結中的資訊。
+
+執行安裝的人員必須擁有足夠的存取權限和權限。
+
+Snap Creator代理程式的預設連接埠為9090。使用Netstat或類似的工具來驗證網路連接埠（9090或您要使用的連接埠）是否可用且尚未使用（例如、輸入：「Netstat -nap | grep 9090」）。
+
+應該已經下載SnapCreator。如需詳細資訊、請參閱下載SnapCreator軟體的相關資訊。
+
+此處使用Linux做為範例平台。
+
+. 將下載的Snap Creator tar.gz檔案複製到您要安裝Snap Creator Agent的位置。
++
+
+NOTE: 如果您打算使用IBM Domino外掛程式、請選取Domino資料夾以外的位置。
+
++
+.. 若要建立子目錄、請輸入下列含有目錄名稱的命令：
++
+[listing]
+----
+mkdir snap_creator_directory
+----
++
+[listing]
+----
+mkdir /SC_41
+----
+.. 輸入下列命令、將Snap Creator tar.gz檔案複製到新建立的目錄：
++
+[listing]
+----
+cp NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+/snap_creator_directory
+----
++
+[listing]
+----
+cp NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+/SC_41
+----
+
+
+. 切換到Snap Creator Framework .tar檔案所在的目錄、然後輸入下列命令來擷取檔案：
++
+
+NOTE: 視UNIX環境而定、您可能需要先解壓縮檔案、然後再輸入tar命令。
+
++
+[listing]
+----
+cd snap_creator_directory
+tar -xvf NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+----
++
+** Snap_creator_directorys是安裝Snap Creator的位置。
+** 版本是目前推出的Snap Creator軟體套件。
+** 作業系統是指作業系統。
++
+[listing]
+----
+cd /sc_41
+tar -xvf NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+----
+
+
++
+這會擷取伺服器和代理程式軟體。一般而言、只會設定Snap Creator Server。代理程式通常位於要保護的資料庫或應用程式伺服器上、如下列範例所示：
+
++
++
+
++
+[listing]
+----
+NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz  scServer4.1.0
+scAgent4.1.0
+----
+. 輸入下列命令並回應範例中所示的提示、以設定Snap Creator Agent。
++
+[listing]
+----
+cd scAgent*
+./snapcreator --setup
+Welcome to the NetApp Snap Creator Framework release-version!
+\#\#\# Installation options \#\#\#
+01. NetApp Snap Creator Framework release-version Agent
+Select install option (enter a number or "q" to quit): <Enter 01>
+
+END USER LICENSE AGREEMENT
+<...the EULA displays...>
+
+Do you accept the End User License Agreement (y|n): <Enter y>
+
+Enter Snap Creator server port [9090]: <Enter agent port>
+
+INFO: Updated NetApp Snap Creator Framework release-version
+/install_path/scAgentrelease-version/engine/etc/agent.properties
+
+
+INFO: To start scAgent please do the following:
+
+/install_path/scAgentrelease-version/bin/scAgent start
+----
+. 啟動SnapCreator代理程式：
++
+[listing]
+----
+/install_path/scAgentrelease-version/bin/scAgent start
+----
++
+
+NOTE: 若要在啟動時自動執行SnapCreator Agent、請將start命令新增至指令碼。
+
++
+建立指令碼的步驟會因使用的作業系統和管理伺服器的系統管理員偏好而略有不同。一般而言、Snap Creator Agent的start命令可新增至以S9開頭的檔案（例如S99scAgent）、該檔案位於/path/to/RC2.d子目錄中。RC2.d子目錄通常位於/etc/之下、但這可能取決於主機作業系統和伺服器的特定組態。如需詳細資訊、請參閱所使用作業系統的文件。
+
++
+此時會出現下列訊息：
+
++
+[listing]
+----
+Starting scAgent:
+    Watchdog: Running
+       Agent: Running
+----
+
+
+*相關資訊*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[在Snap Creator主機上安裝Java]
+
+xref:task_downloading_the_snap_creator_software.adoc[正在下載Snap Creator軟體]

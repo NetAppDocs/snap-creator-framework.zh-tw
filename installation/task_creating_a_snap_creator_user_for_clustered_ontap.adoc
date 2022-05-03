@@ -1,0 +1,63 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_clustered_ontap.html 
+sidebar: sidebar 
+keywords: creating, create, snap, center, user, ontap 
+summary: 對於叢集Data ONTAP 式的功能、您應該為Snap Creator建立使用者。不過、您所建立的使用者類型取決於叢集Data ONTAP 式的版本。這兩種使用者分別是叢集使用者和儲存虛擬機器（SVM）使用者。 
+---
+= 為叢集Data ONTAP 式的功能建立SnapCreator使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於叢集Data ONTAP 式的功能、您應該為Snap Creator建立使用者。不過、您所建立的使用者類型取決於叢集Data ONTAP 式的版本。這兩種使用者分別是叢集使用者和儲存虛擬機器（SVM）使用者。
+
+針對Data ONTAP 您的版本的資訊、建立下列使用者、並依照_Snap Creator Framework管理指南_中所定義的適當角色：
+
+* 叢集式版本的發行版、不只發行叢集式版本、更能建立叢集和SVM使用者。Data ONTAP Data ONTAP
+* 叢集Data ONTAP 式的SVM 8.2或更新版本：建立SVM使用者。
+
+
+為了提高安全性、您應該特別為Data ONTAP Snap Creator建立一個不穩定的使用者和角色。或者、您也可以使用其他使用者帳戶、例如admin或vsadmin。
+
+如需使用CLI建立Snap Creator角色的詳細資訊、請參閱相關參考資料。
+
+這兩種使用者都需要存取Data ONTAPI程式庫。此外、無論Data ONTAP 版本為何、叢集式的更新也需要管理LIF。
+
+這兩個使用者不可互換。例如、叢集使用者無法存取所需的API來執行某些動作、例如建立Snapshot複本。即使您使用預設的叢集管理帳戶、也是如此。SVM帳戶應使用* vsadmin*角色或客戶建立的角色、以便Snap Creator正常運作。
+
+您必須在使用SnapCreator的每個SVM和叢集上執行此程序一次。
+
+為了方便使用、下列指示會提及管理員和vsadmin角色；不過、您可以將這些角色名稱取代為您所建立的角色。
+
+
+NOTE: 您不應直接從本文件複製及貼上命令、否則可能會產生錯誤（例如換行和硬回傳所造成的字元傳輸不正確）。將此程序中的命令複製並貼到文字編輯器、驗證命令、然後在CLI中輸入。
+
+. 在SVM_nameSVM上建立具有適當角色（vsadmin或為使用者建立的角色）的SVM使用者SVM_username01、並輸入下列命令和使用者密碼、以啟用對ONTAPI程式庫的存取：
++
+[listing]
+----
+security login create -username svm_username01
+-vserver svm_name -application ontapi
+-authmethod password -role vsadmin
+
+Please enter a password for user 'svm_username01':
+Please enter it again:
+----
+. _（Data ONTAP 僅適用於叢集式的版本）_輸入下列命令和使用者密碼、以建立叢集使用者：
++
+[listing]
+----
+security login create -username svm_username02
+-vserver svm_clustername -application ontapi
+-authmethod password -role admin
+
+Please enter a password for user 'svm_username02':
+Please enter it again:
+----
+
+
+*相關資訊*
+
+xref:reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.adoc[CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色]

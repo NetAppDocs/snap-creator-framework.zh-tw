@@ -1,0 +1,221 @@
+---
+permalink: administration/reference_snap_creator_gui_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, error, message, gui 
+summary: 下表列出Snap Creator GUI錯誤訊息。 
+---
+= SnapCreator GUI錯誤訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出Snap Creator GUI錯誤訊息。
+
+|===
+| 錯誤代碼 | 說明/解決方法 
+
+
+ a| 
+GUI：00001
+ a| 
+確認組態檔中的加密密碼正確無誤。
+
+
+
+ a| 
+GUI：00002
+ a| 
+請確定您使用的是正確的Snap Creator執行檔。驗證/etc/snapcreatorgui．conf是否正確。
+
+
+
+ a| 
+GUI：00003
+ a| 
+確認記錄和對應的設定檔資料夾存在。
+
+
+
+ a| 
+GUI：00004
+ a| 
+檢查SnapCreator主目錄/記錄/產品名稱是否存在。
+
+
+
+ a| 
+GUI：00005
+ a| 
+檢查組態目錄中是否存在對應的設定檔和組態。
+
+
+
+ a| 
+GUI：00006
+ a| 
+如果snapcreatorgui．conf遺失、請嘗試執行snapcreator設定檔設定。
+
+
+
+ a| 
+GUI：00007
+ a| 
+檢查您的組態是否已重新命名或刪除。
+
+
+
+ a| 
+GUI：00008
+ a| 
+請檢查您的使用者名稱和密碼、並確認您是否已執行snapcreator profile setup命令。
+
+
+
+ a| 
+GUI：00009
+ a| 
+檢查檔案或資料夾的權限是否存在。
+
+
+
+ a| 
+GUI：00010
+ a| 
+檢查檔案或資料夾的權限是否存在。
+
+
+
+ a| 
+GUA-00011
+ a| 
+選擇不同的設定檔或刪除現有的設定檔。
+
+
+
+ a| 
+GUA-00012
+ a| 
+驗證configs目錄是否存在、以及是否有執行snapcreator設定檔設定命令。
+
+
+
+ a| 
+GUI：00013
+ a| 
+如需詳細資訊、請查看記錄。
+
+
+
+ a| 
+GUA-00014
+ a| 
+關閉組態、然後再次開啟。
+
+
+
+ a| 
+GUI：00015
+ a| 
+檢查檔案的權限、以及是否存在權限。
+
+
+
+ a| 
+GUA-00017
+ a| 
+請檢查vCenter是否正確、並擁有有效的資料中心。
+
+
+
+ a| 
+GUI：00019
+ a| 
+請再試一次、因為資料存放區可能已在擷取期間刪除。
+
+
+
+ a| 
+GUA-00020
+ a| 
+請再試一次、因為資料存放區可能已在擷取期間刪除。
+
+
+
+ a| 
+GUA-00021
+ a| 
+請再試一次、確認vCenter是否正確。
+
+
+
+ a| 
+GUI：00022
+ a| 
+將資料存放區新增至vCenter。
+
+
+
+ a| 
+GUA-00023
+ a| 
+請再試一次、驗證vCenter。
+
+
+
+ a| 
+GUA-00024
+ a| 
+您所使用的vCloud Director版本不受支援。
+
+
+
+ a| 
+GUA-00025
+ a| 
+請輸入正確的認證資料、然後再試一次。
+
+
+
+ a| 
+GUA-00026
+ a| 
+找不到VCD.的組織。建立組織並重試。
+
+
+
+ a| 
+GUI：00027
+ a| 
+檢查vCenter認證資料。
+
+
+
+ a| 
+GUI：00028
+ a| 
+檢查控制器詳細資料/NTAP_USERS/NTAP_USERS/.
+
+
+
+ a| 
+GUI：00029
+ a| 
+驗證vCloud Director URL。
+
+
+
+ a| 
+GUA-00030
+ a| 
+檢查組織是否存在VDC。
+
+
+
+ a| 
+GUI：00031
+ a| 
+檢查VDC是否有vApps。
+
+|===

@@ -1,0 +1,111 @@
+---
+permalink: administration/reference_red_hat_kvm_plug_in.html 
+sidebar: sidebar 
+keywords: kernel, kvm, virtualization, linux, snap, creator, virsh, command, plug-in, red, hat, guideline 
+summary: 核心型虛擬機器（KVM）是適用於Linux核心的虛擬化解決方案。SnapCreator使用KVM外掛程式來備份及還原客體虛擬機器。 
+---
+= Red Hat KVM外掛準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+核心型虛擬機器（KVM）是適用於Linux核心的虛擬化解決方案。SnapCreator使用KVM外掛程式來備份及還原客體虛擬機器。
+
+
+NOTE: 如需支援或相容性對照表的最新資訊、請參閱互通性對照表。
+
+KVM外掛程式支援Linux、Windows及Solaris等客體作業系統。
+
+外掛程式會在內部使用virsh命令。
+
+使用KVM外掛程式時、您必須考量下列事項：
+
+* 不支援將伺服器當作Proxy。Active IQ Unified Manager
+* 不支援使用開放式系統SnapVault 功能進行掛載、卸載及備份作業、以及歸檔記錄管理。
+* 在儲存區域網路（SAN）環境中、需要Linux主機公用程式（LHU）套件、才能從儲存控制器收集有關LUN和磁碟區的資訊。
++
+LHU套件應安裝在KVM Hypervisor上、其位置與Snap Creator Agent相同。
+
++
+
+NOTE: 如果未安裝LHU套件、而且組態混合了網路附加儲存設備與儲存區域網路環境、則備份與還原作業只能在網路檔案系統（NFS）上運作。
+
+* KVM外掛程式僅支援Linux版本的Snap Creator 4.0和4.1代理程式。
+* 不支援Volume還原；僅支援應用程式定義的還原作業。
+* 刪除的虛擬機器（VM）無法還原。
+* 儲存控制器IP和主機應位於KVM主機上的/etc/hosts或網域名稱系統（DNS）中。
+* 每個組態僅支援一部KVM主機。
+* 如果使用ISO儲存庫建立虛擬機器、則若要執行任何動作、您應該透過CD-ROM選項中的Virt Manager主控台、將此儲存庫從虛擬機器中斷連線。
+* sc_agent_timeout值應大於預設值：600或更高。
+* 這些磁碟區會使用自動偵測功能自動探索。
++
+如果目的地不在SnapMirror關係中、您將無法看到探索到的目的地磁碟區。您應該使用DPSTATUS來檢查SnapMirror關係的狀態。如果SnapMirror關係不存在、您必須先建立SnapMirror關係。
+
+* 如果APP_defined_restore的值為Y、SnapVault 則不支援使用GUI進行還原作業。
+* 使用GUI建立SnapMirror和SnapVault SnapMirror組態時、必須手動輸入磁碟區詳細資料、因為不會SnapVault 自動偵測到SnapMirror和SnapMirror關係。
+* 不會備份對應至VM的資料磁碟。
+* 虛擬機器暫停與恢復作業會依序執行。
++
+對於多個VM、在備份作業期間、VM處於暫停狀態的持續時間取決於VM數量。
+
+
+
+
+
+== 支援的KVM組態
+
+* SAN：支援安裝在原始多重路徑裝置上的客體虛擬機器（具有多個路徑的LUN）。
+* NAS：支援安裝在NFS磁碟區上的客體虛擬機器。
+
+
+
+NOTE: 不支援在單一多重路徑裝置上安裝多個虛擬機器的組態。
+
+不支援安裝在LVM或SAN環境映像檔上的客體虛擬機器。
+
+下表說明KVM外掛程式參數：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+kvm_還原_vm_list
+ a| 
+範例：「VM1、VM2」
+ a| 
+指定要還原的VM清單。此參數僅在還原期間才需要。
+
+
+
+ a| 
+KVM_VM_mapping
+ a| 
+範例：「VM1：s_C1：/vol/vol1/lun1；VM2：s_C2：/vol/vol2/lun2；」
+ a| 
+（必要）指定VM與其相關儲存控制器、LUN或檔案路徑之間的對應。此參數會在探索過程中動態更新。
+
+
+
+ a| 
+KVM_VM_config_DIR
+ a| 
+預設：/etc/libvirt/qemu
+ a| 
+（選用）指定儲存VM所有XML組態檔的目錄路徑。
+
+
+
+ a| 
+kvm_CMD_retry計數
+ a| 
+預設值：「3」
+ a| 
+（選用）指定在KVM外掛程式中執行命令失敗時、重新執行命令的次數。
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

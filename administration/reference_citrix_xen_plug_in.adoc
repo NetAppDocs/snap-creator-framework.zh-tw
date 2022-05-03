@@ -1,0 +1,121 @@
+---
+permalink: administration/reference_citrix_xen_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, machine, vm, citrix, xenserver, plug-in 
+summary: SnapCreator支援使用Citrix XenServer外掛程式來備份及還原Citrix XenServer虛擬機器（VM）。 
+---
+= Citrix XenServer外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator支援使用Citrix XenServer外掛程式來備份及還原Citrix XenServer虛擬機器（VM）。
+
+
+NOTE: 如需支援或相容性對照表的最新資訊、請參閱互通性對照表。
+
+Citrix XenServer外掛程式支援Windows和XenServer。
+
+使用Citrix XenServer外掛程式時、請考量下列事項：
+
+* 不支援將伺服器當作Proxy。Active IQ Unified Manager
+* 不支援使用開放式系統SnapVault 功能進行掛載、卸載及備份作業、以及歸檔記錄管理。
+* 不支援Volume還原作業；僅支援應用程式定義的還原作業。
+* 刪除的VM可以還原。
+* SnapCreator Agent必須安裝在安裝XenCenter的主機上、且不得在XenServer上安裝SnapCreator Server。
+* SC_agent_timeout值應大於預設值：600或更高。
+* 如果APP_defined_restore的值為Y、SnapVault 則不支援使用GUI進行還原作業。
+* 如果集區主控制器在伺服器集區中當機、則應使用新的主伺服器手動修改Snap Creator組態檔案、以供進一步的活動。
+* XenServer工具必須安裝在所有VM上。
+* 對於儲存區域網路（SAN）環境中的光纖通道、plink.exe工具必須安裝在安裝SnapCreator Agent的主機上、而且plink.exe路徑必須新增至系統環境變數。
++
+如需如何將plink.exe路徑新增至系統環境變數的詳細資訊、請參閱_Snap Creator Framework安裝指南_。
+
+* 虛擬機器暫停和取消暫停作業會依序執行。
++
+對於多個VM、在備份作業期間、VM處於暫停狀態的持續時間取決於VM數量。
+
+* 支援自動探索磁碟區。
+
+
+
+
+== 支援的Citrix XenServer組態
+
+支援下列Citrix XenServer組態：
+
+* SAN
++
+** 每個儲存儲存儲存庫可支援虛擬機器、並具有一個虛擬磁碟映像（VDI）。
+** 每個儲存儲存儲存庫只需一個VDI、即可支援資料磁碟
+
+
+* NAS
++
+** 支援安裝在NFS掛載上的來賓VM。
+** 支援NFS掛載上的資料磁碟。
+
+
+
+
+
+
+== 參數
+
+下表列出並說明Citrix XenServer外掛程式參數：
+
+|===
+
+
+| 參數 | 設定 | 說明 
+
+
+ a| 
+Xen_VMS
+ a| 
+主機IP：VM#
+ a| 
+列出特定主機的虛擬機器、並以斜槓（/）分隔。例如：10.10.10.192：VM1/VM2/VM3
+
+
+
+ a| 
+xen主機使用者
+ a| 
+主機IP：使用者名稱/密碼
+ a| 
+列出Xen主機及對應的使用者名稱和密碼。
+
+
+
+ a| 
+Xen_BIN_path
+ a| 
+例如：C:\Program Files\Citrix \XenCenter\xe.exe
+ a| 
+指定XenServer執行檔（xe）的路徑。必須有XenCenter主控台才能匯入及匯出VM中繼資料。
+
+
+
+ a| 
+xen中繼資料路徑
+ a| 
+例如：C：\scmeta
+ a| 
+指定可下載虛擬機器中繼資料的伺服器路徑。
+
+
+
+ a| 
+Xen_還原_VMS
+ a| 
+例如：xenserver1：vm1、VM2；xenserver2：vm1、VM2
+ a| 
+包含必須還原的VM。只有在還原作業期間才需要此參數。
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

@@ -1,0 +1,137 @@
+---
+permalink: administration/reference_maxdb_plug_in.html 
+sidebar: sidebar 
+keywords: maxdb, plug-in, automates, backup, restore, operations 
+summary: MaxDB外掛程式可在MaxDB資料庫上自動執行備份與還原作業。 
+---
+= MaxDB外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MaxDB外掛程式可在MaxDB資料庫上自動執行備份與還原作業。
+
+
+NOTE: 如需支援或檢視相容性對照表的最新資訊、請參閱互通性對照表。
+
+MaxDB外掛程式提供下列功能：
+
+* 集中式架構、用於備份、還原及複製MaxDB資料庫
+* 與資料庫整合、並提供應用程式一致性
+* 使用Snapshot技術來建立資料庫的時間點複本
+* 使用功能以還原先前的Snapshot複本、因此無論檔案容量或數量為何、只要幾秒鐘就能還原應用程式一致的資料庫SnapRestore
+* 利用FlexClone技術、根據Snapshot複製備份建立快速且節省空間的資料庫複本
+
+
+下表列出MaxDB外掛程式參數、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+app_name
+ a| 
+最大資料庫
+ a| 
+指定應用程式名稱。
+
+
+
+ a| 
+XUSER_enable
+ a| 
+（是
+| n） 
+
+
+ a| 
+啟用或停用將xuser用於MaxDB、使資料庫使用者不需要密碼。
+ a| 
+Handl_LOGWRITER
+ a| 
+（是
+
+
+
+| n）  a| 
+執行暫停記錄寫入器（N）或恢復記錄寫入器（Y）作業。
+ a| 
+DBMCLICMD
+
+
+
+ a| 
+path_to _dbmcli _cmd
+ a| 
+指定MaxDB dbmcli命令的路徑。如果未設定、則會使用搜尋路徑上的dbmcli。
+
+
+NOTE: 如果是在Windows環境中、路徑必須包含在雙引號（"..."）內。
+ a| 
+SQLCLICMD
+
+
+
+ a| 
+path_to_sqlclin_cmd
+ a| 
+指定MaxDB sqlcli命令的路徑。如果未設定、則會在搜尋路徑上使用sqlcli。
+ a| 
+MaxDB_update_HIST_log
+
+
+
+ a| 
+（是
+| n）  a| 
+指示MaxDB備份程式是否更新MaxDB歷程記錄。
+
+
+
+ a| 
+MaxDB_Databases
+ a| 
+DB_NAME：使用者名稱/密碼
+ a| 
+列出要使用使用者名稱和密碼備份的資料庫。您可以使用以逗號分隔的清單來指定多個資料庫和使用者名稱：例如「db1:user1/password、db2:user2/password」。
+
+
+
+ a| 
+最大資料庫檢查快照目錄
+ a| 
+範例：「+SID1：directory[,directory...]；[SID2：directory[,directory...]+]
+ a| 
+檢查Snap Creator Snapshot複本作業是否成功、並確保建立Snapshot複本。這僅適用於NFS。目錄必須指向包含.snapshot目錄的位置。
+
+多個目錄可以包含在以逗號分隔的清單中。多個資料庫可以指定為分號分隔清單。
+
+在MaxDB 7.8及更新版本中、資料庫備份要求在備份記錄中會標示為「失敗」。
+
+
+
+ a| 
+最大資料庫備份範本
+ a| 
+範本名稱範例：「na_snap」
+ a| 
+指定每個資料庫的備份範本。範本必須已經存在、而且是外部備份範本類型。
+
+若要啟用MaxDB 7.8及更新版本的Snapshot複本整合、您必須具備MaxDB背景伺服器功能、且已設定MaxDB備份範本。
+
+
+
+ a| 
+MaxDB_BG_Server_prefix
+ a| 
+ba_server_prefix範例：「na_bg」
+ a| 
+指定背景伺服器名稱的前置詞。如果已設定MaxDB_backup_timates參數、您也必須設定MaxDB_BG_Server_prefix參數。如果您未設定首碼、則會使用預設值「na_bg_database_」。
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

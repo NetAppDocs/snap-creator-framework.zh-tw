@@ -1,0 +1,89 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 3.6.x, windows 
+summary: 您可以直接從Windows上的Snap Creator Server 3.6.x升級。 
+---
+= 升級Windows上的Snap Creator Server 3.6.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接從Windows上的Snap Creator Server 3.6.x升級。
+
+* 如果您有任何包含特殊字元的Snap Create使用者名稱、則在執行升級之前、您必須僅使用字母字元（A-Z、A-Z）重新命名這些使用者。
+* 備份Snap Creator目錄之前、您已停止Snap Creator服務（「shnapcreatorserverservice」和「shapreatoragentservice」）、以確保備份資料完整。
++
+例如、您可以使用「服務」嵌入式管理單元來停止服務：
+
++
+.. 選擇* Start*>* Run*、然後輸入「服務msc」。
+.. 找到並選取SnapCreator服務、然後停止服務。或者、您也可以開啟命令提示字元、然後輸入下列命令：
+
+
++
+[listing]
+----
+sc stop snapcreatorserverservice
+sc stop snapcreatoragentservice
+----
+* 您已在Snap Creator 3.6.x Server目錄（C:\Program Files\NetApp\NetApp_Snap_Creator_Framework\scServer3.6.x）中備份下列目錄及所有相關子目錄與檔案：
++
+** SnapCreator資料庫（.\graphi\snapcreator）
+** 設定檔與組態檔（.\config）
+** 記錄檔（.\logs）*注意：*請勿刪除您建立的Snap Creator 3.6.x備份複本。
+
+
+* （可選）如果Snap Creator Agent安裝在與Snap Creator Server相同的主機上、您應該備份agent.conf檔案（C:\Program Files\NetApp\NetApp_Snap_Creator_Framework\scServer3.6.x\config\agent.conf）
+
+
+下列步驟所提供的路徑、是指Windows的預設安裝路徑。如果未使用預設值、您的路徑資訊可能會有所不同。
+
+升級程序完成後、請考慮下列問題：
+
+* 如果升級的Snap Creator資料庫包含一些標示為「in progress」的工作、則即使升級程序完成、狀態仍維持不變。
+* 最新Snap Creator中的預設管理員必須是Snap Creator 3.6.x中的系統管理員如果3.6.x使用者不是系統管理員、則升級會將操作者角色指派給3.6.x使用者。
++
+.. 如果您尚未這麼做、請停止SnapCreator服務。
++
+如需停止服務的相關資訊、請參閱本主題稍早所提供的詳細資料。
+
+.. 選擇*開始*>*程式集*>* Snap Creator*>*解除安裝NetApp Snap Creator Framework*、即可解除安裝Snap Creator（適用於Windows）。
++
+如需詳細資訊、請參閱在Windows上解除安裝Snap Creator的相關資訊。
+
+.. 安裝最新的Snap Creator Server。
++
+如需詳細資訊、請參閱在Windows上安裝Snap Creator Server的相關資訊。
+
+.. 如果您在安裝最新的Snap Creator Server時選擇啟動Snap Creator Server做為服務、請停止服務。
++
+如需停止服務的相關資訊、請參閱本主題稍早所提供的詳細資料。
+
+.. 刪除最新的Snap Creator Server資料庫資料夾（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x \enginer\snapcreator）。
+.. 將備份的Snap Creator 3.6.x資料庫目錄複製到最新位置（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\enginer\snapcreator）。
+.. 將備份的Snap Creator 3.6.x設定檔和組態目錄複製到最新位置（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\enginer\configs）。
+.. 將備份的Snap Creator 3.6.x記錄目錄複製到最新位置（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\enginer\logs）。
+.. 開啟命令提示字元、並將目錄變更為Snap Creator安裝路徑（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\engine）中的engine子目錄。
+.. 輸入下列命令來升級Snap Creator：java -jar snapcreator.jar -升級
+
+
+
+
+升級程序完成後、請執行下列其中一項動作來啟動Snap Creator Server服務：
+
+* 使用「服務」嵌入式管理單元並啟動服務。
+* 在命令提示字元中輸入下列命令：「c start snapcreatorserverservice」
+
+
+此外、您必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 (https://IP_address:gui_port)[]。
+
+您必須使用HTTPS連線、否則連線不會自動重新導向至HTTPS連線、GUI將無法運作。
+
+*相關資訊*
+
+xref:concept_installing_the_snap_creator_server.adoc[安裝Snap Creator伺服器]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[在Windows上解除安裝Snap Creator]

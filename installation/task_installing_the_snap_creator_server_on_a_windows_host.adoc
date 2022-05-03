@@ -1,0 +1,113 @@
+---
+permalink: installation/task_installing_the_snap_creator_server_on_a_windows_host.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server, windows, hosts 
+summary: 您可以使用Windows安裝程式、在Windows主機上安裝Snap Creator Server。 
+---
+= 在Windows主機上安裝Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Windows安裝程式、在Windows主機上安裝Snap Creator Server。
+
+* 必須安裝JRE 1.8 Update 72或更新版本。
+* 執行安裝的人員必須擁有系統管理層級的權限、才能執行安裝。
+* Snap Creator伺服器的預設連接埠必須為843。
++
+您可以使用Netstat或類似工具來驗證您要使用的網路連接埠（只要連接埠支援HTTPS）是否可用、而且尚未使用（例如、Windows：「Netstat -na | Find "8443"）。
+
+* 您必須已經下載SnapCreator。
++
+.. 按兩下Snap_Creator_Frameworkrelease-Windowsversion.exe檔案。
++
+若要啟動Snap Creator安裝程式、您可以使用Snap_Creator_Framework4.1.0-windows64.exe。
+
+.. 在歡迎頁面上、按一下*下一步*開始安裝。
+.. 閱讀並接受授權合約條款。
+.. 在「*選擇安裝類型*」頁面上、變更設定以符合各種安裝類型、然後按一下「*下一步*」。
++
+image::../media/choose_install_type_page.gif[選擇安裝類型頁面]
+
++
+*** *選擇安裝類型*
++
+選取*伺服器*。如果您想在同一個系統上同時安裝SnapCreator Server和Snap Creator Agent、
+
+*** *啟動伺服器即服務*
++
+選取此選項可在安裝程序完成後立即自動安裝及啟動snapcreatorserverservice服務。如果未選取、則會停用*伺服器連接埠*欄位。
+
++
+
+NOTE: 如果未選取此選項、則不會安裝此服務、您必須從命令提示字元執行批次指令碼、手動啟動Snap Creator Server。
+
+*** *輸入您的系統IP*
++
+選取此選項以提供安裝Snap Creator Server或Snap Creator Agent之系統的IP位址。此選項用於在Snap Creator安裝期間產生SSL憑證。
+
+*** *輸入Java bin路徑*
++
+選取此選項以提供Java Bin路徑來尋找KeyTool公用程式。KeyTool用於在Snap Creator安裝期間產生SSL憑證。
+
+*** *伺服器連接埠*
++
+接受預設連接埠「84443」或指定連接埠號碼。
+
+
+
+.. 設定「*設定檔設定*」頁面、然後按一下「*下一步*」。
++
+在「*設定檔設定*」頁面中輸入的資訊、是用來設定Snap Creator GUI所需的設定檔。
+
++
+*** *儲存控制器序號*
++
+此參數為選用項目。輸入其中一個儲存控制器的序號。提供此資訊時、控制器序號會內嵌在Snap Creator內容檔案中、並包含在支援和記錄輸出中。此資訊可用於協助疑難排解未來發生的任何問題。
+
+*** *使用者名稱*
++
+輸入Snap Creator Server管理員的名稱。
+
+*** *密碼與確認*
++
+輸入Snap Creator Server管理員的密碼。
+
+*** *啟用工作監控*
++
+如果您要啟用工作監控、請選取*啟用工作監控*核取方塊。「工作監控」是GUI中的個別區段、可監控由Snap Creator執行的所有工作、以及這些工作的狀態。
+
+*** *工作記錄大小*
++
+輸入要保留在工作記錄歷史記錄中的工作數。預設值為「100」、大小應介於1到1000之間。
+
++
+
+NOTE: 雖然*工作記錄大小*的最大接受值為10、000、但建議您提供的最大大小為1000。
+
+
+
+.. 在「*選擇安裝位置*」頁面上、輸入Snap Creator安裝路徑或接受預設路徑（C：\Program Files\NetApp\Snap_Creator_Framework）、然後按一下「*下一步*」。
+.. 在「*選擇開始功能表資料夾*」頁面上、自訂「Windows開始功能表」中應顯示「Snap Creator」的資料夾、或接受預設值、然後按一下「*安裝*」。
+.. 安裝完成後、按一下*下一步*。
++
+在Snap Creator Server服務安裝期間、如果選擇某項服務做為安裝選項的一部分、則會顯示命令提示字元。此程序會嘗試啟動現有的服務、因此本步驟通常會列出失敗訊息。
+
+.. 按一下「*完成*」以關閉Windows安裝程式。
+.. 瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動 (https://IP_address:gui_port)[]。
++
+您必須使用HTTPS連線、否則連線不會自動重新導向至HTTPS連線、GUI將無法運作。
+
+
+
+
+
+*相關資訊*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[在Snap Creator主機上安裝Java]
+
+xref:task_downloading_the_snap_creator_software.adoc[正在下載Snap Creator軟體]
+
+xref:task_starting_the_server_from_a_command_prompt.adoc[從命令提示字元啟動伺服器]

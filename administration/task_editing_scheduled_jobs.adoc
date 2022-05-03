@@ -1,0 +1,22 @@
+---
+permalink: administration/task_editing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: edit, schedule, job, snap, creator, gui 
+summary: 您可以編輯排程的工作。 
+---
+= 編輯排程工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯排程的工作。
+
+. 從SnapCreator GUI主功能表中、選取*管理*>*排程*。
+. 從「排程」索引標籤、從排程工作清單中選取工作、然後按一下*編輯*。
+. 修改所需的欄位、然後按一下*「Save（儲存）」*。
++
+排程的工作會隨修改一起儲存。
+
+

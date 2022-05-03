@@ -1,0 +1,25 @@
+---
+permalink: administration/task_viewing_a_list_of_backup_copies_of_a_configuration_file.html 
+sidebar: sidebar 
+keywords: backup, copy, ontap, volume, configuration, file, data 
+summary: 您可以檢視ONTAP 組態檔中定義的一份支援不完整的資料複本清單。您也可以取得可用備份的詳細資料、並根據需求重新命名特定備份。 
+---
+= 檢視組態檔的備份複本清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢視ONTAP 組態檔中定義的一份支援不完整的資料複本清單。您也可以取得可用備份的詳細資料、並根據需求重新命名特定備份。
+
+. 從SnapCreator GUI的主功能表中、選取*資料*>*備份*。
+. 從備份索引標籤的「設定檔與組態」窗格中、展開設定檔、然後選取組態檔。
++
+「備份」索引標籤會顯示ONTAP 組態檔中定義之所有支援版本的清單。
+
++
+
+NOTE: SnapCreator 4.3或較早版本會根據保留期間刪除Snapshot複本、即使複本已重新命名。為了保留Snapshot複本的時間不受限制、Snap Creator Framework在Snap Creator Framework GUI的「data \->備份」索引標籤下、提供名為「無限保留」的按鈕。您可以選取想要保留無限時間的Snapshot複本、然後按一下「無限保留」按鈕。所選Snapshot複本的名稱會從<snapshot名稱>變更為<snapshot名稱_uniment>。
+
+

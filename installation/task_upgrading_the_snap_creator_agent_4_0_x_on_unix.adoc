@@ -1,0 +1,114 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_4_0_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.0.x, unix 
+summary: 您可以直接從UNIX上的Snap Creator Agent 4.1.x升級。 
+---
+= 升級UNIX上的Snap Creator Agent 4.1.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接從UNIX上的Snap Creator Agent 4.1.x升級。
+
+* 您在備份Snap Creator Agent目錄之前、已停止Snap Creator Agent、以確保備份資料已完成。
++
+例如、輸入下列命令：
+
++
+[listing]
+----
+/install_path/scAgent4.0.x/bin/scAgent stop
+----
+* 您已在Snap Creator Agent目錄（/install_path/scagent4.0.x）中備份下列目錄及所有相關子目錄與檔案：
++
+** agent.conf檔案（../config/agent.conf）
+** 記錄目錄（若已啟用）（../記錄）
+** 外掛程式目錄（../外掛程式）
+
+
+
+
+4.1版之前的SnapCreator Agent使用名為agent.conf的檔案、列出可能在Snap Creator代理程式上執行的Snap Creator以外的命令。在4.1中、會使用allowed_commands.config檔案。
+
+同樣地、agent.conf檔案也會列出允許Snap Creator Agent與之通訊的主機。根據預設、Snap Creator Agent允許與所有Snap Creator伺服器進行通訊。不過、如果您選擇在舊版的Snap Creator中使用此功能、則agent.properties檔案中的授權主機參數會取代該功能。
+
+
+NOTE: 如果您未使用這些參數、則只需簡單安裝新代理程式即可。
+
+下列步驟所提供的路徑會參照預設的安裝路徑。下列命令中的路徑可能與您的安裝路徑不同。
+
+. 如果您尚未這麼做、請停止SnapCreator Agent。
++
+如需詳細資訊、請參閱本主題稍早提供的詳細資料。
+
+. 安裝最新的Snap Creator Agent、但不要啟動Snap Creator Agent。
++
+如需詳細資訊、請參閱在UNIX上安裝Snap Creator Agent的相關資訊。
+
+. 在文字編輯器中開啟agent.conf檔案的備份複本。
++
+以下是agent.conf檔案的範例：
+
++
+[listing]
+----
+host: scServer@Lyon
+command: rc_domino
+----
+. 在文字編輯器中開啟新的允許的_commands.config檔案（/install_path/scagent4.1.x/etc/silited_commands.config）、然後將命令列從agent.conf複製到允許的_commands.config檔案；不過、由於最新的Snap Creator增強了安全性、請確定該命令已完全符合資格。
++
+從上一個範例中、allowed_commands.config檔案應包含下列項目：
+
++
+[listing]
+----
+command: /etc/init.d/rc_domino
+----
++
+
+NOTE: 如果命令包含任何空格、則必須將命令封裝在引號內。
+
++
+您可以視需要新增命令、每個命令都位於不同的一行。
+
++
+變更後儲存並關閉檔案。
+
+. 在文字編輯器中開啟agent.properties檔案（/install_path/scagent4.1.x/etc/agent.properties）、然後變更授權主機=*的預設項目、以反映agent.conf檔案中的主機設定。
++
+從上一個範例中、authorized_hosts參數應包含下列項目：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon
+----
++
+可以視需要新增主機、使用逗號分隔主機名稱。同時支援主機名稱和IP位址：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Lyon, 10.10.10.192, Fuji01
+----
++
+變更後儲存並關閉檔案。
+
+. 輸入下列命令、啟動Snap Creator Agent：
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
++
+
+NOTE: 對allowed_commands.config或agent.properties檔案所做的任何變更、都需要在進行變更時重新啟動Snap Creator Agent。
+
+
+
+*相關資訊*
+
+xref:task_installing_the_snap_creator_agent_on_unix.adoc[在UNIX系統上安裝Snap Creator Agent]

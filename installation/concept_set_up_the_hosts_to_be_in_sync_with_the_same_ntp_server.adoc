@@ -1,0 +1,20 @@
+---
+permalink: installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html 
+sidebar: sidebar 
+keywords: synchronizing, synchronize, time, snap, creator, server, agent, hosts 
+summary: 在安裝Snap Creator之前、您應確保Snap Creator Server主機上的時間與Agent主機上的時間同步。您可以將主機的時間與相同的網路時間傳輸協定（NTP）伺服器同步、以達成此目標。 
+---
+= 在Snap Creator伺服器和代理主機上同步時間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝Snap Creator之前、您應確保Snap Creator Server主機上的時間與Agent主機上的時間同步。您可以將主機的時間與相同的網路時間傳輸協定（NTP）伺服器同步、以達成此目標。
+
+如需詳細資訊、請參閱下列文件：
+
+* 叢集式Data ONTAP-_Clustered Data ONTAP Sfor your version of Data ONTAP the Sfor your；特別是、請參閱驗證系統時間及在叢集內同步系統時間的相關資訊。
+* 以7-Mode運作：知識庫文章1011954如何在設定NTP時間同步Data ONTAP link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_set_up_NTP_time_synchronization_in_Data_ONTAP_7-Mode["如何在Data ONTAP VMware 7-Mode中設定NTP時間同步"]。
+

@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_sql_server_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, sql, server, plug-in, backup, operation, program 
+summary: Microsoft SQL Server外掛程式的功能是透過Snap Creator集中管理Microsoft SQL Server的備份作業。SnapManager使用此外掛程式、您可以SnapManager 透過Snap Creator設定數十或數百個Microsoft SQL伺服器的支援、讓您從SnapManager 單一介面檢視所有的Microsoft SQL備份工作和狀態。 
+---
+= 適用於Microsoft SQL Server外掛程式SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Microsoft SQL Server外掛程式的功能是透過Snap Creator集中管理Microsoft SQL Server的備份作業。SnapManager使用此外掛程式、您可以SnapManager 透過Snap Creator設定數十或數百個Microsoft SQL伺服器的支援、讓您從SnapManager 單一介面檢視所有的Microsoft SQL備份工作和狀態。
+
+不像其他外掛程式、SnapManager 支援Microsoft SnapManager SQL Server和SnapManager Microsoft Exchange的支援功能、可利用PowerShell與現有的SnapManager 安裝功能進行通訊。這個元件需要已安裝且正在運作的不支援產品。SnapManager SnapManager這個支援程式使用全新備份PowerShell Cmdlet透過支援功能建立備份。SnapManager SnapManager所有的複製與還原動作都應該繼續透過SnapManager 這個介面來驅動。
+
+
+NOTE: 如需支援或檢視相容性對照表的最新資訊、請參閱互通性對照表。
+
+使用SnapManager Microsoft SQL Server外掛程式時、您必須注意下列考量事項：
+
+* SnapCreator Agent必須安裝在SnapManager Microsoft SQL Server的同一部主機上。您應該將SC_agent_timeout值設為900或更高。
+* PowerShell應安裝在Windows PowerShell的預設安裝位置（例如：C：\Windows\system32\windowssPowerShell\v1.0）。
+
+
+下表提供SnapManager Microsoft SQL Server外掛程式參數的功能、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+SMSQL_PS_CONF
+ a| 
+範例：「C:\Program Files\NetApp\SnapManager for SQL Server\smsqlShell.psc1」
+ a| 
+指定SnapManager 適用於Microsoft SQL Server的Shell*組態檔路徑。
+
+
+
+ a| 
+SMSQL_backup_options
+ a| 
+範例：-server 'SQL'-d 'SQL\SharePoint、'1'、'WSS-Content'- RetainBackups 7-lb -bksif-RetainSnapofSnapInfo 8 -trlog -gen-mgmt標準
+ a| 
+指定SnapManager Microsoft SQL Server的支援選項。Snap Creator使用PowerShell Cmdlet來進行新的備份。
+
+
+
+ a| 
+SMSQL_Server_name
+ a| 
+範例：SQL\SharePoint
+ a| 
+指定SnapManager Microsoft SQL Server名稱的功能。
+
+
+
+ a| 
+SMSQL_32bit
+ a| 
+（是
+| n） 
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

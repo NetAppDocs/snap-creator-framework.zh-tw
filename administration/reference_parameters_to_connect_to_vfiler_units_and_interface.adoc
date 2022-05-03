@@ -1,0 +1,61 @@
+---
+permalink: administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html 
+sidebar: sidebar 
+keywords: several, parameter, snap, creator, sefver, vfiler, unit, interface, management, secondary 
+summary: 將Snap Creator伺服器連線至vFiler單元和介面時、需要多個參數。 
+---
+= 連接至vFiler單元和介面的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+將Snap Creator伺服器連線至vFiler單元和介面時、需要多個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+VFilers
+ a| 
+ a| 
+列出vFiler單元及其託管儲存系統或磁碟區。例如：vFiler1@controller1：vol1、vol2、vol3；vFiler2@controller2：vol1；vFiler3@controller3：vol2、vol3 *附註：* vFiler3裝置不支援HTTPS。
+
+
+
+ a| 
+管理介面
+ a| 
+ a| 
+列出用於通訊的主要儲存控制器及其管理介面。例如：管理介面=控制器1：控制器1：管理；控制器2：控制器2：管理
+
+
+
+ a| 
+二線介面
+ a| 
+ a| 
+列出主要儲存控制器或VFiler裝置、以及其次要介面的來源或目的地、以利SnapVault 實現SnapMirror關係。例如：Controller 1：controller1：來源/控制器2目的地
+
+
+NOTE: 必須設定好才能使用此次要介面的功能、才能使用此功能。SnapVaultSnapCreator無法管理SnapMirror和SnapVault 彼此之間的關係。
+
+
+
+ a| 
+US_PROxy
+ a| 
+（是
+| n） 
+
+
+ a| 
+允許API呼叫透過Active IQ Unified Manager 支援服務器Proxy而非直接透過儲存控制器進行。如果使用此選項、則不需要NTAP_USER舊 有。
+ a| 
+允許_ip_ADDR
+ a| 
+（是
+
+|===

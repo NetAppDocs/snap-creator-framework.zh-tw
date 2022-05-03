@@ -1,0 +1,22 @@
+---
+permalink: administration/task_deleting_clones.html 
+sidebar: sidebar 
+keywords: unmount, delete, clone, gui, snap, creator, management, configuration, action, snapshot, copy, controller, volume 
+summary: 您可以卸載（或刪除）複本。 
+---
+= 卸載複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以卸載（或刪除）複本。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 從「*組態*」索引標籤中選取組態檔、然後選取「*動作*」>「*卸載*」。
+. 從「其他參數」視窗中、選取控制器、磁碟區、包含已掛載備份的Snapshot複本原則、以及建立該複本的特定Snapshot複本名稱、然後按一下「*確定*」。
++
+該實體複本已卸載、不會刪除Snapshot複本。
+
+

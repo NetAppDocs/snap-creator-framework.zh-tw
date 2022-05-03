@@ -1,0 +1,30 @@
+---
+permalink: administration/task_viewing_a_list_of_users_with_profiles_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, command, line, interface, cli 
+summary: 您只能使用命令列介面（CLI）檢視所有具有設定檔的Snap Creator使用者帳戶清單。 
+---
+= 使用CLI檢視SnapCreator使用者和指派的設定檔清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能使用命令列介面（CLI）檢視所有具有設定檔的Snap Creator使用者帳戶清單。
+
+. 輸入下列命令：
++
+「napcreator --server host_name --port port_Number --usersc_user_name --passwdsc_passwd--profile profile_name --action userlistForProfile --verbose'
+
++
+範例如下：
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080
+--user SCadmin --passwd passwd123 –profile FirstProfile
+--action userListForProfile --verbose
+----
+

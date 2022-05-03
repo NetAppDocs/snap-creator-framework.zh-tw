@@ -1,0 +1,72 @@
+---
+permalink: domino-ops/reference_references.html 
+sidebar: sidebar 
+keywords: domino, ibm, more, information, snap creator 
+summary: 您可以在NetApp支援網站上找到更多關於Snap Creator的資訊、包括特定版本的資訊。 
+---
+= 下一步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在NetApp支援網站上找到更多關於Snap Creator的資訊、包括特定版本的資訊。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/installation/index.html["SnapCreator Framework 4.3.3安裝指南"]
++
+說明如何安裝Snap Creator代理程式和Snap Creator伺服器。Snap Creator Agent安裝包含IBM Domino外掛程式。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/administration/index.html["SnapCreator Framework 4.3.3系統管理指南"]
++
+說明如何在安裝完成後管理Snap Creator Framework。
+
+* https://docs.netapp.com/us-en/snap-creator-framework/releasenotes.html["SnapCreator Framework 4.3版本說明"]
++
+說明Snap Creator Framework 4.4.1的新功能、重要注意事項、已知問題及限制。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP1506026["《Windows安裝指南》（英文）SnapDrive"]
++
+說明如何安裝SnapDrive 適用於Windows的功能。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-clus-peer/home.html["《叢集對等快速指南》（英文）ONTAP"]
++
+說明如何快速設定叢集與儲存虛擬機器（SVM）之間的對等關係。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-cg/home.html["《》《9 Volume Disaster Recovery Preparation Express Guide》（英文）ONTAP"]
++
+說明如何準備儲存系統以進行SnapMirror複寫。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《》《 9 Volume Disaster Recovery Express 指南》 ONTAP"]
++
+說明如何準備儲存系統以進行SnapMirror還原。
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-buvault/home.html["《使用《不適用》指南的《》（英文）9 Volume Backup》ONTAP SnapVault"]
++
+說明如何準備儲存系統SnapVault 以進行資訊複寫。
+
+* http://www.netapp.com/in/media/tr-3917.pdf["NetApp技術報告3917：NetApp Domino最佳實務做法"]
++
+說明IBM Domino外掛程式的最佳實務做法。
+
+* http://www.netapp.com/us/media/tr-3588.pdf["技術報告3588：整合Domino 8.5 for Windows 2008與NetApp儲存系統"]
++
+說明如何將IBM Domino 8.5 for Windows 2008與NetApp儲存系統整合。
+
+* http://www.netapp.com/us/media/tr-3691.pdf["技術報告3691：將IBM Domino 8.5 for Linux與NetApp儲存系統整合"]
++
+說明如何將IBM Domino 8.0.2 for Linux與NetApp儲存系統整合。
+
+* http://www.netapp.com/us/media/tr-3723.pdf["技術報告3723：使用NFS在AIX和NetApp環境中部署Domino 8.0.2"]
++
+說明如何將IBM Domino 8.0.2 for AIX與NetApp儲存系統整合。
+
+* http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["SnapCreator架構討論"]
++
+可讓您與同儕交流、提出問題、交換想法、尋找資源、以及分享Snap Creator最佳實務做法。
+
+* http://www.youtube.com/SnapCreatorTV["NetApp影片：SnapCreatorTV"]
++
+可讓您觀看示範Snap Creator關鍵技術的影片。
+
+

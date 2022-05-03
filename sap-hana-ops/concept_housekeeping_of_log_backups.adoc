@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: housekeeping, log, backups 
+summary: SAP HANA記錄備份的管理作業是以HANA Studio內的功能為基礎、或是以SQL聲明為基礎、該聲明允許刪除所有比所選備份舊的備份。 
+---
+= 記錄備份的管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA記錄備份的管理作業是以HANA Studio內的功能為基礎、或是以SQL聲明為基礎、該聲明允許刪除所有比所選備份舊的備份。
+
+SnapCreator會刪除一線或二線儲存設備上的Snapshot複本、並根據定義的保留原則刪除HANA目錄中的對應項目、來處理資料備份（Snapshot複本）的整理工作。
+
+舊於最新資料備份的記錄備份會被刪除、因為不需要這些備份。
+
+SnapCreator負責在檔案系統層級和SAP HANA備份目錄中管理記錄檔備份。在每個Snapshot備份中、使用Snap Creator執行下列步驟：
+
+* 讀取備份目錄、並取得最舊成功資料或Snapshot備份的備份ID。
+* 刪除所有早於最舊備份的備份。
+
+
+
+NOTE: SnapCreator只會根據Snapshot複本來處理備份的內部管理作業。如果建立其他檔案型備份、您必須確保從備份目錄和檔案系統中刪除檔案型備份。如果這類資料備份未從備份目錄手動刪除、則可能會成為最舊的資料備份、而且記錄備份管理作業將會失敗。

@@ -1,0 +1,24 @@
+---
+permalink: domino-ops/concept_single_file_restore_in_fc_iscsi_environments.html 
+sidebar: sidebar 
+keywords: domino, ibm, performing, single-file, restore, single, file, san 
+summary: 對於SAN環境中的單一檔案還原、您可以使用SnapDrive 效益管理功能將Snapshot複本掛載到Snap Creator Agent主機上。 
+---
+= 在SAN環境中執行單一檔案還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於SAN環境中的單一檔案還原、您可以使用SnapDrive 效益管理功能將Snapshot複本掛載到Snap Creator Agent主機上。然後、您可以將想要還原的檔案複製到資料還原目錄、並使用SnapCreator自訂動作來完成還原處理。
+
+*相關資訊*
+
+xref:task_using_snapdrive_for_windows_to_mount_snapshot_copy.adoc[使用SnapDrive 功能表來掛載Snapshot複本]
+
+xref:task_copying_files_to_restore_location.adoc[將檔案複製到資料還原目錄]
+
+xref:task_running_snap_creator_by_using_the_custom_action.adoc[使用SnapCreator自訂動作來完成還原處理]
+
+xref:task_disconnecting_snapshot_copy.adoc[中斷Snapshot複本連線]

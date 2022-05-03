@@ -1,0 +1,35 @@
+---
+permalink: sap-hana-ops/concept_requirements.html 
+sidebar: sidebar 
+keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, recovery, databases 
+summary: SAP HANA外掛程式可讓您建立備份、並執行HANA資料庫的時間點還原。 
+---
+= 需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA外掛程式可讓您建立備份、並執行HANA資料庫的時間點還原。
+
+SAP HANA外掛程式的支援如下：
+
+* 主機作業系統：SUSE Linux Enterprise Server（SLES）、32位元和64位元
+* 以Data ONTAP 7-Mode運作的叢集式VMware或Data ONTAP
+* 至少一個透過NFS附加的SAP HANA資料庫節點
+* 執行Service Pack Stack（SPS）7或更新版本的SAP HANA
+
+
+
+NOTE: 如需支援或檢視相容性比較表的最新資訊、請參閱 http://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"]。
+
+*必要授權*
+
+主儲存控制器SnapRestore 必須安裝一個不含功能的鏡面SnapVault 和不含功能的授權。二線儲存設備SnapVault 必須安裝不含功能的授權。
+
+Snap Creator和Snap Creator SAP HANA外掛程式不需要授權。
+
+* Snapshot備份的容量需求*
+
+相較於傳統資料庫的變更率、儲存層的區塊變更率必須較高。由於資料行存放區的資料表合併程序、資料遠比只將區塊變更寫入磁碟更多。在提供更多客戶資料之前、目前的變更率預估值為每日20%至50%。

@@ -1,0 +1,45 @@
+---
+permalink: administration/task_changing_the_snap_creator_agent_port_after_installation.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, creatoragent, properties, unix, default, port 
+summary: 若要變更Snap Creator Agent正在偵聽的連接埠、您可以變更Snap Creatoragent.properties檔案、然後重新啟動代理程式。 
+---
+= 安裝後變更Snap Creator代理程式連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要變更Snap Creator Agent正在偵聽的連接埠、您可以變更Snap Creatoragent.properties檔案、然後重新啟動代理程式。
+
+變更SnapCreator Agent連接埠的程序與Windows和UNIX相同。下列程序使用UNIX環境的範例。
+
+. 登入執行SnapCreator Agent的系統、然後切換至安裝目錄中的etc子目錄。
++
+[listing]
+----
+cd /install_path/scAgent4.3.0/etc
+----
+. 使用文字編輯器開啟agent.properties檔案。
+. 將預設連接埠參數的值變更為新連接埠（預設為9090）。
++
+例如、若要使用連接埠9191、請變更預設連接埠參數、如下所示：
+
++
+[listing]
+----
+DEFAULT_PORT=9191
+----
+. 儲存並關閉agent.properties檔案。
+. 重新啟動SnapCreator代理程式。
++
+[listing]
+----
+/install_path/scAgent4.3.0/bin/scAgent restart
+----
++
+
+NOTE: 如果Snap Creator Agent正在執行、但允許的_commands.config檔案或agent.properties檔案有任何變更、則必須重新啟動代理程式。
+
+

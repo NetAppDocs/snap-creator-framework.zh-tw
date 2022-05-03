@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/task_overview_of_database_backups.html 
+sidebar: sidebar 
+keywords: snap, creator, backing, up, database, 
+summary: 當Snap Creator備份資料庫時、會執行下列步驟。 
+---
+= 資料庫備份總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當Snap Creator備份資料庫時、會執行下列步驟。
+
+. 建立全域同步備份儲存點（SAP HANA Snapshot複本）、以在持續層上取得一致的映像。
+. 為所有資料磁碟區建立儲存Snapshot複本。
++
+在本例中、有三個資料磁碟區會分散到兩個儲存控制器、分別是hana1a和hana1b。
+
+. 在SAP HANA備份目錄中註冊儲存Snapshot備份。
+. 刪除SAP HANA Snapshot複本。
+. 開始SnapVault 更新所有資料磁碟區。
+. 檢查SnapVault 該狀態、並等待完成或可設定的逾時。
+. 刪除儲存Snapshot複本、並根據已定義的主要和次要儲存設備備份保留原則、刪除SAP HANA備份目錄中的備份。
+. 刪除檔案系統和SAP HANA備份目錄中所有的記錄備份、這些備份比最舊的資料備份還舊。
+

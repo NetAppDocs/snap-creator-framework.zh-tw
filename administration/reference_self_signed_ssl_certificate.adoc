@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_self_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: self-signed, ssl, certificate, url, issue, cause, corrective, action, system, ip, parameter 
+summary: 自我簽署的SSL憑證與URL不符 
+---
+= 自我簽署的SSL憑證與URL不符
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *問題*
++
+SnapCreator Framework提供的自我簽署SSL憑證與URL不符。
+
+* *原因*
++
+Snap Creator服務上所顯示的SSL憑證一般名稱（CN）是用於不同的機器、因此與主機名稱不符。
+
+* *修正行動*
++
+在安裝Snap Creator Server和Snap Creator Agent以解析主機名稱期間、系統IP參數已導入。
+
++
+.. 在System IP（系統IP）選項中輸入安裝Snap Creator Framework的系統IP位址。
++
+*** 您可以使用相同的IP位址來建立SSL憑證的一般名稱。
+
+
+
+
+

@@ -1,0 +1,20 @@
+---
+permalink: administration/task_viewing_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, view 
+summary: 您可以列出現有的SnapCreator設定檔。 
+---
+= 檢視設定檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以列出現有的SnapCreator設定檔。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
++
+現有的Snap Creator設定檔會列在「設定檔與組態」窗格中。
+
+

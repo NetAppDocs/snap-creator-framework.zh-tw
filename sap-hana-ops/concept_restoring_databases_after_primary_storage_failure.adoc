@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html 
+sidebar: sidebar 
+keywords: restoring, restore, database, primary, storage, failure 
+summary: 主儲存設備故障、或從主儲存設備的磁碟區刪除所有Snapshot複本之後、Snap Creator將無法處理還原、因為SnapVault 在主儲存系統上不再存在不可用的情況。 
+---
+= 在主儲存設備故障後還原資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+主儲存設備故障、或從主儲存設備的磁碟區刪除所有Snapshot複本之後、Snap Creator將無法處理還原、因為SnapVault 在主儲存系統上不再存在不可用的情況。

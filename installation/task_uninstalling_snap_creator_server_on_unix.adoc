@@ -1,0 +1,48 @@
+---
+permalink: installation/task_uninstalling_snap_creator_server_on_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, server, unix 
+summary: 您可以刪除Snap Creator Server安裝資料夾、從UNIX解除安裝Snap Creator Server。 
+---
+= 在UNIX上解除安裝Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除Snap Creator Server安裝資料夾、從UNIX解除安裝Snap Creator Server。
+
+備份Snap Creator Server引擎目錄（/install_path/scServer4.1.0/engine）中的下列目錄及所有相關子目錄與檔案：
+
+* SnapCreator資料庫（../ snapcreator）
+* SnapCreator伺服器內容（../等）
+* 組態（../組態）
+* 記錄（../記錄）
+* 外掛程式儲存庫（若已啟用）（./snapreatorPlugin）
+
+
+
+NOTE: 請務必備份這些目錄、否則將會遺失使用者資料、而且無法恢復。
+
+若要解除安裝Snap Creator Server、請執行下列步驟。
+
+
+NOTE: 下列步驟所提供的路徑、是指一般安裝路徑。您可以修改這些命令中的路徑、以反映自訂的Snap Creator Server安裝路徑。
+
+. 使用下列指令碼來停止SnapCreator Server服務（「shapreatorserverservice」）：
++
+[listing]
+----
+/install_path/scServer4.1.0/bin/scServer stop
+----
+. 刪除Snap Creator Server安裝資料夾。
++
+例如、對於Linux系統、請執行下列命令：
+
++
+[listing]
+----
+rm -Rf /install_path/scServer4.1.0
+----
+

@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_performing_database_integrity_checks_from_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: sap, hana, performing, perform, database, integrity, checks, snap, creator, command, line 
+summary: 您可以使用Snap Creator命令列執行資料庫完整性檢查。 
+---
+= 從Snap Creator命令列執行資料庫完整性檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator命令列執行資料庫完整性檢查。
+
+. 若要執行資料庫完整性檢查、請執行下列命令：
++
+[listing]
+----
+./snapcreator --server localhost --port 8443 --user sc --passwd sc --profile hana_testing --config HANA_Test --action integrityCheck --policy none --verbose
+----
+

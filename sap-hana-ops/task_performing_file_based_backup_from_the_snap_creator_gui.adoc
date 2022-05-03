@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/task_performing_file_based_backup_from_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: performing, perform, file-based, backup, snap, creator, gui, graphical, user, interface 
+summary: 您可以從Snap Creator圖形化使用者介面（GUI）執行檔案型備份。 
+---
+= 從Snap Creator GUI執行檔案型備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從Snap Creator圖形化使用者介面（GUI）執行檔案型備份。
+
+您必須在HANA檔案型備份設定索引標籤中啟用檔案型備份參數。
+
+. 選取HANA資料庫備份組態。
+. 選取*「動作*」>*「檔案型備份*」。
++
+image::../media/performing_file_based_backup_with_gui.gif[使用GUI執行檔案型備份]
+
+. 將「原則」選項設為*「無」*、然後按一下「*確定*」。
++
+image::../media/performing_file_based_backup_with_gui_2.gif[使用GUI執行檔案型備份]
+
+

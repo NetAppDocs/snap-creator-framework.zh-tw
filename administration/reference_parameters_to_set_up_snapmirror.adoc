@@ -1,0 +1,94 @@
+---
+permalink: administration/reference_parameters_to_set_up_snapmirror.html 
+sidebar: sidebar 
+keywords: parameter, snapmirror, snap, creator, server, update, cascading, volume 
+summary: 若要設定SnapCreator伺服器的SnapMirror、必須使用數個參數。 
+---
+= 設定SnapMirror的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要設定SnapCreator伺服器的SnapMirror、必須使用數個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+nTap SnapMirror更新
+ a| 
+「Y」或「N」
+ a| 
+可讓您開啟和關閉SnapMirror更新功能。
+
+
+
+ a| 
+ntap_SnapMirror串聯更新
+ a| 
+「Y」或「N」
+ a| 
+可讓您開啟及關閉串聯SnapMirror更新功能。這是使用SnapVault 目的地Volume的SnapMirror更新。
+
+
+NOTE: 叢集Data ONTAP 式的不支援此功能。
+
+
+
+ a| 
+SnapMirror磁碟區
+ a| 
+ a| 
+指定您要執行SnapMirror更新的來源儲存系統和磁碟區清單（例如、控制器1：vol1、vol2、vol3；控制器2：vol1；控制器3：vol2、vol3）。*注意：*對於VMware外掛程式（vSphere和vCloud）、此值應設為自動：偵測。
+
+
+
+ a| 
+SnapMirror串聯磁碟區
+ a| 
+ a| 
+指定SnapVault 更新SnapVault 完成後想要執行SnapMirror更新的目的地儲存系統和磁碟區清單（例如、sec-controller1:vol1-sec,vol2-sec）。如果來源磁碟區有多個目的地、則串聯複寫不支援此功能。
+
+
+NOTE: 叢集Data ONTAP 式的不支援此功能。
+
+
+
+ a| 
+nTap SnapMirror®等待
+ a| 
+ a| 
+指定SnapMirror更新程序在SnapMirror目的地上建立複本之前完成的等待時間（以分鐘為單位）。如果NTAP_clone _secondary設定為Y、則Snap Creator會等到SnapMirror更新完成後再繼續。
+
+
+NOTE: 這只能搭配NTAP_CLIN_INAT屬 和clonewal Vol動作使用（目前僅支援Volume複本）。
+
+
+
+ a| 
+nTap SnapMirror使用快照
+ a| 
+「Y」或「N」
+ a| 
+如果啟用此參數、SnapMirror更新會使用新建立的Snapshot複本、進而在SnapMirror目的地上建立Snapshot複本。*附註：* NTAP_clone _secondary需要此功能、因為在SnapMirror目的地上建立複本需要Snapshot複本。
+
+
+
+ a| 
+ntap_SnapMirror®MAX_transfer
+ a| 
+ a| 
+指定允許SnapMirror使用的最大頻寬（以kbps為單位）。如果未設定此參數、SnapMirror會使用最大可用頻寬。
+
+
+
+ a| 
+SnapMirror®qtree®包含
+ a| 
+ a| 
+指定SnapMirror更新中要包含的主要儲存控制器和qtree路徑清單（例如、controller1：/vol/qtree /qtree1、/vol/vol/volVolume /qtre2；controller2：/vol/vole/vole/qtre1）。如果未使用此選項、則會備份磁碟區下的所有qtree。使用此選項指定清單時、只會備份列出的qtree；其餘qtree將會被忽略。
+
+|===

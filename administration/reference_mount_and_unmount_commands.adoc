@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_mount_and_unmount_commands.html 
+sidebar: sidebar 
+keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post 
+summary: '複製時、您應該使用mount_CMD和umount_CMD命令、而非Snap Creator pre"或POST命令。' 
+---
+= 掛載和卸載命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複製時、您應該使用mount_CMD和umount_CMD命令、而非Snap Creator pre"或POST命令。
+
+|===
+| 命令 | 說明 
+
+
+ a| 
+mount_CMD ##
+ a| 
+掛載命令用於掛載檔案系統以進行複製或掛載動作、其中##為從01至99之間開始的數字。
+
+
+
+ a| 
+umount_CMD ##
+ a| 
+unmount命令用於掛載檔案系統以進行複製或掛載動作、其中##是從01至99之間開始的數字。
+
+|===

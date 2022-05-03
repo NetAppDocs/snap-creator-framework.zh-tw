@@ -1,0 +1,16 @@
+---
+permalink: installation/concept_installing_the_snap_creator_server.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server 
+summary: 您可以在Windows和UNIX主機上安裝Snap Creator Server。 
+---
+= 安裝Snap Creator伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Windows和UNIX主機上安裝Snap Creator Server。
+
+在典型安裝中、Snap Creator Server和Snap Creator Agent會安裝在不同的主機上。不過、在某些情況下、伺服器和代理程式可以同時安裝。在此設定中、只有伺服器會在安裝期間進行設定。

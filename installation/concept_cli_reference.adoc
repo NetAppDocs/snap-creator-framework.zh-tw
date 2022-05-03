@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_cli_reference.html 
+sidebar: sidebar 
+keywords: cli, reference 
+summary: 本節包含從命令列介面使用Snap Creator的參考資訊。 
+---
+= CLI參考
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節包含從命令列介面使用Snap Creator的參考資訊。

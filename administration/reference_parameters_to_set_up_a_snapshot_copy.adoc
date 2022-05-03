@@ -1,0 +1,183 @@
+---
+permalink: administration/reference_parameters_to_set_up_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: parameter, snapshot, copy, snap, creator, server, retention, snapdrive 
+summary: 若要為Snap Creator Server設定Snapshot複本、需要多個組態檔參數。 
+---
+= 設定Snapshot複本的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要為Snap Creator Server設定Snapshot複本、需要多個組態檔參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+ntap_snapshot _ retent_age
+ a| 
+ a| 
+可讓您定義Snapshot複本的保留期限（以天為單位）。如果已設定、則只有在Snapshot複本超過NTAP_snapshot保留參數中定義的數字、且早於保留期限（以天為單位）時、才會刪除Snapshot複本。
+
+
+
+ a| 
+SnapDrive
+ a| 
+「Y」或「N」
+ a| 
+可讓您使用SnapDrive 支援功能來建立Data ONTAP Snapshot複本、而非使用支援功能的API。
+
+
+
+ a| 
+SnapDrive探索
+ a| 
+「Y」或「N」
+ a| 
+可讓SnapDrive 您使用支援功能來探索儲存設備。使用validation_volume參數時、SAN或Isan環境需要此功能。
+
+
+
+ a| 
+nTap快照_停用
+ a| 
+「Y」或「N」
+ a| 
+停用SnapCreator建立Snapshot複本、讓Snap Creator能夠處理SnapVault 供SnapManager 作支援的功能。若要使此設定正常運作、SnapManager 「不完整快照」複本必須遵循此命名慣例：SnapShot複製名稱-policy_Recent。
+
+
+
+ a| 
+ntap_snapshot _ NODELETE
+ a| 
+「Y」或「N」
+ a| 
+覆寫NTAP_snapshot參數、並防止刪除Snapshot複本。啟用此變數可能會使磁碟區變滿。
+
+
+
+ a| 
+ntap_snapshot刪除_CMD
+ a| 
+ a| 
+根據SnapDrive 快照保留、透過不使用SnapCreator的功能刪除快照。*注意：* SnapDrive 此用作刪除快照的指令所包含的所有磁碟區（掛載磁碟機）也應包含在組態檔中。
+
+
+
+ a| 
+nTap快照_delete_by_age_only
+ a| 
+（主要
+| 次要 
+
+
+| 兩者兼具 | n）  a| 
+可刪除舊的Snapshot複本。此參數需要NTAP_snapshot _reture_age參數、並根據Snapshot複本的存留期而非Snapshot複本的數量強制刪除。
+
+
+
+ a| 
+ntap_snapshot相依性忽略
+ a| 
+「Y」或「N」
+ a| 
+僅適用於使用備份刪除動作刪除Snapshot複本。不允許手動刪除具有相依性的Snapshot複本。
+
+
+
+ a| 
+nTap快照_ create_CMD ##
+ a| 
+ a| 
+建立Snapshot複本並清空檔案系統緩衝區；##為1到99之間的數字。*注意：*如果啟用SnapDrive 此參數、則需要此設定。雖然仍然使用此功能來執行其他所有作業、Data ONTAP 但使用此功能時、將會建立Snapshot複本。SnapDrive
+
+
+
+ a| 
+ntap_中繼資料_snapshot _ create_CMD ##
+ a| 
+ a| 
+建立中繼資料Volume Snapshot複本、然後清空檔案系統緩衝區；##為1到99之間的數字。
+
+
+
+ a| 
+nTap一致性_ group快照
+ a| 
+「Y」或「N」
+ a| 
+使用一致性群組、在多個磁碟區之間建立一致的Snapshot複本。
+
+
+
+ a| 
+ntap_consistency群組快照重試計數
+ a| 
+ a| 
+指定在發生故障時應重試一致性群組Snapshot的次數。
+
+
+
+ a| 
+nTap一致性_ group快照_retry、wait
+ a| 
+時間（以秒為單位）
+ a| 
+指定在每次重試一致性群組Snapshot之間等待的時間。
+
+
+
+ a| 
+nTap一致性_ group超時
+ a| 
+（緊急
+| 中 
+
+
+| 休閒）  a| 
+指定儲存控制器一致群組Snapshot複本的等待時間。
+ a| 
+ntap_consistency群組_WAFL_sync
+
+
+
+ a| 
+「Y」或「N」
+ a| 
+透過WAFL-SYNC強制使用一致點（CP）、在啟動CG之前提高一致性群組Snapshot複本的效能。*附註：*如果您使用DB2外掛程式執行一致性群組備份、則必須將此參數設為「N」。
+ a| 
+ntap_snapshot還原_Auto_detect
+
+
+
+ a| 
+「Y」或「N」
+ a| 
+如果停用、此設定會在SnapRestore 執行單一檔案還原時強制使用單一檔案還原（SFSR）。
+ a| 
+ntap_snapshot清理
+
+
+
+ a| 
+「Y」或「N」
+ a| 
+移除在備份失敗時所建立的任何Snapshot複本。
+ a| 
+ntap_use外部快照
+
+
+
+ a| 
+「Y」或「N」
+ a| 
+可匯入非SnapCreator Snapshot複本。最新的Snapshot複本已相符。
+ a| 
+ntap_external_snapshot REGEX
+
+|===

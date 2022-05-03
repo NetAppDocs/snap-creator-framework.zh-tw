@@ -1,0 +1,35 @@
+---
+permalink: administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, director, vcenter, vdc 
+summary: SnapCreator可透過VMware外掛程式支援vCloud vApp的備份。vApp和虛擬機器備份複本是由VMware外掛程式透過vCloud Director API和vSphere API製作、這些API分別在VMware vCloud Director和VMware vCenter伺服器上叫用。 
+---
+= vCloud vApp使用VMware外掛程式進行備份與還原作業的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator可透過VMware外掛程式支援vCloud vApp的備份。vApp和虛擬機器備份複本是由VMware外掛程式透過vCloud Director API和vSphere API製作、這些API分別在VMware vCloud Director和VMware vCenter伺服器上叫用。
+
+若要成功執行vApp備份與還原作業、您必須在組態檔中提供下列詳細資料：
+
+* vCloud IP與認證
+* vCloud組織、虛擬資料中心（VDC）和vApp名稱
+
+
+
+NOTE: 如果有多個vCenter附加至vCloud、則所有vCenter伺服器的密碼應該相同。
+
+執行vCloud備份與還原作業時、您必須考量下列事項：
+
+* VMware與vCloud的備份與還原程序非常類似、但探索程序除外、因為vCloud備份需要使用代表性狀態傳輸（REST）API來額外探索vCloud Director中繼資料。
+* 您應該提供vCloud的詳細資料、包括要備份的組織、VDC和vApp。
+* 如果列出了VDC-、則會備份VApps中的所有VApps。
+* vCloud模組會探索與任何vApp相關的虛擬機器、這些虛擬機器必須備份並放在備份清單中。
+* 如果選擇要備份的vApp包含在組織內、或是也選擇要備份的VDC-、則vApp只會備份一次。
+
+
+
+NOTE: 對於使用VMware外掛程式的虛擬機器檔案系統（VMFS）還原作業、磁碟區中必須有足夠的空間、才能建立與LUN大小相同的LUN複製。

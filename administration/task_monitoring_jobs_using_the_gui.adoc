@@ -1,0 +1,21 @@
+---
+permalink: administration/task_monitoring_jobs_using_the_gui.html 
+sidebar: sidebar 
+keywords: monitor, job, snap, creator, gui 
+summary: 您可以使用Snap Creator GUI來監控SnapCreator所執行工作的狀態。 
+---
+= 監控工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI來監控SnapCreator所執行工作的狀態。
+
+. 從SnapCreator GUI主功能表中、選取*管理*>*工作監控*。
++
+隨即顯示執行中工作的清單。
+
+. 若要停止執行中的工作、請選取該工作、然後按一下*取消*。
+

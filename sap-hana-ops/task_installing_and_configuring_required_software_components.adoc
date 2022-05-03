@@ -1,0 +1,61 @@
+---
+permalink: sap-hana-ops/task_installing_and_configuring_required_software_components.html 
+sidebar: sidebar 
+keywords: installing, install, configuring, configure, required, software 
+summary: 對於使用Snap Creator Framework和SAP HANA外掛程式的SAP HANA備份與還原解決方案、您需要安裝Snap Creator軟體元件和SAP HANA hdbsql用戶端軟體。 
+---
+= 安裝及設定必要的軟體元件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於使用Snap Creator Framework和SAP HANA外掛程式的SAP HANA備份與還原解決方案、您需要安裝Snap Creator軟體元件和SAP HANA hdbsql用戶端軟體。
+
+您不需要個別安裝外掛程式。隨代理程式一起安裝。
+
+. 在與安裝代理程式的主機共用網路連線的主機上安裝Snap Creator Server。
+. 在與Snap Creator Server主機共用網路連線的主機上安裝Snap Creator Agent。
++
+** 在單一SAP HANA節點環境中、將代理程式安裝在資料庫主機上。或者、也可以將代理程式安裝在另一部連線至資料庫主機和Snap Creator Server主機的主機上。
+** 在多節點SAP HANA環境中、您不應在資料庫主機上安裝代理程式；代理程式必須安裝在可連線至資料庫主機和Snap Creator Server主機的網路連線獨立主機上。
+
+
+. 在安裝SnapCreator Agent的主機上安裝SAP HANA hdbsql用戶端軟體。
++
+針對透過此主機管理的SAP HANA節點、設定使用者儲存金鑰。
+
++
+[listing]
+----
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL # ./hdbinst
+
+SAP HANA Database Client installation kit detected.
+
+SAP HANA Database Installation Manager - Client Installation 1.00.46.371989
+***************************************************************************
+
+Enter Installation Path [/usr/sap/hdbclient32]:
+Checking installation...
+Installing and configuring required software components | 13
+Preparing package "Product Manifest"...
+Preparing package "SQLDBC"...
+Preparing package "ODBC"...
+Preparing package "JDBC"...
+Preparing package "Client Installer"...
+Installing SAP HANA Database Client to /usr/sap/hdbclient32...
+Installing package 'Product Manifest' ...
+Installing package 'SQLDBC' ...
+Installing package 'ODBC' ...
+Installing package 'JDBC' ...
+Installing package 'Client Installer' ...
+Installation done
+Log file written to '/var/tmp/hdb_client_2013-07-05_11.38.17/hdbinst_client.log'
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL #
+----
+
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854419["SnapCreator Framework安裝指南"]

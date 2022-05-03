@@ -1,0 +1,66 @@
+---
+permalink: administration/reference_db2_plug_in.html 
+sidebar: sidebar 
+keywords: db2, plug-in, communicate, database 
+summary: DB2外掛程式使用DB2命令與資料庫進行通訊。 
+---
+= DB2外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+DB2外掛程式使用DB2命令與資料庫進行通訊。
+
+下表列出DB2外掛程式參數、提供參數設定、並說明參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+app_name
+ a| 
+DB2
+ a| 
+提供應用程式名稱。
+
+
+
+ a| 
+DB2_Databases
+ a| 
+DB_NAME：使用者名稱
+ a| 
+列出DB2資料庫和使用者名稱。多個資料庫和使用者名稱可以指定為分號分隔的清單：例如「db1:user1；db2:user2」。
+
+
+
+ a| 
+DB2_CMD
+ a| 
+path_to（路徑）db2cli（路徑）_cmd
+ a| 
+指定用於初始化資料庫連線的路徑、以便在資料庫上執行更多命令。
+
+* UNIX型環境：「db2_install_ddirectory/sqlib/bin/db2`」
++
+例如：「/hhome/db2inst1/sqllib/bin/db2」
+
+* Windows：「db2_install_ddirectory\SQLLIB\bin\db2cmd．exe」
++
+例如：「C：\「Program Files」\IBM\SQLLIB\BIN\db2cmd．exe
+
+
+
+如果未指定路徑、則會使用sqllib/DB2做為路徑。
+
+|===
+*附註：*根據WAFL 預設、DB2外掛程式會處理Write Anywhere File Layout（簡稱「Write Anywhere File Layout」、簡稱「DB2」）作業。如果您要使用DB2外掛程式備份一致性群組備份、則應將參數設定為NTAP_Consistency群組_WAFL_SYNC參數為N如果您將此參數設為Y、則會執行其他和備援的同步作業。
+
+如需支援或檢視相容性對照表的最新資訊、請參閱互通性對照表。
+
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

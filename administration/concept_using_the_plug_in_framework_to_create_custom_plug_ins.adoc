@@ -1,0 +1,43 @@
+---
+permalink: administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover, scdump, restore, restore, clone, describe, restore 
+summary: 外掛程式架構可讓您為Snap Creator建立自己的外掛程式、或是重複使用現有的外掛程式。外掛程式可為Snap Creator提供處理特定應用程式備份與還原的步驟。 
+---
+= 使用外掛程式架構來建立自訂外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+外掛程式架構可讓您為Snap Creator建立自己的外掛程式、或是重複使用現有的外掛程式。外掛程式可為Snap Creator提供處理特定應用程式備份與還原的步驟。
+
+外掛程式架構定義下列方法：
+
+* 靜止-處理特定應用程式外掛程式靜止的方法
+* Unquiesce -針對特定應用程式外掛程式處理取消靜止的方法
+* 探索：處理探索特定應用程式外掛程式之儲存物件的方法
+* scdump：處理支援資訊、資料庫、作業系統及SnapDrive 資訊的收集方法
+* 還原：處理特定應用程式外掛程式還原的方法
+* reest_pre：處理特定應用程式外掛程式的預先儲存作業方法（可使用Snap Creator的內建還原CLI）
+* reet_POST：處理特定應用程式外掛程式的還原後作業的方法（可使用Snap Creator的內建還原CLI）
+* Clone（克隆）預先複製）：處理特定應用程式外掛程式的預先複製作業的方法
+* Clone（克隆）POST：處理特定應用程式外掛程式之後複製作業的方法
+* 說明：說明外掛程式實作內容的方法。這是Perl外掛程式的選用功能、但在外掛程式/原生程式下、原生外掛程式則為必要項目。
+* Clone_all：處理特定應用程式外掛程式之複製的方法（無法使用內建的複製介面）
+* Clone（克隆）_Clean（清除）-克隆操作失敗時處理清除的方法
+* 還原清理：還原作業失敗時處理清除的方法
+
+
+
+NOTE: 外掛程式架構支援Perl、PowerShell、Java、UNIX Shell和Python程式設計。附註：外掛程式架構可讓您實作Snap Creator內的物件與功能。
+
++例如、有錯誤處理功能、也就是說外掛程式可以使用標準實作的Snap Creator。如此可減少建立外掛程式所需的工作。
+
+* Perl外掛程式安裝在/plug-ins/plug-in-name/plug-in.pm.
+* 原生外掛程式安裝在/plug-ins/nome/plug-in.sh、plug-in.java.plug-in.bat等下。
+* 外掛程式必須安裝在應執行的位置。這可以是Snap Creator Server或Snap Creator Agent、視Snap Creator的設定而定。
+
+
+如需外掛程式架構、外掛程式及外掛程式使用者指南的詳細資訊、請參閱 http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["SnapCreator架構討論社群論壇"]。

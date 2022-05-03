@@ -1,0 +1,78 @@
+---
+permalink: domino-ops/concept_restore_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, understanding, plug-in, restore 
+summary: IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資料庫檔案。當Snapshot還原作業完成時、外掛程式會套用變更資訊目錄中記錄的任何變更。 
+---
+= 瞭解IBM Domino外掛程式還原作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資料庫檔案。當Snapshot還原作業完成時、外掛程式會套用變更資訊目錄中記錄的任何變更。
+
+高層級步驟如下：
+
+. 從Snapshot複本還原資料庫檔案。
+. 套用變更資訊目錄中記錄的變更。
+. 套用交易記錄資訊（若有）。
+
+
+
+
+== 還原選項
+
+外掛程式提供多種還原選項：
+
+|===
+
+
+| 還原類型 | 說明 
+
+
+ a| 
+Volume還原（時間點）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態。
+
+
+
+ a| 
+Volume還原（最新）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到最近的複本。
+
+
+
+ a| 
+Volume還原（可選擇最新）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到指定時間。
+
+
+
+ a| 
+單一檔案還原（時間點）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態（僅限NFS）。
+
+
+
+ a| 
+單一檔案還原（直到現在）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到最近的複本（僅限NFS）。
+
+
+
+ a| 
+單一檔案還原（可選擇最新）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到指定的時間（僅限NFS）。
+
+|===
+*附註：*若要進行最新且可選取的最新還原、必須啟用Domino交易記錄。
+
+交易記錄只能轉送。選取建立Snapshot複本之前的時間會導致還原錯誤。

@@ -1,0 +1,137 @@
+---
+permalink: administration/concept_managing_user_access.html 
+sidebar: sidebar 
+keywords: snap, creator, security, features, rbac, snapcreator 
+summary: SnapCreator提供角色型存取控制（RBAC）等安全功能、可讓您管理Snap Creator內的使用者存取。 
+---
+= 管理使用者存取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator提供角色型存取控制（RBAC）等安全功能、可讓您管理Snap Creator內的使用者存取。
+
+RBAC涉及使用者、角色、權限、作業和設定檔。使用者、角色和權限可由Snap Creator使用者定義。
+
+
+
+== 使用者
+
+* 使用者會以使用者名稱和密碼加以唯一識別。
+* 可以將使用者指派給一或多個角色和設定檔、並將其取消指派給該使用者。
+* 當Snap Creator伺服器啟動時、snapcreator.properties檔案中的SNAPCREATOR_USERN會新增為使用者。
+* snapcreator.properties檔案中的SNAPCREATOR_user,會在啟動期間建立使用者時指派預設的系統管理員角色。
+
+
+
+
+== 角色
+
+角色具有一或多個權限。指派的權限可決定使用者可以執行的動作、以及使用者可以存取的GUI元素。內建三種角色：
+
+* *系統管理員*
++
+擁有所有API的完整存取權。這是唯一能夠建立、編輯及刪除使用者的角色。
+
+* *營運者*
++
+此角色設定為超級使用者、可存取除RBAC以外的所有API。
+
+* *檢視者*
++
+存取權限非常有限。此角色可存取唯讀SnapCreator API呼叫。
+
+
+
+這些內建角色無法新增、移除或修改。
+
+
+
+== 權限
+
+權限是使用者獲授權執行的一組作業。下列為內建權限：
+
+* *備份*
++
+執行備份或複製作業所需的。
+
+* *組態*
++
+建立、讀取、更新及刪除組態檔所需的。
+
+* *自訂*
++
+啟動自訂外掛程式作業所需。
+
+* * extended儲存庫*
++
+執行目錄（也稱為延伸儲存庫）作業所需的資源。
+
+* *全球*
++
+建立、編輯及刪除全域組態檔所需的項目。
+
+* * policy_admin*
++
+呼叫原則作業所需的項目（例如、addPolicy、updatePolicy、removePolicy）。
+
+* * policy_Viewer*
++
+唯讀原則作業所需。
+
+* * RBAC管理*
++
+管理使用者所需的項目（例如：建立、更新、刪除使用者及角色； 也可指派和取消指派角色、權限）。
+
+* * RBAC檢視*
++
+檢視使用者帳戶、指派的角色及指派的權限時所需。
+
+* *還原*
++
+執行還原作業所需的。
+
+* *排程器*
++
+執行排程器作業所需。
+
+* *檢視者*
++
+提供唯讀作業的授權。
+
+
+
+
+
+== 營運
+
+作業是Snap Creator檢查授權的基礎值。一些作業範例包括getTask、fileCloneCreate、createTask、dirCreate等等。
+
+
+NOTE: 無法新增、移除或修改作業。
+
+
+
+== 設定檔
+
+* 設定檔會指派給使用者。
+* RBAC中的設定檔會建立在檔案系統的設定檔目錄中。
+* 某些Snap Creator API會檢查使用者是否已指派至設定檔、並檢查作業權限。
++
+例如、如果使用者想要工作狀態、RBAC會驗證使用者是否有權呼叫Scheduler工作、然後檢查是否已將與工作相關的設定檔指派給使用者。
+
+* 如果指派給「操作員」角色的使用者建立設定檔、則該設定檔會自動指派給使用者。
+
+
+
+
+== 管理儲存控制器的使用者存取
+
+如果您不使用Active IQ Unified Manager 此伺服器、則需要使用者名稱和密碼才能與儲存控制器通訊。密碼可加密以確保安全。
+
+
+NOTE: 您不應使用root使用者或admin/vsadmin使用者。最佳實務做法是建立具有必要API權限的備份使用者。
+
+網路通訊是透過HTTP（80）或HTTPS（443）進行、因此您必須在執行Snap Creator的主機和儲存控制器之間開啟其中一個或兩個連接埠。必須在儲存控制器上建立使用者以進行驗證。對於HTTPS、您必須確保已在儲存控制器上啟用及設定使用者。

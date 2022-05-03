@@ -1,0 +1,14 @@
+---
+permalink: installation/index.html 
+sidebar: sidebar 
+keywords: install, setup, set, up, Snap, reference_snap_creator_framework_error_messages 
+summary: 說明如何安裝及設定Snap Creator。 
+---
+= 安裝指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+本指南說明如何安裝及設定Snap Creator 4.4.3。

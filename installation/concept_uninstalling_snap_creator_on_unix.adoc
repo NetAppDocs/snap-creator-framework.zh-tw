@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_uninstalling_snap_creator_on_unix.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, unix 
+summary: 在UNIX上解除安裝Snap Creator時、請先解除安裝Snap Creator Agent、然後解除安裝Snap Creator Server。 
+---
+= 在UNIX上解除安裝Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX上解除安裝Snap Creator時、請先解除安裝Snap Creator Agent、然後解除安裝Snap Creator Server。

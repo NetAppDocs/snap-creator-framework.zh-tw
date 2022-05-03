@@ -1,0 +1,522 @@
+---
+permalink: installation/reference_cli_commands_for_creating_svm_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, svm, roles, role create 
+summary: 下表列出建立新SVM使用者角色所需的命令。 
+---
+= 用於建立SVM角色的CLI命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出建立新SVM使用者角色所需的命令。
+
+|===
+| 命令目錄名稱 | 要執行的命令 
+
+
+ a| 
+附加使用者
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"adduser"-vserver Snapcreator
+
+
+
+ a| 
+事件generate-autosup-log
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"事件generate-autosup-log"-vserver Snapcreator
+
+
+
+ a| 
+LUN註釋
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN Comment」-vserver Snapcreator
+
+
+
+ a| 
+LUN建立
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN create」-vserver Snapcreator
+
+
+
+ a| 
+LUN刪除
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN DELETE」-vserver Snapcreator
+
+
+
+ a| 
+LUN幾何資料
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN幾何資料」-vserver Snapcreator
+
+
+
+ a| 
+新增LUN igroup
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"LUN igroup add"-vserver Snapcreator
+
+
+
+ a| 
+建立LUN igroup
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"LUN igroup cree"-vserver Snapcreator
+
+
+
+ a| 
+LUN igroup集
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「LUN igroup set」-vserver Snapcreator
+
+
+
+ a| 
+LUN igroup顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"LUN igroup show"-vserver Snapcreator
+
+
+
+ a| 
+LUN對應
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"LUN map"-vserver Snapcreator
+
+
+
+ a| 
+LUN對應顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN mapping show」-vserver Snapcreator
+
+
+
+ a| 
+LUN修改
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN modify」-vserver Snapcreator
+
+
+
+ a| 
+LUN搬移
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"LUN move"-vserver Snapcreator
+
+
+
+ a| 
+LUN離線
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN offline」-vserver Snapcreator
+
+
+
+ a| 
+LUN連線
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN online」-vserver Snapcreator
+
+
+
+ a| 
+LUN大小調整
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN resize」-vserver Snapcreator
+
+
+
+ a| 
+LUN顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN show」-vserver Snapcreator
+
+
+
+ a| 
+LUN取消對應
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「LUN UNMAP」-vserver Snapcreator
+
+
+
+ a| 
+網路
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「network」-vserver SnapCreator
+
+
+
+ a| 
+網路連線
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"網路連線"-vserver SnapCreator
+
+
+
+ a| 
+網路連線作用中
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"網路連線作用中"-vserver SnapCreator
+
+
+
+ a| 
+網路連線聆聽秀
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"網路連線偵聽show "-vserver SnapCreator
+
+
+
+ a| 
+網路介面
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"網路介面"-vserver SnapCreator
+
+
+
+ a| 
+網路路由群組
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"網路路由群組"-vserver SnapCreator
+
+
+
+ a| 
+還原檔案
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「reet-file」-vserver Snapcreator
+
+
+
+ a| 
+SnapMirror
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「SnapMirror」-vserver SnapCreator
+
+
+
+ a| 
+版本
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「version」-vserver Snapcreator
+
+
+
+ a| 
+Volume
+ a| 
+角色建立-role VsERVERRBACROLE_New -cmd目錄名稱「volume」
+
+
+
+ a| 
+Volume自動調整大小
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd dirname "volume autosize"-vserver Snapcreator
+
+
+
+ a| 
+Volume複製
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"volume clone"-vserver Snapcreator
+
+
+
+ a| 
+建立Volume Clone
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume clone create」-vserver Snapcreator
+
+
+
+ a| 
+Volume建立
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume create」-vserver Snapcreator
+
+
+
+ a| 
+Volume銷毀
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd dirname "volume destro"-vserver Snapcreator
+
+
+
+ a| 
+Volume效率關閉
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「Volume Efficiance Off」-vserver Snapcreator
+
+
+
+ a| 
+上的Volume效率
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「Volume Efficiance on」-vserver Snapcreator
+
+
+
+ a| 
+磁碟區效率開始
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「volume Efficiance start」-vserver Snapcreator
+
+
+
+ a| 
+Volume效率表現
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「volume Efficiance show」-vserver Snapcreator
+
+
+
+ a| 
+Volume檔案
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「Volume file」-vserver Snapcreator
+
+
+
+ a| 
+Volume檔案複製
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「Volume file clone」-vserver Snapcreator
+
+
+
+ a| 
+建立Volume檔案複製
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume file clone crede"-vserver Snapcreator
+
+
+
+ a| 
+Volume修改
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「volume modify」-vserver Snapcreator
+
+
+
+ a| 
+Volume掛載
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"volume mount"-vserver Snapcreator
+
+
+
+ a| 
+Volume離線
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「volume offline」-vserver Snapcreator
+
+
+
+ a| 
+Volume Show
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd dirname "volume show"-vserver Snapcreator
+
+
+
+ a| 
+Volume大小
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd dirname "volume size"-vserver Snapcreator
+
+
+
+ a| 
+建立Volume Snapshot快照
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume snapshot create」-vserver Snapcreator
+
+
+
+ a| 
+Volume Snapshot刪除
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume snapshot delete」-vserver Snapcreator
+
+
+
+ a| 
+Volume Snapshot還原
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「Volume snapshot RESTORE」-vserver Snapcreator
+
+
+
+ a| 
+Volume卸載
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「volume unmount」-vserver Snapcreator
+
+
+
+ a| 
+顯示Vserver匯出原則規則
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver匯出原則規則show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver匯出原則顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver EXPORT原則show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver FCP
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver fCP"-vserver Snapcreator
+
+
+
+ a| 
+Vserver FCP啟動器顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「vserver FCP啟動器show」-vserver Snapcreator
+
+
+
+ a| 
+Vserver FCP顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver FCP show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver FCP狀態
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver FCP STATUS"-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI"-vserver Snapcreator
+
+
+
+ a| 
+顯示Vserver iSCSI連線
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI connection show"-vserver Snapcreator
+
+
+
+ a| 
+加入Vserver iSCSI介面存取清單
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄「vserver iSCSI介面存取清單add」-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI介面存取清單顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄"vserver iSCSI介面存取清單show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI iSNS查詢
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI siscs query"-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI節點名稱
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI nodename"-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI工作階段顯示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「vserver iSCSI工作階段show」-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI展示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver iSCSI狀態
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver iSCSI STATUS"-vserver Snapcreator
+
+
+
+ a| 
+Vserver NFS
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver nfs"-vserver Snapcreator
+
+
+
+ a| 
+Vserver NFS狀態
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver NFS STATUS"-vserver Snapcreator
+
+
+
+ a| 
+顯示Vserver服務DNS主機
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱「vserver services name-service DNS hosts show」-vserver SnapCreator
+
+
+
+ a| 
+Vserver服務UNIX群組建立
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver services name-service unix-group cred"-vserver Snapcreator
+
+
+
+ a| 
+Vserver服務UNIX群組展示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver services name-service unix-group show"-vserver Snapcreator
+
+
+
+ a| 
+Vserver服務UNIX使用者建立
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver services name-service unix-usercred"-vserver Snapcreator
+
+
+
+ a| 
+Vserver服務UNIX使用者展示
+ a| 
+角色create -role VsERVERRBACROLE_New -cmd目錄名稱"vserver services name-service unix-user show"-vserver Snapcreator
+
+|===

@@ -1,0 +1,32 @@
+---
+permalink: domino-ops/concept_allowing_additional_commands_through_the_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: domino, ibm, allowing, allow, additional, commands, snap, creator, agent 
+summary: 如果您要在Snap Creator Agent上執行補充命令、您必須明確允許執行命令、方法是將命令包含在Agent的允許_commands.config檔案中。 
+---
+= 允許對Snap Creator Agent執行補充命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您要在Snap Creator Agent上執行補充命令、您必須明確允許執行命令、方法是將命令包含在Agent的允許_commands.config檔案中。
+
+allowed_commands.config位於Snap Creator Agent安裝目錄的etc子目錄中。例如：
+
+* 在UNIX主機上、安裝/path/scAgent4.1.x/etc/allowed_commands.config
+* 在Windows主機上、C：\Program Files\NetApp\Snap_Creator_Framework\scAgent4.1.x\etc\allowed_commands.config
+
+
+若要允許代理程式上的輔助命令、請在編輯器中開啟allowed_commands.config。在命令提示字元中輸入每個命令、完全如同在命令提示字元中輸入命令一樣。案例很重要。請務必指定完整的路徑名稱。如果路徑名稱包含空格、請以引號括住。例如：
+
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe"
+ myscript.bat
+----
+重新啟動代理程式、變更才會生效。
+
+
+NOTE: 基於安全考量、您不應使用萬用字元項目（*）來允許所有命令。

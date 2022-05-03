@@ -1,0 +1,27 @@
+---
+permalink: administration/task_deleting_snap_creator_profiles.html 
+sidebar: sidebar 
+keywords: delete, snap, creator, profile 
+summary: 您可以刪除SnapCreator設定檔。 
+---
+= 刪除設定檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除SnapCreator設定檔。
+
+刪除設定檔也會刪除與設定檔相關的任何組態檔。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
++
+現有的Snap Creator設定檔會列在「設定檔與組態」窗格中。
+
+. 在要刪除的設定檔上按一下滑鼠右鍵、然後選取*刪除*。
+. 按一下確認訊息中的* Yes*
++
+設定檔和相關組態檔會從Snap Creator中永久刪除。
+
+

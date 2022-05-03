@@ -1,0 +1,19 @@
+---
+permalink: domino-ops/concept_snapmirror_and_snapvault_setup.html 
+sidebar: sidebar 
+keywords: domino, ibm, snapmirror, snapvault, setup 
+summary: SnapMirror是災難恢復技術、專為從一線儲存設備容錯移轉到位於地理位置遠端站台的二線儲存設備而設計。針對符合標準及其他治理相關目的、旨在進行磁碟對磁碟Snapshot複製複本的歸檔技術。SnapVault 
+---
+= SnapMirror與SnapVault SnapMirror設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror是災難恢復技術、專為從一線儲存設備容錯移轉到位於地理位置遠端站台的二線儲存設備而設計。針對符合標準及其他治理相關目的、旨在進行磁碟對磁碟Snapshot複製複本的歸檔技術。SnapVault
+
+您必須先設定來源與目的地磁碟區之間的資料保護關係、然後初始化關係、才能將Snap Creator與這些產品搭配使用。
+
+
+NOTE: 本節中的程序說明如何在叢集Data ONTAP 式的整套功能中設定複寫關係。您可以在Data ONTAP 中的7-Mode中找到有關設定這些關係的資訊。

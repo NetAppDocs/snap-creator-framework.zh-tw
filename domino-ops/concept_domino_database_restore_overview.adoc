@@ -1,0 +1,49 @@
+---
+permalink: domino-ops/concept_domino_database_restore_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror, snapvault, destination, directories 
+summary: IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資料庫檔案。當Snapshot還原完成時、外掛程式會套用變更資訊目錄中記錄的任何變更。 
+---
+= 還原資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資料庫檔案。當Snapshot還原完成時、外掛程式會套用變更資訊目錄中記錄的任何變更。
+
+
+
+== 瞭解SnapMirror和SnapVault 還原作業
+
+您無法使用SnapCreator還原資料的SnapMirror複本。若要還原鏡射複本、您必須先中斷鏡射、然後手動還原資料。如需詳細資訊、請參閱 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《》《 9 Volume Disaster Recovery Express 指南》 ONTAP"]。
+
+當您SnapVault 從二線儲存設備還原一份還原時、只能使用時間點Volume還原功能。您無法執行最新的Volume還原或單一檔案還原。您可以先從次要儲存設備還原至主要儲存設備、藉此解決此限制。接著您可以從主要儲存設備執行最新的Volume還原、或視需要執行單一檔案還原。
+
+
+
+== 瞭解目的地目錄
+
+Volume還原和單一檔案還原通常具有不同的目的地目錄。您可以在備份與還原組態檔的Data Restore Directory參數中指定目的地目錄（請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["task_using the _the_GUI to _create_a_configuration _file.MD#STRUCT_E6C507729B3647FDB2E8D0818F22D3B"]）：
+
+* 若要進行Volume還原、您必須將Data Restore Directory（資料還原目錄）設定為Domino資料目錄。
+* 若要進行單一檔案還原、您必須將資料還原目錄設定為Domino資料磁碟區的子目錄。
+
+
+這表示、如果您要替代還原類型、則必須修改資料還原目錄、以針對每種還原類型指向正確的設定。否則、變更資訊將無法正確套用、而且資料將與您要還原的資料庫狀態不一致。當然、您也可以視需要為Volume和單一檔案還原建立不同的組態。
+
+
+
+== 執行還原的位置
+
+除了一個例外、您可以使用SnapCreator GUI或Snap Creator CLI來還原資料庫。若要在SAN環境中還原單一檔案、您必須使用CLI、如所述 xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[在SAN環境中執行單一檔案還原]。
+
+
+NOTE: 本指南說明如何在SAN環境中僅使用CLI進行單一檔案還原。否則、它會顯示如何使用GUI還原資料庫。如需有關如何使用CLI的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+*相關資訊*
+
+link:task_performing_point_in_time_volume_restore.adoc["執行Volume還原"]
+link:task_performing_point_in_time_single_file_restore_with_nfs.adoc["執行單一檔案還原"]
+link:concept_single_file_restore_in_fc_iscsi_environments.adoc["在SAN環境中執行單一檔案還原"]

@@ -1,0 +1,63 @@
+---
+permalink: administration/reference_parameters_to_set_up_event_management.html 
+sidebar: sidebar 
+keywords: parameter, management, snap, creator, server, event, ntap, asup, error, failure, msg, sendtrap 
+summary: 若要設定SnapCreator伺服器的事件管理、必須使用數個參數。 
+---
+= 設定事件管理的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要設定SnapCreator伺服器的事件管理、必須使用數個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+nTap ASUP_ERROR_啟用
+ a| 
+「Y」或「N」
+ a| 
+EnablesSnap Creator錯誤訊息、也會在AutoSupport 儲存控制器上記錄一個故障訊息。SnapCreator一律會在AutoSupport 備份開始及備份完成時、建立資訊資訊不完整訊息。
+
+
+
+ a| 
+故障_MSG
+ a| 
+ a| 
+記錄在Snap Creator故障時所定義的故障訊息。如果定義了SENDTRP、也可以將此故障訊息傳送至SENDTRP。
+
+
+
+ a| 
+SENDTRP
+ a| 
+ a| 
+與監控軟體或電子郵件介面、讓您將從Snap Creator產生的警示傳遞到自己的監控基礎架構。%MSG變數是從Snap Creator傳送的訊息。以下是您如何在UNIX系統上傳送電子郵件的範例：senntrapa=/usr/bin/mailx -s %msg myaddress@mydomain.com（開發/ null）
+
+若要在Windows系統上傳送電子郵件、您必須在任何命令之前新增「cmd.exe /c」。例如：SENDTRRA= cmd.exe /c ECHO %how
+
+
+
+ a| 
+成功陷阱
+ a| 
+ a| 
+與監控軟體或電子郵件介面、讓您將從Snap Creator產生的成功訊息傳遞到自己的監控基礎架構。%s指_msg變數是Snap Creator的成功訊息。以下是您如何在UNIX系統上傳送電子郵件的範例：suce_fap=/usr/bin/mailx -s %suce_msg myaddress@mydomain.com（開發/ null）
+
+若要在Windows系統上傳送電子郵件、您必須在任何命令之前新增「cmd.exe /c」。例如：some_fap= cmd.exe /c回應%Hello
+
+
+
+ a| 
+成功_ MSG
+ a| 
+ a| 
+成功備份SnapCreator之後、此設定會記錄所定義的訊息。訊息也會傳送至socure_f陷阱（如果已定義socm_f陷阱）、或傳送至sentdetRAP（如果已定義sentdRAP）。
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_creating_retention_policies.html 
+sidebar: sidebar 
+keywords: creating, retention, policies, local, configuration 
+summary: 如果您打算使用原則物件而非本機保留原則（包含在組態檔中）、則可以建立保留原則。 
+---
+= 建立保留政策
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您打算使用原則物件而非本機保留原則（包含在組態檔中）、則可以建立保留原則。
+
+在建立保留原則時、您可以建立備份類型和原則排程。

@@ -1,0 +1,54 @@
+---
+permalink: administration/concept_scf_component_plug_ins_ag.html 
+sidebar: sidebar 
+keywords: plug-in, applications, databases, snap, creator, plug-ins, binary, installation, integration, db2, ibm, domino, maxdb, mysql 
+summary: 外掛程式用於將應用程式或資料庫置於一致的狀態。SnapCreator包含數個外掛程式、這些外掛程式屬於二進位檔案的一部分、不需要任何額外安裝。 
+---
+= 用於應用程式整合的外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+外掛程式用於將應用程式或資料庫置於一致的狀態。SnapCreator包含數個外掛程式、這些外掛程式屬於二進位檔案的一部分、不需要任何額外安裝。
+
+支援的應用程式類型包括資料庫、電子郵件、Hypervisor和自訂應用程式。下列外掛程式可搭配Snap Creator使用：
+
+* 應用程式與資料庫外掛程式：
++
+** DB2
+** IBM Domino（Domino）
+** 最大資料庫
+** MySQL
++
+
+NOTE: MySQL外掛程式不支援多個資料庫的備份與還原作業。
+
+** Oracle
+** SAP高效能分析設備（HANA）
+** Sybase Adaptive Server Enterprise（ASE）
+
+
+* 程式集外掛程式：SnapManager
++
+** 適用於Microsoft Exchange SnapManager
+** 適用於Microsoft SQL Server SnapManager
+
+
+* Hypervisor外掛程式：
++
+** Citrix XenServer
+** Red Hat核心型虛擬機器（KVM）
+** VMware（vSphere適用於個別虛擬機器備份、vCloud Director則適用於vApp備份）
+
+
+
+
+如需詳細資訊、請參閱設定Snap Creator所需的外掛程式資訊。自訂外掛程式（也稱為「社群外掛程式」）是由開發人員社群所建立、可由Snap Creator啟用；不過、不支援自訂外掛程式。這些外掛程式會運用Snap Creator提供的介面。
+
+如需詳細資訊、請參閱 http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["SnapCreator架構討論社群論壇"]。
+
+*相關資訊*
+
+xref:reference_information_required_to_configure_snap_creator.adoc[設定Snap Creator所需的外掛程式資訊]

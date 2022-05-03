@@ -1,0 +1,14 @@
+---
+permalink: domino-ops/index.html 
+sidebar: sidebar 
+keywords: domino, ibm, plug-in, operations, guide, configure, use, backup, back up, restore, databases 
+summary: 說明如何設定及使用IBM Domino外掛程式來備份及還原IBM Domino資料庫。 
+---
+= IBM®Domino®外掛程式作業指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+說明如何設定及使用適用於Snap Creator 4.3.3的IBM Domino外掛程式來備份及還原IBM Domino資料庫。

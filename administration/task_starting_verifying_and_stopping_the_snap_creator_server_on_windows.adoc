@@ -1,0 +1,65 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, server, service, start, verify, stop, windows 
+summary: 您可以啟動和停止Snap Creator Server服務、並確認Snap Creator Server服務是否在Windows系統上執行。 
+---
+= 在Windows上啟動、驗證及停止Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟動和停止Snap Creator Server服務、並確認Snap Creator Server服務是否在Windows系統上執行。
+
+. 如果未開啟SnapCreator圖形使用者介面（GUI）、請開啟：
++
+.. 在網頁瀏覽器中輸入Snap Creator伺服器的URL： "https://IP_address:gui_port"[]
++
+根據預設、連接埠為84443。
+
+.. 使用Snap Creator GUI的認證登入。
+
+
++
+如果Snap Creator GUI開啟、則表示Snap Creator Server服務正在執行。
+
+. 在命令提示字元中、啟動或停止Snap Creator Server服務、或視情況確認Snap Creator Server服務是否正在執行：
++
+|===
+| 如果您想要... | 輸入下列項目... 
+
+
+ a| 
+啟動Snap Creator Server服務
+ a| 
+SC start snapcreatorserverservice
+
+
+
+ a| 
+確認Snap Creator Server服務是否正在執行
+ a| 
+SC查詢snapcreatorserverservice
+
+
+
+ a| 
+停止Snap Creator Server服務
+ a| 
+SC停止snapcreatorserverservice
+
+|===
++
+如果您要在前景執行SnapCreator、請執行下列步驟、而非使用SC start命令：
+
++
+.. 在安裝SnapCreator Server的主機上開啟命令提示字元、然後瀏覽至Snap Creator Serverdirectory：「CD \install_path\scServer4.3.0\bin\」
+.. 若要啟動Snap Creator Server、請執行批次指令碼：「cServer.bat start」
++
+關閉命令提示字元會停止Snap Creator Server服務。由於批次指令碼（scServer.bat）會在前景執行Snap Creator、因此只要命令提示字元開啟、Snap Creator Server就會執行。若要在背景執行Snap Creator、您應該使用Snap Creator Server服務命令。
+
+
+
+

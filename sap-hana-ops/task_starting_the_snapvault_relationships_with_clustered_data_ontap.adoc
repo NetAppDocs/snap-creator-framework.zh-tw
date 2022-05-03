@@ -1,0 +1,55 @@
+---
+permalink: sap-hana-ops/task_starting_the_snapvault_relationships_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, starting, start, snapvault, relationship, clustered, data, ontap 
+summary: 您必須先定義SnapMirror原則、才能開始SnapVault 建立彼此的關係。 
+---
+= 使用SnapVault 叢集Data ONTAP 式的等化功能來建立不一樣的關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義SnapMirror原則、才能開始SnapVault 建立彼此的關係。
+
+. 對於執行叢集Data ONTAP 式的儲存系統、SnapVault 您可以執行下列命令來啟動彼此之間的相依關係。
++
+[listing]
+----
+hana::> snapmirror policy create -vserver hana2b -policy SV_HANA
+hana::> snapmirror policy add-rule -vserver hana2b -policy SV_HANA -snapmirror-label daily -keep 20
+hana::> snapmirror policy add-rule -vserver hana2b -policy SV_HANA -snapmirror-label hourly -keep 10
+
+hana::> snapmirror policy show -vserver hana2b -policy SV_HANA
+
+                   Vserver: hana2b
+    SnapMirror Policy Name: SV_HANA
+              Policy Owner: vserver-admin
+               Tries Limit: 8
+         Transfer Priority: normal
+ Ignore accesstime Enabled: false
+   Transfer Restartability: always
+                   Comment: -
+     Total Number of Rules: 2
+                Total Keep: 8
+                     Rules: Snapmirror-label  Keep Preserve Warn
+                            ----------------- ---- -------- ----
+                            daily              20  false      0
+                            hourly             10  false      0
+----
++
+原則必須包含所有保留類別（標籤）的規則、這些保留類別（標籤）會用於Snap Creator組態。上述命令說明如何建立專屬的SnapMirror原則SV_HANA
+
+. 若要在SnapVault 備份叢集的叢集主控台上建立及啟動「支援」關係、請執行下列命令。
++
+[listing]
+----
+hana::> snapmirror create -source-path hana1a:hana_data -destination-path
+hana2b:backup_hana_data -type XDP –policy SV_HANA
+Operation succeeded: snapmirror create the relationship with destination
+hana2b:backup_hana_data.
+
+hana::> snapmirror initialize -destination-path hana2b:backup_hana_data -type XDP
+----
+

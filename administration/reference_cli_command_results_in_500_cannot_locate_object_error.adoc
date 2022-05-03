@@ -1,0 +1,88 @@
+---
+permalink: administration/reference_cli_command_results_in_500_cannot_locate_object_error.html 
+sidebar: sidebar 
+keywords: unix, 500, locate, error, cli, ssl, libraries 
+summary: 在UNIX環境中、執行CLI命令後、可能會遇到500找不到物件錯誤。 
+---
+= CLI命令導致500找不到物件錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX環境中、執行CLI命令後、可能會遇到500找不到物件錯誤。
+
+* *問題*
++
+在UNIX環境中、您嘗試執行CLI命令、但遇到500找不到物件錯誤、如下列範例所示：
+
++
+[listing]
+----
+500 Can't locate object method "new" via package "LWP::Protocol::https::Socket"
+----
+* *原因*
++
+此錯誤訊息可能有兩種原因：
+
++
+** 此錯誤訊息最可能的原因是未連結CLI SSL程式庫。
+** 如果錯誤訊息並非SSL程式庫未連結的結果、另一個原因可能是HTTPS Perl程式庫遺失。
+
+
+* *修正行動*
++
+若要解決程式庫檔案連結問題、必須手動建立simlinks。請洽詢作業系統管理員、確認是否存在libssl.so.so和libcrypto.so.so檔案。可能需要安裝SSL套件。
+
++
+假設檔案存在、您必須手動連結檔案。若要這麼做、請根據您的作業系統執行下列其中一組命令：
+
++
+** 32位元：
++
+[listing]
+----
+cd /usr/lib
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+** 對於3264IT：
++
+[listing]
+----
+cd /usr/lib64
+ln -s libssl.so.1.0.0 libssl.so.6
+ln -s libcrypto.so.1.0.0 libcrypto.so.6
+----
+
+
+* *修正行動*
++
+若要解決遺失的HTTPS Perl程式庫問題、請從CPAN模式安裝LwP::Protocol：https程式庫。
+
++
+請執行下列步驟：
+
++
+.. 開啟Linux伺服器的SSH工作階段、然後執行下列命令：Perl -MCPAN -e Shell
++
+
+NOTE: 如果這是您第一次使用CPAN、系統會提示您下列項目：
+
++
+[listing]
+----
+Would you like me to configure as much as possible automatically? [yes]
+----
++
+按* Enter *接受預設值。CPAN Shell隨即開啟。
+
+.. 執行下列命令：install lwP::Protocol：：https
++
+系統會下載並安裝必要的套件。如果需要其他套件、系統可能會提示您安裝這些套件、也會選取[yes]（是）。
+
+.. 安裝完成後、輸入exit返回正常Shell。
+
+
+

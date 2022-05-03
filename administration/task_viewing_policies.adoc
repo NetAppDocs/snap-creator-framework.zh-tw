@@ -1,0 +1,18 @@
+---
+permalink: administration/task_viewing_policies.html 
+sidebar: sidebar 
+keywords: retention, policy, view, list, snap, creator, gui 
+summary: 您可以檢視保留原則清單。 
+---
+= 檢視保留政策
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢視保留原則清單。
+
+. 從Snap Creator GUI主功能表中、選取* Policy*>* Policy Management *。
+. 從「原則管理員」索引標籤、檢視原則清單。
+

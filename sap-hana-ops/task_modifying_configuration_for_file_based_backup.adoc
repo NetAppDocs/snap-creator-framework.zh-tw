@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, change, changing, configuration, file-based, backup 
+summary: 您可以修改設定為「檔案型備份」的參數。後續的排程或隨選檔案型備份作業會反映更新的資訊。 
+---
+= 修改檔案型備份的組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以修改設定為「檔案型備份」的參數。後續的排程或隨選檔案型備份作業會反映更新的資訊。
+
+. 按一下SAP HANA設定檔。
+. 選取您要修改的組態、然後按一下「* HANA檔案型備份設定*」。
++
+image::../media/modifying_file_based_backup_configuration.gif[修改檔案型備份組態]
+
+. 編輯資訊、然後按一下*「Save*（儲存*）」。
+

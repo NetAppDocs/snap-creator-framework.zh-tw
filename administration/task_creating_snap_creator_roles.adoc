@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, creating, role 
+summary: 您可以使用Snap Creator GUI來建立Snap Creator角色。 
+---
+= 建立Snap Creator角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI來建立Snap Creator角色。
+
+. 從Snap Creator GUI主功能表中、選取*使用者與角色*>*角色管理*。
+. 在「角色管理」索引標籤中、按一下「*新增*」。
+. 在「新增角色」對話方塊中、輸入角色名稱和說明、然後按一下「*儲存*」。
++
+新角色會顯示在*角色*窗格中。
+
+

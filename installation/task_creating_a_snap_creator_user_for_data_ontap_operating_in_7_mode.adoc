@@ -1,0 +1,67 @@
+---
+permalink: installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user, ontap, 7-mode 
+summary: SnapCreator使用Data ONTAP REST API與儲存系統進行通訊。若要確保使用者帳戶只能存取Snap Creator、請在每個儲存控制器上建立新的角色、群組和使用者。角色會指派給群組、而群組中包含該使用者。這會控制對SnapCreator帳戶的存取並限制其範圍。 
+---
+= 建立Snap Creator使用者、以便Data ONTAP 在7-Mode中運作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator使用Data ONTAP REST API與儲存系統進行通訊。若要確保使用者帳戶只能存取Snap Creator、請在每個儲存控制器上建立新的角色、群組和使用者。角色會指派給群組、而群組中包含該使用者。這會控制對SnapCreator帳戶的存取並限制其範圍。
+
+您必須針對安裝SnapCreator的每個儲存控制器執行此程序一次。
+
+若要使用Data ONTAP VMware CLI（Data ONTAP SSH、主控台連線或遠端登入）建立Snap Creator使用者、以便在7-Mode中運作、請完成下列步驟。
+
+
+NOTE: 您不應直接從本文件複製及貼上命令、因為換行和硬退貨造成的字元傳輸不正確等錯誤可能會導致。將此程序中的命令複製並貼到文字編輯器、驗證命令、然後在CLI中輸入。
+
+. 執行下列命令、在儲存系統上建立角色、以定義Snap Creator所需的權限：
++
+[listing]
+----
+useradmin role add rolename -a login-\*,api-snapshot-\*,api-system-\*,
+api-ems-\*,api-snapvault-\*,api-snapmirror-\*,api-volume-\*,
+api-lun-\*,api-cg-\*,api-nfs-\*,api-file-\*,api-license-\*,
+api-net-\*api-clone-\*, api-options-get, api-wafl-sync
+----
++
+
+NOTE: 此步驟所示的命令包括Snap Creator所使用的所有API角色。不過、您可以僅加入所需的角色來限制使用者存取（例如、如果不使用SnapMirror、則不需要API-SnapMirror-*）。
+
++
+[listing]
+----
+useradmin role add sc_role -a login-*,api-snapshot-*,api-system-*,api-ems-*,api-snapvault-*,api-snapmirror-*,api-volume-*,
+api-lun-*,api-cg-*,api-nfs-*,api-file-*,api-license-*, api-net-*, api-clone-*, api-options-get, api-wafl-sync
+----
+. 在儲存系統上建立新群組、然後執行下列命令、將新建立的角色指派給群組：
++
+[listing]
+----
+useradmin group add groupname -r rolename
+----
++
+[listing]
+----
+useradmin group add snap_creator_group -r snap_creator_role
+----
+. 執行下列命令來建立使用者帳戶：
++
+[listing]
+----
+useradmin user add username -g groupname
+----
++
+[listing]
+----
+useradmin user add snap_creator_user -g snap_creator_group
+----
+. 輸入帳戶的密碼。
+
+
+建立SnapCreator的組態檔時、請使用此受限帳戶。

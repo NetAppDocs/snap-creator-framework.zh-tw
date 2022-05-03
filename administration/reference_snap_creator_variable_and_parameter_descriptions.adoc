@@ -1,0 +1,298 @@
+---
+permalink: administration/reference_snap_creator_variable_and_parameter_descriptions.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, variable, parameter, basic, configuration, description, snap, type, time, action 
+summary: SnapCreator包含基本組態所需的內建變數和參數。 
+---
+= SnapCreator變數與參數說明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator包含基本組態所需的內建變數和參數。
+
+|===
+| 變數 | 說明 
+
+
+ a| 
+%snap類型
+ a| 
+當您執行Snap Creator時、會使用此功能、這是您的保留政策（每日、每週、每月）。
+
+
+
+ a| 
+%snap_time
+ a| 
+命名Snapshot複本時所使用的時間戳記（月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：月號：也可用來命名備份報告和Sybase交易記錄。
+
+
+
+ a| 
+%ACTION
+ a| 
+執行Snap Creator時可執行的動作清單：（備份
+
+
+
+| clonewVol | clonewlun 
+
+
+| 架構 | 還原 
+
+
+| 備份刪除 | 備份清單 
+
+
+| cloneList | Pmsetup 
+
+
+| OSSV）  a| 
+%MSG
+
+
+
+ a| 
+用於傳送錯誤訊息給其他程式、例如電子郵件或Tivoli、只能搭配使用SENDTRP功能。
+ a| 
+%USER_defined
+
+|===
+下表列出並說明在基本組態中使用的Snap Creator參數：
+
+|===
+
+
+| 參數 | 設定 | 說明 
+
+
+ a| 
+SNAME
+ a| 
+ a| 
+指定Snapshot複本命名慣例應為唯一的。快照複本會根據命名慣例刪除。
+
+
+
+ a| 
+Snap_timestamp_only
+ a| 
+（是
+| n） 
+
+
+ a| 
+設定Snapshot命名慣例如果設定為Y、則Snapshot複本以Y-Y-Y-Y-Y-Y-Y-MMDHHMSS.結束。否則、新的Snapshot複本會重新命名為「以Y-Y-Y-Y-Y-Y-Y-MMMDDHHMMSS.結尾」。
+ a| 
+磁碟區
+ a| 
+
+
+
+ a| 
+列出您要建立Snapshot複本的主要儲存控制器和磁碟區、例如：
+
+[listing]
+----
+controller1:vol1,vol2,vol3;
+controller2:vol1;
+controller3:vol2,vol3
+---- a| 
+Volume群組
+ a| 
+Vol_1、vol_2、vol_n
+
+
+
+ a| 
+將多個磁碟區定義為單一群組。多個磁碟區會指定為以逗號分隔的清單、例如：
+
+[listing]
+----
+VOLUMES_01=filer1:vol1,vol2,vol3;filer2:vol1
+VOLUMES_02=filer1:vol3,vol4
+VOLUMES_03=filer2:vol3,vol4
+VOLUME_GROUPS=VOLUMES_01,VOLUMES_02,VOLUMES_03
+----
+
+NOTE: Volume群組僅支援備份作業。如果設定此參數、則會在備份期間忽略Volume參數。
+ a| 
+ntap_snapshot保留
+ a| 
+
+
+
+ a| 
+決定要保留給定政策的Snapshot複本數量例如：
+
+[listing]
+----
+daily:7,weekly:4,monthly:1
+---- a| 
+ntap_usern
+ a| 
+
+
+
+ a| 
+列出儲存系統及其對應的使用者名稱和密碼、例如：
+
+[listing]
+----
+controller1:joe/password1;
+controller2:bob/password2;
+controller3:ken/password3
+----
+
+NOTE: 密碼必須包含至少兩個字元。
+ a| 
+ntap_PWD_protection
+ a| 
+（是
+
+
+
+| n）  a| 
+啟用或停用密碼保護您必須加密所有密碼（儲存系統和應用程式或外掛程式）、並將加密的密碼儲存在組態檔中。
+ a| 
+傳輸
+
+
+
+ a| 
+HTTP
+| HTTPS  a| 
+可讓您使用HTTP或HTTPS連線至儲存控制器*注意：* HTTPS可能需要opensl-devel程式庫。
+
+
+
+ a| 
+連接埠
+ a| 
+ a| 
+設定儲存控制器使用的連接埠號碼、通常為80和443
+
+
+
+ a| 
+log_NUM
+ a| 
+ a| 
+指定Snap Creator必須保留的.DEBUG和.out報告數量
+
+
+
+ a| 
+組態類型
+ a| 
+外掛程式
+| 標準 
+
+
+ a| 
+指定組態類型有兩種組態類型：外掛程式和標準。您可以使用多個外掛程式組態來建置複雜的靜止和靜止備份工作流程。
+ a| 
+CMODE_叢 集使用者
+ a| 
+
+
+
+ a| 
+（叢集Data ONTAP 式的需求）列出主要和次要叢集Data ONTAP 式的叢集式叢集及其對應的使用者名稱和密碼例如：
+
+[listing]
+----
+cluster1:joe/password1;
+cluster2:bob/password2
+----
+
+NOTE: 密碼必須包含至少兩個字元。
+ a| 
+CMODE_叢 集名稱
+ a| 
+
+
+
+ a| 
+（叢集Data ONTAP 式的不需要）指定主要叢集Data ONTAP 式的叢集式叢集名稱
+ a| 
+CMODE_snapshot強制刪除
+ a| 
+（是
+
+
+
+| n）  a| 
+確保根據叢集Data ONTAP 式的Snapshot複本原則刪除應刪除的Snapshot複本、如果Snapshot複本具有任何相依性（例如複本）、則不會刪除這些複本。
+ a| 
+log_trace_enable
+
+
+
+ a| 
+（是
+| n）  a| 
+啟用或停用所有事件的記錄如果停用、則不會ONTAP 記錄「管理解決方案結果」物件。
+
+
+
+ a| 
+ntap_timeout
+ a| 
+秒
+ a| 
+設定所有儲存控制器的逾時值管理ONTAP 不可靠解決方案通話；預設值為60秒
+
+
+
+ a| 
+US_global_config
+ a| 
+（是
+| n） 
+
+
+ a| 
+可讓您使用全域組態來儲存值
+ a| 
+聯盟應用程式
+ a| 
+
+
+
+ a| 
+列出組態下的聯盟應用程式組態和設定檔名稱、例如：
+
+[listing]
+----
+databases@db2;databases@oracle
+---- a| 
+CMODE_Set
+ a| 
+（是
+
+
+
+| n）  a| 
+定義組態是針對Data ONTAP 以7-Mode運作的叢集式功能或Data ONTAP 功能性功能
+ a| 
+允許_重複_名稱
+
+
+
+ a| 
+（是
+| n）  a| 
+（選用）啟用或停用以複製Snapshot名稱建立組態檔的功能。此參數無法搭配全域（超級全域或設定檔全域）組態檔使用。
+
+
+
+ a| 
+SNAPCREATOR_MISSEDJOB_RUN
+ a| 
+（是
+| n） 
+|===

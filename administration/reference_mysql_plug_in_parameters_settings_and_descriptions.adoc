@@ -1,0 +1,84 @@
+---
+permalink: administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html 
+sidebar: sidebar 
+keywords: mysql, plug-in, net-mysql, interoperability, matrix 
+summary: MySQL外掛程式使用Net-MySQL與資料庫通訊。 
+---
+= MySQL外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL外掛程式使用Net-MySQL與資料庫通訊。
+
+MySQL外掛程式不支援多個資料庫的備份與還原作業。互通性對照表包含有關支援與相容性的最新資訊。
+
+對於Snap Creator組態、MySQL資料庫使用者必須獲得鎖定表格權限、以及其他權限、例如super和reload。
+
+下表列出MySQL外掛程式參數、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+app_name
+ a| 
+MySQL
+ a| 
+應用程式名稱
+
+
+
+ a| 
+MySQL_Databases
+ a| 
+DB_NAME：使用者名稱/密碼
+ a| 
+MySQL資料庫清單、使用者名稱和密碼。您可以將多個資料庫的使用者名稱和密碼指定為分號分隔清單、例如「db1:user1/pwd1；db2:user2/pwd2」。
+
+
+
+ a| 
+主機
+ a| 
+主機名稱
+ a| 
+資料庫所在主機的名稱。*注意：*驗證磁碟區僅在host=localhost時才正常運作。如果host=ip_address,則validation_volume將不會發現MySQL資料庫。
+
+
+
+ a| 
+連接埠
+ a| 
+DB_NAME：連接埠編號
+ a| 
+資料庫及其所接聽的連接埠清單、例如「dB1:3307；db2:3308」。
+
+
+
+ a| 
+master_slave
+ a| 
+（是
+| n） 
+
+
+ a| 
+指定備份資料庫環境：如果設定為Y、請備份主要資料庫。
+
+如果設定為N、則會備份從屬資料庫、或是不使用主/從組態。
+
+
+NOTE: SnapCreator Framework備份會在啟用Master_Slave選項的情況下、刪除MySQL伺服器上所需的MySQL二進位記錄檔。使用Snap Creator Framework進行MySQL（主要）資料庫備份會移除所有二進位記錄檔、只留下一個具有重設編號（.000001）的空白二進位記錄檔。由於此問題、從伺服器在備份作業之後無法啟動。
+ a| 
+Purge二進位記錄
+ a| 
+（是
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

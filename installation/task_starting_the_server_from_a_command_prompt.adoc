@@ -1,0 +1,35 @@
+---
+permalink: installation/task_starting_the_server_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, server, command, prompt 
+summary: 您可以執行批次指令碼（scServer.bat）、從命令提示字元手動啟動Snap Creator Server。 
+---
+= 從命令提示字元啟動伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行批次指令碼（scServer.bat）、從命令提示字元手動啟動Snap Creator Server。
+
+一般而言、只有在安裝期間未選取「*啟動伺服器做為服務*」選項時、才必須遵循此程序。
+
+您也可以透過Windows工作排程器、排定批次指令碼（scServer.bat）在啟動時執行。如需使用Windows工作排程器的詳細資訊、請參閱Windows作業系統的文件。
+
+由於批次指令碼（scServer.bat）會在前景執行Snap Creator、因此只要命令提示字元開啟、Snap Creator Server就會繼續執行。關閉命令提示字元會結束Snap Creator Server。若要在背景執行、應使用Snap Creator Server服務。
+
+. 開啟命令提示字元並輸入下列命令：
++
+[listing]
+----
+cd \install_path\scServerrelease-version\bin\
+scServer.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scServer4.1.0\bin\
+scServer.bat start
+----
+

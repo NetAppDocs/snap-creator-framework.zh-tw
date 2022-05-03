@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_3_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.3 
+summary: 您可以從Snap Creator 4.3.x升級、包括所有目前可用的修補程式版本。 
+---
+= 從Snap Creator 4.3.x升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從Snap Creator 4.3.x升級、包括所有目前可用的修補程式版本。
+
+Snap Creator Framework 4.1.x和4.3.x的升級程序相同
+
+
+NOTE: 如果您將Snap Creator Framework 4.3.1升級至4.3.1修補程式版本、則必須省略執行Java -Jar snapcreator.jar -Upgrade命令的最後步驟。

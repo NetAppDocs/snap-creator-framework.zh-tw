@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: modifying, modify, configuration, database, integrity, checks, sap, hana 
+summary: 您可以修改設定用於資料庫完整性檢查的參數。後續的排程或隨選完整性檢查作業會反映更新的資訊。 
+---
+= 修改資料庫完整性檢查的組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以修改設定用於資料庫完整性檢查的參數。後續的排程或隨選完整性檢查作業會反映更新的資訊。
+
+. 按一下SAP HANA設定檔。
+. 選取您要修改的組態、然後按一下「* HANA Integrity Check Settings*」。
++
+image::../media/modifying_database_integrity_check_configuration.gif[修改資料庫完整性檢查組態]
+
+. 編輯資訊、然後按一下*「Save*（儲存*）」。
+

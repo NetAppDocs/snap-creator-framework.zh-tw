@@ -1,0 +1,36 @@
+---
+permalink: administration/task_performing_volume_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: volume, restore, snap, creator, gui, perform, wizard 
+summary: 您可以使用Snap Creator GUI來執行Volume還原。 
+---
+= 執行Volume還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI來執行Volume還原。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 從*組態*索引標籤的*組態設定*窗格中、選取組態檔。
+. 選擇*操作*>*還原*。
++
+還原精靈會顯示在右窗格中。
+
+. 完成還原精靈中的頁面以執行還原。
++
+.. 在「*還原詳細資料*」頁面中、選取控制器/SVM名稱、還原磁碟區名稱、原則及還原Snapshot複本名稱、然後從「*還原類型*」下拉式清單中選取「*磁碟區還原*」。
++
+image::../media/restore_wizard_restore_details.gif[還原精靈還原詳細資料]
+
+.. 檢閱摘要、然後按一下「*完成*」。
+
+
++
+此時會出現一則警告訊息、詢問是否有更多項目要還原。
+
+. 按一下「*否*」、然後按一下「還原」確認頁面上的「*確定*」。
+. 在*主控台*窗格中、檢視訊息以確認還原已成功完成。
+

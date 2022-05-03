@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_cli_command_results_in_404_not_found_error.html 
+sidebar: sidebar 
+keywords: unix, cli, command, port, 404, error 
+summary: 在UNIX環境中、執行CLI命令時可能會遇到「404 Not Found」錯誤。 
+---
+= CLI命令會導致找不到404錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX環境中、執行CLI命令時可能會遇到「404 Not Found」錯誤。
+
+* *問題*
++
+在UNIX環境中、您會嘗試執行CLI命令、但會遇到「找不到404」錯誤。例如：
+
++
+[listing]
+----
+404 Not Found at //local/scServer4.1.0c/snapcreator>SnapCreator/Service/Engine.pm line 152
+----
+* *原因*
++
+此錯誤通常發生於SnapCreator以外的其他應用程式使用所選連接埠時。
+
+* *修正行動*
++
+確認SnapCreator正在選取的連接埠上執行、而且沒有其他使用連接埠的項目。
+
+

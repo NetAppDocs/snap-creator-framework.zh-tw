@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_performing_restore_operations.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, snapdrive, windows 
+summary: 您可以使用Snap Creator GUI執行Volume還原、單一檔案還原及應用程式定義的還原作業。 
+---
+= 執行還原作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI執行Volume還原、單一檔案還原及應用程式定義的還原作業。
+
+如果您使用SnapDrive 適用於Windows的功能、則必須使用SnapDrive 效能分析來執行還原作業、而還原作業應在Snap Creator之外執行。

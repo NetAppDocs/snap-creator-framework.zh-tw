@@ -1,0 +1,21 @@
+---
+permalink: administration/task_viewing_assigned_configuration_files_for_a_profile.html 
+sidebar: sidebar 
+keywords: configuration, file, assign, profile 
+summary: 您可以檢視指派給設定檔的組態檔清單。 
+---
+= 檢視指派給設定檔的組態檔清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢視指派給設定檔的組態檔清單。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 從「設定檔與組態」窗格中、展開設定檔的內容。
++
+指派給設定檔的組態檔會列在設定檔名稱下方。
+
+

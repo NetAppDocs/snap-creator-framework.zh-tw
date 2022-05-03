@@ -1,0 +1,20 @@
+---
+permalink: domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: domino, ibm, preparing, prepare, ibm, domino, backup, restore 
+summary: 在部署IBM Domino外掛程式之前、請確定您的儲存系統和主機符合最低資源需求。您也需要設定資料庫的儲存系統配置、以及選擇性地設定SnapMirror和SnapVault 相依關係。 
+---
+= 準備IBM Domino備份與還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在部署IBM Domino外掛程式之前、請確定您的儲存系統和主機符合最低資源需求。您也需要設定資料庫的儲存系統配置、以及選擇性地設定SnapMirror和SnapVault 相依關係。
+
+如需Snap Creator伺服器和代理程式安裝需求、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["SnapCreator Framework 4.1.2安裝指南"]。特別注意代理主機的IBM Domino預先安裝需求：
+
+* 在UNIX主機上、您必須建立指向IBM Domino共用物件檔案的符號連結。
+* 在Windows主機上、您必須將IBM Domino安裝路徑新增至path環境變數。
+

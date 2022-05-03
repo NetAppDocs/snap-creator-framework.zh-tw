@@ -1,0 +1,37 @@
+---
+permalink: administration/reference_cannot_connect_to_the_gui.html 
+sidebar: sidebar 
+keywords: unix, snap, creator, gui, https 
+summary: 在UNIX環境中、您可能無法連線至Snap Creator GUI；您必須在調查問題來源時確認特定情況是否存在。 
+---
+= 無法連線至SnapCreator GUI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX環境中、您可能無法連線至Snap Creator GUI；您必須在調查問題來源時確認特定情況是否存在。
+
+* *問題*
++
+在UNIX環境中、您無法連線至Snap Creator GUI。
+
+* *修正行動*
++
+驗證下列項目：
+
++
+** URL必須以HTTPS開頭。
++
+
+NOTE: 如果您使用HTTP而非HTTPS、結果可能是頁面上沒有任何內容、或是「？」 視您使用的瀏覽器而定。
+
+** URL中使用正確的連接埠號碼、而且沒有其他連接埠正在使用選取的連接埠。
++
+您可能會嘗試選擇不同的連接埠。
+
+** 允許透過作業系統的防火牆進行通訊。
+
+
+

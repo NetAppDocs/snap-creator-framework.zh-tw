@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_creating_a_snap_creator_user_for_data_ontap.html 
+sidebar: sidebar 
+keywords: creating, create, snap, creator, user 
+summary: 在安裝Snap Creator之前、您應該先建立Snap Creator使用者以供Data ONTAP 參考。建立Snap Creator使用者的程序取決於您的系統是以Data ONTAP 7-Mode或叢集Data ONTAP 式VMware執行。 
+---
+= 建立SnapCreator使用者Data ONTAP 以供參考
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝Snap Creator之前、您應該先建立Snap Creator使用者以供Data ONTAP 參考。建立Snap Creator使用者的程序取決於您的系統是以Data ONTAP 7-Mode或叢集Data ONTAP 式VMware執行。

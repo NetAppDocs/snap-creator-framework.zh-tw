@@ -1,0 +1,20 @@
+---
+permalink: sap-hana-ops/concept_configuring_data_backups.html 
+sidebar: sidebar 
+keywords: configuring, configure, data, backups, back-ups 
+summary: 您必須在安裝必要元件之後、設定資料備份 
+---
+= 設定資料備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+安裝必要的軟體元件之後、請依照下列步驟完成組態：
+
+. 設定專屬資料庫使用者和SAP HANA使用者儲存區。
+. 準備SnapVault 在所有儲存控制器上進行的區複寫。
+. 在次要儲存控制器上建立磁碟區。
+. 初始化SnapVault 資料庫磁碟區的相依關係。
+. 設定Snap Creator。
+

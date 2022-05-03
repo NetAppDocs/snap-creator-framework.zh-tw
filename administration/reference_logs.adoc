@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_logs.html 
+sidebar: sidebar 
+keywords: snap, creator, error, troubleshoot, cmd, output, debug, warn, error, out, debug, stderr 
+summary: SnapCreator提供實用的錯誤訊息和疑難排解記錄。 
+---
+= 錯誤訊息類型和疑難排解記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator提供實用的錯誤訊息和疑難排解記錄。
+
+Snap Creator提供下列類型的錯誤訊息：
+
+* *資訊*
++
+適用於標準的正常作業。
+
+* * CMD *
++
+Snap Creator執行的外部命令或指令碼（根據組態）、並記錄命令或指令碼的傳回碼。一般而言、這些命令是pre, post或APP quiesce或unquiesce命令。
+
+* *輸出*
++
+適用於Data ONTAPI程式庫呼叫。
+
+* *除錯*
++
+以取得偵錯資訊。
+
+* *警告*
++
+提醒您注意、但這通常被視為正常活動、不需要採取任何行動（例如、刪除Snapshot複本時）
+
+* *錯誤*
++
+表示問題、很可能需要手動操作來修正錯誤。SnapCreator會在任何錯誤訊息上結束。請務必先修正任何在再次執行之前發生的問題。SnapCreator不會自動修正問題、但您可以使用組態檔中定義的pre_exit_CMD、指定在結束Snap Creator之前要執行的動作。
+
+
+
+疑難排解記錄包含Snap Creator執行的任何外部命令或指令碼輸出（例如SnapDrive 、列舉）。如果您透過Snap Creator呼叫其他指令碼、請務必正確設定這些指令碼的結束代碼和輸出。如果發生問題、請勿以狀態0結束。
+
+每個Snap Creator設定檔和組態都有下列記錄可供使用：
+
+* *輸出*
++
+僅包含詳細的記錄資訊。
+
+* *除錯*
++
+包含詳細資訊和偵錯記錄資訊。如果在預設設定的組態檔中啟用追蹤訊息、則追蹤資訊會顯示在此記錄中。啟用追蹤訊息的參數為log_trace_enable -（Y|N）。
+
+* *錯誤*
++
+包含指定組態的所有錯誤事件歷程記錄。錯誤記錄有助於檢視過去錯誤的相關資訊、讓使用者能夠建立事件的關聯、並獲得歷史觀點。它可監控並作為將Snap Creator與監控應用程式整合的方法。
+
+* * Stderr*
++
+如果發生SnapCreator程式碼問題、請包含相關資訊；不過、標準錯誤串流記錄通常是空白的。
+
+
+
+輸出、除錯和Stderr記錄會保留在組態檔中的log_NUM值所定義、而錯誤記錄一律會附加。所有記錄都會寫入/scServer_install_path/engins/logs/profile目錄。
+
+Snap Creator Agent也會選擇性地建立Out、偵錯和Stderr記錄、預設會啟用下列參數設定：sc_agent_log_enable=Y

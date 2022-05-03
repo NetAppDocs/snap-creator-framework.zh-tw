@@ -1,0 +1,39 @@
+---
+permalink: administration/concept_guidelines_to_define_snap_creator_policies.html 
+sidebar: sidebar 
+keywords: snap, creator, policies, guidelines, retendtion, snapshot 
+summary: SnapCreator原則是使用者定義的Snapshot複本保留、適用於主要儲存設備上的Snapshot複本、SnapVault 以及次要儲存設備上的SnapMirror複本。您可以使用原則來定義您要保留的Snapshot複本數目和Snapshot複本存留期。 
+---
+= 定義Snap Creator原則的準則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator原則是使用者定義的Snapshot複本保留、適用於主要儲存設備上的Snapshot複本、SnapVault 以及次要儲存設備上的SnapMirror複本。您可以使用原則來定義您要保留的Snapshot複本數目和Snapshot複本存留期。
+
+您必須在「* Snapshot Retention Count*」（* Snapshot Retention Count*）欄位中定義至少一個原則。對於SNetApp、您可以將相同的原則與不同的不一致保留期間建立關聯。SnapVault SnapVault例如、若要建立每日Snapshot複本、並在主要儲存設備上保留七天、在次要儲存設備上保留一個月、您必須使用下列原則選項和設定：
+
+* * Snapshot Retention Count*：每日：7.
+* *《保留計數》*：每日：SnapVault 28
+
+
+您也可以指定刪除Snapshot複本的最短天數。根據上述範例、您應該使用下列選項和設定：
+
+* * Snapshot保留期限*：7.
+* *《保留年齡》*：SnapVault 28
+
+
+此外、您也可以在組態檔中設定下列參數、依年齡指定刪除Snapshot複本：
+
+nTap快照_delete_by_age_only =主要|次要|兩者
+
+
+NOTE: 此參數無法透過Snap Creator GUI使用。如需設定Snapshot複本所用組態檔參數的詳細資訊、請參閱相關參考資料。
+
+SnapCreator一次只能執行一個原則。最大使用期限值是適用於所有原則的全域參數。若要設定額外的每週原則、請定義原則、然後使用cron或task manager、並將Snap Creator變數%snap_type設為每週、一週在Snap Creator中呼叫一次。
+
+*相關資訊*
+
+xref:reference_parameters_to_set_up_a_snapshot_copy.adoc[設定Snapshot複本的參數]

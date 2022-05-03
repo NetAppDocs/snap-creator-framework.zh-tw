@@ -1,0 +1,22 @@
+---
+permalink: administration/reference_sap_hana_plug_in.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql 
+summary: SAP HANA外掛程式可讓您建立備份、並根據儲存Snapshot複本執行SAP HANA資料庫的時間點還原。 
+---
+= SAP HANA外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANA外掛程式可讓您建立備份、並根據儲存Snapshot複本執行SAP HANA資料庫的時間點還原。
+
+此外掛程式使用SAP HANA hdbsqll用戶端執行SQL命令、以提供資料庫一致性、並管理SAP HANA備份目錄。外掛程式同時支援SAP認證硬體設備和量身打造的資料中心整合（TDI）方案。
+
+外掛程式是以SnapCreator代理程式的一部分安裝在可存取SAP HANA資料庫節點的主機上。
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854420["SnapCreator Framework 4.3.3 SAP HANA外掛作業指南"]

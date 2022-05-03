@@ -1,0 +1,43 @@
+---
+permalink: administration/task_running_a_snap_creator_dump.html 
+sidebar: sidebar 
+keywords: collect, support, information, perform, snap, creator, dump, gui 
+summary: 您可以使用Snap Creator GUI中的scdump來收集支援資訊。 
+---
+= 執行SnapCreator傾印
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從Snap Creator GUI使用* scdump *來收集支援資訊。
+
+Snap Creator傾印（scdump）會在設定檔層級收集下列支援資訊、並將其放入.zip檔案中：
+
+* 設定檔的組態檔
+* 記錄檔（outuptut和偵錯）
+* 其他記錄檔（server.log、GUI記錄和sc_server.log）
+* 環境資訊（scdump）、例如下列項目：
++
+** SnapCreator版本（建置資訊、日期等）
+** 主機作業系統與架構
+** 資料庫與版本
+** 版本SnapDrive
++
+... 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+... 從「設定檔與組態」窗格中、展開設定檔並選取組態檔。
+... 選擇* Actions *>* scdump *。
++
+
+NOTE: 此程序可能需要數分鐘的時間。不要多次選擇scdump選項。
+
+... 儲存.Zip檔案。
++
+壓縮檔（scdump設定檔日期/時間.zip）會儲存至引擎子目錄中的Snap Creator Server安裝目錄。
+
+
+
+
+
+

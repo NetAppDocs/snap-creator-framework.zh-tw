@@ -1,0 +1,17 @@
+---
+permalink: administration/concept_snap_creator_agent_security.html 
+sidebar: sidebar 
+keywords: snap, creator, server, agent, https, multitenant, environment, self-signed 
+summary: SnapCreator Server只能透過HTTPS與Snap Creator Agent通訊、以確保安全且加密的通訊。此功能在多租戶環境中非常重要。自我簽署憑證可讓您使用自己產生的憑證搭配Snap Creator Agent。 
+---
+= SnapCreator代理程式安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator Server只能透過HTTPS與Snap Creator Agent通訊、以確保安全且加密的通訊。此功能在多租戶環境中非常重要。自我簽署憑證可讓您使用自己產生的憑證搭配Snap Creator Agent。
+
+
+NOTE: 只有Snap Creator 4.1及更新版本才支援此功能。

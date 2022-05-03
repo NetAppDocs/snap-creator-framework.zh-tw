@@ -1,0 +1,22 @@
+---
+permalink: administration/task_deleting_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: delete, schedule, job, management 
+summary: 您可以刪除排程的工作。 
+---
+= 刪除排程的工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除排程的工作。
+
+. 從SnapCreator GUI主功能表中、選取*管理*>*排程*。
+. 從「排程」索引標籤、從排程工作清單中選取工作、然後按一下「*刪除*」。
+. 在確認視窗中按一下*是*。
++
+排程的工作會從清單中刪除。
+
+

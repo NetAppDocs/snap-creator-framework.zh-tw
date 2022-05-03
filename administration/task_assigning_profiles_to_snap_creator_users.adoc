@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_profiles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, profile, menu, assign 
+summary: 您可以使用Snap Creator GUI、將設定檔指派給Snap Creator使用者。 
+---
+= 指派設定檔給Snap Creator使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI、將設定檔指派給Snap Creator使用者。
+
+. 從Snap Creator GUI主功能表中、選取*使用者與角色*>*使用者管理*。
+. 在使用者管理索引標籤中、選取所需的使用者名稱、然後按一下*指派設定檔*。
+. 將所需的設定檔從左欄移到右欄、然後按一下*「Save（儲存）」*。
++
+您可以在欄之間選取並拖曳設定檔、或按一下箭頭、在欄之間移動設定檔。
+
+. 選取使用者並在*「指派的設定檔與角色」窗格中檢視指派的設定檔、以確認已指派設定檔。
+

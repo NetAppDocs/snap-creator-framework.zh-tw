@@ -1,0 +1,21 @@
+---
+permalink: domino-ops/task_disconnecting_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, disconnecting, disconnect, snapshot, copy 
+summary: 還原作業完成時、您需要中斷掛載的Snapshot複本的連線。 
+---
+= 中斷Snapshot複本連線
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原作業完成時、您需要中斷掛載的Snapshot複本的連線。
+
+下列程序說明如何中斷Windows Server 2008主機上已掛載Snapshot複本的連線。適用於Windows的支援功能、而且主機上必須執行SnapCreator Agent。SnapDrive
+
+. 在「伺服器管理員」中、按一下「*儲存設備*」>「* SnapDrive 物件*」>「*實體伺服器名稱*」>「*磁碟*」。
+. 在「磁碟識別」窗格中、選取掛載的磁碟、然後按一下右鍵功能表中的「*中斷磁碟*」。
+. 在「中斷磁碟連線」對話方塊中、按一下「*是*」。
+

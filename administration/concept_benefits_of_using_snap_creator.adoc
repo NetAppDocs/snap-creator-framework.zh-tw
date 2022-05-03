@@ -1,0 +1,23 @@
+---
+permalink: administration/concept_benefits_of_using_snap_creator.html 
+sidebar: sidebar 
+keywords: benefits, using, snap, creator, framework, hypervisors, applications, databsases, microsoft, sql, ibm, db2, maxdb, sap, hana, imt, oracle 
+summary: SnapCreator Framework提供簡單靈活的軟體架構、可滿足各種儲存需求。 
+---
+= 使用Snap Creator的優點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator Framework提供簡單靈活的軟體架構、可滿足各種儲存需求。
+
+SnapCreator用於下列內容、以因應各種儲存需求：
+
+* 作為單一介面、可管理具有多個作業系統、Hypervisor、應用程式和資料庫的環境。
+* 用於備份、還原及複製不具備SnapManager 任何功能的應用程式或資料庫、例如IBM DB2、MaxDB或SAP HANA。
+* 如果SnapManager 您SnapManager 的環境中已設定適用於Microsoft Exchange Server和適用於Microsoft SQL Server的功能、則可將其作為備份與監控的集中式介面。
+* 使用含有SnapManager 供應功能的應用程式或資料庫（例如Oracle）時、主機環境不符合互通性對照表IMT （簡稱「互通性對照表」）或類似要求。
+* 取代儲存動作的自訂指令碼、提供一致的方法來建立Snapshot複本、執行SnapVault 更新程式、SnapMirror更新、複製磁碟區或LUN、並透過Snap Creator工作流程、隨處呼叫自訂指令碼。
+

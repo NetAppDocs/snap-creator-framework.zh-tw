@@ -1,0 +1,22 @@
+---
+permalink: domino-ops/concept_create_a_domino_backup_using_snap_creator.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, databases 
+summary: 您可以隨需或排程備份資料庫。您可以使用Snap Creator GUI或Snap Creator CLI來備份資料庫。 
+---
+= 備份資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以隨需或排程備份資料庫。您可以使用Snap Creator GUI或Snap Creator CLI來備份資料庫。
+
+
+NOTE: 本指南說明如何使用GUI備份資料庫。如需有關如何使用CLI的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+*相關資訊*
+
+link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["隨需備份資料庫"]
+link:task_scheduling_actions_using_the_snap_creator_gui.adoc["排程備份"]

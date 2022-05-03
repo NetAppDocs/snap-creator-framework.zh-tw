@@ -1,0 +1,18 @@
+---
+permalink: installation/concept_scf_component_agent.html 
+sidebar: sidebar 
+keywords: snap, creator, agent 
+summary: SnapCreator代理程式通常安裝在安裝應用程式或資料庫的同一部主機上。代理程式是外掛程式所在的位置。有時、在Snap Creator中、代理程式會縮短為scAgent。 
+---
+= SnapCreator代理程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator代理程式通常安裝在安裝應用程式或資料庫的同一部主機上。代理程式是外掛程式所在的位置。有時、在Snap Creator中、代理程式會縮短為scAgent。
+
+代理程式接受來自Snap Creator Server的應用程式靜止和取消靜止命令、以及其他的pre/POST命令。使用外掛程式時、必須使用SnapCreator代理程式。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["SnapCreator Framework 4.3.3系統管理指南"]

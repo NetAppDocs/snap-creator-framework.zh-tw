@@ -1,0 +1,37 @@
+---
+permalink: administration/reference_what_you_should_back_up.html 
+sidebar: sidebar 
+keywords: create, backup, copy, snap, creator, directories, information, server, snapcreator 
+summary: 最佳實務做法是建立特定Snap Creator目錄的備份複本、以協助確保Snap Creator資料可在不遺失的情況下還原。 
+---
+= 應該備份哪些Snap Creator資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+最佳實務做法是建立特定Snap Creator目錄的備份複本、以協助確保Snap Creator資料可在不遺失的情況下還原。
+
+您應該建立下列目錄的備份複本：
+
+* Snap Creator Server 4.3引擎子目錄：
++
+** SnapCreator資料庫（.\snapcreator）
+** SnapCreator伺服器內容（.\etc）
+** 設定檔與組態（.\config）
+** 記錄（.\logs）
+** 外掛程式儲存庫（若已啟用）（.\snapreatorPlugin）
+
+
+* Snap Creator Agent目錄：
++
+** SnapCreator代理程式內容（.\etc）
+** 記錄（若已啟用）（.\logs）
+** 外掛程式（..\外掛程式）
+
+
+
+
+
+NOTE: 最佳情況下、應將備份排程在可以停止Snap Creator服務或程序的情況下進行、以確保Snap Creator資料的備份一致。

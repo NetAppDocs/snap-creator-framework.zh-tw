@@ -1,0 +1,21 @@
+---
+permalink: administration/task_viewing_a_list_of_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: schedule, job, view, list, snap, creator, gui 
+summary: 您可以檢視排程工作的清單。 
+---
+= 檢視排程工作的清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以檢視排程工作的清單。
+
+. 從SnapCreator GUI主功能表中、選取*管理*>*排程*。
+. 從「排程」索引標籤、檢閱排程工作的清單。
++
+「上次執行結果」欄位會顯示上次排程工作的狀態。欄位中的綠色核取符號表示工作已成功執行、紅色的「X」表示發生故障。
+
+

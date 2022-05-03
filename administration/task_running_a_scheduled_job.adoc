@@ -1,0 +1,18 @@
+---
+permalink: administration/task_running_a_scheduled_job.html 
+sidebar: sidebar 
+keywords: schedule, job, run, snap, creator, gui 
+summary: 您可以執行排程的工作。 
+---
+= 執行排程工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行排程的工作。
+
+. 從SnapCreator GUI主功能表中、選取*管理*>*排程*。
+. 從「排程」索引標籤、從排程工作清單中選取工作、然後按一下「*執行*」。
+

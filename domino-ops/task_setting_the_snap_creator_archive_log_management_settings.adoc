@@ -1,0 +1,74 @@
+---
+permalink: domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html 
+sidebar: sidebar 
+keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transaction, logs 
+summary: 如果您使用Domino交易記錄、IBM Domino外掛程式會將Domino交易記錄的複本歸檔到changeinfo目錄、以便在最新的還原作業中使用。您必須先啟用交易記錄管理、Snap Creator才會清除不再需要的交易記錄複本。 
+---
+= 清除Domino交易記錄的歸檔複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用Domino交易記錄、IBM Domino外掛程式會將Domino交易記錄的複本歸檔到changeinfo目錄、以便在最新的還原作業中使用。您必須先啟用交易記錄管理、Snap Creator才會清除不再需要的交易記錄複本。
+
+Domino外掛程式會將changeinfo檔案和Domino交易記錄的封存複本儲存在changeinfo目錄中。外掛程式會根據組態的保留原則、自動清除.info檔案。除非您在Snap Creator中明確啟用交易記錄管理、否則不會清除不需要的交易記錄複本。
+
+在設定交易記錄管理時、請務必在您要保留以進行最新還原作業的交易記錄歸檔複本數量與包含變更資訊目錄的磁碟區大小之間取得適當的平衡。
+
+
+IMPORTANT: 請勿將歸檔記錄目錄參數設定為Domino交易記錄的路徑。這樣做可能會損壞Domino環境。
+
+. 在「設定檔與組態」窗格中、選取組態檔、然後按一下「*歸檔記錄管理*」索引標籤。
+. 在*歸檔記錄管理*索引標籤中、為交易記錄管理設定指定下列值：
++
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+啟用歸檔記錄
+ a| 
+是
+ a| 
+啟用交易記錄清除。
+
+
+
+ a| 
+歸檔記錄保留
+ a| 
+輸入大於或等於Snapshot複本保留天數的值。
+ a| 
+保留交易記錄的天數。
+
+
+
+ a| 
+歸檔記錄目錄
+ a| 
+變更資訊/記錄
+ a| 
+要清理的目錄。*重要事項：*請勿指定Domino交易記錄的路徑。這樣做可能會損壞Domino環境。
+
+
+
+ a| 
+歸檔記錄副檔名
+ a| 
+ a| 
+Domino交易記錄檔複本的副檔名。
+
+
+
+ a| 
+歸檔記錄循環搜尋
+ a| 
+n
+ a| 
+Snap Creator外掛程式會將.txn檔案放在changeinfo目錄的logs子目錄中、因此不需要循環搜尋。
+
+|===
+. 按一下「組態內容」窗格中的「*儲存*」以儲存變更。
+

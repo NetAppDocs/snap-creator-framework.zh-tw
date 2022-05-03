@@ -1,0 +1,27 @@
+---
+permalink: administration/task_creating_profiles.html 
+sidebar: sidebar 
+keywords: profile, snap, creator, gui, configuration 
+summary: 您可以使用Snap Creator GUI建立設定檔來組織組態檔案。 
+---
+= 建立設定檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI建立設定檔來組織組態檔案。
+
+第一次開啟SnapCreator GUI時、會自動顯示「New Profile」（新設定檔）對話方塊、提示您建立新的設定檔。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 在「*設定檔與組態*」窗格中、按一下「*新增設定檔*」。
++
+此時會顯示New Profile（新設定檔）對話方塊。
+
+. 輸入新設定檔的名稱、然後按一下「*確定*」。
++
+新的設定檔會列在「**設定檔與組態」窗格中、而「組態」精靈會顯示在右窗格中。
+
+

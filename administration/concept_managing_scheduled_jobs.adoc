@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_managing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: manage, scheduled, jobs, listing, running, deleting, managing 
+summary: 您可以建立排程工作（以自動化備份作業）、並透過編輯、列出、執行及刪除這些排程工作來管理排程工作。 
+---
+= 管理排程工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立排程工作（以自動化備份作業）、並透過編輯、列出、執行及刪除這些排程工作來進行清單管理。
+
+Snap Creator Server包含集中式排程器、可透過原則排程（原則物件的一部分）或透過排程器直接建立Snap Creator工作。排程器最多可同時執行10個工作、並可在執行中的工作完成之前佇列其他工作。

@@ -1,0 +1,59 @@
+---
+permalink: sap-hana-ops/task_resuming_a_snapvault_relationship_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: resuming, resume, snapvault, relationship, clustered, data, ontap 
+summary: 如果您使用非最新的Snapshot備份來還原、則需要恢復SnapVault 「支援」關係、以便Snap Creator繼續執行備份。 
+---
+= 使用SnapVault 叢集Data ONTAP 式的不一樣功能恢復不一樣的關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用非最新的Snapshot備份來還原、則需要恢復SnapVault 「支援」關係、以便Snap Creator繼續執行備份。
+
+. 重新建立SnapVault 及重新同步化此等資訊關係。
++
+[listing]
+----
+hana::> snapmirror create -source-path hana1a:hana_data -destination-path
+hana2b:backup_hana_data -type XDP
+Operation succeeded: snapmirror create the relationship with destination
+hana2b:backup_hana_data.
+
+hana::> snapmirror resync -destination-path hana2b:backup_hana_data -type XDP
+
+Warning: All data newer than Snapshot copy sc-backup-daily_20140430121000 on volume
+hana2b:backup_hana_data will be deleted.
+Do you want to continue? {y|n}: y
+[Job 6554] Job is queued: initiate snapmirror resync to destination "hana2b:backup_hana_data".
+[Job 6554] Job succeeded: SnapMirror Resync Transfer Queued
+----
+. 若要實際重新啟動SnapVault 此功能、需要手動複製Snapshot複本。
++
+[listing]
+----
+hana::> snapshot create -vserver hana1a -volume hana_data -snapshot sv_resync
+
+hana::> snapshot modify -vserver hana1a -volume hana_data -snapshot sv_resync -snapmirror-label daily
+
+hana::> snapmirror update -destination-path hana2b:backup_hana_data
+Operation is queued: snapmirror update of destination hana2b:backup_hana_data.
+----
+. 驗證SnapVault 目標清單中是否顯示了此等不景關係。
++
+[listing]
+----
+hana::> snapmirror list-destinations -source-path hana1a:hana_data
+                                                  Progress
+Source             Destination         Transfer   Last         Relationship
+Path         Type  Path         Status Progress   Updated      Id
+----------- ----- ------------ ------- --------- ------------ ---------------
+hana1a:hana_data
+            XDP   hana2b:backup_hana_data
+                               Transferring
+                                       38.46KB   04/30 18:15:54
+                                                              9137fb83-cba9-11e3-85d7-123478563412
+----
+

@@ -1,0 +1,64 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_exchange_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, exchange, plug-in, centralize, backup, operation 
+summary: Microsoft Exchange的支援功能外掛程式可透過Snap Creator集中管理Microsoft Exchange Server的備份作業。SnapManager使用此外掛程式、您可以SnapManager 透過Snap Creator設定數十或數百個Exchange伺服器的支援、讓您從SnapManager 單一介面檢視所有的Exchange備份工作和狀態。 
+---
+= 適用於Microsoft Exchange外掛程式SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Microsoft Exchange的支援功能外掛程式可透過Snap Creator集中管理Microsoft Exchange Server的備份作業。SnapManager使用此外掛程式、您可以SnapManager 透過Snap Creator設定數十或數百個Exchange伺服器的支援、讓您從SnapManager 單一介面檢視所有的Exchange備份工作和狀態。
+
+不像其他外掛程式、SnapManager 支援Microsoft SnapManager SQL Server和SnapManager Microsoft Exchange的支援功能、可利用PowerShell與現有的SnapManager 安裝功能進行通訊。這個元件需要已安裝且正在運作的不支援產品。SnapManager SnapManager這個支援程式使用全新備份PowerShell Cmdlet透過支援功能建立備份。SnapManager SnapManager所有的複製與還原動作都應該繼續透過SnapManager 這個介面來驅動。
+
+
+NOTE: 如需支援或檢視相容性對照表的最新資訊、請參閱互通性對照表。
+
+Microsoft Exchange的支援功能外掛程式需要將Snap Creator Agent安裝在與Microsoft Exchange相同的主機上。SnapManager SnapManager您應該將SC_agent_timeout值設為900或更高。
+
+下表SnapManager 提供Microsoft Exchange外掛程式參數的功能、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+SME_PS_CONF
+ a| 
+範例：「C:\Program Files\NetApp\SnapManager for Exchange」
+ a| 
+指定PowerShell組態檔案的路徑SnapManager 、以供Microsoft Exchange使用。
+
+
+
+ a| 
+SME_backup_options
+ a| 
+範例：「伺服器'EX2K10-DAG01」-GenericNaming -Management Group 'tandard'-NoFunctatefs $假- RetainBackups 8 -StorageGroup 'dag01_db01'-Backup CopyRemoteCCRNode $假
+ a| 
+指定SnapManager 適用於Microsoft Exchange備份選項的功能。Snap Creator使用PowerShell Cmdlet來進行新的備份。
+
+
+
+ a| 
+SME_SERVER_NAME
+ a| 
+範例：「EX2K10-DAG01」
+ a| 
+指定SnapManager Microsoft Exchange伺服器名稱的功能。
+
+
+
+ a| 
+SM_32bit
+ a| 
+（是
+| n） 
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

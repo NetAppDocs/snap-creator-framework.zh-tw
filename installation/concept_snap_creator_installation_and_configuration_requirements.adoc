@@ -1,0 +1,122 @@
+---
+permalink: installation/concept_snap_creator_installation_and_configuration_requirements.html 
+sidebar: sidebar 
+keywords: snap, creator, install, installation, configuration, requirements 
+summary: 在安裝Snap Creator Framework之前、您應該瞭解授權、軟體及硬體的特定安裝與組態需求。 
+---
+= SnapCreator安裝與組態需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝Snap Creator Framework之前、您應該瞭解授權、軟體及硬體的特定安裝與組態需求。
+
+
+
+== 授權需求
+
+雖然Snap Creator不需要授權、但視您使用Snap Creator時想要執行的動作而定、可能需要下列授權：
+
+* FlexClone（用於磁碟區複製）
+* 核心套件（適用於NetApp管理主控台資料保護功能和Operations Manager主控台）Active IQ Unified Manager
+* 開放式系統SnapVault 不二（適用於OSSV行動）
+* （僅供執行）SnapDrive SnapDrive
+* SnapMirror（適用於SnapMirror行動）
+* 還原SnapRestore
+* （僅供執行）SnapVault SnapVault
+
+
+請參閱互通性對照表、網址為 http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]，瞭解有關支援軟體的詳細資訊。
+
+
+
+== 軟體資訊
+
+視您的環境而定、可能需要下列軟體：
+
+* Java（必填）
++
+
+NOTE: SnapCreator Framework 4.3.3僅支援OpenJDK和Oracle Java 1.8 Update 72及更新版本。
+
+* 部門（必填）Data ONTAP
+* Microsoft .NET Framework
+* 作業系統：
++
+
+NOTE: 目前僅支援美國型作業系統。
+
++
+** UNIX平台：
++
+
+NOTE: SnapCreator僅支援適用於所有UNIX平台的Bash Shell。
+
++
+*** AIX
+*** HP-UX
+*** Linux
+*** Solaris
+
+
+** Microsoft Windows
+
+
+* 網頁瀏覽器：
++
+** Internet Explorer
+** Firefox
+
+
+
+
+請參閱互通性對照表、網址為 http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]，瞭解有關支援軟體的詳細資訊。
+
+
+
+== 硬體需求
+
+Snap Creator硬體需求如下：
+
+* SnapCreator伺服器需求：
++
+|===
+| 硬體元件 | 最低 | 建議 
+
+
+ a| 
+處理器
+ a| 
+1核心
+ a| 
+4核心、2 GHz或更快
+
+
+
+ a| 
+記憶體（適用於Snap Creator加上作業系統）
+ a| 
+2 GB RAM
+ a| 
+4 GB RAM
+
+
+
+ a| 
+磁碟空間
+ a| 
+5 GB
+ a| 
+50 GB以上（根據要儲存的記錄數目而定）
+
+|===
+* SnapCreator代理程式需求：
++
+如果未部署外掛程式或使用預先封裝的外掛程式、則至少需要256 MB記憶體。
+
++
+預先封裝的外掛程式不需要任何額外的記憶體需求。其他外掛程式可能有其他需求。
+
+

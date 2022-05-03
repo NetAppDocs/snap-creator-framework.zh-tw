@@ -1,0 +1,33 @@
+---
+permalink: administration/reference_clonevol_reports_that_aggregate_does_not_exist.html 
+sidebar: sidebar 
+keywords: clustered, data, ontap, storage, virtual, machine, svm, cloning, clonevol 
+summary: 對於叢集Data ONTAP 式的實體、必須將Aggregate指派給儲存虛擬機器（SVM）以進行複製。否則、clonewal Vol動作可能會傳回錯誤。 
+---
+= clonewal報告不存在Aggregate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於叢集Data ONTAP 式的實體、必須將Aggregate指派給儲存虛擬機器（SVM）以進行複製。否則、clonewal Vol動作可能會傳回錯誤。
+
+* *問題*
++
+clonewVol巨集指令會傳回類似下列範例的錯誤：
+
++
+[listing]
+----
+ERROR: com.netapp.snapcreator.storage.executor.ZapiExecutorException: netapp.manage.NaAPIFailedException: Aggregate [aggregate name] does not exist (errno=14420)
+----
+* *原因*
++
+此Aggregate未指派給SVM進行複製。
+
+* *修正行動*
++
+將Aggregate指派給SVM進行複製：vserver modify -vserver [vserver_name]-agg-list [Aggregate名稱]
+
+

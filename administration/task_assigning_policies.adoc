@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_policies.html 
+sidebar: sidebar 
+keywords: assign, retention, policy, configuration, snap, creator, gui, assignment 
+summary: 您可以使用Snap Creator GUI將保留原則指派給組態檔案。 
+---
+= 指派原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI將保留原則指派給組態檔案。
+
+. 從Snap Creator GUI主功能表中、選取* Policy*>* Policy Assignments *。
+. 從「設定檔」窗格中選取設定檔。
+. 選取右窗格中適當的核取方塊、選取要指派給設定檔的原則或原則、然後按一下*「Save（儲存）」*。
++
+如果設定檔中已存在組態檔、則會顯示一則訊息、通知您指派的原則將會取代組態檔中的設定。
+
+. 按一下「*是*」指派原則。
+

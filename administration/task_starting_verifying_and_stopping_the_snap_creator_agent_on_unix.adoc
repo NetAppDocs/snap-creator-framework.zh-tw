@@ -1,0 +1,42 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_unix.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, verify, start, stop, unix 
+summary: 您可以啟動和停止Snap Creator Agent服務、並確認Snap Creator Agent服務是否在UNIX系統上執行。 
+---
+= 在UNIX上啟動、驗證及停止Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟動和停止Snap Creator Agent服務、並確認Snap Creator Agent服務是否在UNIX系統上執行。
+
+. 啟動或停止Snap Creator Agent、或確認Snap Creator Server服務是否正在執行（視情況而定）：
++
+|===
+| 如果您想要... | 輸入下列項目... 
+
+
+ a| 
+啟動SnapCreator Agent服務
+ a| 
+安裝路徑/scagent4.3.0/bin/scAgent啟動
+
+
+
+ a| 
+確認SnapCreator Agent服務是否正在執行
+ a| 
+安裝路徑/scagent4.3.0/bin/scAgent狀態
+
+
+
+ a| 
+停止SnapCreator Agent服務
+ a| 
+安裝路徑/scagent4.3.0/bin/Agent停止
+
+|===
+

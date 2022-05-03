@@ -1,0 +1,23 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html 
+sidebar: sidebar 
+keywords: configuration, file, downloading, gui, snap, creator 
+summary: 您可以下載現有檔案、並使用Snap Creator GUI以新檔案名稱匯入、藉此建立新的組態檔。 
+---
+= 透過下載現有的組態檔來建立新的組態檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以下載現有檔案、並使用Snap Creator GUI以新檔案名稱匯入、藉此建立新的組態檔。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 在「設定檔與組態」窗格中、以滑鼠右鍵按一下組態檔、然後選取「*下載*」。
+. 將檔案儲存為必要路徑/必要檔案名稱.ext.
++
+
+NOTE: 請記得為此新檔案提供唯一名稱、否則請務必在上傳前重新命名檔案、以免覆寫原始組態檔。
+
+

@@ -1,0 +1,30 @@
+---
+permalink: administration/task_viewing_user_names_assigned_to_a_role_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, command-line, interface, cli 
+summary: 您只能使用命令列介面（CLI）來檢視指派給每個角色的所有Snap Creator使用者清單。 
+---
+= 使用CLI檢視指派給角色的Snap Creator使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能使用命令列介面（CLI）來檢視指派給每個角色的所有Snap Creator使用者清單。
+
+. 輸入下列命令：
++
+「napcreator --server host_name --port port_Number --usersc_use_name --passwdsc_passwd--action userlistasrided --roleName role_name --verbose'」
+
++
+範例如下：
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 –-action userListAssigned
+–rolename ADMINISTRATOR –verbose
+----
+

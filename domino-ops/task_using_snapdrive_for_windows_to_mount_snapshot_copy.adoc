@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, using, snapdrive, mount, snapshot, copy 
+summary: 您可以使用SnapDrive 此功能來掛載您要還原之檔案的Snapshot複本。然後、您可以手動將檔案複製到資料還原目錄。 
+---
+= 使用SnapDrive 功能表來掛載Snapshot複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapDrive 此功能來掛載您要還原之檔案的Snapshot複本。然後、您可以手動將檔案複製到資料還原目錄。
+
+下列程序說明如何使用SnapDrive 適用於Windows的功能、在Windows Server 2008主機上掛載Snapshot複本。適用於Windows的支援功能、而且主機上必須執行SnapCreator Agent。SnapDrive
+
+. 在「伺服器管理員」中、按一下「*儲存設備*」>「* SnapDrive 物件*」>「*實體伺服器名稱*」>「*磁碟*」。
+. 在「磁碟識別」窗格中、瀏覽至包含您要還原之檔案複本的Snapshot複本、然後在右鍵功能表中選擇「*連線磁碟*」。
++
+「連線磁碟」精靈隨即開啟。
+
++
+在「Connect Disk（連接磁碟）」精靈中、按一下*「Next*（下一步*）」進入下一頁。按一下*上一頁*即可返回上一頁。
+
++
+
+TIP: 記下Snapshot複本的名稱。當您將檔案複製到資料還原目錄時、您將需要該名稱。
+
+. 在「提供儲存系統名稱、Lun路徑和名稱」頁面上、可選擇輸入LUN的描述性文字。
+. 在「Select a LUN Type（選取LUN類型）」頁面上、保留預設值。
+. 在「Select LUN Properties（選取LUN內容）」頁面上、選取Snapshot複本的磁碟機代號或掛載點。
+. 在iSCSI啟動器/FC主機匯流排介面卡（HBA）頁面上、選取iSCSI啟動器或FC主機匯流排介面卡（HBA）。
+. 在「Management Type（管理類型）」頁面上、選取您要用於對應至LUN的管理類型：自動或手動。
+. 按一下「*完成*」將Snapshot複本掛載到指定的掛載點。
+

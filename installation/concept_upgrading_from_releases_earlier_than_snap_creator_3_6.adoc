@@ -1,0 +1,20 @@
+---
+permalink: installation/concept_upgrading_from_releases_earlier_than_snap_creator_3_6.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, releases, earlier, before, snap, creator, 3.6 
+summary: 如果您要從早於Snap Creator 3.6的版本升級、則必須一次升級至SnapCreator 3.6一個版本。 
+---
+= 從早於Snap Creator 3.6的版本升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您要從早於Snap Creator 3.6的版本升級、則必須一次升級至SnapCreator 3.6一個版本。
+
+例如、若要從Snap Creator 3.5.x升級、您必須先從3.5.x升級至3.6。執行Snap Creator 3.6之後、即可完成升級至最新版本。在此升級過程中、您可以在升級SnapCreator Server的同時安裝SnapCreator Agent。
+
+*相關資訊*
+
+xref:task_upgrading_the_snap_creator_server_3_6_x_on_windows.adoc[升級Windows上的Snap Creator Server 3.6.x]

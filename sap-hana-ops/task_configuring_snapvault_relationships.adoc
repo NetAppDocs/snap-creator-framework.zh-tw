@@ -1,0 +1,54 @@
+---
+permalink: sap-hana-ops/task_configuring_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: configuring, configure snapvault, relationships, snaprestore 
+summary: 設定SnapVault 靜態關係時、主要儲存控制器必須SnapRestore 安裝有效的功能驗證和SnapVault 功能驗證。二線儲存設備SnapVault 必須安裝有效的版次授權。 
+---
+= 設定SnapVault 相互關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定SnapVault 靜態關係時、主要儲存控制器必須SnapRestore 安裝有效的功能驗證和SnapVault 功能驗證。二線儲存設備SnapVault 必須安裝有效的版次授權。
+
+. 在SnapVault 主儲存控制器和次儲存控制器上啟用支援功能和NDMP。
++
+[listing]
+----
+hana1a> options snapvault.enable on
+hana1a> ndmp on
+hana1a>
+hana1b> options snapvault.enable on
+hana1b> ndmpd on
+hana1b
+hana2b> options snapvault.enable on
+hana2b> ndmpd on
+hana2b>
+----
+. 在所有主要儲存控制器上、設定次要儲存控制器的存取權。
++
+[listing]
+----
+hana1a> options snapvault.access host=hana2b
+hana1a>
+hana1b> options snapvault.access host=hana2b
+hana1b>
+----
++
+
+NOTE: 建議使用專屬網路來處理複寫流量。在這種情況下、需要在次要儲存控制器上設定此介面的主機名稱。主機名稱可以是hana2b-rep-re.
+
+. 在次要儲存控制器上、設定所有主要儲存控制器的存取。
++
+[listing]
+----
+hana2b> options snapvault.access host=hana1a,hana1b
+hana2b>
+----
++
+
+NOTE: 建議使用專屬網路來處理複寫流量。在這種情況下、必須在主要儲存控制器上設定此介面的主機名稱。主機名稱可以是hana1a-rep-rep-rep-and hana1b-rep-.而不是hana1b和hana1a。
+
+

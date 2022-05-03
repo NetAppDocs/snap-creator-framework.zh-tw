@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_troubleshooting_snap_creator_gui_errors.html 
+sidebar: sidebar 
+keywords: unix, environments, snap, creator, gui, troubleshoot, errors, troubleshooting 
+summary: 在UNIX環境中、您可能會在存取Snap Creator GUI時遇到一些錯誤。您應該瞭解這些錯誤、並知道如何疑難排解這些錯誤。 
+---
+= 疑難排解Snap Creator GUI錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX環境中、您可能會在存取Snap Creator GUI時遇到一些錯誤。您應該瞭解這些錯誤、並知道如何疑難排解這些錯誤。

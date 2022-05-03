@@ -1,0 +1,128 @@
+---
+permalink: administration/reference_oracle_plug_in.html 
+sidebar: sidebar 
+keywords: oracle, plug-in, sql, plus, database, quiesce, unquiesce, oracle, database 
+summary: Oracle外掛程式使用SQL* Plus與資料庫進行通訊、並靜止及取消靜止Oracle資料庫以進行備份。 
+---
+= Oracle外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle外掛程式使用SQL* Plus與資料庫進行通訊、並靜止及取消靜止Oracle資料庫以進行備份。
+
+Snap Creator Oracle外掛程式支援Oracle自動儲存管理（離線或線上備份）、以及Real Application Clusters（RAC）資料庫組態的線上備份。互通性對照表包含有關支援與相容性的最新資訊。
+
+若要在UNIX或Linux平台上搭配使用C Shell（CSH）與Oracle外掛程式、應符合下列條件：
+
+* SnapCreator Agent必須以Oracle使用者的身分啟動、而非root使用者。
+* Oracle使用者必須設定適當的環境變數（Oracle_Home和Oracle_SID）、外掛程式導向的SQL* Plus命令才能正常運作。
++
+這可以使用Shell啟動檔案來完成、例如~//.cshrc。
+
+
+
+下表列出Oracle外掛程式參數、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+app_name
+ a| 
+Oracle
+ a| 
+應用程式名稱
+
+
+
+ a| 
+Oracle_Databases
+ a| 
+DB_NAME：使用者名稱
+ a| 
+Oracle資料庫和使用者名稱清單多個資料庫和使用者名稱可以指定為分號分隔清單、例如「db1:user1;db2:user2」。
+
+
+
+ a| 
+sqlplus _CMD
+ a| 
+ a| 
+sqlplus命令的路徑
+
+
+
+ a| 
+cntl_file_backup_DIR
+ a| 
+ a| 
+使用者應儲存備份控制檔的目錄路徑Oracle使用者必須擁有此目錄的適當權限。
+
+
+
+ a| 
+ora暫存
+ a| 
+ a| 
+儲存暫用檔案的目錄路徑、例如/tmp.the Oracle使用者必須擁有此目錄的適當權限。
+
+
+
+ a| 
+archive記錄檔僅限
+ a| 
+（是
+| n 
+
+
+| 原則：<y | n>）  a| 
+通知Oracle外掛程式僅執行交換器記錄作業如果您要在資料備份之外處理歸檔記錄備份、此設定很有用。
+
+
+
+ a| 
+Oracle_Home
+ a| 
+ a| 
+Oracle主目錄的路徑
+
+
+
+ a| 
+Oracle_home_SID
+ a| 
+ a| 
+指定系統識別碼（SID）的Oracle主目錄路徑備份多個資料庫時、指定多個Oracle主目錄可能很重要。
+
+
+
+ a| 
+oracle_EX出口 參數
+ a| 
+（是
+| n） 
+
+
+ a| 
+使用匯出命令匯出Oracle_Home和Oracle_SID環境參數。這僅適用於UNIX或Linux型環境。
+ a| 
+Oracle_BACKUPMODE
+ a| 
+
+
+
+ a| 
+使用Snap Creator原則設定離線或線上備份的選項。預設選項為線上。oracle_BACKUPMODE=每小時：線上、每日：離線
+ a| 
+Oracle_SHUTDOWNABORT
+ a| 
+（是
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

@@ -1,0 +1,18 @@
+---
+permalink: administration/concept_creating_clones.html 
+sidebar: sidebar 
+keywords: creating, clones, lunes, volumes, cloning, snapshot 
+summary: 複製磁碟區或LUN的方法有兩種：從新的備份和現有的備份。 
+---
+= 建立複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複製磁碟區或LUN的方法有兩種：從新的備份和現有的備份。
+
+* 從新備份建立複本、包括製作Snapshot、複製新的Snapshot複本、然後掛載複本。
+* 從現有備份建立複本、包括複製現有的Snapshot複本、然後掛載複本。
+

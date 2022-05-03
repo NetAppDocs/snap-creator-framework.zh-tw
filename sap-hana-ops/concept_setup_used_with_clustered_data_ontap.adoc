@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: setup, sap, hana, clustered, data, ontap 
+summary: 與叢集Data ONTAP 式的不一樣 
+---
+= 與叢集Data ONTAP 式的不一樣
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+下圖顯示已搭配叢集Data ONTAP 式功能使用的設定。此設定以單節點SAP HANA組態為基礎、其中儲存虛擬機器（SVM）和Volume名稱如下圖所示。
+
+image::../media/sap_hana_cdot_setup.gif[顯示已與叢集Data ONTAP 式的不二之一搭配使用的設定。此設定以單節點SAP HANA組態為基礎、其中包含儲存虛擬機器（SVM）和Volume名稱。]
+
+在以7-Mode運作的叢集式VMware和VMware中、您準備、開始、恢復SnapVault 和還原等作業的方式各不相同Data ONTAP 。Data ONTAP這些差異會在本指南的對應章節中加以說明。

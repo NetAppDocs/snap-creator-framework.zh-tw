@@ -1,0 +1,179 @@
+---
+permalink: sap-hana-ops/reference_troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshooting 
+summary: 疑難排解一節提供錯誤代碼、錯誤訊息的相關資訊、並包含解決問題的說明或解決方法。 
+---
+= 疑難排解
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+疑難排解一節提供錯誤代碼、錯誤訊息的相關資訊、並包含解決問題的說明或解決方法。
+
+下表列出SAP HANA外掛程式錯誤訊息。
+
+|===
+| 錯誤代碼 | 錯誤訊息 | 說明/解決方法 
+
+
+ a| 
+HDB-00001
+ a| 
+無法使用提供的組態參數找到可存取的HANA節點來執行hdbsqll命令。請在組態中驗證並更新HANA設定、然後再試一次。
+ a| 
+確認HANA節點正在執行且可連線、且提供的執行個體編號正確無誤。
+
+
+
+ a| 
+HDB-00002
+ a| 
+為[$SID]建立資料庫快照失敗。
+ a| 
+檢查資料庫上是否已建立HANA資料庫快照。如果已經建立、請刪除HANA資料庫快照或執行靜止作業。如果尚未建立、請檢查記錄中是否有其他錯誤訊息和詳細資料。
+
+
+
+ a| 
+HDB-00003
+ a| 
+刪除[$SID]的資料庫快照失敗。
+ a| 
+檢查HANA資料庫快照是否已刪除。如果是、則可忽略此錯誤。如果沒有、請檢查SAP HANA外掛程式參數、並確定節點可連線且提供的執行個體編號正確無誤。
+
+
+
+ a| 
+HDB-00004
+ a| 
+連接至執行個體為[$instance]的[$Hana節點失敗、因為連線遭拒。
+ a| 
+訊息中顯示執行個體的HANA節點無法連線。這只是一項警告、因為外掛程式會嘗試在其他節點上執行hdbsqll命令。檢查記錄以查看作業是否成功。
+
+
+
+ a| 
+HDB-00005
+ a| 
+資料庫[$SID]已經有快照！
+ a| 
+Hana資料庫快照已存在於資料庫中。刪除HANA資料庫快照或執行靜止作業來解決此問題。
+
+
+
+ a| 
+HDB-00006
+ a| 
+無法解析主機名稱[$HANA節點]。
+ a| 
+HANA節點主機名稱無法解析。檢查DNS伺服器或ETC主機項目。
+
+
+
+ a| 
+HDB-00007
+ a| 
+使用者名稱或密碼無效。請驗證認證資料、然後再試一次。
+ a| 
+HANA資料庫提供的使用者名稱和密碼不正確。請更正組態檔中的項目、然後再試一次。
+
+
+
+ a| 
+HDB-00008
+ a| 
+在[$Hana節點]上執行命令[$hdbsql_cmd失敗。
+ a| 
+外掛程式無法在組態中提供的所有HANA節點上執行hdbsqll命令。驗證HANA節點和執行個體參數、並確保至少有一個HANA節點可以啟動且可連線。
+
+
+
+ a| 
+HDB-00009
+ a| 
+找不到HANA [$info]。
+ a| 
+SAP HANA外掛程式SCDUMP作業無法從HANA資料庫擷取特定資訊。確認HANA節點和執行個體參數、並確定至少有一個HANA節點已啟動且可連線。
+
+
+
+ a| 
+HDB-00010
+ a| 
+收集OS資訊失敗。
+ a| 
+在Windows環境中收集OS資訊失敗；Windows不支援SAP HANA外掛程式。改用SLES作業系統。
+
+
+
+ a| 
+HDB-00011
+ a| 
+收集OS資訊失敗。
+ a| 
+SnapCreator無法收集SCDUMP作業的OS資訊。檢查代理程式組態檔案並修正設定。
+
+
+
+ a| 
+HDB-00012
+ a| 
+收集不知所知的資訊失敗。SnapDrive
+ a| 
+SAP HANA外掛程式僅在NFS環境中受支援。您的HANA資料庫組態SnapDrive 已啟用功能不穩定、請在組態檔中設定SnapDrive：Nin。
+
+
+
+ a| 
+HDB-00013
+ a| 
+未設定HANA節點參數。檢查組態檔中的HANA設定。
+ a| 
+SAP HANA外掛程式需要HANA節點（HANA節點）參數。請設定參數、然後再試一次。
+
+
+
+ a| 
+HDB-00014
+ a| 
+無法使用提供的組態參數找到可存取的HANA節點來執行hdbsql命令。請在組態中驗證並更新HANA設定、然後再試一次。
+ a| 
+確認HANA節點正在執行且可連線、且提供的執行個體編號正確無誤。
+
+
+
+ a| 
+HDB-00015
+ a| 
+未設定HANA執行個體參數。檢查組態檔中的HANA設定。
+ a| 
+SAP HANA外掛程式需要HANA執行個體（HANA執行個體）參數。請設定參數、然後再試一次。
+
+
+
+ a| 
+HDB-00016
+ a| 
+未設定HANA密碼參數。檢查組態檔中的HANA設定。
+ a| 
+SAP HANA外掛程式需要Hana密碼（HANA密碼）參數。請設定參數、然後再試一次。
+
+
+
+ a| 
+HDB-00017
+ a| 
+hdbsql路徑、參數HANA的值HDBSQL_CMD無效！
+ a| 
+發生下列其中一種情況：
+
+* 您尚未提供hdbsql路徑
+* 提供的hdbsql路徑不正確。
+
+
+請確定在安裝SnapCreator Agent的管理主機上安裝HANA hdbsqll用戶端、並在HANA參數中提供正確的hdbsql2二進位路徑、然後再試一次。
+
+|===

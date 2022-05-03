@@ -1,0 +1,65 @@
+---
+permalink: sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: sap, hana, restoring, restore, recovering, recover, databases 
+summary: 您可以使用SAP HANA Studio和Snap Creator來還原及還原SAP HANA資料庫。 
+---
+= 還原及還原SAP HANA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SAP HANA Studio和Snap Creator來還原及還原SAP HANA資料庫。
+
+. 在SAP HANA Studio中：
++
+.. 針對SAP HANA系統選取「恢復」。
+.. SAP HANA系統已關機。
+.. 選取恢復類型。
+.. 提供記錄備份位置。
+.. 此時會顯示資料備份清單
+.. 選取備份以查看外部備份ID。
+
+
+. 若儲存系統只執行叢集Data ONTAP 式的不適用功能：
++
+.. 只有在使用非最新的備份進行還原時才需要。
+.. 僅SnapRestore 適用於主儲存設備的「Volume」。
+.. 停用SnapVault 相依關係
+
+
+. 在Snap Creator中：
++
+.. 針對SAP HANA系統選取「還原」。
+.. 視主要儲存設備的備份可用度而定、選取從主要或次要儲存設備還原。
+.. 選取儲存控制器、磁碟區名稱和Snapshot複本名稱。Snapshot複本名稱與先前的備份ID有關。
+.. 對於多節點SAP HANA系統、需要還原多個磁碟區：
++
+... 選擇*新增更多還原項目*。
+... 選取儲存控制器、磁碟區名稱和Snapshot複本名稱。
+... 針對所有必要的磁碟區重複此程序。
+
+
+.. 對於多租戶資料庫容器（MDC）單一租戶資料庫系統、系統和租戶資料庫都會還原。
+.. 還原程序已開始
+.. 所有磁碟區的還原均已完成。
+
+
+. 在資料庫節點上、卸載並掛載所有資料磁碟區、以清除「過時的NFS處理代碼」。
+. 在SAP HANA Studio中：
++
+.. 在備份清單中選取* Refresh*。
+.. 選取可用的備份以進行恢復（綠色項目）。
+.. 開始恢復程序。
+.. 對於多租戶資料庫容器（MDC）單租戶資料庫系統、請先針對系統資料庫、然後針對租戶資料庫開始還原程序。
+.. SAP HANA系統隨即啟動。
+
+
+. （選用）恢復SnapVault 所有已還原磁碟區的彼此之間的關係。
++
+
+NOTE: 在儲存系統中、只有在使用非最新備份進行還原時、才需要執行此步驟。
+
+

@@ -1,0 +1,204 @@
+---
+permalink: administration/reference_information_required_to_configure_snap_creator.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, native, plug-in, oracle, db2, mysql, sybase, ase, domino, snapmanager, micorsoft, sql 
+summary: SnapCreator支援下列內建（或原生）外掛程式：Oracle、DB2、MySQL、Sybase ASE、Domino、 適用於Microsoft SQL Server、適用於Microsoft Exchange、MaxDB、VMware（vSphere和vCloud Director）、Red Hat KVM、Citrix XenServer和SAP HANA的功能。SnapManager SnapManager社群外掛程式未隨附於套件中、必須另外下載。 
+---
+= 設定Snap Creator所需的外掛程式資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator支援下列內建（或原生）外掛程式：Oracle、DB2、MySQL、Sybase ASE、Domino、 適用於Microsoft SQL Server、適用於Microsoft Exchange、MaxDB、VMware（vSphere和vCloud Director）、Red Hat KVM、Citrix XenServer和SAP HANA的功能。SnapManager SnapManager社群外掛程式未隨附於套件中、必須另外下載。
+
+下表列出並說明外掛程式的參數和設定：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+app_name
+ a| 
+Oracle
+| DB2 
+
+
+| MySQL | Domino | 震動 
+
+
+| SMSQL | 中小企業 | Sybase 
+
+
+| 最大資料庫 | KVM | Xen 
+
+
+| Hana  a| 
+決定要備份的應用程式。SnapCreator內建對所列應用程式的支援。您可以使用APP_NAME或設定APP_quiesce_CMDXX、APP_unquies_CMDXX和pre_exit_CMDXX。如果Snap Creator不直接支援應用程式、您可以使用外掛程式、或執行自己的應用程式靜止或取消靜止命令或指令碼。外掛程式：將外掛程式複製到/path_to_scServer
+| scagent/plug-ins目錄、並在APP_NAME參數中指定外掛程式。命令或指令碼：--APP_quiesce_CMD01=path_of_quiesceCMD APP_unquies_CMD01=path_of_unquiesceCMD pre_exit_CMD01=path_of_unquiesceCMD 
+
+
+ a| 
+app_ignore錯誤
+ a| 
+（是
+| n） 
+
+
+ a| 
+決定Snap Creator是否應忽略應用程式外掛程式的錯誤。當您想要備份多個資料庫、但不想在某個資料庫的靜止或取消靜止作業失敗時停止備份時、此功能非常實用。
+ a| 
+app_defined_backup
+ a| 
+（是
+
+
+
+| n）  a| 
+應用程式外掛程式預期會執行整個備份作業、包括靜止、建立Snapshot複本及靜止。內建外掛程式不支援這類備份。
+ a| 
+app_defined_還原
+
+
+
+ a| 
+（是
+| n）  a| 
+啟用應用程式型還原作業。如果執行還原作業、Snap Creator會將要求傳送至應用程式外掛程式、而外掛程式則會處理要求。
+
+
+
+ a| 
+app_defined_mount
+ a| 
+（是
+| n） 
+
+
+ a| 
+忽略Snap Creator的內建掛載功能。外掛程式則負責所有掛載活動、包括建立Volume或LUN實體複本。內建外掛程式不支援此類型的掛載。
+ a| 
+app_defined_umount
+ a| 
+（是
+
+
+
+| n）  a| 
+會忽略Snap Creator的內建卸載功能。而是由外掛程式負責處理所有卸載活動、包括刪除Volume或LUN實體複本。內建外掛程式不支援此類卸載作業。
+ a| 
+App_Auto_Discovery
+
+
+
+ a| 
+（是
+| n）  a| 
+啟用應用程式自動探索。SnapCreator會將探索要求傳送至應用程式外掛程式、而外掛程式則負責探索儲存組態。如果要將資訊儲存至組態檔、您可以使用APP_COND_PONNONNING參數動態或持續執行此動作。
+
+
+
+ a| 
+App_Conf_永久性
+ a| 
+（是
+| n） 
+
+
+ a| 
+讓自動探索持續進行、這表示變更會在組態檔中動態更新。
+ a| 
+app_defined_clone
+ a| 
+（是
+
+
+
+| n）  a| 
+忽略Snap Creator的內建複製功能。而外掛程式則負責處理所有的複製活動、包括建立及刪除Volume或LUN複製。內建外掛程式不支援此類實體複本。
+ a| 
+fs_name
+
+
+
+ a| 
+外掛程式
+ a| 
+決定檔案系統作業所使用的外掛程式。
+ a| 
+Java_Home
+
+
+
+ a| 
+文字
+ a| 
+此設定指向應用於執行.Class和.jar檔案的Java虛擬機器（JVM）。
+ a| 
+JVM_args
+
+
+
+ a| 
+文字
+ a| 
+此設定可控制執行原生Java .Class或.jar檔案時的JVM設定。預設設定為-Xms32M -Xmx12MM。
+ a| 
+Java_CLASSPATH
+
+
+
+ a| 
+文字
+ a| 
+此設定可定義Java類路徑。預設會設定外掛程式/原生程式、並可使用附加於預設值的環境變數來完成。
+ a| 
+meta_data_volume
+
+
+
+ a| 
+ a| 
+啟用在取消靜止作業之後建立指定磁碟區的Snapshot複本。對於某些外掛程式而言、這項功能非常重要、因為必須在不同時間建立資料的Snapshot複本。此參數不僅必須指定磁碟區、也必須指定控制器（例如、「controller1：volum1、volum2、controller2：volume3、volume4、controller3：volume5、volume6」）。
+ a| 
+Perl_home
+
+
+
+ a| 
+文字
+ a| 
+此設定指向應該用於執行.pl檔案的Perl解譯程式。
+ a| 
+Perl_opts
+
+
+
+ a| 
+文字
+ a| 
+執行原生Perl檔案時、此設定會控制Perl解譯器設定。其他設定選項包括可傳遞給Perl解釋程式的目錄（-I）。
+ a| 
+Python_home
+
+
+
+ a| 
+文字
+ a| 
+此設定指向Python解譯器、該解譯器應用於執行.py檔案。
+ a| 
+Python_opts
+
+
+
+ a| 
+文字
+ a| 
+此設定可在執行原生Python檔案時控制Python解譯器設定。
+ a| 
+驗證磁碟區
+
+|===

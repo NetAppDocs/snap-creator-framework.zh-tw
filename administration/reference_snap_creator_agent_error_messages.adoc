@@ -1,0 +1,95 @@
+---
+permalink: administration/reference_snap_creator_agent_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, error, message, aft, sc_agentconfiguration, parameter, remote, port 
+summary: 下表列出Snap Creator Agent錯誤訊息。 
+---
+= SnapCreator Agent錯誤訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出Snap Creator Agent錯誤訊息。
+
+|===
+| 錯誤代碼 | 說明/解決方法 
+
+
+ a| 
+Agt-00001
+ a| 
+Snap Creator代理程式或其他程序正在指定的連接埠上執行。請嘗試不同的連接埠。
+
+
+
+ a| 
+Agt-00003
+ a| 
+提供的參數不正確、無法啟動SnapCreator Agent。檢查所需的參數。
+
+
+
+ a| 
+Agt-00004
+ a| 
+使用遠端代理程式時、必須定義SC_AGENTconfiguration參數。
+
+
+
+ a| 
+Agt-00005
+ a| 
+您不允許執行背對背靜止作業、而且已有一個作業正在執行中。等待或執行靜止。
+
+
+
+ a| 
+Agt-00006
+ a| 
+監督程序無法產生。最可能的系統已達到處理程序的最大數量。在組態中停用監視程式、或檢查作業系統設定。
+
+
+
+ a| 
+Agt-00008
+ a| 
+靜止和取消靜止作業並未完成、備份只是當機一致。檢查記錄。如果靜止作業耗時過久、而且您使用的是監控程式、就可能發生這種情況。監督程序會在設定中定義的x秒後執行強制取消靜止。
+
+
+
+ a| 
+Agt-00009
+ a| 
+值機員端的agent.conf必須允許使用pre"和Post命令。更新agent.confand以允許必要的命令。
+
+
+
+ a| 
+Agt-00010
+ a| 
+代理程式無法讀取其組態檔。檢查agent.conf檔案的權限。
+
+
+
+ a| 
+Agt-00011
+ a| 
+已傳送命令給代理程式、但不允許。更新agent.conf以允許命令。
+
+
+
+ a| 
+Agt-00012
+ a| 
+載入外掛程式時發生此錯誤。檢查外掛程式和APP_NAME設定。
+
+
+
+ a| 
+Agt-00013
+ a| 
+在外掛程式中執行setenv方法時會發生此錯誤。檢查外掛程式、並確定語法正確。
+
+|===

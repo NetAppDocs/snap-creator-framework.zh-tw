@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html 
+sidebar: sidebar 
+keywords: cli, command-line, interface, configuration, file, copy 
+summary: 使用命令列介面（CLI）、您可以複製現有的組態檔、然後重新命名新檔案、藉此建立新的組態檔。 
+---
+= 透過複製現有的組態檔來建立新的組態檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用命令列介面（CLI）、您可以複製現有的組態檔、然後重新命名新檔案、藉此建立新的組態檔。
+
+. 切換到組態目錄：「CD install_path/scServer4.3/engine/configs」
+. 複製來源組態檔：「cp SOUR_PROfile_name/configuration _nametarGet_profile名稱/new_configuration名稱」
++
+您必須提供新組態檔的名稱。
+
+. 自訂新的組態檔、以搭配您要管理的應用程式或資料庫使用。
+

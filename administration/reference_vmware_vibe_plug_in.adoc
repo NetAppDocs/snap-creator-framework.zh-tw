@@ -1,0 +1,186 @@
+---
+permalink: administration/reference_vmware_vibe_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, virtual, machine, vmware, windows, linux, vcenter, ha 
+summary: SnapCreator可透過VMware VIBE外掛程式支援VMware虛擬機器和vApp的備份。VMware外掛程式是整合式外掛程式、適用於採用vSphere的虛擬機器、以及採用vCloud Director的vApp。 
+---
+= VMware VIBE外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator可透過VMware VIBE外掛程式支援VMware虛擬機器和vApp的備份。VMware外掛程式是整合式外掛程式、適用於採用vSphere的虛擬機器、以及採用vCloud Director的vApp。
+
+使用VMware VIBE外掛程式時、您必須考量下列事項：
+
+* VMware外掛程式僅在Windows和Linux上受支援。
++
+如果您使用非Windows或非Linux Snap Creator Server、則需要使用Snap Creator Windows或Linux代理程式來執行VMware外掛程式。
+
+* 不支援以Proxy形式使用Unified Manager伺服器。
+* 不支援使用開放式系統SnapVault 進行掛載、卸載及備份作業、也不支援歸檔記錄管理。
+* VMware高可用度（HA）搭配VMware外掛程式並未經過測試、因此不受支援。
+* VMware vCenter連結模式與VMware外掛程式未通過測試、因此不受支援。
+* VMware外掛程式不支援原始裝置對應（RDM）。
+* 這些磁碟區是使用自動偵測來探索。
++
+如果發現的目的地Volume不在SnapMirror關係中、您將無法檢視它。您可以使用dpSTATUS命令來檢查SnapMirror關係。如果SnapMirror關係不存在、您必須先建立SnapMirror關係。
+
+* 在執行還原作業之前、您必須刪除所有的VMware Snapshot複本。
+* 還原作業完成後、您必須執行已還原虛擬機器和vApp的Snap Creator備份、以便清理新環境、並移除所有VMware Snapshot複本。
++
+如果VMware外掛程式無法清除VMware Snapshot複本並顯示錯誤、您必須手動移除VMware Snapshot複本。VMware外掛程式不保證100% VMware快照複本移除。這是已知的VMware問題。
+
+* VMware外掛程式僅支援32位元Snap Creator搭配32位元Linux系統、以及64位元Snap Creator搭配64位元Linux系統。
+* 刪除的虛擬機器無法還原。
+* 不支援Volume還原作業；僅支援應用程式定義的還原作業。
+* SC_agent_timeout參數的值應設為1800或更高。
+* VIB_VMware_snapshot參數（VMware Snapshot選項）的預設值為N
+* 如果APP_defined_restore的值為Y、SnapVault 則不支援使用圖形使用者介面（GUI）進行還原作業。
+* 使用SnapVault GUI建立SnapMirror和SnapMirror組態時、您必須手動輸入SnapMirror和SnapVault SnapMirror參數、因為SnapMirror和SnapVault 不自動偵測到的不相關性。
+* VMware外掛程式會將ISO掛載路徑探索為資料存放區。
+
+
+下表列出VMware VIBE外掛程式參數、提供參數設定及參數說明。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+VIB_動態 磁碟區更新
+ a| 
+Y或nDefault：未設定
+ a| 
+如果此參數設為N、則不會執行動態磁碟區更新、這表示您必須手動設定Volume、SnapVault磁碟區、SnapMirror磁碟區和NTAP_DFM_data_set參數。
+
+
+
+ a| 
+震動非組織
+ a| 
+預設值：n
+ a| 
+指定不使用網際網路控制訊息傳輸協定（ICMP）來ping VMware外掛程式或儲存控制器。
+
+
+
+ a| 
+VIB_vCloud：IPADDR
+ a| 
+不適用
+ a| 
+指定用於登入的vCloud Director IP位址或主機名稱（僅限vCloud）。
+
+
+
+ a| 
+VIB_vCloud使用者
+ a| 
+不適用
+ a| 
+指定用於登入vCloud Director的使用者名稱（僅限vCloud）。您必須設定@org或@system（頂層vCloud資料庫）。
+
+
+NOTE: vCloud Director系統管理員使用者名稱必須用於執行備份與還原作業。如果使用組織管理員認證或任何其他使用者認證、這些作業就會失敗。
+
+範例：「Administrator @ system」
+
+
+
+ a| 
+vibe_vvCloud密碼
+ a| 
+不適用
+ a| 
+指定與指定的VIB_vCloud使用者相關的密碼（僅限vCloud）。
+
+
+
+ a| 
+vibe_vCenter_user
+ a| 
+不適用
+ a| 
+指定用於登入vCenter的使用者名稱。
+
+
+
+ a| 
+vibe_vCenter_passwd
+ a| 
+不適用
+ a| 
+指定與指定的VIB_VCenter_User相關聯的密碼。
+
+
+
+ a| 
+VIB_vCloud名稱
+ a| 
+不適用
+ a| 
+列出應備份的組織、虛擬資料中心和vApp物件名稱（僅限vCloud）。範例：「org:VDC1、VDC2：VAPP1、VAPP2；ORG2：VDC3：；ORG3：：：VAPP6」
+
+
+
+ a| 
+vibe_vSphere_names
+ a| 
+不適用
+ a| 
+列出每個vCenter應備份的資料存放區和虛擬機器（僅限vSphere）。範例：「VCEENTEER1：DS1：VM1；VCEENTEER2；DS2、DS3：；VCEENTE3：：VM4」
+
+
+
+ a| 
+vibe_trim_vSphere_names
+ a| 
+不適用
+ a| 
+列出應從每個vCenter備份中移除的虛擬機器（僅限vSphere）。範例：「VCEENTEER1：VM99；VCEENTEER2：VM5、vm12」
+
+
+
+ a| 
+vibe_還原 時間間隔
+ a| 
+預設值：「30秒」
+ a| 
+指定每次還原檢查之間的時間。
+
+
+
+ a| 
+vibe_還原 時間
+ a| 
+預設值：「3、600秒」
+ a| 
+指定等待完整還原作業完成的總時間。
+
+
+
+ a| 
+vibe_VMware_snapshot
+ a| 
+預設值：n
+ a| 
+在備份期間建立VMware Snapshot複本。
+
+
+
+ a| 
+vibe_ignore或exportfs=Y或N
+ a| 
+預設值：n
+ a| 
+您必須手動將此參數新增至SnapCreator VIBE組態檔案。
+
+當值設為Y時、Data ONTAP 以7-Mode組態運作的支援功能會忽略控制器上的任何匯出fs值。而是Data ONTAP 將Volume匯出路徑對應為/vol/datastore_name、其中指定了資料存放區名稱以供備份。使用vFiler單元的舊環境可能會使用此方法、因為無法從vFiler單元取得個別資料存放區的匯出fs資訊。相反地、組態需要根據查詢將路徑對應至vfiler0。
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

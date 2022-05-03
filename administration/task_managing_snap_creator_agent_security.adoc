@@ -1,0 +1,57 @@
+---
+permalink: administration/task_managing_snap_creator_agent_security.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, server, manage, security, install, snapdrive 
+summary: 您可以新增SnapCreator可使用的命令、來管理Snap Creator Agent的安全性設定。您也可以限制與特定Snap Creator伺服器的通訊。 
+---
+= 管理Snap Creator代理程式安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以新增SnapCreator可使用的命令、來管理Snap Creator Agent的安全性設定。您也可以限制與特定Snap Creator伺服器的通訊。
+
+管理Snap Creator Agent安全性的程序與Windows和UNIX相同。下列程序使用UNIX環境的範例。
+
+. 登入執行SnapCreator Agent的系統、然後切換至安裝目錄中的etc子目錄。
++
+"CD /install_path/scAgent4.3.0/etc"
+
+. 如果您要新增可由Snap Creator使用的命令、請執行下列步驟：
++
+.. 在文字編輯器中開啟allowed_commands.config檔案。
+.. 視需要新增命令、每個命令都放在一行。
++
+
+NOTE: 在allowed_commands.config檔案中輸入的命令區分大小寫、必須與組態檔中的命令完全相符、包括大寫和引號。
+
++
+命令：「C:\Program Files\NetApp\SnapDrive \sdcli．exe」
+
++
+
+NOTE: 如果命令包含任何空格、則必須將命令括在引號內。
+
+.. 儲存並關閉檔案。
+
+
+. 如果您想限制與特定Snap Creator伺服器的通訊、請執行下列步驟：
++
+.. 在文字編輯器中開啟agent.properties檔案。
+.. 變更authorized_hosts參數、使用逗號分隔主機名稱。
++
+同時支援主機名稱和IP位址。
+
++
+授權主機=里昂、10.10.192、Fuji01
+
+.. 儲存並關閉檔案。
+
+
+. 重新啟動SnapCreator代理程式。
++
+「/install_path/scagent4.3.0/bin/scAgent重新啟動」
+
+

@@ -1,0 +1,26 @@
+---
+permalink: installation/concept_scf_component_server.html 
+sidebar: sidebar 
+keywords: snap, creator, server 
+summary: SnapCreator動作是由Snap Creator伺服器啟動。 
+---
+= SnapCreator伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator動作是由Snap Creator伺服器啟動。
+
+SnapCreator Server通常安裝在實體或虛擬主機上。伺服器裝載SnapCreator GUI和必要的資料庫、以儲存有關工作、排程、使用者、角色、設定檔、 組態檔、以及外掛程式的中繼資料。伺服器有時會縮短為Snap Creator中的scServer。
+
+伺服器會透過Snap Creator Agent、將靜止或取消靜止作業傳送至支援的應用程式（資料庫、電子郵件、Hypervisor或任何其他自訂應用程式）。伺服器與Snap Creator代理程式之間的通訊預設會在連接埠9090上進行、但您可以自訂連接埠以符合您的需求。
+
+根據預設、Snap Creator Server會使用Data ONTAP 無法與儲存系統及其他NetApp軟體產品通訊的功能進行API呼叫。從Snap Creator Server向儲存系統發出的命令會透過連接埠80或連接埠443執行、並在SnapVault 將變更提交至儲存裝置或集區之前、先處理所有Snapshot、SnapMirror和SnapMirror類型的功能。
+
+Snap Creator Server Active IQ Unified Manager 可透過Unified Manager API與功能進行通訊。
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["SnapCreator Framework 4.3.3系統管理指南"]

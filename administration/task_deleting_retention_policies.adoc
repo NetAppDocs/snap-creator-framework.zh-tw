@@ -1,0 +1,26 @@
+---
+permalink: administration/task_deleting_retention_policies.html 
+sidebar: sidebar 
+keywords: delete, retention, policy, snap, creator, gui 
+summary: 您可以刪除保留原則。 
+---
+= 刪除保留原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除保留原則。
+
+. 從Snap Creator GUI主功能表中、選取* Policy*>* Policy Management *。
+. 從* Policy Manager*（策略管理器）選項卡中選擇一個策略，然後單擊* Delete（刪除）*。
++
+
+NOTE: 如果您嘗試刪除指派給組態檔的原則、GUI會顯示下列錯誤訊息：原則無法刪除、因為原則名稱已套用至組態。請使用分離原則、然後刪除原則。
+
+. 在確認視窗中按一下*是*。
++
+原則會從原則管理員索引標籤中移除。
+
+

@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_managing_configuration_files.html 
+sidebar: sidebar 
+keywords: create, copy, download, list, delete, configuration, managing, files 
+summary: 您可以建立、複製、下載、列出及刪除組態檔。 
+---
+= 管理組態檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立、複製、下載、列出及刪除組態檔。
+
+組態檔是Snap Creator的核心、由設定為影響Snap Creator行為的參數組成、例如啟用支援的外掛程式來執行、指定必要的變數、以及定義Snapshot複本中擷取的磁碟區。

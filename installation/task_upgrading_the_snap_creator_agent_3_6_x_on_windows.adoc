@@ -1,0 +1,121 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_agent_3_6_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 3.6.x, windows 
+summary: 您可以直接從Windows上的Snap Creator Agent 3.6.x升級。 
+---
+= 升級Windows上的Snap Creator Agent 3.6.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接從Windows上的Snap Creator Agent 3.6.x升級。
+
+* 在備份Snap Creator Agent目錄之前、您已停止Snap Creator Agent服務（「napcreatoragentservice」）、以確保備份資料已完成。
++
+例如、您可以使用「服務」嵌入式管理單元來停止服務：
+
++
+.. 選擇* Start*>* Run*、然後輸入「服務msc」。
+.. 找到並選取Snap Creator Agent服務、然後停止服務。或者、您也可以開啟命令提示字元、然後輸入下列命令：
+
+
++
+[listing]
+----
+sc stop snapcreatoragentservice
+----
+* 您已在Snap Creator Agent目錄（C:\Program Files\NetApp\NetApp_Snap_Creator_Framework\scagent3.6.x）中備份下列目錄及所有相關子目錄與檔案：
++
+** agent.conf檔案（.\config\agent.conf）
++
+
+NOTE: 如果您在同一個系統上安裝了Snap Creator Server、則在升級Snap Creator Server 3.6.x時、可能已經備份此檔案
+
+** 記錄目錄（若已啟用）（.\logs）
+** 外掛程式目錄（.\plugins）
+
+
+
+
+4.1版之前的SnapCreator Agent使用名為agent.conf的檔案、列出可能在Snap Creator代理程式上執行的Snap Creator以外的命令。在4.1中、會使用allowed_commands.config檔案。
+
+同樣地、agent.conf檔案也會列出允許Snap Creator Agent與之通訊的主機。根據預設、Snap Creator代理程式允許與所有Snap Creator伺服器進行通訊。不過、如果您選擇在舊版的Snap Creator中使用此功能、agent.properties檔案中的授權主機參數現在會取代該功能。
+
+
+NOTE: 如果您未使用這些參數、則只需簡單安裝新代理程式即可。
+
+下列步驟所提供的路徑、是指Windows的預設安裝路徑。如果未使用預設值、路徑資訊可能會與安裝路徑不同。
+
+. 如果您尚未這麼做、請停止SnapCreator Agent服務。
++
+如需停止服務的相關資訊、請參閱本主題稍早所提供的詳細資料。
+
+. 若要解除安裝Snap Creator（適用於Windows）、請選取* Start*>* Programs*>* Snap Creator*>*解除安裝NetApp Snap Creator Framework*。
++
+如需詳細資訊、請參閱在Windows上解除安裝Snap Creator的相關資訊。
+
+. 安裝最新的Snap Creator Agent。
++
+如需詳細資訊、請參閱在Windows上安裝Snap Creator Agent的相關資訊。
+
+. 在文字編輯器中開啟agent.conf檔案的備份複本。
++
+以下是agent.conf的範例：
+
++
+[listing]
+----
+host: scServer@Tampico
+command: sdcli.exe
+----
+. 在文字編輯器中開啟新的允許的_commands.config檔案（C:\Program Files\NetApp\Snap_Creator_Framework\scagent4.1.x\etc\ilited_commands.config）、並將命令列從agent.conf複製到允許的_commands.config檔案；不過、由於最新的Snap Creator增強安全性、請確定命令已完全符合資格。
++
+從上一個範例中、allowed_commands.config檔案應包含下列項目：
+
++
+[listing]
+----
+command: "C:\Program Files\NetApp\SnapDrive\sdcli.exe"
+----
++
+
+NOTE: 由於「[.code]'Program Files.'」之間有空格、因此必須包含引號才能封裝命令。如果命令不包含任何空格、則不需要引號。
+
++
+您可以視需要新增命令、每個命令都位於不同的一行。
+
+. 儲存並關閉檔案。
+. 在文字編輯器中開啟agent.properties檔案（C：\Program Files\NetApp\Snap_Creator_Framework\scagent4.1.x\etc\agent.properties）、然後變更authorized_hosts=*的預設項目、以反映agent.conf檔案中的主機設定。
++
+從上一個範例中、authorized_hosts參數應包含下列項目：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico
+----
++
+可以視需要新增主機、使用逗號分隔主機名稱。同時支援主機名稱和IP位址：
+
++
+[listing]
+----
+AUTHORIZED_HOSTS=Tampico, 10.10.10.192, Fuji01
+----
+. 儲存並關閉檔案。
+. 執行下列其中一項動作、啟動Snap Creator Agent服務：
++
+** 使用「服務」嵌入式管理單元並啟動服務。
+** 在命令提示字元中、輸入下列命令：「c start snapcreatoragentservice」
+
+
+
+
+*相關資訊*
+
+xref:task_installing_snap_creator_agent_on_windows.adoc[在Windows上安裝Snap Creator Agent]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[在Windows上解除安裝Snap Creator]

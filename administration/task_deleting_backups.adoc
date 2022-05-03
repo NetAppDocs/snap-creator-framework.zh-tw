@@ -1,0 +1,24 @@
+---
+permalink: administration/task_deleting_backups.html 
+sidebar: sidebar 
+keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui, data 
+summary: 您可以刪除組態檔的備份複本。 
+---
+= 刪除備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除組態檔的備份複本。
+
+. 從SnapCreator圖形化使用者介面（GUI）的主功能表中、選取*資料*>*備份*
+. 從備份索引標籤的「設定檔與組態」窗格中、展開設定檔並選取組態檔。
+. 選取您要刪除的備份、然後按一下*刪除*。
++
+
+NOTE: 如果組態檔包含多Data ONTAP 個支援區、您必須在Data ONTAP 每個支援區上選取要刪除的Snapshot複本。
+
+. 在確認視窗中按一下*是*。
+

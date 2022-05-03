@@ -1,0 +1,45 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_unix.html 
+sidebar: sidebar 
+keywords: snap, creator, service, server, start, verify, stop, unix 
+summary: 您可以啟動和停止Snap Creator Server服務、並確認Snap Creator Server服務是否在UNIX系統上執行。 
+---
+= 在UNIX上啟動、驗證及停止Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟動和停止Snap Creator Server服務、並確認Snap Creator Server服務是否在UNIX系統上執行。
+
+. 啟動Snap Creator Server服務：「install_path/scServer4.3.0/bin/scServer start」
+. 開啟Snap Creator圖形化使用者介面（GUI）：
++
+.. 在網頁瀏覽器中輸入Snap Creator伺服器的URL： "https://IP_address:gui_port"[]
++
+根據預設、連接埠為84443。
+
+.. 使用Snap Creator GUI的認證登入。
+
+
+. 確認SnapCreator Server服務是否正在執行、或視情況停止Snap Creator Server服務：
++
+|===
+| 如果您想要... | 輸入下列項目... 
+
+
+ a| 
+確認Snap Creator Server服務是否正在執行
+ a| 
+「install_path/scServer4.3.0/bin/scServer狀態」
+
+
+
+ a| 
+停止Snap Creator Server服務
+ a| 
+「install_path/scServer4.3.0/bin/scserver stop」
+
+|===
+

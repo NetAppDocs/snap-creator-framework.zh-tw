@@ -1,0 +1,659 @@
+---
+settings:
+  name: Snap Creator Framework
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: 主頁
+    url: "/index.html"
+  - title: 版本資訊
+    url: "/releasenotes.html"
+  - title: 安裝
+    url: "/installation/index.html"
+    entries:
+    - title: Snap Creator Framework的功能
+      url: "/installation/concept_what_snap_creator_does.html"
+      entries:
+      - title: SnapCreator架構
+        url: "/installation/concept_snap_creator_architecture.html"
+        entries:
+        - title: SnapCreator伺服器
+          url: "/installation/concept_scf_component_server.html"
+        - title: SnapCreator代理程式
+          url: "/installation/concept_scf_component_agent.html"
+        - title: 用於應用程式整合的外掛程式
+          url: "/installation/concept_plug_ins_for_application_integration.html"
+    - title: Snap Creator的預先安裝需求
+      url: "/installation/concept_preinstallation_requirements_for_snap_creator.html"
+      entries:
+      - title: SnapCreator安裝與組態需求
+        url: "/installation/concept_snap_creator_installation_and_configuration_requirements.html"
+      - title: 正在下載Snap Creator軟體
+        url: "/installation/task_downloading_the_snap_creator_software.html"
+      - title: 建立SnapCreator使用者Data ONTAP 以供參考
+        url: "/installation/concept_creating_a_snap_creator_user_for_data_ontap.html"
+        entries:
+        - title: 建立Snap Creator使用者、以便Data ONTAP 在7-Mode中運作
+          url: "/installation/task_creating_a_snap_creator_user_for_data_ontap_operating_in_7_mode.html"
+        - title: 為叢集Data ONTAP 式的功能建立SnapCreator使用者
+          url: "/installation/task_creating_a_snap_creator_user_for_clustered_ontap.html"
+      - title: 在Snap Creator主機上安裝Java
+        url: "/installation/task_installing_java_on_snap_creator_hosts.html"
+      - title: 在Snap Creator伺服器和代理主機上同步時間
+        url: "/installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html"
+      - title: 設定Domino外掛程式的設定
+        url: "/installation/concept_configuring_settings_for_the_domino_plug_in.html"
+        entries:
+        - title: 設定Windows特定設定：新增環境變數路徑
+          url: "/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html"
+        - title: 設定UNIX特定設定：建立符號連結
+          url: "/installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html"
+          entries:
+          - title: 在Linux和Solaris主機上建立Domino外掛程式的符號連結
+            url: "/installation/task_creating_symbolic_links_for_domino_plug_in_on_linux_and_solaris_hosts.html"
+          - title: 在AIX主機上建立Domino外掛程式的符號連結
+            url: "/installation/task_creating_symbolic_links_for_domino_plug_in_on_aix_hosts.html"
+    - title: 安裝Snap Creator伺服器
+      url: "/installation/concept_installing_the_snap_creator_server.html"
+      entries:
+      - title: 在Windows主機上安裝Snap Creator Server
+        url: "/installation/task_installing_the_snap_creator_server_on_a_windows_host.html"
+        entries:
+        - title: 從命令提示字元啟動伺服器
+          url: "/installation/task_starting_the_server_from_a_command_prompt.html"
+      - title: 在UNIX系統上安裝Snap Creator Server
+        url: "/installation/task_installing_the_snap_creator_server_on_unix.html"
+    - title: 安裝Snap Creator代理程式
+      url: "/installation/concept_install_snap_creator_agent.html"
+      entries:
+      - title: 在Windows上安裝Snap Creator Agent
+        url: "/installation/task_installing_snap_creator_agent_on_windows.html"
+        entries:
+        - title: 從命令提示字元啟動代理程式
+          url: "/installation/task_starting_the_agent_from_a_command_prompt.html"
+      - title: 在UNIX系統上安裝Snap Creator Agent
+        url: "/installation/task_installing_the_snap_creator_agent_on_unix.html"
+      - title: 安裝後變更Snap Creator代理程式連接埠
+        url: "/installation/task_changing_the_snap_creator_agent_port_after_installation.html"
+    - title: 正在升級Snap Creator
+      url: "/installation/concept_upgrading_snap_creator.html"
+      entries:
+      - title: 正在檢查工作監視器大小
+        url: "/installation/task_checking_job_monitor_size.html"
+      - title: 從早於Snap Creator 3.6的版本升級
+        url: "/installation/concept_upgrading_from_releases_earlier_than_snap_creator_3_6.html"
+      - title: 從Snap Creator 3.6.x升級
+        url: "/installation/concept_upgrading_from_snap_creator_3_6_x.html"
+        entries:
+        - title: 升級Windows上的Snap Creator Server 3.6.x
+          url: "/installation/task_upgrading_the_snap_creator_server_3_6_x_on_windows.html"
+        - title: 升級UNIX系統上的Snap Creator Server 3.6.x
+          url: "/installation/task_upgrading_the_snap_creator_server_3_6_x_on_unix.html"
+        - title: 升級Windows上的Snap Creator Agent 3.6.x
+          url: "/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_windows.html"
+        - title: 升級UNIX上的Snap Creator Agent 3.6.x
+          url: "/installation/task_upgrading_the_snap_creator_agent_3_6_x_on_unix.html"
+      - title: 從Snap Creator 4.4.x升級
+        url: "/installation/concept_upgrading_from_snap_creator_4_0_x.html"
+        entries:
+        - title: 升級Windows上的Snap Creator Server 4.1.x
+          url: "/installation/task_upgrading_the_snap_creator_server_4_0_x_on_windows.html"
+        - title: 升級UNIX系統上的Snap Creator Server 4.1.x
+          url: "/installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html"
+        - title: 升級Windows上的Snap Creator Agent 4.1.x
+          url: "/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_windows.html"
+        - title: 升級UNIX上的Snap Creator Agent 4.1.x
+          url: "/installation/task_upgrading_the_snap_creator_agent_4_0_x_on_unix.html"
+      - title: 從Snap Creator 4.1.x升級
+        url: "/installation/concept_upgrading_from_snap_creator_4_1.html"
+        entries:
+        - title: 升級Windows上的Snap Creator Server 4.1.x
+          url: "/installation/task_upgrading_snap_creator_server_4_1_x_on_windows.html"
+        - title: 升級UNIX系統上的Snap Creator Server 4.1.x
+          url: "/installation/task_upgrading_snap_creator_server_4_1_x_on_unix_based_systems.html"
+        - title: 升級Windows上的Snap Creator Agent 4.1.x
+          url: "/installation/task_upgrading_snap_creator_agent_4_1_x_on_windows.html"
+        - title: 升級UNIX系統上的Snap Creator Agent 4.1.x
+          url: "/installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html"
+      - title: 從Snap Creator 4.3.x升級
+        url: "/installation/concept_upgrading_from_snap_creator_4_3_x.html"
+    - title: 正在解除安裝Snap Creator
+      url: "/installation/concept_uninstalling_snap_creator.html"
+      entries:
+      - title: 在Windows上解除安裝Snap Creator
+        url: "/installation/task_uninstalling_snap_creator_on_windows.html"
+      - title: 在UNIX上解除安裝Snap Creator
+        url: "/installation/concept_uninstalling_snap_creator_on_unix.html"
+        entries:
+        - title: 在UNIX上解除安裝Snap Creator Agent
+          url: "/installation/task_uninstalling_snap_creator_agent_from_unix.html"
+        - title: 在UNIX上解除安裝Snap Creator Server
+          url: "/installation/task_uninstalling_snap_creator_server_on_unix.html"
+    - title: CLI參考
+      url: "/installation/concept_cli_reference.html"
+      entries:
+      - title: CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色
+        url: "/installation/reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.html"
+        entries:
+        - title: 用於建立叢集角色的CLI命令
+          url: "/installation/reference_cli_command_for_creating_cluster_roles.html"
+        - title: 用於建立SVM角色的CLI命令
+          url: "/installation/reference_cli_commands_for_creating_svm_roles.html"
+  - title: IBM®Domino®外掛程式作業
+    url: "/domino-ops/index.html"
+    entries:
+    - title: IBM Domino外掛程式總覽
+      url: "/domino-ops/concept_ibm_domino_plug_in_overview.html"
+      entries:
+      - title: 瞭解IBM Domino外掛程式備份作業
+        url: "/domino-ops/concept_backup_operations_using_domino_plug_in.html"
+      - title: 瞭解IBM Domino外掛程式還原作業
+        url: "/domino-ops/concept_restore_operations_using_domino_plug_in.html"
+    - title: IBM Domino備份與還原工作流程
+      url: "/domino-ops/concept_ibm_domino_backup_and_recovery_workflow.html"
+    - title: 準備IBM Domino備份與還原
+      url: "/domino-ops/concept_preparing_for_ibm_domino_backup_and_restore_operations.html"
+      entries:
+      - title: 儲存配置需求
+        url: "/domino-ops/reference_storage_layout_requirements.html"
+      - title: SnapMirror與SnapVault SnapMirror設定
+        url: "/domino-ops/concept_snapmirror_and_snapvault_setup.html"
+        entries:
+        - title: 準備儲存系統以進行SnapMirror複寫
+          url: "/domino-ops/task_preparing_storage_systems_for_snapmirror_replication.html"
+        - title: 準備儲存系統SnapVault 以進行資訊複寫
+          url: "/domino-ops/task_preparing_storage_systems_for_snapvault_replication.html"
+    - title: 建立備份與還原組態
+      url: "/domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html"
+      entries:
+      - title: 登入SnapCreator GUI
+        url: "/domino-ops/concept_general_configuration_file_information.html"
+      - title: 建立組態檔
+        url: "/domino-ops/task_using_the_gui_to_create_a_configuration_file.html"
+      - title: 新增命令至備份與還原組態
+        url: "/domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html"
+        entries:
+        - title: 允許對Snap Creator Agent執行補充命令
+          url: "/domino-ops/concept_allowing_additional_commands_through_the_snap_creator_agent.html"
+        - title: 新增輔助命令至組態
+          url: "/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html"
+      - title: 清除Domino交易記錄的歸檔複本
+        url: "/domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html"
+      - title: 備份changeinfo目錄
+        url: "/domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html"
+    - title: 備份資料庫
+      url: "/domino-ops/concept_create_a_domino_backup_using_snap_creator.html"
+      entries:
+      - title: 隨需備份資料庫
+        url: "/domino-ops/task_creating_a_domino_backup_using_the_snap_creator_gui.html"
+      - title: 排程備份
+        url: "/domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html"
+    - title: 還原資料庫
+      url: "/domino-ops/concept_domino_database_restore_overview.html"
+      entries:
+      - title: 執行Volume還原
+        url: "/domino-ops/task_performing_point_in_time_volume_restore.html"
+      - title: 執行單一檔案還原
+        url: "/domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html"
+      - title: 在SAN環境中執行單一檔案還原
+        url: "/domino-ops/concept_single_file_restore_in_fc_iscsi_environments.html"
+        entries:
+        - title: 使用SnapDrive 功能表來掛載Snapshot複本
+          url: "/domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html"
+        - title: 將檔案複製到資料還原目錄
+          url: "/domino-ops/task_copying_files_to_restore_location.html"
+        - title: 使用SnapCreator自訂動作來完成還原處理
+          url: "/domino-ops/task_running_snap_creator_by_using_the_custom_action.html"
+        - title: 中斷Snapshot複本連線
+          url: "/domino-ops/task_disconnecting_snapshot_copy.html"
+    - title: 檢視工作狀態和記錄
+      url: "/domino-ops/concept_accessing_snap_creator_log_files.html"
+      entries:
+      - title: 在工作監控器中檢視工作狀態和記錄
+        url: "/domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html"
+      - title: 在「報告」窗格中檢視記錄
+        url: "/domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html"
+      - title: 使用scdump以壓縮格式收集記錄
+        url: "/domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html"
+    - title: 疑難排解Domino外掛程式特定錯誤
+      url: "/domino-ops/reference_domino_plug_in_specific_errors.html"
+    - title: 下一步
+      url: "/domino-ops/reference_references.html"
+  - title: SAP HANA®外掛作業
+    url: "/sap-hana-ops/index.html"
+    entries:
+    - title: SAP HANA備份與還原解決方案總覽
+      url: "/sap-hana-ops/concept_sap_hana_backup_and_restore_solution_overview.html"
+      entries:
+      - title: 備份SAP HANA系統的考量
+        url: "/sap-hana-ops/concept_considerations_for_backing_up_sap_hana_systems.html"
+      - title: NetApp解決方案
+        url: "/sap-hana-ops/concept_the_netapp_solution.html"
+      - title: 備份解決方案元件
+        url: "/sap-hana-ops/concept_backup_solution_components.html"
+      - title: SAP HANA外掛程式總覽
+        url: "/sap-hana-ops/concept_sap_hana_plug_in_overview.html"
+      - title: 需求
+        url: "/sap-hana-ops/concept_requirements.html"
+    - title: 安裝及設定必要的軟體元件
+      url: "/sap-hana-ops/task_installing_and_configuring_required_software_components.html"
+      entries:
+      - title: 本指南中的設定假設
+        url: "/sap-hana-ops/concept_setup_assumptions_in_this_guide.html"
+      - title: 與叢集Data ONTAP 式的不一樣
+        url: "/sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html"
+    - title: 設定資料備份
+      url: "/sap-hana-ops/concept_configuring_data_backups.html"
+      entries:
+      - title: 設定備份使用者和hdbuserstore
+        url: "/sap-hana-ops/task_configuring_the_backup_user_and_hdbuserstore.html"
+      - title: 設定SnapVault 相互關係
+        url: "/sap-hana-ops/task_configuring_snapvault_relationships.html"
+      - title: 開始SnapVault 建立不穩固的關係
+        url: "/sap-hana-ops/concept_starting_the_snapvault_relationships.html"
+        entries:
+        - title: 利用以7-Mode運作的功能來啟動SnapVault 不支援的功能Data ONTAP
+          url: "/sap-hana-ops/task_starting_the_snapvault_relationships_with_data_ontap_operating_in_7_mode.html"
+        - title: 使用SnapVault 叢集Data ONTAP 式的等化功能來建立不一樣的關係
+          url: "/sap-hana-ops/task_starting_the_snapvault_relationships_with_clustered_data_ontap.html"
+      - title: 設定SnapCreator Framework和SAP HANA資料庫備份
+        url: "/sap-hana-ops/task_configuring_the_snap_creator_framework_and_sap_hana_database_backup.html"
+    - title: 為SAN環境設定SAP HANA
+      url: "/sap-hana-ops/task_configuring_sap_hana_for_san_environments.html"
+    - title: 設定記錄備份
+      url: "/sap-hana-ops/task_configuring_log_backups.html"
+      entries:
+      - title: 記錄備份的管理
+        url: "/sap-hana-ops/concept_housekeeping_of_log_backups.html"
+      - title: 修改記錄備份的內部管理
+        url: "/sap-hana-ops/task_modifying_the_housekeeping_of_log_backups.html"
+    - title: 執行資料庫備份
+      url: "/sap-hana-ops/concept_executing_database_backups.html"
+      entries:
+      - title: 資料庫備份總覽
+        url: "/sap-hana-ops/task_overview_of_database_backups.html"
+      - title: 使用Snap Creator GUI備份資料庫
+        url: "/sap-hana-ops/task_backing_up_the_database_with_the_snap_creator_gui.html"
+      - title: 使用Snap Creator命令列備份資料庫
+        url: "/sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html"
+      - title: 檢閱SAP HANA Studio中的可用備份
+        url: "/sap-hana-ops/concept_reviewing_available_backups_in_sap_hana_studio.html"
+    - title: SAP HANA檔案型備份與資料庫完整性檢查
+      url: "/sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html"
+      entries:
+      - title: 修改檔案型備份的組態
+        url: "/sap-hana-ops/task_modifying_configuration_for_file_based_backup.html"
+      - title: 修改資料庫完整性檢查的組態
+        url: "/sap-hana-ops/task_modifying_configuration_for_database_integrity_checks.html"
+      - title: 排程檔案型備份
+        url: "/sap-hana-ops/task_scheduling_file_based_backup.html"
+      - title: 排程資料庫完整性檢查
+        url: "/sap-hana-ops/task_scheduling_database_integrity_checks.html"
+      - title: 從Snap Creator GUI執行檔案型備份
+        url: "/sap-hana-ops/task_performing_file_based_backup_from_the_snap_creator_gui.html"
+      - title: 從Snap Creator命令列執行檔案型備份
+        url: "/sap-hana-ops/task_performing_file_based_backup_from_snap_creator_command_line.html"
+      - title: 從Snap Creator GUI執行資料庫完整性檢查
+        url: "/sap-hana-ops/task_performing_database_integrity_checks_with_snap_creator_gui.html"
+      - title: 從Snap Creator命令列執行資料庫完整性檢查
+        url: "/sap-hana-ops/task_performing_database_integrity_checks_from_snap_creator_command_line.html"
+    - title: 還原及還原SAP HANA資料庫
+      url: "/sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html"
+      entries:
+      - title: 從主要儲存設備還原及還原資料庫
+        url: "/sap-hana-ops/task_restoring_and_recovering_databases_from_primary_storage.html"
+      - title: 從二線儲存設備還原及還原資料庫
+        url: "/sap-hana-ops/task_restoring_and_recovering_database_from_secondary_storage.html"
+      - title: 還原後恢復SnapVault 不還原關係
+        url: "/sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html"
+        entries:
+        - title: 恢復SnapVault 以Data ONTAP 7-Mode運作的支援功能與支援功能之間的不正常關係
+          url: "/sap-hana-ops/task_resuming_a_snapvault_relationship_with_data_ontap_operating_in_7_mode.html"
+        - title: 使用SnapVault 叢集Data ONTAP 式的不一樣功能恢復不一樣的關係
+          url: "/sap-hana-ops/task_resuming_a_snapvault_relationship_with_clustered_data_ontap.html"
+      - title: 在主儲存設備故障後還原資料庫
+        url: "/sap-hana-ops/concept_restoring_databases_after_primary_storage_failure.html"
+        entries:
+        - title: 在主儲存設備故障後還原資料庫、Data ONTAP 以7-Mode運作
+          url: "/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_data_ontap_operating_in_7_mode.html"
+        - title: 使用叢集Data ONTAP 式的功能來還原資料庫、因為主要儲存設備故障
+          url: "/sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html"
+    - title: SAP HANA外掛程式參數
+      url: "/sap-hana-ops/reference_sap_hana_plug_in_parameters.html"
+    - title: 疑難排解
+      url: "/sap-hana-ops/reference_troubleshooting.html"
+    - title: 下一步
+      url: "/sap-hana-ops/reference_where_to_go_next_sap_hana.html"
+  - title: 系統管理
+    url: "/administration/index.html"
+    entries:
+    - title: Snap Creator Framework的功能
+      url: "/administration/concept_what_snap_creator_does.html"
+      entries:
+      - title: 使用Snap Creator的優點
+        url: "/administration/concept_benefits_of_using_snap_creator.html"
+    - title: SnapCreator架構
+      url: "/administration/concept_snap_creator_architecture.html"
+      entries:
+      - title: SnapCreator伺服器總覽
+        url: "/administration/concept_what_snap_creator_server_overview.html"
+      - title: SnapCreator Agent總覽
+        url: "/administration/concept_what_snap_creator_agent_is.html"
+      - title: 用於應用程式整合的外掛程式
+        url: "/administration/concept_scf_component_plug_ins_ag.html"
+    - title: 管理Snap Creator伺服器
+      url: "/administration/concept_managing_snap_creator_server.html"
+      entries:
+      - title: 在Windows上啟動、驗證及停止Snap Creator Server
+        url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html"
+      - title: 在UNIX上啟動、驗證及停止Snap Creator Server
+        url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_unix.html"
+      - title: 安裝後變更Snap Creator伺服器連接埠
+        url: "/administration/task_changing_the_snap_creator_server_port.html"
+      - title: 設定Snap Creator伺服器認證
+        url: "/administration/task_setting_snap_creator_server_credentials.html"
+    - title: 管理Snap Creator代理程式
+      url: "/administration/concept_managing_snap_creator_agent.html"
+      entries:
+      - title: 在Windows上啟動、驗證及停止Snap Creator Agent
+        url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html"
+      - title: 在UNIX上啟動、驗證及停止Snap Creator Agent
+        url: "/administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_unix.html"
+      - title: 安裝後變更Snap Creator代理程式連接埠
+        url: "/administration/task_changing_the_snap_creator_agent_port_after_installation.html"
+      - title: SnapCreator代理程式安全性
+        url: "/administration/concept_snap_creator_agent_security.html"
+        entries:
+        - title: 管理Snap Creator代理程式安全性
+          url: "/administration/task_managing_snap_creator_agent_security.html"
+        - title: 自訂預設的Keystore
+          url: "/administration/task_customizing_the_default_keystore.html"
+    - title: 備份與還原工作流程
+      url: "/administration/concept_backup_and_recovery_workflow_with_plug_ins.html"
+      entries:
+      - title: 建立設定檔
+        url: "/administration/task_creating_profiles.html"
+      - title: 建立全域組態檔
+        url: "/administration/task_creating_global_configuration_files.html"
+      - title: 正在建立組態檔
+        url: "/administration/task_creating_configuration_files_using_sc_gui.html"
+      - title: 建立備份
+        url: "/administration/task_creating_backups_using_the_snap_creator_gui.html"
+      - title: 監控工作
+        url: "/administration/task_monitoring_jobs_using_the_gui.html"
+      - title: 監控記錄
+        url: "/administration/task_monitoring_logs_by_using_the_snap_creator_gui.html"
+      - title: 建立排程工作
+        url: "/administration/task_creating_scheduled_jobs_using_sc_gui.html"
+      - title: 建立保留政策
+        url: "/administration/concept_creating_retention_policies.html"
+        entries:
+        - title: 定義Snap Creator原則的準則
+          url: "/administration/concept_guidelines_to_define_snap_creator_policies.html"
+        - title: 建立備份類型
+          url: "/administration/task_creating_backup_types.html"
+        - title: 建立原則排程
+          url: "/administration/task_creating_policy_schedules.html"
+        - title: 建立原則
+          url: "/administration/task_creating_policies.html"
+        - title: 指派原則
+          url: "/administration/task_assigning_policies.html"
+      - title: 建立複本
+        url: "/administration/concept_creating_clones.html"
+        entries:
+        - title: 從新備份建立複本
+          url: "/administration/task_creating_clones_from_a_new_backup.html"
+        - title: 從現有備份建立複本
+          url: "/administration/task_creating_clones_using_a_mounted_backup.html"
+      - title: 執行還原作業
+        url: "/administration/concept_performing_restore_operations.html"
+        entries:
+        - title: 執行Volume還原
+          url: "/administration/task_performing_volume_restore_using_the_gui.html"
+        - title: 執行單一檔案還原作業
+          url: "/administration/task_performing_single_file_restore_using_the_gui.html"
+        - title: 執行應用程式定義的還原作業
+          url: "/administration/task_performing_application_defined_restore_operations.html"
+    - title: 管理使用者存取
+      url: "/administration/concept_managing_user_access.html"
+      entries:
+      - title: 建立SnapCreator使用者
+        url: "/administration/task_creating_users.html"
+      - title: 指派設定檔給Snap Creator使用者
+        url: "/administration/task_assigning_profiles_to_snap_creator_users.html"
+      - title: 使用CLI檢視SnapCreator使用者和指派的設定檔清單
+        url: "/administration/task_viewing_a_list_of_users_with_profiles_by_using_the_cli.html"
+      - title: 建立Snap Creator角色
+        url: "/administration/task_creating_snap_creator_roles.html"
+      - title: 指派角色給Snap Creator使用者
+        url: "/administration/task_assigning_roles_to_snap_creator_users.html"
+      - title: 檢視SnapCreator使用者和指派角色的清單
+        url: "/administration/task_viewing_a_list_of_snap_creator_users_by_using_the_gui.html"
+      - title: 使用CLI檢視指派給角色的Snap Creator使用者
+        url: "/administration/task_viewing_user_names_assigned_to_a_role_by_using_the_cli.html"
+      - title: 使用CLI建立Snap Creator權限
+        url: "/administration/task_creating_snap_creator_permissions.html"
+      - title: 指派對Snap Creator角色的權限
+        url: "/administration/task_assigning_permissions_to_snap_creator_roles.html"
+      - title: 使用CLI建立所有Snap Creator權限的清單
+        url: "/administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html"
+      - title: 檢視指派給角色的Snap Creator權限
+        url: "/administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html"
+    - title: 管理設定檔
+      url: "/administration/concept_managing_profiles.html"
+      entries:
+      - title: 建立設定檔
+        url: "/administration/task_creating_profiles.html"
+      - title: 檢視設定檔
+        url: "/administration/task_viewing_snap_creator_profiles.html"
+      - title: 刪除設定檔
+        url: "/administration/task_deleting_snap_creator_profiles.html"
+    - title: 管理組態檔案
+      url: "/administration/concept_managing_configuration_files.html"
+      entries:
+      - title: 正在建立組態檔
+        url: "/administration/task_creating_configuration_files_using_sc_gui.html"
+      - title: 透過下載現有的組態檔來建立新的組態檔
+        url: "/administration/task_creating_new_configuration_files_by_downloading_existing_configuration_files.html"
+      - title: 透過複製現有的組態檔來建立新的組態檔
+        url: "/administration/task_creating_new_configuration_files_by_copying_existing_configuration_files_using_the_cli.html"
+      - title: 檢視指派給設定檔的組態檔清單
+        url: "/administration/task_viewing_assigned_configuration_files_for_a_profile.html"
+      - title: 從設定檔刪除組態檔
+        url: "/administration/task_deleting_configuration_files.html"
+    - title: 管理保留政策
+      url: "/administration/concept_managing_policies.html"
+      entries:
+      - title: 建立備份類型
+        url: "/administration/task_creating_backup_types.html"
+      - title: 建立原則排程
+        url: "/administration/task_creating_policy_schedules.html"
+      - title: 建立原則
+        url: "/administration/task_creating_policies.html"
+      - title: 指派原則
+        url: "/administration/task_assigning_policies.html"
+      - title: 檢視保留政策
+        url: "/administration/task_viewing_policies.html"
+      - title: 刪除保留原則
+        url: "/administration/task_deleting_retention_policies.html"
+    - title: 管理備份
+      url: "/administration/concept_managing_backups.html"
+      entries:
+      - title: 應該備份哪些Snap Creator資訊
+        url: "/administration/reference_what_you_should_back_up.html"
+      - title: 建立備份
+        url: "/administration/task_creating_backups_using_the_snap_creator_gui.html"
+      - title: 檢視組態檔的備份複本清單
+        url: "/administration/task_viewing_a_list_of_backup_copies_of_a_configuration_file.html"
+      - title: 刪除備份
+        url: "/administration/task_deleting_backups.html"
+    - title: 管理排程工作
+      url: "/administration/concept_managing_scheduled_jobs.html"
+      entries:
+      - title: 建立排程工作
+        url: "/administration/task_creating_scheduled_jobs_using_sc_gui.html"
+      - title: 執行排程工作
+        url: "/administration/task_running_a_scheduled_job.html"
+      - title: 檢視排程工作的清單
+        url: "/administration/task_viewing_a_list_of_scheduled_jobs.html"
+      - title: 編輯排程工作
+        url: "/administration/task_editing_scheduled_jobs.html"
+      - title: 刪除排程的工作
+        url: "/administration/task_deleting_scheduled_jobs.html"
+    - title: 管理複本
+      url: "/administration/concept_managing_clones.html"
+      entries:
+      - title: 從新備份建立複本
+        url: "/administration/task_creating_clones_from_a_new_backup.html"
+      - title: 從現有備份建立複本
+        url: "/administration/task_creating_clones_using_a_mounted_backup.html"
+      - title: 卸載複本
+        url: "/administration/task_deleting_clones.html"
+    - title: 設定Snap Creator所需的外掛程式資訊
+      url: "/administration/reference_information_required_to_configure_snap_creator.html"
+      entries:
+      - title: 歸檔記錄外掛程式
+        url: "/administration/reference_archive_log_plug_in.html"
+      - title: Citrix XenServer外掛程式
+        url: "/administration/reference_citrix_xen_plug_in.html"
+      - title: DB2外掛程式
+        url: "/administration/reference_db2_plug_in.html"
+      - title: IBM Domino外掛程式
+        url: "/administration/reference_ibm_domino_plug_in.html"
+      - title: MaxDB外掛程式
+        url: "/administration/reference_maxdb_plug_in.html"
+      - title: MySQL外掛程式
+        url: "/administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html"
+      - title: Oracle外掛程式
+        url: "/administration/reference_oracle_plug_in.html"
+      - title: Red Hat KVM外掛準則
+        url: "/administration/reference_red_hat_kvm_plug_in.html"
+      - title: SAP HANA外掛程式
+        url: "/administration/reference_sap_hana_plug_in.html"
+      - title: 適用於Microsoft Exchange外掛程式SnapManager
+        url: "/administration/reference_snapmanager_for_microsoft_exchange_plug_in.html"
+      - title: 適用於Microsoft SQL Server外掛程式SnapManager
+        url: "/administration/reference_snapmanager_for_microsoft_sql_server_plug_in.html"
+      - title: Sybase ASE外掛程式
+        url: "/administration/reference_sybase_plug_in.html"
+      - title: VMware VIBE外掛程式
+        url: "/administration/reference_vmware_vibe_plug_in.html"
+        entries:
+        - title: vCloud vApp使用VMware外掛程式進行備份與還原作業的需求
+          url: "/administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html"
+        - title: 使用VMware外掛程式進行虛擬機器備份與還原
+          url: "/administration/concept_vm_backup_and_restore_using_vmware_plug_in.html"
+      - title: 使用外掛程式架構來建立自訂外掛程式
+        url: "/administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html"
+      - title: 使用Hypervisor外掛程式時、將Snap Creator設定為多層應用程式靜止作業
+        url: "/administration/task_configuring_snap_creator_for_multilevel_application_quiesce_operations.html"
+    - title: 疑難排解Snap Creator問題
+      url: "/administration/reference_troubleshooting_snap_creator_issues.html"
+      entries:
+      - title: 錯誤訊息類型和疑難排解記錄
+        url: "/administration/reference_logs.html"
+        entries:
+        - title: 執行SnapCreator傾印
+          url: "/administration/task_running_a_snap_creator_dump.html"
+      - title: 疑難排解Snap Creator GUI錯誤
+        url: "/administration/concept_troubleshooting_snap_creator_gui_errors.html"
+        entries:
+        - title: 無法連線至SnapCreator GUI
+          url: "/administration/reference_cannot_connect_to_the_gui.html"
+        - title: 啟動Snap Creator GUI時發生錯誤
+          url: "/administration/reference_error_starting_the_gui.html"
+      - title: 疑難排解網路問題
+        url: "/administration/reference_troubleshooting_network_issues.html"
+      - title: 疑難排解安全性問題
+        url: "/administration/concept_troubleshooting_security_issues.html"
+        entries:
+        - title: 傳輸層安全性的密碼編譯瑕疵
+          url: "/administration/reference_transport_layer_security_tls.html"
+        - title: 自我簽署的SSL憑證與URL不符
+          url: "/administration/reference_self_signed_ssl_certificate.html"
+        - title: Snap Creator Framework需要CA簽署SSL憑證
+          url: "/administration/reference_ca_signed_ssl_certificate.html"
+      - title: 疑難排解Snap Creator伺服器或Snap Creator代理程式問題
+        url: "/administration/concept_troubleshooting_snap_creator_server_or_agent_issues.html"
+        entries:
+        - title: SnapCreator伺服器或代理程式未啟動
+          url: "/administration/reference_snap_creator_server_or_agent_not_starting.html"
+        - title: SnapCreator代理程式沒有回應
+          url: "/administration/reference_snap_creator_agent_not_responding.html"
+        - title: SnapCreator密碼重設
+          url: "/administration/reference_snap_creator_password_reset.html"
+      - title: CLI命令錯誤疑難排解
+        url: "/administration/concept_troubleshooting_cli_command_errors.html"
+        entries:
+        - title: CLI命令會導致403 Forbidbid禁 用錯誤
+          url: "/administration/reference_cli_command_results_in_403_forbidden_error.html"
+        - title: CLI命令會導致找不到404錯誤
+          url: "/administration/reference_cli_command_results_in_404_not_found_error.html"
+        - title: CLI命令導致500找不到物件錯誤
+          url: "/administration/reference_cli_command_results_in_500_cannot_locate_object_error.html"
+        - title: CLI命令導致500 Connect失敗錯誤
+          url: "/administration/reference_cli_command_results_in_500_connect_failed_error.html"
+      - title: clonewal報告不存在Aggregate
+        url: "/administration/reference_clonevol_reports_that_aggregate_does_not_exist.html"
+      - title: 錯誤訊息
+        url: "/administration/reference_error_messages.html"
+        entries:
+        - title: SnapCreator Framework錯誤訊息
+          url: "/administration/reference_snap_creator_framework_error_messages.html"
+        - title: SnapCreator Agent錯誤訊息
+          url: "/administration/reference_snap_creator_agent_error_messages.html"
+        - title: 儲存庫錯誤訊息
+          url: "/administration/reference_repository_error_messages.html"
+        - title: 儲存錯誤訊息
+          url: "/administration/reference_storage_error_messages.html"
+        - title: SnapCreator GUI錯誤訊息
+          url: "/administration/reference_snap_creator_gui_error_messages.html"
+    - title: SnapCreator組態檔案變數、參數和命令
+      url: "/administration/reference_snap_creator_configuration_file_variables.html"
+      entries:
+      - title: SnapCreator變數與參數說明
+        url: "/administration/reference_snap_creator_variable_and_parameter_descriptions.html"
+      - title: 用於設定Snap Creator Agent主機用戶端和Snap Creator伺服器的參數
+        url: "/administration/reference_parameters_used_to_configure_the_client_and_server.html"
+      - title: 連接至vFiler單元和介面的參數
+        url: "/administration/reference_parameters_to_connect_to_vfiler_units_and_interface.html"
+      - title: 設定複製作業的參數
+        url: "/administration/reference_parameters_to_set_up_cloning.html"
+      - title: 設定事件管理的參數
+        url: "/administration/reference_parameters_to_set_up_event_management.html"
+      - title: 設定Operations Manager主控台的參數
+        url: "/administration/reference_parameters_to_set_up_operations_manager_console.html"
+      - title: 設定OSSV的參數
+        url: "/administration/reference_parameters_to_set_up_ossv.html"
+      - title: 設定SnapMirror的參數
+        url: "/administration/reference_parameters_to_set_up_snapmirror.html"
+      - title: 設定Snapshot複本的參數
+        url: "/administration/reference_parameters_to_set_up_a_snapshot_copy.html"
+      - title: 設定SnapVault 參數
+        url: "/administration/reference_parameters_to_set_up_snapvault.html"
+      - title: 設定NetApp管理主控台資料保護功能的參數
+        url: "/administration/reference_parameters_to_set_up_netapp_management_console_data_protection_capability.html"
+      - title: 應用程式命令
+        url: "/administration/reference_app_commands.html"
+      - title: 掛載和卸載命令
+        url: "/administration/reference_mount_and_unmount_commands.html"
+      - title: 預先命令
+        url: "/administration/reference_pre_commands.html"
+      - title: POST命令
+        url: "/administration/reference_post_commands.html"
+    - title: SnapCreator術語
+      url: "/administration/reference_snap_creator_terminology.html"
+    - title: 使用Snap Creator命令列介面的準則
+      url: "/administration/reference_guidelines_for_using_the_snap_creator_command_line.html"
+      entries:
+      - title: SnapCreator CLI命令、以執行工作流程動作
+        url: "/administration/reference_snap_creator_cli_commands_for_workflow_actions.html"
+      - title: 用於管理Snap Creator使用者存取的命令
+        url: "/administration/reference_cli_command_for_snap_creator_rbac_actions.html"
+  - title: 法律聲明
+    url: "/reference_legal_notices.html"

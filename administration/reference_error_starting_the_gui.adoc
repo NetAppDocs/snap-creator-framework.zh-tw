@@ -1,0 +1,30 @@
+---
+permalink: administration/reference_error_starting_the_gui.html 
+sidebar: sidebar 
+keywords: unix, environment, snap, creator, gui, linux 
+summary: 在UNIX環境中、啟動Snap Creator GUI時可能會發生錯誤。 
+---
+= 啟動Snap Creator GUI時發生錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在UNIX環境中、啟動Snap Creator GUI時可能會發生錯誤。
+
+* *問題*
++
+在UNIX環境中、啟動Snap Creator GUI時會出現HTTP錯誤503；例如：HTTP錯誤503Problem存取/。原因：service_unavailable
+
+* *原因*
++
+當暫存檔案空間不足時、您可能會收到此錯誤訊息。
+
+* *修正行動*
++
+請確認您在各個作業系統資料夾的暫存資料夾中有足夠的空間。
+
+
+
+範例：在Linux環境中、請檢查/tmp.

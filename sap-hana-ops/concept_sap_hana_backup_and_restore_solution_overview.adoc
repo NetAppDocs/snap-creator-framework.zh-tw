@@ -1,0 +1,16 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_backup_and_restore_solution_overview.html 
+sidebar: sidebar 
+keywords: sap, hana, backup, restore, solution, overview 
+summary: 現今企業需要SAP應用程式一週七天、一天24小時可用。無論資料磁碟區增加、系統備份等例行維護工作、都能達到一致的效能水準。 
+---
+= SAP HANA備份與還原解決方案總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+現今企業需要SAP應用程式一週七天、一天24小時可用。無論資料磁碟區增加、系統備份等例行維護工作、都能達到一致的效能水準。
+
+執行SAP資料庫備份可能會對正式作業SAP系統造成重大效能影響。由於備份時間不斷縮短、需要備份的資料量也不斷增加、因此很難定義一個時間點、以便在對業務程序影響最小的情況下執行備份。還原及還原SAP系統所需的時間尤其令人擔憂、因為停機時間必須盡量縮短。

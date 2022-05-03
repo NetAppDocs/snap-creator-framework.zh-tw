@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_users.html 
+sidebar: sidebar 
+keywords: snap, creator, profile, role, gui, user 
+summary: 您可以使用Snap Creator GUI來建立Snap Creator使用者、並執行多項動作、例如指派設定檔和角色給使用者。 
+---
+= 建立SnapCreator使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI來建立Snap Creator使用者、並執行多項動作、例如指派設定檔和角色給使用者。
+
+. 從Snap Creator GUI主功能表中、選取*使用者與角色*>*使用者管理*。
+. 在使用者管理索引標籤中、按一下*新增*。
+. 在「新使用者」對話方塊中、輸入使用者名稱密碼、然後按一下「*儲存*」。
++
+新的使用者名稱會顯示在「*使用者*」窗格的「*使用者名稱*」下。
+
+

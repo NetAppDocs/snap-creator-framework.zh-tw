@@ -1,0 +1,25 @@
+---
+permalink: domino-ops/concept_general_configuration_file_information.html 
+sidebar: sidebar 
+keywords: domino, ibm, logging into, Snap Creator, GUI, login 
+summary: 您可以使用網頁瀏覽器登入SnapCreator GUI。請洽詢系統管理員、以取得Snap Creator Server IP位址、連接埠及登入認證。 
+---
+= 登入Snap Creator GUI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用網頁瀏覽器登入SnapCreator GUI。請洽詢系統管理員、以取得Snap Creator Server IP位址、連接埠及登入認證。
+
+. 在網頁瀏覽器中輸入下列URL：「+https://server_name:port+`」、其中：
++
+** Server_name是Snap Creator Server的名稱或IP位址
+** 連接埠是Snap Creator伺服器的連接埠（預設為8443）
+
+
+. 輸入Snap Creator伺服器的登入認證資料。
+
+
+快照建立者GUI會顯示在瀏覽器中。如果您是第一次啟動GUI、螢幕上會出現歡迎訊息。按一下「*確定*」以關閉訊息。

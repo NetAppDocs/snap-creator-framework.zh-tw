@@ -1,0 +1,14 @@
+---
+permalink: installation/reference_cli_commands_for_creating_a_role_for_a_snap_creator_user_in_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: cli, commands, create, creating, role 
+summary: 在叢集Data ONTAP 式功能表中建立Snap Creator使用者時、您必須執行各種命令、為新的叢集使用者或SVM使用者建立角色。 
+---
+= CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在叢集Data ONTAP 式功能表中建立Snap Creator使用者時、您必須執行各種命令、為新的叢集使用者或SVM使用者建立角色。

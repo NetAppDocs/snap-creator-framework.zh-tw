@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, logs, report pane 
+summary: 您可以在「Snap CreatorReports」窗格中檢視記錄、格式與在「主控台」窗格中顯示記錄的格式相同。您可以在「報告」窗格中檢視錯誤記錄和標準記錄。 
+---
+= 在「報告」窗格中檢視記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在「Snap CreatorReports」窗格中檢視記錄、格式與在「主控台」窗格中顯示記錄的格式相同。您可以在「報告」窗格中檢視錯誤記錄和標準記錄。
+
+. 在Snap Creator Framework視窗頂端、按一下* Reports*>* Logs*。
+. 在「報告」窗格中、選取設定檔、組態檔、記錄類型和記錄檔、 其中記錄類型如下：
++
+** * Out Log*提供工作的詳細層級資訊。
+** *除錯記錄*提供詳細層級的資訊、以及在除錯時有用的資訊。
+** * Stderr Log*提供寫入標準錯誤的錯誤資訊。
+** *錯誤日誌*提供所有錯誤資訊。*附註：*視工作大小而定、選擇*除錯記錄*可能會導致瀏覽器變慢或無回應。
+
+
+. 按一下：
++
+** *下載所選的Log*以下載所選記錄。
+** *下載GUI日誌*下載GUI日誌。在下載對話方塊中、視需要按一下「*開啟*」或「*儲存*」。
+
+
+

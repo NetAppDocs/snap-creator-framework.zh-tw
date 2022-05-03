@@ -1,0 +1,146 @@
+---
+permalink: domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html 
+sidebar: sidebar 
+keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, file restore 
+summary: 您可以使用IBM Domino外掛程式、針對NFS環境中的資料庫執行時間點、最新或可選取的最新單一檔案還原。 
+---
+= 執行單一檔案還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用IBM Domino外掛程式、針對NFS環境中的資料庫執行時間點、最新或可選取的最新單一檔案還原。
+
+您必須將組態檔中的Data Restore Directory參數 設定為Domino資料Volume上正確的子目錄。
+
+
+NOTE: 您不需要停止Domino伺服器即可進行單一檔案還原。
+
+單一檔案還原選項如下：
+
+|===
+| 還原類型 | 說明 
+
+
+ a| 
+單一檔案還原（時間點）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態（僅限NFS）。
+
+
+
+ a| 
+單一檔案還原（直到現在）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到最近的複本（僅限NFS）。
+
+
+
+ a| 
+單一檔案還原（可選擇最新）
+ a| 
+將單一檔案還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到指定的時間（僅限NFS）。
+
+|===
+
+NOTE: 若要進行最新且可選擇的時間點還原、必須啟用Domino交易記錄。
+
+交易記錄只能轉送。選取建立Snapshot複本之前的時間會導致還原錯誤。
+
+. 在「設定檔與組態」窗格中、選取組態檔、然後按一下「*動作*」>「*還原*」。
++
+選取「*還原*」會自動啟動「Snap Creator Framework還原」精靈。在整個還原精靈中、按一下*「下一步*」以前進到下一頁、然後按一下*「上一步*」以返回上一頁。
+
++
+
+NOTE: 如果您是從SnapVault 還原複本還原、系統會提示您從主要或次要儲存設備還原。您的選擇取決於如何處理中所述的限制 link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concention_DOMIN_database_STAGE_overvice.MD#GUID-4D864E7-DE54F-4B9F-EF2F240F65D9"]。
+
+. 在「還原詳細資料」頁面上、指定還原詳細資料：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+控制器/Vserver名稱
+ a| 
+在儲存系統上選取您要還原的SVM。
+
+
+
+ a| 
+還原Volume名稱
+ a| 
+選取您要還原的磁碟區。
+
+
+
+ a| 
+原則
+ a| 
+選取您要還原的備份原則。
+
+
+
+ a| 
+SnapCreator Snapshot複本/所有Snapshot複本
+ a| 
+保留預設值。
+
+
+
+ a| 
+還原Snapshot複本名稱
+ a| 
+選取您要還原的Snapshot複本。
+
+
+
+ a| 
+還原類型
+ a| 
+選擇*單一檔案還原*。
+
+|===
+. 在下一頁中、選取您要還原的檔案。
++
+檔案會以完整路徑名稱顯示在*來源路徑*欄位中。
+
++
+
+TIP: 將路徑名稱複製到剪貼簿以供日後使用。
+
+. 在下一頁中、選取您要還原檔案的目錄。
++
+檔案的父子目錄名稱必須與來源路徑中父子目錄的名稱相同。例如、如果來源路徑為/DOMINA/data/mail/user1.nsf、則還原路徑為/DOMINA/data/report/mail/user1.nsf。
+
++
+目錄會以完整路徑名稱顯示在*目的地路徑*欄位中。
+
+. 在下一頁中、指定單一檔案還原類型：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+還原類型
+ a| 
+按一下單一檔案還原類型。如果您選擇*可選取的分鐘*、則會顯示新欄位、您可以在其中指定要播放Domino交易記錄的日期和時間。如果Snap Creator伺服器上的時間與儲存控制器上的時間不符、請按一下*「Ignore Validation」（忽略驗證）*。
+
+
+
+ a| 
+停用複寫
+ a| 
+選取此方塊可為還原的資料庫檔案設定新的Domino複本ID。
+
+|===
+. 檢閱摘要、然後按一下「*完成*」。
+. 在「單一檔案還原」對話方塊中、按一下「*確定*」。
++
+SnapCreator會啟動還原工作。工作資訊會顯示在主控台窗格中。
+
+

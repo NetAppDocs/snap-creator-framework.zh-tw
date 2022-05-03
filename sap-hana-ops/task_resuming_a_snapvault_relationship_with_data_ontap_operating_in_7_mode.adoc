@@ -1,0 +1,62 @@
+---
+permalink: sap-hana-ops/task_resuming_a_snapvault_relationship_with_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: sap,hana, resuming, resume, snapvault, relationship, data, ontap, operating, 7-mode 
+summary: 如果您使用非最新的Snapshot備份來還原、則需要恢復SnapVault 「支援」關係、以便Snap Creator繼續執行備份。 
+---
+= 恢復SnapVault 以Data ONTAP 7-Mode運作的支援功能與支援功能之間的不正常關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用非最新的Snapshot備份來還原、則需要恢復SnapVault 「支援」關係、以便Snap Creator繼續執行備份。
+
+. 輸入下列命令、以SnapVault 7-Mode繼續執行支援的功能、恢復執行支援的功能。Data ONTAPSetsstart -r -S sSOUR_控制 器：source_volumeBackup控制器：SnapVault backup_volume
++
+針對屬於SAP HANA資料庫的所有磁碟區執行此步驟。
+
++
+[listing]
+----
+hana2b> snapvault start -r -S hana1a:/vol/data_00001/mnt00001
+hana2b:/vol/backup_data_00001/mnt00001
+The resync base snapshot will be: Backup-ANA-SV_daily_20140406200000
+Resync may alter the data in this qtree.
+Are you sure you want to resync the qtree? y
+Mon Apr  7 14:08:21 CEST [hana2b:replication.dst.resync.success:notice]: SnapVault resync of
+/vol/backup_data_00001/mnt00001 to hana1a:/vol/data_00001/mnt00001 was successful.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+[listing]
+----
+hana2b> snapvault start -r -S hana1b:/vol/data_00002/mnt00002
+hana2b:/vol/backup_data_00002/mnt00002
+The resync base snapshot will be: Backup-ANA-SV_daily_20140406200000
+Resync may alter the data in this qtree.
+Are you sure you want to resync the qtree? y
+Mon Apr  7 14:09:49 CEST [hana2b:replication.dst.resync.success:notice]: SnapVault resync of
+/vol/backup_data_00002/mnt00002 to hana1b:/vol/data_00002/mnt00002 was successful.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+[listing]
+----
+hana2b> snapvault start -r -S hana1a:/vol/data_00003/mnt00003
+hana2b:/vol/backup_data_00003/mnt00003
+The resync base snapshot will be: Backup-ANA-SV_daily_20140406200000
+Resync may alter the data in this qtree.
+Are you sure you want to resync the qtree? y
+Mon Apr  7 14:10:25 CEST [hana2b:replication.dst.resync.success:notice]: SnapVault resync of
+/vol/backup_data_00003/mnt00003 to hana1a:/vol/data_00003/mnt00003 was successful.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+資料傳輸完成後、您可以使用Snap Creator重新排程備份。
+
+

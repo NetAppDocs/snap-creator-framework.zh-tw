@@ -1,0 +1,24 @@
+---
+permalink: sap-hana-ops/task_scheduling_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, schedule, database, integrity, checks 
+summary: 對於SAP HANA組態、您可以排程其他作業、例如檔案型備份和資料庫完整性檢查。您可以排定在特定時間間隔執行資料庫完整性檢查作業。 
+---
+= 排程資料庫完整性檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於SAP HANA組態、您可以排程其他作業、例如檔案型備份和資料庫完整性檢查。您可以排定在特定時間間隔執行資料庫完整性檢查作業。
+
+. 從SnapCreator GUI的主功能表中、選取*管理*>*排程*、然後按一下*建立*。
+. 在「新工作」視窗中、輸入工作的詳細資料。
++
+完整性檢查原則預設為「無」。
+
++
+image::../media/creating_database_integrity_checks_schedules.gif[建立資料庫完整性檢查排程]
+
+

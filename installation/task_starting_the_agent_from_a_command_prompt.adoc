@@ -1,0 +1,35 @@
+---
+permalink: installation/task_starting_the_agent_from_a_command_prompt.html 
+sidebar: sidebar 
+keywords: starting, start, agent, command, prompt 
+summary: 您可以執行批次指令碼（scagent.bat）、從命令提示字元手動啟動Snap Creator Agent。 
+---
+= 從命令提示字元啟動代理程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行批次指令碼（scagent.bat）、從命令提示字元手動啟動Snap Creator Agent。
+
+一般而言、只有在安裝程序期間未選取「*啟動代理程式做為服務*」選項時、才應遵循此程序。
+
+您也可以透過Windows工作排程器、排定批次指令碼（scagent.bat）在啟動時執行。如需使用Windows工作排程器的詳細資訊、請參閱Windows作業系統的文件。
+
+. 開啟命令提示字元並輸入下列命令：
++
+[listing]
+----
+cd \install_path\scAgentrelease-version\bin\
+scAgent.bat start
+----
++
+[listing]
+----
+cd \Program Files\NetApp\Snap_Creator_Framework\scAgent4.1.0\bin\
+scAgent.bat start
+----
+
+
+由於批次指令碼（scagent.bat）會在前景執行Snap Creator、因此只要命令提示字元開啟、Snap Creator Agent就會繼續執行。關閉命令提示字元將會結束Snap Creator Agent。若要在背景執行SnapCreator、應使用Snap Creator Agent服務。

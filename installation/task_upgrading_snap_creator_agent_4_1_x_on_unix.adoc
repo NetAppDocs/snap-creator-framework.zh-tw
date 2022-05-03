@@ -1,0 +1,57 @@
+---
+permalink: installation/task_upgrading_snap_creator_agent_4_1_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, agent, 4.1.x, unix, unix-based 
+summary: 您可以從UNIX系統上的Snap Creator Agent 4.1.x升級。 
+---
+= 升級UNIX系統上的Snap Creator Agent 4.1.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從UNIX系統上的Snap Creator Agent 4.1.x升級。
+
+* 備份Snap Creator Agent目錄之前、您已停止Snap Creator Agent、以確保備份資料已完成。
++
+例如、輸入下列命令：
+
++
+[listing]
+----
+/install_path/scAgent4.1.0/bin/scAgent stop
+----
+* 您已在Snap Creator Agent目錄（/install_path/scagent4.1.x）中備份下列目錄及所有相關子目錄與檔案：
++
+** SnapCreator Agent屬性（../等）、其中包含允許的_commands.config和agent.properties檔案
+** 記錄（../記錄）
+** 外掛程式（../外掛程式）*注意：*請勿刪除您建立的Snap Creator 4.1.x備份複本。
+
+
+
+
+下列步驟所提供的路徑會參照預設的安裝路徑。如果未使用預設值、路徑資訊可能會與安裝路徑不同。
+
+. 如果您尚未這麼做、請停止SnapCreator Agent。
++
+如需相關資訊、請參閱本主題稍早提供的詳細資料。
+
+. 安裝最新的Snap Creator Agent、但不要啟動Snap Creator Agent。
++
+如需詳細資訊、請參閱在UNIX上安裝Snap Creator Agent的相關資訊。
+
+. 將備份的Snap Creator 4.1.x記錄目錄複製到/install_path/scAgent4.1.x/logs的最新位置。
+. 將備份的Snap Creator 4.1.x外掛程式目錄複製到/install_path/scAgent4.1.x/plugins的最新位置。
+. 將備份的Snap Creator 4.1.x代理程式內容目錄複製到/install_path/scagent4.1.x/etc的最新位置。
+. 輸入下列命令、啟動Snap Creator Agent：
++
+[listing]
+----
+/install_path/scAgent4.1.x/bin/scAgent start
+----
++
+
+NOTE: 對allowed_commands.config或agent.properties檔案所做的任何變更、都會要求您在進行變更時重新啟動Snap Creator Agent。
+
+

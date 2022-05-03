@@ -1,0 +1,33 @@
+---
+permalink: domino-ops/concept_creating_a_configuration_for_domino_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, creating, create, backup, restore, configuration 
+summary: 您可以在組態檔中指定備份與還原作業所需的大部分資訊。組態檔是Snap Creator備份與還原作業的輸入。 
+---
+= 建立備份與還原組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在組態檔中指定備份與還原作業所需的大部分資訊。組態檔是Snap Creator備份與還原作業的輸入。
+
+您可以視需要建立任意數量的組態檔、但只能指定單一組態檔做為作業的輸入。您可以使用Snap Creator GUI或Snap Creator CLI來建立組態檔案。
+
+
+NOTE: 本指南說明如何使用GUI建立組態檔。如需有關如何使用CLI的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+您可以在Snap Creatorprofile中組織組態檔案。設定檔和組態檔位於Snap Creator安裝目錄的\enger\configs子目錄中：
+
+* 在UNIX主機上、是擷取安裝檔案的目錄
+* 在Windows主機上、預設為C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x
+
+
+*相關資訊*
+
+link:concept_general_configuration_file_information.adoc["登入SnapCreator GUI"]
+link:task_using_the_gui_to_create_a_configuration_file.adoc["建立組態檔"]
+link:concept_adding_commands_to_the_backup_and_restore_configuration.adoc["新增命令至備份與還原組態"]
+link:task_setting_the_snap_creator_archive_log_management_settings.adoc["清除Domino交易記錄的歸檔複本"]
+link:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc["備份changeinfo目錄"]

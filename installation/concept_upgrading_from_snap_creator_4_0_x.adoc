@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_0_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.0.x 
+summary: 從Snap Creator 4.1.x升級時、資料庫架構會升級。 
+---
+= 從Snap Creator 4.4.x升級
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從Snap Creator 4.1.x升級時、資料庫架構會升級。

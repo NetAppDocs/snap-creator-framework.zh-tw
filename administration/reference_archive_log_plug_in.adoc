@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_archive_log_plug_in.html 
+sidebar: sidebar 
+keywords: archive, log, plug-in, snap, creator, archive 
+summary: 歸檔記錄外掛程式可搭配Snap Creator歸檔記錄使用、而非搭配任何應用程式或資料庫的記錄使用。 
+---
+= 歸檔記錄外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+歸檔記錄外掛程式可搭配Snap Creator歸檔記錄使用、而非搭配任何應用程式或資料庫的記錄使用。
+
+下表列出歸檔記錄外掛程式參數、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+archive記錄啟用
+ a| 
+（是
+| n 
+
+
+| 原則：年齡）  a| 
+啟用歸檔記錄管理（刪除舊的歸檔記錄）。
+ a| 
+archive記錄保留
+
+
+
+ a| 
+天數
+ a| 
+指定保存記錄檔保留的天數。此設定必須等於或大於NTAP_snapshot保留。
+ a| 
+archive記錄目錄
+
+
+
+ a| 
+change_info_directory/logs
+ a| 
+指定包含歸檔記錄檔之目錄的路徑。
+ a| 
+archive記錄_EXT
+
+
+
+ a| 
+副檔名
+ a| 
+指定歸檔記錄檔的副檔名。例如、如果歸檔記錄為10192091019.log、請將此參數設定指定為log。
+ a| 
+archive記錄檔_循環搜尋
+
+
+
+ a| 
+（是
+| n）  a| 
+可管理子目錄內的歸檔記錄。如果歸檔記錄位於子目錄下、您應該使用此參數。
+
+|===

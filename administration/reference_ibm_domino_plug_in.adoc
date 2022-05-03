@@ -1,0 +1,26 @@
+---
+permalink: administration/reference_ibm_domino_plug_in.html 
+sidebar: sidebar 
+keywords: ibm, domino, plug-in, snap, creator, framework, backup, netapp, api, snapshot, snapmirror, snapvault 
+summary: 適用於Snap Creator Framework的IBM Domino外掛程式為NetApp儲存設備上的Domino資料庫提供完整的備份與還原解決方案。有了IBM Domino外掛程式、您就能有效率地備份資料庫、並視需要還原資料庫、而不需讓資料庫伺服器離線。外掛程式使用IBM提供的API來確保應用程式一致性。 
+---
+= IBM Domino外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Snap Creator Framework的IBM Domino外掛程式為NetApp儲存設備上的Domino資料庫提供完整的備份與還原解決方案。有了IBM Domino外掛程式、您就能有效率地備份資料庫、並視需要還原資料庫、而不需讓資料庫伺服器離線。外掛程式使用IBM提供的API來確保應用程式一致性。
+
+有了與Snap Creator Framework緊密整合的重要NetApp資料保護技術、您可以使用IBM Domino外掛程式：
+
+* 在主儲存設備上建立應用程式一致的Snapshot複本
+* 將Snapshot複本複製到二線儲存設備、以進行災難恢復與歸檔
+
+
+整合式技術包括Snapshot、SnapMirror和SnapVault SnapMirror。
+
+*相關資訊*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12422115["SnapCreator Framework 4.1.2 IBM Domino外掛程式作業指南"]

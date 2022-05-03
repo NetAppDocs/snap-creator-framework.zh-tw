@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_executing_database_backups.html 
+sidebar: sidebar 
+keywords: executing, database, backups 
+summary: 您可以使用Snap Creator GUI或命令列來備份SAP HANA資料庫。若要排程備份、您可以在GUI中使用排程器、或是搭配cron等外部排程器使用命令列。 
+---
+= 執行資料庫備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI或命令列來備份SAP HANA資料庫。若要排程備份、您可以在GUI中使用排程器、或是搭配cron等外部排程器使用命令列。

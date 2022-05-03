@@ -1,0 +1,45 @@
+---
+permalink: administration/concept_vm_backup_and_restore_using_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, vmware, virtual, machines, vsphere, api, vmware, vcenter, credentials 
+summary: SnapCreator支援透過VMware外掛程式備份VMware虛擬機器。虛擬機器備份是透過VMware vCenter伺服器上的vSphere API進行。 
+---
+= 使用VMware外掛程式進行虛擬機器備份與還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator支援透過VMware外掛程式備份VMware虛擬機器。虛擬機器備份是透過VMware vCenter伺服器上的vSphere API進行。
+
+對於虛擬機器備份、您必須在組態檔中提供下列詳細資料：
+
+* vCenter IP或主機名稱和認證
+* vSphere虛擬機器和資料存放區名稱
+
+
+
+NOTE: SnapCreator只有在vCenter設定於預設連接埠（443）時、才會探索vCenter。
+
+對於還原作業、您應該提供備份參數和Snapshot複本名稱。
+
+執行VMware備份與還原程序時、請考量下列事項：
+
+* 如果虛擬機器已列出且無法使用、外掛程式會顯示錯誤訊息。即使已備份、也無法還原遺失的虛擬機器。
+* 如果列出資料存放區、則會備份資料存放區中的所有虛擬機器。
+* 只會備份所列的虛擬機器或位於指定資料存放區中的虛擬機器。
+* 如果選取備份的虛擬機器包含在也選取備份的資料存放區內、則只會備份一次。
+* VMware外掛程式同時支援網路檔案系統（NFS）和VMware虛擬機器檔案系統（VMFS）資料存放區。
++
+** NFS資料存放區上的虛擬機器還原使用SnapRestore 儲存系統上的單一檔案功能（SFSR）、可避免主機複本。
+** 若要還原VMFS資料存放區上的虛擬機器、請執行下列步驟：
++
+... 使用特定還原Snapshot複本所含LUN的FlexClone或LUN複本。
+... 將其對應至叢集。
+... 使用vCenter API呼叫將內容從VMFS資料存放區的Snapshot複本複本複製到原始VMFS資料存放區。
+
+
+
+
+

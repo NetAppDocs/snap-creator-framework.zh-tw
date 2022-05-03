@@ -1,0 +1,39 @@
+---
+permalink: sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: backing up, database, snap, creator, command, line 
+summary: 您也可以使用Snap Creator命令列來備份資料庫。 
+---
+= 使用Snap Creator命令列備份資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您也可以使用Snap Creator命令列來備份資料庫。
+
+. 若要備份資料庫、請執行下列命令。
++
+[listing]
+----
+mgmtsrv01:~ # /opt/NetApp/Snap_Creator_Framework_411/scServer4.1.1/snapcreator --server
+localhost --port 8443 --user scadmin --passwd scadmin --profile HANA_profile_ANA --config
+ANA_database_backup --action backup --policy daily --verbose
+[Wed Mar 5 14:17:08 2014] INFO: Validating policy: daily finished successfully
+
+########## Detecting Data ONTAP mode for hana1a ##########
+
+########## Detecting Data ONTAP mode for hana1b ##########
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03031: Getting system version details of [hana2b]
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03032: Getting system version details of [hana2b] finished successfully.
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03031: Getting system version details of [hana1a]
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03032: Getting system version details of [hana1a] finished successfully.
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03031: Getting system version details of [hana1b]
+[Wed Mar  5 14:17:13 2014] INFO: STORAGE-03032: Getting system version details of [hana1b] finished successfully.
+
+….
+Truncated
+…
+----
+

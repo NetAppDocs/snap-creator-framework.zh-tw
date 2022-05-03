@@ -1,0 +1,592 @@
+---
+permalink: installation/reference_cli_command_for_creating_cluster_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, cluster, roles, role create 
+summary: 下表列出為新叢集使用者建立角色所需的命令。 
+---
+= 用於建立叢集角色的CLI命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出為新叢集使用者建立角色所需的命令。
+
+|===
+| 命令目錄名稱 | 要執行的命令 
+
+
+ a| 
+叢集身分識別顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "cluster identity show"-vserver clus3240rre
+
+
+
+ a| 
+活動
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"EVATE"-vserver clus3240rre
+
+
+
+ a| 
+事件組態
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"EVENT config"-vserver clus3240rre
+
+
+
+ a| 
+事件目的地
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「事件目的地」-vserver clus3240rre
+
+
+
+ a| 
+事件記錄
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「事件記錄」-vserver clus3240rre
+
+
+
+ a| 
+事件郵件記錄
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「事件郵件記錄」-vserver clus3240rre
+
+
+
+ a| 
+活動路由
+ a| 
+角色create -role CRBAC_New -cmd dirname "EVENT route"-vserver clus3240rre
+
+
+
+ a| 
+事件snmphistory
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「事件snmphistory」-vserver clus3240rre
+
+
+
+ a| 
+事件狀態
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「事件狀態」-vserver clus3240rre
+
+
+
+ a| 
+LUN註釋
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN Comment"-vserver clus3240rre
+
+
+
+ a| 
+LUN建立
+ a| 
+角色create -role CRBAC_New -cmd dirname "lun cree"-vserver clus3240rre
+
+
+
+ a| 
+LUN刪除
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN delete"-vserver clus3240rre
+
+
+
+ a| 
+LUN幾何資料
+ a| 
+角色create -role CRBAC_New -cmd目錄「LUN幾何資料」-vserver clus3240rre
+
+
+
+ a| 
+新增LUN igroup
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN igroup add"-vserver clus3240rre
+
+
+
+ a| 
+建立LUN igroup
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN igroup cree"-vserver clus3240rre
+
+
+
+ a| 
+LUN igroup集
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"LUN igroup Set"-vserver clus3240rre
+
+
+
+ a| 
+LUN igroup顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN igroup show"-vserver clus3240rre
+
+
+
+ a| 
+LUN對應
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"LUN map"-vserver clus3240rre
+
+
+
+ a| 
+LUN對應顯示
+ a| 
+角色create -role CRBAC_New -cmd目錄「LUN mappping show」-vserver clus3240rre
+
+
+
+ a| 
+LUN修改
+ a| 
+角色create -role CRBAC_New -cmd dirname "lun modify"-vserver clus3240rre
+
+
+
+ a| 
+LUN搬移
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN move"-vserver clus3240rre
+
+
+
+ a| 
+LUN離線
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱"lun offline"-vserver clus3240rre
+
+
+
+ a| 
+LUN連線
+ a| 
+角色create -role CRBAC_New -cmd目錄「LUN online」-vserver clus3240rre
+
+
+
+ a| 
+LUN大小調整
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN resize"-vserver clus3240rre
+
+
+
+ a| 
+LUN顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "LUN show"-vserver clus3240rre
+
+
+
+ a| 
+LUN取消對應
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱"LUN unmap"-vserver clus3240rre
+
+
+
+ a| 
+網路
+ a| 
+角色create -role CRBAC_New -cmd dirname "network"-vserver clus3240rre
+
+
+
+ a| 
+顯示網路FCP介面卡
+ a| 
+角色create -role CRBAC_New -cmd dirname "network FCP Adapter show"-vserver clus3240rre
+
+
+
+ a| 
+網路介面顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "network interface show"-vserver clus3240rre
+
+
+
+ a| 
+安全登入角色展示
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱「安全登入角色show」-vserver clus3240rre
+
+
+
+ a| 
+安全登入秀
+ a| 
+角色create -role CRBAC_New -cmd目錄「安全登入show」-vserver clus3240rre
+
+
+
+ a| 
+SnapMirror
+ a| 
+角色create -role CRBAC_New -cmd dirname "SnapMirror"-vserver clus3240rre
+
+
+
+ a| 
+儲存Aggregate
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱「儲存Aggregate」-vserver clus3240rre
+
+
+
+ a| 
+系統授權展示
+ a| 
+角色create -role CRBAC_New -cmd dirname "system license show"-vserver clus3240rre
+
+
+
+ a| 
+系統節點
+ a| 
+角色create -role CRBAC_New -cmd dirname "system node"-vserver clus3240rre
+
+
+
+ a| 
+系統節點AutoSupport 不一樣
+ a| 
+角色create -role CRBAC_New -cmd dirname "system node" AutoSupport -vserver clus3240rre
+
+
+
+ a| 
+系統節點AutoSupport 可叫用
+ a| 
+角色create -role CRBAC_New -cmd dirname "system node" AutoSupport -vserver clus3240rre
+
+
+
+ a| 
+系統節點顯示
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱「system node show」-vserver clus3240rre
+
+
+
+ a| 
+系統節點執行中
+ a| 
+角色create -role CRBAC_New -cmd dirname "system node"-vserver clus3240rre
+
+
+
+ a| 
+系統服務NDMP
+ a| 
+角色create -role CRBAC_New -cmd dirname "system services NDMP（系統服務NDMP）-vserver clus3240rre
+
+
+
+ a| 
+版本
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"ve"-vserver clus3240rre
+
+
+
+ a| 
+版本
+ a| 
+安全性登入角色create -role bainew1 -vserver SnapCreator -cmd目錄名稱"version"-access readonly
+
+
+
+ a| 
+建立Vserver匯出原則規則
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver EXP出口 原則規則cree"-vserver clus3240rre
+
+
+
+ a| 
+顯示Vserver匯出原則規則
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver EXPer-policy rRule show"-vserver clus3240rre
+
+
+
+ a| 
+Vserver匯出原則顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver EXPON-policy show"-vserver clus3240rre
+
+
+
+ a| 
+Vserver FCP
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱"vserver fc"-vserver Snapcreator -vserver clus3240rre
+
+
+
+ a| 
+Vserver FCP啟動器顯示
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver FCP啟動器show」-vserver clus3240rre
+
+
+
+ a| 
+Vserver FCP顯示
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver FCP show」-vserver clus3240rre
+
+
+
+ a| 
+Vserver FCP狀態
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver FCP STATUS"-vserver clus3240rre
+
+
+
+ a| 
+顯示Vserver iSCSI連線
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver iSCSI connection show」-vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱"vserver iSCSI"-vserver Snapcreator -vserver clus3240rre
+
+
+
+ a| 
+加入Vserver iSCSI介面存取清單
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver iSCSI介面存取清單add"-vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI介面存取清單顯示
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver iSCSI介面存取清單show"-vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI節點名稱
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver iSCSI nodename"-vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI工作階段顯示
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱"vserver iSCSI session" show -vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI展示
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver iSCSI show」-vserver clus3240rre
+
+
+
+ a| 
+Vserver iSCSI狀態
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver iSCSI狀態」-vserver clus3240rre
+
+
+
+ a| 
+Vserver NFS
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver nfs"-vserver Snapcreator -vserver clus3240rre
+
+
+
+ a| 
+Vserver NFS狀態
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver NFS STATUS"-vserver clus3240rre
+
+
+
+ a| 
+Vserver選項
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver options」-vserver clus3240rre
+
+
+
+ a| 
+Vserver服務UNIX群組建立
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver services name-service unix-group cree"-vserver clus3240rre
+
+
+
+ a| 
+Vserver服務UNIX使用者建立
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver services name-service UNIX使用者cree"-vserver clus3240rre
+
+
+
+ a| 
+Vserver服務UNIX群組展示
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver services name-service unix-group show"-vserver clus3240rre
+
+
+
+ a| 
+Vserver服務UNIX使用者展示
+ a| 
+角色create -role CRBAC_New -cmd dirname "vserver services name-service unix-user show"-vserver clus3240rre
+
+
+
+ a| 
+Vserver展示
+ a| 
+角色建立-role CRBAC_New -cmd目錄名稱「vserver show」-vserver clus3240rre
+
+
+
+ a| 
+Volume自動調整大小
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume autosize"-vserver clus3240rre
+
+
+
+ a| 
+建立Volume Clone
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱「volume clone create」-vserver clus3240rre
+
+
+
+ a| 
+Volume建立
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume cree"-vserver clus3240rre
+
+
+
+ a| 
+Volume銷毀
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume destro"-vserver clus3240rre
+
+
+
+ a| 
+Volume效率關閉
+ a| 
+角色create -role CRBAC_New -cmd目錄「Volume Efficiate Off」-vserver clus3240rre
+
+
+
+ a| 
+上的Volume效率
+ a| 
+角色create -role CRBAC_New -cmd目錄「Volume Efficiate on」-vserver clus3240rre
+
+
+
+ a| 
+Volume效率表現
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume Efficiate show"-vserver clus3240rre
+
+
+
+ a| 
+磁碟區效率開始
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume Efficiate start"-vserver clus3240rre
+
+
+
+ a| 
+Volume檔案
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume file"-vserver clus3240rre
+
+
+
+ a| 
+建立Volume檔案複製
+ a| 
+角色create -role CRBAC_New -cmd目錄名稱「volume file clone create」-vserver clus3240rre
+
+
+
+ a| 
+Volume檔案show-disk-usage
+ a| 
+角色create -role bainew1 -vserver SnapCreator -cmd目錄名稱「volume file show-disme-usage」-access all
+
+
+
+ a| 
+Volume修改
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume modify"-vserver clus3240rre
+
+
+
+ a| 
+Volume離線
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume offline"-vserver clus3240rre
+
+
+
+ a| 
+Volume Show
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume show"-vserver clus3240rre
+
+
+
+ a| 
+Volume大小
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume size"-vserver clus3240rre
+
+
+
+ a| 
+建立Volume Snapshot快照
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume snapshot cree"-vserver clus3240rre
+
+
+
+ a| 
+Volume卸載
+ a| 
+角色create -role CRBAC_New -cmd dirname "volume unmount」-vserver clus3240rre
+
+|===

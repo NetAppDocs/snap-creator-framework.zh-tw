@@ -1,0 +1,48 @@
+---
+permalink: administration/reference_ca_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ca-signed, ssl, certificate, snap, creator, framework 
+summary: Snap Creator Framework需要CA簽署SSL憑證 
+---
+= Snap Creator Framework需要CA簽署SSL憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *問題*
++
+Snap Creator Framework需要憑證授權單位（CA）簽署的SSL憑證。
+
+* *原因*
++
+伺服器的X．509憑證沒有來自已知公共憑證授權單位的簽名。
+
+* *修正行動*
++
+SnapCreator Framework支援安裝協力廠商憑證。
+
++
+.. 更新snapcreator.properties和agent.properties檔案中的下列參數值：
++
+snapcreator.properties檔案：
+
++
+SNAPCREATOR_Keystore密碼
+
++
+SNAPCREATOR_Keystore路徑
+
++
+agent.properties檔案：
+
++
+Keystore檔案
+
++
+Keystore密碼
+
+.. 重新啟動伺服器和代理程式服務。
+
+
+

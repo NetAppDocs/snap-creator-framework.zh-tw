@@ -1,0 +1,76 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_4_0_x_on_unix.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.0.x, unix, unix-based 
+summary: 您可以直接從UNIX系統上的Snap Creator Server 4.4.x升級。 
+---
+= 升級UNIX系統上的Snap Creator Server 4.1.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以直接從UNIX系統上的Snap Creator Server 4.4.x升級。
+
+* 如果您在Snap Creator中有任何包含特殊字元的使用者名稱、則必須僅使用字母字元（a到z或a到Z）重新命名這些使用者。
+* 您在備份Snap Creator目錄之前、已停止Snap Creator程序程序、以確保備份的資料已完成。
++
+例如、輸入下列命令：
+
++
+[listing]
+----
+/install_path/scServer4.0.x/bin/scServer stop
+/install_path/scAgent4.0.x/bin/scAgent stop
+----
+* 您已在Snap Creator 4.1.x Server引擎子目錄（/install_path/scServer4.0.x/engine）中備份下列目錄及所有相關子目錄與檔案：
++
+** SnapCreator資料庫（../ snapcreator）
+** SnapCreator伺服器內容（../等）
+** 設定檔與組態（../組態）
+** 記錄檔（../記錄）*注意：*您不得刪除所建立的Snap Creator 4.1.x備份複本。
+
+
+
+
+下列步驟所提供的路徑會參照預設的安裝路徑。下列命令中的路徑可能與您的安裝路徑不同。
+
+升級程序完成後、您應該考慮下列問題：
+
+* 如果升級的Snap Creator資料庫包含一些標示為「進行中」的工作、則即使升級程序完成、狀態仍維持不變。
+* 最新SnapCreator中的預設管理員必須是Snap Creator 4.5.x中的系統管理員如果4.1.x使用者不是系統管理員、則升級會將操作者角色指派給4.1.x使用者。
++
+.. 如果您尚未停止Snap Creator程序、請停止。
++
+如需停止程序的相關資訊、請參閱本主題稍早所提供的詳細資料。
+
+.. 安裝最新的Snap Creator、但不要啟動Snap Creator Server服務。
++
+如需詳細資訊、請參閱在UNIX上安裝Snap Creator Server的相關資訊。
+
+.. 將備份的Snap Creator 4.1.x資料庫目錄複製到最新位置（/install_path/scServer4.1.x /引擎/snapcreator）。
+.. 將備份的4.x設定檔和組態目錄複製到最新位置（/install_path/scServer4.1.x/enger/config）。
+.. 將備份的4.4.x記錄目錄複製到最新位置（/install_path/scServer4.1.x/enginal/logs）。
+.. 將目錄變更為Snap Creator安裝路徑（/install_path/scServer4.1.x/engine）中的引擎子目錄。
+.. 輸入下列命令來升級Snap Creator：java -jar snapcreator.jar -升級
+
+
+
+
+升級程序完成後、輸入下列命令啟動Snap Creator Server服務：
+
+/install_path/scServer4.1.x/bin/scServer start
+
+此外、請刪除Snap Creator 4.0安裝目錄。
+
+
+IMPORTANT: 在確定不需要還原為舊版之前、請勿刪除備份複本。
+
+您也必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 (https://IP_address:gui_port)[]。
+
+您必須使用HTTPS連線、否則連線不會自動重新導向至HTTPS連線、GUI將無法運作。
+
+*相關資訊*
+
+xref:task_installing_the_snap_creator_server_on_unix.adoc[在UNIX系統上安裝Snap Creator Server]

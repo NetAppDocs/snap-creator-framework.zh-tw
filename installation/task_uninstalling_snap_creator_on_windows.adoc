@@ -1,0 +1,43 @@
+---
+permalink: installation/task_uninstalling_snap_creator_on_windows.html 
+sidebar: sidebar 
+keywords: uninstalling, uninstall, snap, creator, windows 
+summary: 您可以使用Windows「開始」功能表來解除安裝Snap Creator。Windows卸載程式會移除已安裝的Snap Creator元件（例如、如果同時安裝Snap Creator Server和Snap Creator Agent、兩者都會解除安裝）。同樣地、如果只安裝其中一個元件、就會解除安裝該元件。 
+---
+= 在Windows上解除安裝Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Windows * Start*功能表來解除安裝Snap Creator。Windows卸載程式會移除已安裝的Snap Creator元件（例如、如果同時安裝Snap Creator Server和Snap Creator Agent、兩者都會解除安裝）。同樣地、如果只安裝其中一個元件、就會解除安裝該元件。
+
+* 備份Snap Creator Server引擎目錄（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.0\engine）中的下列目錄及所有相關子目錄與檔案：
++
+** SnapCreator資料庫（.\snapcreator）
+** SnapCreator伺服器內容（.\etc）
+** 組態檔（.\config）
+** 記錄（.\logs）
+** 外掛程式儲存庫（若已啟用）（.\snapreatorPlugin）
+
+
+* 備份Snap Creator Agent目錄（C:\Program Files\NetApp\Snap_Creator_Framework\scagent4.1.0）中的下列目錄及所有相關子目錄與檔案：
++
+** 記錄（.\logs）
+** 外掛程式（..\外掛程式）
+** SnapCreator Agent屬性（.\etc）、其中包含允許的_commands.config和agent.properties檔案
+
+
+* 如果是從命令提示字元手動啟動SnapCreator、請關閉命令提示字元、停止並結束Snap Creator。
++
+
+NOTE: 如果SnapCreator是從服務啟動、則解除安裝程式會在解除安裝程序中停止服務。
+
++
+.. 選擇* Start*>* All programs *>* Snap Creator*>*解除安裝NetApp Snap Creator Framework*。
+.. 當系統提示您是否在卸載Snap Creator之前備份日誌和配置文件時，請單擊* Yes*。
+.. 在解除安裝程序完成後出現提示時、請按一下*關閉*。
+
+
+

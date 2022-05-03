@@ -1,0 +1,23 @@
+---
+permalink: administration/reference_error_messages.html 
+sidebar: sidebar 
+keywords: error, messages, scf, repo, storage, agt, gui 
+summary: 您必須注意與不同Snap Creator作業相關的錯誤訊息。 
+---
+= 錯誤訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須注意與不同Snap Creator作業相關的錯誤訊息。
+
+每則錯誤訊息都包含區碼和唯一的5位數識別碼、例如：錯誤：[<Area code>-<Unique Area誤差識別碼>]<錯誤訊息>。區碼會識別錯誤發生的位置。不同的區碼如下：
+
+* 「SNAP」：SnapCreator架構
+* 「REPO」：儲存庫
+* 「儲存設備」
+* 「agt」：SnapCreator Agent
+* 「GUI」：SnapCreator圖形化使用者介面（GUI）
+

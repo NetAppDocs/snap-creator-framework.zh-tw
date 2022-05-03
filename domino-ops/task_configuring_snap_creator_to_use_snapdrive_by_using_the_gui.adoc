@@ -1,0 +1,87 @@
+---
+permalink: domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, supplemental, commands 
+summary: 您可以在建立組態檔之後、將輔助命令新增至組態。您可以在Snap Creator伺服器或代理程式上執行命令。 
+---
+= 新增輔助命令至組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在建立組態檔之後、將輔助命令新增至組態。您可以在Snap Creator伺服器或代理程式上執行命令。
+
+若要在代理程式上執行補充命令、您應該已經將命令新增至代理程式上的允許命令.config檔案。
+
+根據預設、輔助命令會在代理程式上執行。您可以在伺服器上執行輔助命令、方法是在命令前面加上文字伺服器、然後加上一個分號（：）。例如、伺服器：C：\myscript.bat。不需要在伺服器上允許命令。
+
+您可以使用Snap Creator GUI或Snap Creator CLI、將命令新增至備份與還原組態。
+
+
+NOTE: 本指南說明如何使用GUI來新增命令。如需有關如何使用CLI的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+. 在「設定檔與組態」窗格中、選取組態檔、然後按一下「*命令*」索引標籤。
++
+可使用下列命令類型：
+
++
+|===
+| 命令類型 | 說明 
+
+
+ a| 
+應用程式靜止
+ a| 
+僅供非外掛程式使用。忽略此命令類型。
+
+
+
+ a| 
+應用程式靜止
+ a| 
+僅供非外掛程式使用。忽略此命令類型。
+
+
+
+ a| 
+預先結束
+ a| 
+使用此類型來執行命令、告訴Snap Creator發生嚴重錯誤後該怎麼辦。
+
+
+
+ a| 
+建立Snapshot複本
+ a| 
+使用此類型可執行您自己的Snapshot複本建立命令。
+
+|===
++
+
+NOTE: GUI中只能使用支援的命令子集。如需有關APP、歸檔、掛載/卸載及POST命令的資訊、請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+. 在*命令*索引標籤上、捲動至您要使用之命令類型的區段、然後按一下*新增*。
+. 在「* Add Command here *（在此處新增命令*）」文字上輸入命令。
++
+若要使用SnapDrive Windows的支援功能來建立備份、您可以在Snapshot Copy Create命令類型的區段中輸入下列命令：
+
++
+[listing]
+----
+"C:\Program Files\NetApp\SnapDrive\sdcli.exe" snap create -s %SNAME-%SNAP_TYPE_%SNAP_TIME -D F G H
+----
++
+其中：
+
++
+** 「C:\Program Files\NetApp\SnapDrive \sdcli．exe」是SnapDrive 程式碼CLI的預設安裝路徑。
+** %SNAME-%snap_type_%snap_time指定從組態檔名稱、Snapshot原則（每小時、每日或每月）、以及建立Snapshot複本的時間和日期來建立Snapshot複本。
+** D是交換器、F G H是要備份資料的掛載點。秘訣：若要在伺服器上執行命令、請在命令前面加上文字伺服器、然後加上一個分號（：）。
+
+
+. 當您對輸入內容感到滿意時、請按* Enter *。
+. 重複步驟 <<STEP_3F9C83DD05D84075AD0277213FD67C56,#採取 步驟_3F9C83DD05D864075AD0277213FD67C56>> 透過 <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,#採取 步驟_FBEDD7AE105 F42138EB35315EA9FA7CC>> 以新增其他命令。
+. 按一下「組態內容」窗格中的「*儲存*」以儲存變更。
+

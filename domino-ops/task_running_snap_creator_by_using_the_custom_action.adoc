@@ -1,0 +1,63 @@
+---
+permalink: domino-ops/task_running_snap_creator_by_using_the_custom_action.html 
+sidebar: sidebar 
+keywords: domino, ibm,using, use, snap, creator, custom, action complete, restore 
+summary: 您可以使用SnapCreator自訂動作來完成源自SnapCreator之外的還原處理。 
+---
+= 使用SnapCreator自訂動作來完成還原處理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCreator自訂動作來完成源自SnapCreator之外的還原處理。
+
+您只能在Snap Creator CLI中執行此動作。
+
+. 在Snap Creator CLI中、輸入下列命令：snapcreator.exe --action CUSTOM --server server --port port --user user-passwd password --profile profile --config --param snapname=snapsnapshot名稱datapas=datapath restoretype=u2m | surestorestime="mm/DD/YYYY：mm:SS" disablerN=2分鐘
++
+其中
+
++
+** 伺服器是Snap Creator伺服器的主機名稱或IP位址。
+** 連接埠是執行Snap Creator Server的連接埠號碼。
+** 使用者是Snap Creator使用者的名稱。
+** 密碼是Snap Creator使用者的密碼。
++
+
+NOTE: 如果您不想以純文字輸入密碼、可以省略--passwd選項。當您執行命令時、SnapCreator會提示您輸入密碼
+
+** 設定檔是SnapCreator設定檔的名稱。
+** config是Snap Creator組態檔的名稱。
+** SnapShot名稱是您要從中還原檔案的Snapshot複本名稱。
+** datapath是您要還原檔案之目錄的路徑名稱。
+** 還原類型是要執行的還原類型：
++
+*** u2m執行最新的還原。
+*** su2m執行可選的最新還原。在「-restoreTime」選項中、以「mm/DD/YYYY hh：mm:SS」格式指定您要播放Domino交易記錄的日期和時間。例如：2014年1月23日12：45：00。
+
+
+** 停用應用程式會停用Domino複寫：
++
+*** 輸入N（預設）以允許Domino複寫。外掛程式會使用現有的Domino複本ID來儲存還原的資料庫檔案。
++
+
+NOTE: 允許Domino複寫的另一種方法是將此參數保留在命令之外。
+
+*** 輸入Y以停用Domino複寫。外掛程式會為還原的資料庫檔案設定新的Domino複本ID。附註：附加命令-verbose會顯示有關還原作業的其他資訊。否則、當命令完成執行時、您會立即返回命令提示字元。
+
+
+
+
++
+[listing]
+----
+snapcreator.exe --action custom --server Tampico --port 8443
+--user admin --profile Domino --config Nantes
+--params snapname=Nantes-Test_Policy_20140123121459
+datapath=F:\Domino\data\restore\mail\t04.nsf
+restoretype=su2m restoretime="01/23/2014 12:45:00"
+disablereplication=y
+----
+

@@ -1,0 +1,87 @@
+---
+permalink: domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, using scdump, gathering, logs, compressed, format 
+summary: 您可以使用Snap Creatorscdump動作、將記錄收集到壓縮檔案歸檔中。然後、您可以將歸檔傳送給技術支援或SnapCreator專家以供檢閱。 
+---
+= 使用scdump以壓縮格式收集記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creatorscdump動作、將記錄收集到壓縮檔案歸檔中。然後、您可以將歸檔傳送給技術支援或SnapCreator專家以供檢閱。
+
+您應該已經建立備份與還原組態檔。
+
+scdump包含下列檔案：
+
+|===
+| 檔案 | 說明 
+
+
+ a| 
+scdump.txt
+ a| 
+包含Snap Creator Agent版本和主機作業系統、Data ONTAP 版本資訊更新和Domino版本。
+
+
+
+ a| 
+engine.log
+ a| 
+包含有關Snap Creator工作流程引擎作業的資訊。
+
+
+
+ a| 
+gui.log
+ a| 
+包含有關Snap Creator GUI作業和訊息的資訊。可能包含多個記錄。
+
+
+
+ a| 
+sc_server.log
+ a| 
+包含有關Snap Creator Server作業的詳細資訊。可能包含多個記錄。
+
+
+
+ a| 
+登出記錄
+ a| 
+包含工作的詳細層級資訊。所選設定檔中所有組態的輸出記錄都會包含在內。
+
+
+
+ a| 
+偵錯記錄
+ a| 
+包含詳細層級的資訊、以及可用於偵錯的資訊。所選設定檔中所有組態的偵錯記錄都包含在內。
+
+
+
+ a| 
+錯誤記錄
+ a| 
+包含記錄的錯誤資訊。所選設定檔中所有組態的錯誤記錄都會包含在內。
+
+
+
+ a| 
+組態檔
+ a| 
+所選設定檔中的所有組態檔都會包含在內、包括全域組態檔。
+
+|===
+
+NOTE: 雖然組態檔是scdump的輸入、但公用程式會收集父設定檔中所有組態的資訊。
+
+. 在「設定檔與組態」窗格中、選取一個組態檔、然後按一下「*動作*」>「* scdump」。
++
+scdump會將記錄和其他檔案收集到壓縮檔案歸檔中。
+
+. 在下載對話方塊中、視需要按一下「*開啟*」或「*儲存*」。
+

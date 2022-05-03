@@ -1,0 +1,29 @@
+---
+permalink: administration/task_deleting_configuration_files.html 
+sidebar: sidebar 
+keywords: delete, configuration, file, profile, management 
+summary: 您可以從設定檔刪除組態檔。 
+---
+= 從設定檔刪除組態檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從設定檔刪除組態檔。
+
+
+IMPORTANT: 刪除組態檔時、與組態相關的排程也會隨著程序一併移除。
+
+. 從Snap Creator GUI主功能表中、選取*管理*>*組態*。
+. 從「設定檔與組態」窗格中、展開設定檔的內容。
++
+指派給設定檔的組態檔會列在設定檔名稱下方。
+
+. 在組態檔上按一下滑鼠右鍵、然後選取*刪除*。
+. 在確認視窗中按一下*是*。
++
+組態檔會從設定檔名稱下的清單中移除、並從Snap Creator伺服器中永久刪除。
+
+

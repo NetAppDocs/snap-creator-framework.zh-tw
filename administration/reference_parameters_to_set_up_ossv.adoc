@@ -1,0 +1,53 @@
+---
+permalink: administration/reference_parameters_to_set_up_ossv.html 
+sidebar: sidebar 
+keywords: parameter, open, system, snapvault, ossv, enable, homedir, snapshot 
+summary: 設定開放式系統SnapVault 功能區（OSSV）需要數個參數。 
+---
+= 設定OSSV的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定開放式系統SnapVault 功能區（OSSV）需要數個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+ntap_OSSV_enable
+ a| 
+（是
+| n） 
+
+
+ a| 
+啟用OSSV整合。此參數必須與NTAP_OSSV_HOMEDIR參數搭配使用。執行Snap Creator的主機也需要OSSV。在OSSV中、原則保留邏輯只會根據預先定義的Snap Creator原則來處理原則。它不支援任何原則物件。
+
+
+NOTE: 啟用此OSSV參數時、路徑會指定為Volume。在Windows中為OSSV指定路徑時、不應使用分號（：）。例如、如果路徑是E：\DB、則應將其用作E \DB。
+ a| 
+nTap的OSSV_HOMEDIR
+ a| 
+/usr /SnapVault
+
+
+
+ a| 
+設定OSSV主目錄（/usr/SnapVault）的路徑。
+ a| 
+ntap_OSSV_fs_snapshot
+ a| 
+（是
+
+
+
+| n）  a| 
+設定NTAP_OSSV_Fs_snapshot _create_CMD參數所需。可讓您使用「開放式系統」或「檔案系統」命令來建立檔案系統Snapshot複本。接著、檔案系統Snapshot複本會使用SnapVault NetApp將其傳輸至儲存系統。
+ a| 
+ntap_OSSV_fs_snapshot create_CMD
+
+|===

@@ -1,0 +1,180 @@
+---
+permalink: installation/task_installing_the_snap_creator_server_on_unix.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server, unix, unix-based 
+summary: 對於UNIX平台（AIX、HP-UX、Linux和Solaris）、安裝Snap Creator的程序包括擷取Snap Creator軟體套件（包含Snap Creator Server和Snap Creator Agent的.tar檔案）、執行設定指令碼、啟動服務及驗證連接埠。 
+---
+= 在UNIX系統上安裝Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於UNIX平台（AIX、HP-UX、Linux和Solaris）、安裝Snap Creator的程序包括擷取Snap Creator軟體套件（包含Snap Creator Server和Snap Creator Agent的.tar檔案）、執行設定指令碼、啟動服務及驗證連接埠。
+
+必須安裝JRE 1.8 Update 72或更新版本。
+
+執行安裝的人員必須擁有足夠的存取權限和權限、才能執行安裝。
+
+
+NOTE: 您必須擁有root層級的權限、才能執行初始設定。
+
+Snap Creator伺服器的預設連接埠為843。您可以使用Netstat或類似工具來驗證您要使用的網路連接埠是否支援HTTPS、是否可用、以及是否尚未使用（例如、在UNIX主機上、您可以輸入「netstat-nap | grep 8443」）。
+
+您必須已經下載SnapCreator。
+
+UNIX服務（伺服器和代理程式）功能提供SnapCreator Server和Snap Creator Agent的啟動指令碼。啟動指令碼是以UNIX Shell指令碼（Bourne Shell）撰寫、設計用於在Snap Creator支援的所有UNIX環境中執行。
+
+. 將下載的Snap Creatortar.gz檔案複製到您要安裝Snap Creator Server的位置：
++
+.. 建立子目錄：mkdir snap_creator目錄建立子目錄：
++
+mkdir snap_creator目錄
+
++
+[listing]
+----
+mkdir /SC_41
+----
+.. 將Snap Creatortar.gz檔案複製到新建立的目錄：
++
+[listing]
+----
+cp NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+/snap_creator_directory
+----
++
+[listing]
+----
+cp NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+/SC_41
+----
+
+
+. 變更至SnapCreator Framework .tar檔案所在的目錄、然後擷取檔案：
++
+
+NOTE: 視UNIX環境而定、您可能需要先解壓縮檔案、然後再輸入tar命令。
+
++
+[listing]
+----
+cd snap_creator_directory
+tar -xvf NetApp_Snap_Creator_Frameworkrelease-os.tar.gz
+----
++
+** Snap_creator_directorys是安裝Snap Creator的位置。
+** 版本是目前推出的Snap Creator軟體套件。
+** 作業系統是指作業系統。
++
+[listing]
+----
+cd /sc_41
+tar -xvf NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz
+----
+
+
++
+這會擷取伺服器和代理程式軟體。一般而言、只會設定Snap Creator Server。代理程式通常位於要保護的資料庫或應用程式伺服器上、如下列範例所示：
+
++
++
+
++
+[listing]
+----
+NetApp_Snap_Creator_Framework4.1.0-Linux32.tar.gz  scServer4.1.0
+scAgent4.1.0
+----
+. 執行Snap Creator的初始設定：
++
+[listing]
+----
+cd scServer*
+./snapcreator --setup
+Welcome to the NetApp Snap Creator Framework release-version!
+\#\#\# Installation options \#\#\#
+01. NetApp Snap Creator Framework release-version Server
+02. NetApp Snap Creator Framework release-version Remote CLI
+Select install option (enter a number or "q" to quit):
+----
++
+輸入「01」以安裝Snap Creator Server。
+
++
+** 選項01會設定Snap Creator使用者和密碼、指定要執行Snap Creator伺服器的GUI連接埠、以及設定其他參數、以執行Snap Creator Server的初始設定。
+** 選項02將Snap Creator Server設定為本機二進位檔、並可讓您從本機系統CLI向遠端Snap Creator伺服器發出命令。
+
+
+. 在此輸入y、接受終端使用者授權合約：
++
+[listing]
+----
+END USER LICENSE AGREEMENT
+...the EULA displays...
+
+Do you accept the End User License Agreement (y|n): <Enter y>
+
+Enter controller serial number (Recommended): <OPTIONAL: Enter serial number for one of your storage controllers>
+----
+. 輸入控制器序號。
++
+控制器序號會內嵌在Snap Creator內容檔案中、並包含在支援和記錄輸出中。您可以使用此資訊來協助疑難排解稍後可能發生的任何問題。
+
+. 輸入伺服器連接埠、系統IP和Java Bin路徑、然後繼續提示。
++
+[listing]
+----
+Enter Snap Creator server port [8443]: <Enter server port>
+
+Enable job monitor (Y|N): <Enter Y>
+
+Enter job monitor size, how many jobs to allow [100]: <Enter the number of jobs from 1-1000>
+----
++
+
+NOTE: 雖然*工作監視器大小*的最大接受值為10、000、但建議的最大大小為1000。
+
++
+[listing]
+----
+Enter scServer Administrator Username: <Enter the Administrator username>
+Enter password for snap_creator_administrator: <Enter the password>
+Confirm password for snap_creator_administrator: <Enter the password again>
+
+Enter JAVA Bin Path: /usr/java/default/bin
+Enter Your System IP: 10.232.30.18
+INFO: Updated NetApp Snap Creator Framework release-version
+/install_path/scServerrelease-version/engine/etc/snapcreator.properties
+INFO: Updated NetApp Snap Creator Framework release-version
+/install_path/scServerrelease-version/bin/scServer
+
+INFO: To start scServer please do the following:
+
+/install_path/scServerrelease-version/bin/scServer start
+
+INFO: To access NetApp Snap Creator Framework release-version GUI goto https://hostname:gui_port
+----
+. 啟動Snap Creator Framework伺服器：
++
+[listing]
+----
+/install_path/scServerrelease-version/bin/scServer start
+Checking Status of scServer:
+Running
+----
+. 瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動（例如： https://10.12.123.123:8443)[]。
++
+您必須使用HTTPS連線、否則GUI將無法運作。
+
++
+如果通訊經過防火牆、請開啟網路連接埠。
+
+
+
+*相關資訊*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[在Snap Creator主機上安裝Java]
+
+xref:task_downloading_the_snap_creator_software.adoc[正在下載Snap Creator軟體]

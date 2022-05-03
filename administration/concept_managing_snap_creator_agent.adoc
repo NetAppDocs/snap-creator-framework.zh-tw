@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_snap_creator_agent.html 
+sidebar: sidebar 
+keywords: start, verify, snap, creator, agent, port, managing, unix, windows 
+summary: 您可以啟動、驗證及停止SnapCreator Agent、變更Agent連接埠、以及管理Windows和UNIX系統上的代理程式安全性。 
+---
+= 管理Snap Creator代理程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟動、驗證及停止SnapCreator Agent、變更Agent連接埠、以及管理Windows和UNIX系統上的代理程式安全性。

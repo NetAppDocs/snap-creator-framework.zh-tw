@@ -1,0 +1,73 @@
+---
+permalink: domino-ops/reference_storage_layout_requirements.html 
+sidebar: sidebar 
+keywords: domino, ibm, storage, layout, requirements, 
+summary: 典型的IBM Domino環境至少有三個Domino磁碟區、每個磁碟區分別用於Domino資料、Domino交易記錄和外掛程式變更資訊目錄。許多站台也有Domino DAOS和檢視重建的磁碟區。 
+---
+= 儲存配置需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+典型的IBM Domino環境至少有三個Domino磁碟區、每個磁碟區分別用於Domino資料、Domino交易記錄和外掛程式變更資訊目錄。許多站台也有Domino DAOS和檢視重建的磁碟區。
+
+IBM Domino外掛程式使用changeinfo目錄來記錄備份作業期間所記錄的變更、以及用於最新還原作業的交易記錄複本。最佳實務做法是將changeinfo目錄儲存在個別的磁碟區上、以避免不慎覆寫資訊、並使備份更容易。
+
+您可能也會發現、Domino DAOS（若已啟用）和視圖重建的磁碟區是分開的、很實用。當Domino重新建置檢視時（例如、當使用者開啟索引已刪除的檢視、或執行updall -R時）、可能會產生暫存檔、以排序資料以進行快速檢視重建。
+
+根據預設、這些暫存檔位於系統的暫存資料夾或Domino資料夾中。IBM建議將暫用檔案的位置變更為不同的磁碟機、以分散磁碟I/O、並確保有足夠的空間來重建視圖。若要變更用於檢視重新建置的暫用資料夾、請將View_Rebuild設定新增至notes.ini檔案。
+
+下表顯示偏好的Volume配置：
+
+|===
+| Volume | 內容 | 附註 
+
+
+ a| 
+Volume 1
+ a| 
+Domino資料
+ a| 
+建議使用FC、SAS或SSD磁碟機。
+
+
+
+ a| 
+Volume 2
+ a| 
+Domino交易記錄
+ a| 
+建議使用FC、SAS或SSD磁碟機。
+
+
+
+ a| 
+Volume 3
+ a| 
+變更資訊
+ a| 
+儲存備份作業期間記錄的變更、以及交易記錄的複本、以便在最新的還原作業中使用。
+
+
+
+ a| 
+Volume 4
+ a| 
+檢視重新建置
+ a| 
+選用。儲存索引更新期間建立的暫存檔案。可以使用RAM磁碟。將View_Rebuild設定新增至notes.ini檔案。
+
+
+
+ a| 
+Volume 5.
+ a| 
+DAOS儲存庫
+ a| 
+選用。包含來自DAOS的.DLO檔案。I/O需求低、是SATA磁碟機的理想選擇。
+
+|===
+
+NOTE: 在虛擬環境中、最好使用來賓掛載磁碟。

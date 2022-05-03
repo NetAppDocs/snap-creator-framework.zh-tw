@@ -1,0 +1,35 @@
+---
+permalink: installation/task_installing_java_on_snap_creator_hosts.html 
+sidebar: sidebar 
+keywords: installing, install, java, snap, creator, hosts 
+summary: OpenJDK和Oracle Java執行時間環境（JRE）1.8 Update 72或更新版本必須安裝在任何Snap Creator Server和Agent主機上。為了避免傳輸層安全性（TLS）弱點、最好在Snap Creator Server和Agent主機上安裝任何較新版本的JRE 1.8 Update 72。 
+---
+= 在Snap Creator主機上安裝Java
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OpenJDK和Oracle Java執行時間環境（JRE）1.8 Update 72或更新版本必須安裝在任何Snap Creator Server和Agent主機上。為了避免傳輸層安全性（TLS）弱點、最好在Snap Creator Server和Agent主機上安裝任何較新版本的JRE 1.8 Update 72。
+
+. 在每個Snap Creator Server或Snap Creator Agent主機上下載並安裝JRE。
++
+Java和Snap Creator的位元層級（32位元或64位元）必須相同。
+
++
+如有必要、請從下載Java http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"] 頁面。
+
+. 安裝完JRE後、請確認Java的版本和位元層級：Java版本
++
+[listing]
+----
+C:\Documents and Settings\Administrator>java -version
+java version "1.7.0_04-ea"
+Java(TM) SE Runtime Environment (build 1.7.0_04-ea-b01)
+Java HotSpot(TM) Client VM (build 23.0-b03, mixed mode, sharing)
+----
++
+命令的輸出會顯示已安裝的Java版本。如果未顯示位元層級（如上例所示）、則安裝為32位元。
+
+

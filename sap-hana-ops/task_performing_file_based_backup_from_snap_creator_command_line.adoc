@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_performing_file_based_backup_from_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: sap, hana, performing, file-based, backup, snap, creator, command, line 
+summary: 您可以使用Snap Creator命令列執行檔案型備份。 
+---
+= 從Snap Creator命令列執行檔案型備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator命令列執行檔案型備份。
+
+. 若要執行檔案型備份、請執行下列命令：
++
+[listing]
+----
+./snapcreator --server localhost --port 8443 --user sc --passwd sc --profile hana_testing --config HANA_Test --action fileBasedBackup --policy none --verbose
+----
+

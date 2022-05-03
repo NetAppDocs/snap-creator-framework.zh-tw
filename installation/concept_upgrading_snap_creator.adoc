@@ -1,0 +1,28 @@
+---
+permalink: installation/concept_upgrading_snap_creator.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator 
+summary: 您可以從各種支援的版本升級至最新版本的Snap Creator。 
+---
+= 正在升級Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從各種支援的版本升級至最新版本的Snap Creator。
+
+
+NOTE: 如果您對是否可以從社群網站上發佈的版本升級有任何疑問、您可以將一般問題提交給NetApp社群論壇。NetApp社群論壇的線上網址為： https://communities.netapp.com/community/products_and_solutions/databases_and_enterprise_apps/snapcreator[]
+
+在升級至最新版本的Snap Creator之前、請先檢查目前安裝版本之Snap Creator的工作監控大小。升級Snap Creator時、您必須將工作監視器大小設定為等於或大於先前的設定、以避免工作監視器資料庫中的資料遺失。
+
+此外、升級Snap Creator時、您必須確保升級是在使用相同作業系統環境的主機上進行。例如、如果您是在Windows環境中升級、則應確保在複製備份資料時、也會將資料複製回Windows環境、而非UNIX系統。
+
+
+IMPORTANT: SnapCreator沒有降級（回復）選項。在升級過程中、您需要備份數個檔案。請務必保留備份檔案、直到您確定不需要回復至舊版的Snap Creator為止。
+
+*相關資訊*
+
+xref:task_checking_job_monitor_size.adoc[正在檢查工作監視器大小]

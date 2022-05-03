@@ -1,0 +1,669 @@
+---
+permalink: administration/reference_snap_creator_framework_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, error, message, troubleshoot, issue, scf, serial, number, plug-in, snapcreator, application 
+summary: Snap Creator Framework錯誤訊息可協助您疑難排解任何發生的問題。 
+---
+= SnapCreator Framework錯誤訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Framework錯誤訊息可協助您疑難排解任何發生的問題。
+
+|===
+| 錯誤代碼 | 錯誤訊息 | 說明/解決方法 
+
+
+ a| 
+SCP-00001
+ a| 
+無法取得序號[%s]
+ a| 
+未執行Snap Creator安裝命令。執行snapcreator --profile setup命令。請確定序號為空白或設為數值。
+
+
+
+ a| 
+SCP-00002
+ a| 
+外掛程式的備份處理失敗、錯誤為「%s」、結束代碼為「%s」、正在結束！
+ a| 
+應用程式備份因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00003
+ a| 
+外掛程式的備份清除處理作業失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式備份清除因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00004
+ a| 
+外掛程式的實體複本處理失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式複製因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00005
+ a| 
+外掛程式的實體複本清除處理失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式複製清除因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00006
+ a| 
+預先複製處理的「%s」失敗、並顯示錯誤「%s」和結束代碼「%s」、正在結束！
+ a| 
+應用程式預先複製作業因應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00007
+ a| 
+外掛程式的複製後處理作業失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式複製後作業因應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00008
+ a| 
+複製的LUN igroup對應（將[%s]複製到位於[%s]上的igroup [%s]）失敗、正在結束！
+ a| 
+LUN實體複製的igroup對應失敗。檢查錯誤記錄。您可能遇到NetApp Manageability SDK解決方案錯誤。記錄可能會顯示問題的原因。
+
+
+
+ a| 
+SCP-00009
+ a| 
+資料集[%s]的NetApp管理主控台備份清單結束失敗、退出代碼為「%s」、正在結束！
+ a| 
+SnapCreator已在NetApp管理主控台中啟動備份刪除作業、但無法列出Snapshot複本。確認SnapCreator正在註冊備份、並檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00010
+ a| 
+NetApp管理主控台備份清單未定義、資料集[%s]不存在備份、正在結束！
+ a| 
+SnapCreator已在NetApp管理主控台中啟動備份刪除作業、但Snapshot複本已存在。確認SnapCreator正在註冊備份、並檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00011
+ a| 
+資料集[%s]的NetApp管理主控台備份版本ID（%s）時間戳記（s）刪除失敗、退出代碼為（s）、正在結束！
+ a| 
+確認SnapCreator正在註冊備份、並檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00012
+ a| 
+擷取資料集的NetApp管理主控台資料集狀態為「%s」失敗、退出代碼為「%s」、正在結束！
+ a| 
+確認資料集存在且狀態一致。同時確保資料集是由Snap Creator所建立。未由Snap Creator建立的資料集不是應用程式資料集、這些資料集無法運作。
+
+
+
+ a| 
+SCP-00013
+ a| 
+無法使用資料集[%s]結束程式碼[%s]登錄Snapshot複本
+ a| 
+檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00014
+ a| 
+NetApp管理主控台針對[%s]（[%s]）的備份啟動失敗、正在結束！
+ a| 
+檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00015
+ a| 
+工作ID為「%s」的NetApp管理主控台備份已完成、並出現錯誤-「%s」
+| [%s] 
+
+
+| [%s] | [%s]  a| 
+SnapCreator已啟動NetApp管理主控台備份、但無法取得備份作業的進度。檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00016
+ a| 
+無法取得[%s]的SnapMirror狀態、正在結束！
+ a| 
+SnapCreator找不到指定控制器的任何SnapMirror關係。登入儲存控制器並執行SnapMirror狀態命令、以確保關係存在。
+
+
+
+ a| 
+SCP-00017
+ a| 
+針對[%s]的SnapMirror關係：[%s]不存在、正在結束！
+ a| 
+SnapCreator找不到指定控制器磁碟區的SnapMirror關係。登入儲存控制器、執行SnapMirror狀態命令、並確保指定控制器名稱的關係存在。如果使用不同的名稱、則必須設定secondary _INTERFACES蔘 數、以告知Snap Creator哪些內容對應至儲存控制器。
+
+
+
+ a| 
+SCP-00018
+ a| 
+無法取得[%s]的狀態清單、正在結束！SnapVault
+ a| 
+SnapCreator找不到SnapVault 指定控制器的任何相關資訊。請登入儲存控制器並執行SnapVault 「版本資訊」命令。確保SnapVault 存在不必要的關係。
+
+
+
+ a| 
+SCP-00019
+ a| 
+關於「%s」的關聯性：不存在「%s」、正在結束！SnapVault
+ a| 
+SnapCreator找不到SnapVault 此資訊。請登入儲存控制器、然後執行SnapVault 「動動」狀態命令。確保SnapVault 指定控制器名稱存在的不一致關係。如果使用不同的名稱、則必須設定secondary介面參數、告訴Snap Creator哪些內容對應至儲存控制器。
+
+
+
+ a| 
+SCP-00020
+ a| 
+在SnapVault 目的地（%s）上使用來源（%s）執行更新失敗！
+ a| 
+SnapCreator無法開始SnapVault 更新。登入儲存控制器並執行SnapVault 「flexfStatus」命令。確保SnapVault 指定控制器名稱存在的不一致關係。如果使用不同的名稱、則必須設定secondary介面參數、告訴Snap Creator哪些內容對應至儲存控制器。
+
+
+
+ a| 
+SCP-00021
+ a| 
+偵測到SnapMirror傳輸錯誤-[%s]、正在結束！
+ a| 
+檢查SnapMirror的錯誤和儲存控制器設定。
+
+
+
+ a| 
+SCP-00022
+ a| 
+來源為「%s」的SnapMirror更新無法在「%s」分鐘內完成、結束！
+ a| 
+SnapMirror更新所花的時間比設定的等待時間長。您可以在組態檔中增加NTAP_SnapMirror_WAIT的值、以調整等待時間。
+
+
+
+ a| 
+SCP-00023
+ a| 
+來源為「%s」的更新無法在「%s」分鐘內完成、請結束！SnapVault
+ a| 
+更新此更新所需時間比設定的等待時間更長。SnapVault您可以在組態檔中增加NTAP_SnapVault的等待值、以調整等待時間。
+
+
+
+ a| 
+SCP-00024
+ a| 
+偵測到傳輸錯誤-[%s]、正在結束！SnapVault
+ a| 
+檢查錯誤和儲存控制器設定SnapVault 以瞭解其功能。
+
+
+
+ a| 
+SCP-00025
+ a| 
+外掛程式的還原後處理作業失敗、錯誤為「%s」、結束代碼為「%s」
+ a| 
+應用程式POST還原作業因應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00026
+ a| 
+還原外掛程式的清除處理作業失敗、錯誤為「%s」、結束代碼為「%s」
+ a| 
+應用程式還原清除作業因應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00027
+ a| 
+外掛程式的預先還原處理作業失敗、錯誤為「%s」、結束代碼為「%s」
+ a| 
+應用程式預先還原作業因應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00028
+ a| 
+外掛程式的自動探索功能失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式探索因為應用程式錯誤而失敗。檢查記錄和應用程式設定。此外、您也可以設定APP_Auto_Discovery = N並註解validation_volume、以停用自動探索。
+
+
+
+ a| 
+SCP-00029
+ a| 
+外掛程式的自動探索失敗、因為環境是空的、正在結束！
+ a| 
+應用程式外掛程式不支援使用自動探索。設定APP_Auto_Discovery = N以停用自動探索
+
+
+
+ a| 
+SCP-00030
+ a| 
+檔案系統無法停止外掛程式的動作（%s）、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+檔案系統因檔案系統錯誤而停止失敗。檢查記錄和檔案系統設定。若要忽略錯誤並繼續備份、您可以設定APP_ignore錯誤= Y
+
+
+
+ a| 
+SCP-00031
+ a| 
+檔案系統停止外掛程式（%s）發生錯誤、結束程式碼（%s）、繼續備份！
+ a| 
+檔案系統因檔案系統錯誤而停止失敗。不過、APP_ignore錯誤= Y；Snap Creator會繼續備份。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00032
+ a| 
+由於應用程式錯誤、應用程式取消靜止失敗。若要忽略應用程式錯誤並繼續備份、您可以設定APP_ignore錯誤=Y
+ a| 
+檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00033
+ a| 
+應用程式無法針對外掛程式取消靜止（%s）失敗、退出程式碼為「%s」、請繼續備份！
+ a| 
+由於應用程式錯誤、應用程式取消靜止失敗。不過、APP_ignore錯誤= Y；Snap Creator會繼續進行備份。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00034
+ a| 
+從[%s]建立的LUN實體複本為（%s）、位於（s）：（s）失敗、正在結束！
+ a| 
+LUN實體複製建立失敗。檢查錯誤記錄。可能發生NetApp管理錯誤。記錄可能會顯示問題的原因。
+
+
+
+ a| 
+SCP-00035
+ a| 
+在[%s]上的LUN資源清冊失敗、正在結束！
+ a| 
+LUN清單建立失敗。檢查錯誤記錄。可能發生NetApp管理錯誤。記錄可能會顯示問題的原因。
+
+
+
+ a| 
+SCP-00036
+ a| 
+應用程式停止外掛程式（%s）失敗、沒有從外掛程式傳回結束程式碼、正在結束！
+ a| 
+應用程式靜止完成、沒有結束程式碼。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00037
+ a| 
+應用程式靜止外掛程式（%s）失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+由於應用程式錯誤、應用程式靜止失敗。檢查記錄和應用程式設定。若要忽略應用程式錯誤並繼續備份、您可以設定APP_ignore錯誤= Y
+
+
+
+ a| 
+SCP-00038
+ a| 
+應用程式停止外掛程式（%s）失敗、結束程式碼為「%s」、繼續備份。
+ a| 
+由於應用程式錯誤、應用程式靜止失敗。不過、APP_ignore錯誤= Y；Snap Creator會繼續進行備份。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00039
+ a| 
+指定的控制器（%s）與組態中指定的任何控制器不相符。檢查組態檔中的NTAP_USERs參數。
+ a| 
+檢查NTAP_USERs,並確定已在組態檔中定義儲存控制器。
+
+
+
+ a| 
+SCP-00040
+ a| 
+指定的Volume（%s）與組態中指定的任何儲存系統或磁碟區不相符。檢查組態檔中的Volume參數。
+ a| 
+檢查組態檔中的Volume設定、並確定已設定正確的控制器磁碟區。
+
+
+
+ a| 
+SCP-00041
+ a| 
+偵測到叢集Data ONTAP 式的功能、但未正確設定CMODE_cluster_name。檢查組態參數、結束！
+ a| 
+CMODE_叢 集名稱參數是必填項目、可用於AutoSupport SnapMirror和SnapMirror。您應該在組態檔中正確定義此參數。
+
+
+
+ a| 
+SCP-00042
+ a| 
+偵測到叢集Data ONTAP 式的功能、但未正確設定CMODE_cluster_users)。檢查組態參數、結束！
+ a| 
+CMODE_叢 集名稱和CMODE_叢 集使用者的參數是必要條件、可用於AutoSupport 進行SnapMirror和SnapMirror。您應該在組態檔中正確定義這些參數。
+
+
+
+ a| 
+SCP-00043
+ a| 
+叢集式的整套功能不支援使用此功能、請在組態中將NTAP_SnapVault更新設定為N。SnapVault Data ONTAP
+ a| 
+檢查組態和變更參數。叢集Data ONTAP 式支援不SnapVault 支援
+
+
+
+ a| 
+SCP-00044
+ a| 
+已定義meta_data_volume參數、但指定的儲存系統：Volume與Volume參數中所設定的不相符。檢查組態。
+ a| 
+未在Volume中指定meta_data_volume參數。將中繼資料磁碟區新增至磁碟區。
+
+
+
+ a| 
+SCP-00045
+ a| 
+meta_data_volume參數已定義、但不能是Volume參數中指定的唯一Volume。中繼資料磁碟區必須是獨立的磁碟區。
+ a| 
+在meta_data_volume中指定的Volume是Volume中唯一存在的磁碟區。也應該有其他磁碟區。請勿將meta_data_volume用於正常的Snapshot作業。
+
+
+
+ a| 
+SCP-00046
+ a| 
+NetApp管理主控台僅支援時間戳記Snapshot複本。
+ a| 
+更新組態檔、並將Snap_timestamp_only選項設為Y
+
+
+
+ a| 
+SCP-00047
+ a| 
+已選取不相容的設定。NTAP_SnapVault更新和NTAP_SnapVault快照選項都無法啟用
+ a| 
+編輯組態檔、並停用這兩個選項之一。
+
+
+
+ a| 
+SCP-00048
+ a| 
+掛載外掛程式的處理作業失敗、錯誤為「%s」、結束程式碼為「%s」、正在結束！
+ a| 
+應用程式掛載因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00049
+ a| 
+卸載外掛程式的處理作業（%s）失敗、並顯示錯誤（s）和結束代碼（s）、正在結束！
+ a| 
+由於應用程式錯誤、應用程式卸載失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00050
+ a| 
+自訂動作僅支援應用程式外掛程式
+ a| 
+未在組態檔中設定APP_NAME參數。此參數決定要使用的外掛程式。自訂動作僅受應用程式外掛程式支援。
+
+
+
+ a| 
+SCP-00051
+ a| 
+無法針對退出程式碼為「%s」的「%s」建立NetApp管理主控台資料集、正在結束！
+ a| 
+檢查偵錯錯誤訊息。與Active IQ Unified Manager 該伺服器通訊時可能發生問題。
+
+
+
+ a| 
+SCP-00052
+ a| 
+還原外掛程式的處理作業失敗、錯誤為「[%s]」、結束程式碼為「%s」、正在結束！
+ a| 
+由於應用程式錯誤、還原失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00053
+ a| 
+檔案系統無法針對外掛程式取消靜止、但發生錯誤「%s」並結束程式碼「%s」、正在結束！
+ a| 
+檔案系統因檔案系統錯誤而無法取消靜止。不過、APP_ignore錯誤= Y；Snap Creator會繼續進行備份。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00054
+ a| 
+檔案系統針對外掛程式（%s）取消靜止時發生錯誤、結束程式碼（%s）、繼續備份！
+ a| 
+檔案系統因檔案系統錯誤而無法取消靜止。不過、APP_ignore錯誤= Y；Snap Creator會繼續進行備份。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00055
+ a| 
+NetApp管理主控台導向的資料集（%s）備份、採用儲存控制器（%s）上的原則（%s）
+ a| 
+不適用
+
+
+
+ a| 
+SCP-00056
+ a| 
+在儲存控制器（%s）上建立具有原則（%s）的資料集（[%s]）NetApp管理主控台導向備份（%s）已成功完成
+ a| 
+不適用
+
+
+
+ a| 
+SCP-00057
+ a| 
+在儲存控制器上建立具有原則[%s]的資料集[%s]的NetApp管理主控台驅動備份[%s]失敗、並顯示錯誤[%s]
+ a| 
+檢查NTAP_PM_update和NTAP_Dfm_data_set參數的組態。
+
+
+
+ a| 
+SCP-00058
+ a| 
+無法更新已探索應用程式值的組態（針對[%s]）、正在結束！
+ a| 
+無法更新檔案、因為權限問題或無法剖析從應用程式傳回的值。檢查執行Snap Creator的使用者權限、並確認權限正確無誤。
+
+
+
+ a| 
+SCP-00059
+ a| 
+外掛程式的[%s]傾印失敗、退出代碼為「%s」、正在結束！
+ a| 
+scdump動作因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00060
+ a| 
+DTO無效：[%s]
+ a| 
+DTO中的必填欄位未設定或無效、導致處理DTO時發生驗證錯誤。修正問題並重新傳送DTO。
+
+
+
+ a| 
+SCP-00061
+ a| 
+刪除歸檔記錄失敗、錯誤為「[%s]」、正在結束！
+ a| 
+SnapCreator無法刪除應用程式的歸檔記錄。檢查Snap Creator使用者的權限、視組態而定、這可能是Snap Creator Server或Snap Creator Agent。
+
+
+
+ a| 
+SCP-00062
+ a| 
+驗證失敗！
+ a| 
+驗證失敗、因為使用者沒有執行作業的權限。
+
+
+
+ a| 
+SCP-00063
+ a| 
+探索[%s]失敗、傳回碼為[%s]和訊息為[%s]
+ a| 
+使用validation_Volumes=資料的應用程式探索因為應用程式錯誤而失敗。檢查記錄和應用程式設定。
+
+
+
+ a| 
+SCP-00064
+ a| 
+探索未發現任何儲存物件
+ a| 
+使用validation_Volumes=資料的應用程式探索失敗。SnapCreator無法探索儲存系統上的任何資料磁碟區。若要停用自動探索、請註解validation_volume。
+
+
+
+ a| 
+SCP-00065
+ a| 
+配置檔案中未包含位於[%s]上的Volume [%s]
+ a| 
+應用程式探索偵測到部分磁碟區遺失。檢查遺失的磁碟區、並將其新增至Volume參數、以便將其納入備份中。
+
+
+
+ a| 
+SCP-00066
+ a| 
+針對「%s」的代理程式驗證失敗、錯誤為「%s」
+ a| 
+無法連線到已設定的代理程式。代理程式可能當機、或可能發生本機防火牆問題。檢查組態參數sc_agent.
+
+
+
+ a| 
+SCP-00067
+ a| 
+無法列出名稱模式為[%s]的外部Snapshot複本
+ a| 
+SnapCreator無法根據regex模式NTAP_external_snapshot REGEX找到外部Snapshot複本。登入控制器、並將快照清單輸出與regex模式配對。
+
+
+
+ a| 
+SCP-00068
+ a| 
+外掛程式的檔案系統pre_reRestore（檔案系統）[%s]失敗、退出程式碼為「%s」、正在結束！
+ a| 
+檔案系統因檔案系統錯誤而無法預先還原。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00069
+ a| 
+外掛程式的檔案系統pre_reRestore（檔案系統）[%s]發生錯誤、結束程式碼為[%s]、請繼續備份！
+ a| 
+檔案系統因檔案系統錯誤而無法預先還原。不過、APP_ignore錯誤= Y；Snap Creator會繼續執行其他作業。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00070
+ a| 
+外掛程式的檔案系統POST還原失敗、結束程式碼為「%s」、正在結束！
+ a| 
+檔案系統POST還原因為檔案系統錯誤而失敗。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00071
+ a| 
+外掛程式的檔案系統POST還原（%s）發生錯誤、結束程式碼（%s）、繼續備份！
+ a| 
+檔案系統POST還原因為檔案系統錯誤而失敗。不過、APP_ignore錯誤= Y；Snap Creator會繼續執行其他作業。檢查記錄和檔案系統設定。
+
+
+
+ a| 
+SCP-00072
+ a| 
+原則[%s]不是組態中已定義的Snapshot複本保留原則、正在結束！
+ a| 
+您使用的原則無效。檢查組態檔、並正確設定NTAP_snapshot保留。
+
+|===

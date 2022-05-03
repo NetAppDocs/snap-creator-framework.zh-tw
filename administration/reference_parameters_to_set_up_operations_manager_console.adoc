@@ -1,0 +1,57 @@
+---
+permalink: administration/reference_parameters_to_set_up_operations_manager_console.html 
+sidebar: sidebar 
+keywords: parameter, required, operation, manager, host, user, pwd, port 
+summary: 設定Operations Manager主控台需要數個參數。 
+---
+= 設定Operations Manager主控台的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定Operations Manager主控台需要數個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+OM_host
+ a| 
+ a| 
+Operations Manager主控台主機的名稱或IP位址。
+
+
+
+ a| 
+OM_USER
+ a| 
+ a| 
+具有建立事件權限的Operations Manager主控台使用者名稱。
+
+
+
+ a| 
+OM_PWD
+ a| 
+ a| 
+Operations Manager主控台使用者的密碼。*注意：*密碼必須包含至少兩個字元。
+
+
+
+ a| 
+OM_port
+ a| 
+ a| 
+用於與Operations Manager主控台通訊的連接埠；8088為預設HTTP連接埠、8488為Operations Manager主控台使用的預設HTTPS連接埠。
+
+
+
+ a| 
+OM_EVATE_generate
+ a| 
+（是
+| n） 
+|===

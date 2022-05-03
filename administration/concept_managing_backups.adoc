@@ -1,0 +1,20 @@
+---
+permalink: administration/concept_managing_backups.html 
+sidebar: sidebar 
+keywords: managing, backups, backup, copies, 
+summary: 您可以建立備份複本、檢視備份複本清單、並在不再需要時刪除備份複本。 
+---
+= 管理備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立備份複本、檢視備份複本清單、並在不再需要時刪除備份複本。
+
+此外、您也可以自動化備份作業。如需詳細資料、請參閱相關工作以取得建立排程工作的相關資訊。
+
+*相關資訊*
+
+xref:task_creating_scheduled_jobs_using_sc_gui.adoc[建立排程工作]

@@ -1,0 +1,56 @@
+---
+permalink: sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: restoring, restore, databases, primary, storage, failure, data, ontap, operating, 7-mode 
+summary: 在Data ONTAP 執行以7-Mode運作的主儲存系統故障後、您可以還原SAP HANA資料庫。 
+---
+= 在主儲存設備故障後還原資料庫、Data ONTAP 以7-Mode運作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在Data ONTAP 執行以7-Mode運作的主儲存系統故障後、您可以還原SAP HANA資料庫。
+
+. 在這種情況下、必須使用下列命令直接在次要儲存系統上執行還原SnapVault ：-s snapshot _name -S backup_controller：backup_volumesource_controller：source_volume
++
+針對屬於SAP HANA資料庫的所有磁碟區執行此步驟。
+
++
+[listing]
+----
+hana1a>  snapvault restore -s Backup-ANA-SV_hourly_20140410103943 -S
+hana2b:/vol/backup_data_00001/mnt00001 hana1a:/vol/data_00001/mnt00001
+Restore will overwrite existing data in /vol/data_00001/mnt00001.
+Are you sure you want to continue? y
+Thu Apr 10 11:55:55 CEST [hana1a:vdisk.qtreePreserveComplete:info]: Qtree preserve is complete for /vol/data_00001/mnt00001.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+[listing]
+----
+hana1a>  snapvault restore -s Backup-ANA-SV_hourly_20140410103943 -S
+hana2b:/vol/backup_data_00003/mnt00003 hana1a:/vol/data_00003/mnt00003
+Restore will overwrite existing data in /vol/data_00003/mnt00003.
+Are you sure you want to continue? y
+Thu Apr 10 11:58:18 CEST [hana1a:vdisk.qtreePreserveComplete:info]: Qtree preserve is complete for /vol/data_00003/mnt00003.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+[listing]
+----
+hana1b>  snapvault restore -s Backup-ANA-SV_hourly_20140410103943 -S
+hana2b:/vol/backup_data_00002/mnt00002 hana1b:/vol/data_00002/mnt00002
+Restore will overwrite existing data in /vol/data_00002/mnt00002.
+Are you sure you want to continue? y
+Thu Apr 10 12:01:29 CEST [hana1b:vdisk.qtreePreserveComplete:info]: Qtree preserve is complete for /vol/data_00002/mnt00002.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+----
++
+還原程序完成後、您可以使用SAP HANA來執行還原。
+
+

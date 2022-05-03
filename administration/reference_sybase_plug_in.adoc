@@ -1,0 +1,173 @@
+---
+permalink: administration/reference_sybase_plug_in.html 
+sidebar: sidebar 
+keywords: sybase, ase, plug-in, isql, command, database, parameter, user, server 
+summary: Sybase ASE外掛程式使用isql命令與Sybase資料庫互動。 
+---
+= Sybase ASE外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sybase ASE外掛程式使用isql命令與Sybase資料庫互動。
+
+
+NOTE: 如需支援或檢視相容性對照表的最新資訊、請參閱互通性對照表。
+
+下表列出Sybase外掛程式參數、提供其設定及說明：
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+Sybase使用者
+ a| 
+使用者名稱
+ a| 
+指定可執行isql命令的作業系統使用者。UNIX需要此參數。如果執行Snap Creator代理程式啟動和停止命令的使用者（通常是root使用者）和執行isql命令的使用者不同、則需要此參數。
+
+
+
+ a| 
+Sybase_Server
+ a| 
+data_server_name
+ a| 
+指定Sybase資料伺服器名稱（isql命令上的-S選項）。例如：「p_test」
+
+
+
+ a| 
+Sybase_Databases
+ a| 
+DB_NAME：使用者名稱/密碼
+ a| 
+列出要備份之執行個體內的資料庫。新增主要資料庫；例如：「DBAtest2：sa/53616c7404351e」。如果使用名稱為+all的資料庫、則會使用資料庫自動探索、並排除sybsybsybsybsystemdb、sybsystemprocs和Tempdb資料庫。
+
+例如：「+all：sa/53616c711a6351e」
+
+如果設定NTAP_PWD_protection參數、則支援加密密碼。
+
+
+
+ a| 
+Sybase_Database_exclude
+ a| 
+DB_NAME
+ a| 
+如果使用+all結構、則允許排除資料庫。您可以使用分號分隔的清單來指定多個資料庫。例如「publs2;test_db1」
+
+
+
+ a| 
+Sybase_Tran傾印
+ a| 
+DB_NAME：directory_path
+ a| 
+可讓您在建立Snapshot複本之後執行Sybase交易傾印。例如：「publs2：/sybase dump / publs2」
+
+您必須指定每個需要處理傾印的資料庫。
+
+
+
+ a| 
+Sybase_Tra_dump格式
+ a| 
+%S_%D_%T.CMN
+ a| 
+可讓您指定傾印命名慣例。可以指定下列金鑰：
+
+* %S =來自Sybase_Server的執行個體名稱
+* %D =來自Sybase_databases的資料庫
+* %T =唯一時間戳記
+
+
+以下是範例：「%S_%D_%T.log」
+
+
+
+ a| 
+Sybase_Tra_dump壓縮
+ a| 
+（是
+| n） 
+
+
+ a| 
+啟用或停用原生Sybase交易傾印壓縮。
+ a| 
+Sybase_ISQM_CMD
+ a| 
+範例：/opt/sybase/OCS-15__0/bin/isql
+
+
+
+ a| 
+定義isql命令的路徑。
+ a| 
+Sybase
+ a| 
+範例：/Sybase
+
+
+
+ a| 
+指定Sybase安裝的位置。
+ a| 
+Sybase_LOGDIR
+ a| 
+範例：/usr/local/nt點/scServer/logs
+
+
+
+ a| 
+定義放置Snap Creator記錄的目錄。
+ a| 
+Sybase_manifest
+ a| 
+範例：「DBAtest2：/t_inf_nzl_devs/」
+
+
+
+ a| 
+指定應建立資訊清單檔案的資料庫、以及資訊清單檔案的放置位置。
+ a| 
+Sybase_manifest_format
+ a| 
+%S__%D_%T。資訊清單範例：「%S_%D_%T。資訊清單」
+
+
+
+ a| 
+可讓您指定資訊清單檔案命名慣例。可以指定下列金鑰：
+
+* %S =來自Sybase_Server的執行個體名稱
+* %D =來自Sybase_databases的資料庫
+* %T =唯一時間戳記、與Snapshot複本命名相同
+
+ a| 
+Sybase_manifest_dete
+ a| 
+（是
+
+
+
+| n）  a| 
+可在建立Snapshot複本之後刪除資訊清單。資訊清單檔案應擷取在Snapshot複本中、以便隨時可用於備份。
+ a| 
+Sybase_exclus_tempdb
+
+
+
+ a| 
+（是
+| n）  a| 
+自動排除使用者建立的暫用資料庫。
+
+|===
+*相關資訊*
+
+http://mysupport.netapp.com/matrix["互通性對照表工具：mysupport.netapp.com/matrix"]

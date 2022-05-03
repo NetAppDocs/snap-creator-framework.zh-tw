@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_managing_profiles.html 
+sidebar: sidebar 
+keywords: create, view, delete, profiles, managing, rbac 
+summary: 您可以建立、檢視及刪除設定檔。 
+---
+= 管理設定檔
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立、檢視及刪除設定檔。
+
+設定檔基本上是用來組織組態檔的資料夾。設定檔也可做為角色型存取控制（RBAC）的物件、表示只允許使用者存取特定設定檔和內包含的組態檔。

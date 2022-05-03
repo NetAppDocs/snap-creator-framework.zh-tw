@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_transport_layer_security_tls.html 
+sidebar: sidebar 
+keywords: cryptographic, flaw, transport, layer, security, tls, protocol 
+summary: 傳輸層安全性的密碼編譯瑕疵 
+---
+= 傳輸層安全性的密碼編譯瑕疵
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *問題*
++
+TLS 1.0有幾個密碼編譯瑕疵。攻擊者可能會利用這些缺陷來進行攔截式攻擊、或是解密受影響服務與用戶端之間的通訊。
+
+* *原因*
++
+遠端服務接受使用TLS 1.0加密的連線。
+
+* *修正行動*
++
+SnapCreator可選擇啟用或停用TLS 1.0傳輸協定。
+
++
+.. 若要支援向下相容性、請在snapcreator.properties和agent.properties檔案中將啟用安全性傳輸協定TLS V1參數設為Y。啟用安全性傳輸協定TLS V1參數預設為N。
+
+
+
+
+
+NOTE: 啟用安全性傳輸協定TLS V1參數只能用於快照建立者架構4.3之前的版本。因為SnapCreator Framework 4.4.3。版本僅支援Oracle Java和OpenJDK 1.8及更新版本、而對TLS 1.0的支援已從Snap Creator Framework移除。

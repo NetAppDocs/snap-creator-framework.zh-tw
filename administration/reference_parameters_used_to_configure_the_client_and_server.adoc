@@ -1,0 +1,101 @@
+---
+permalink: administration/reference_parameters_used_to_configure_the_client_and_server.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, agent, host, client, port 
+summary: 您必須瞭解設定Snap Creator Agent主機用戶端和Snap Creator伺服器的參數。 
+---
+= 用於設定Snap Creator Agent主機用戶端和Snap Creator伺服器的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須瞭解設定Snap Creator Agent主機用戶端和Snap Creator伺服器的參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+sc_agent_##
+ a| 
+主機名稱或IP位址：連接埠
+ a| 
+使用單一組態、在多個遠端主機上同時執行命令或工作。工作可以是定義的外掛程式（參數APP_NAME）、也可以是以_CMD命令指定的命令（例如NTAP_snapshot create_CMDB）。
+
+若要指定遠端主機、您應該輸入其名稱或IP位址、然後輸入一個分號、以及Snap Creator Agent正在偵聽的連接埠。
+
+例如：sc_agent_編號= IP位址：連接埠
+
+sc_agent_01 =代理IP：代理連接埠
+
+sc_agent_02=代理IP：代理連接埠
+
+在遠端主機上、您可以執行<path to scagent_v（至scagent_v）>/bin/scAgent start（至scagent_v）命令來啟動Snap Creator Agent。
+
+
+
+ a| 
+sc_clone目標
+ a| 
+實體複本目標：連接埠的主機名稱或IP位址
+ a| 
+啟用複製作業。使用參數* clonewor*搭配｛pre
+
+
+
+| POST｝_clone_create_CMDB參數、您可以管理遠端的遠端儲存物件（例如、掛載或卸載檔案系統）。若要指定複製目標、您應該輸入其名稱或IP位址、然後輸入一個分號、以及Snap Creator Agent正在偵聽的連接埠。  a| 
+sc_agent_timeout
+ a| 
+時間（以秒為單位）
+
+
+
+ a| 
+指定代理程式服務的逾時時間（以秒為單位）。實作的用戶端/伺服器架構使用逾時機制。這表示如果用戶端在指定的時間間隔內沒有回應、伺服器就會失敗並顯示逾時訊息。不過、用戶端上的工作不會中止、需要進一步調查。
+
+依預設、逾時設定為300秒。在具有高負載或已知長期執行工作的伺服器（例如使用者建立的指令碼或複雜SnapDrive 的動作）上、您應該延長逾時時間、並根據需求修改此值。
+
+您應該將此參數設定為作業可以花費的最長時間（例如、如果靜止需要1、800分鐘、則此參數必須設定為1800）。
+
+
+NOTE: 某些外掛程式有特定的SC_agent_timeout值需求。
+ a| 
+sc_agent_watchder_enable
+ a| 
+「Y」或「N」
+
+
+
+ a| 
+SC_agent_watchder_enable參數僅適用於SnapCreator Agent版本早於4.1的情況。此參數可啟用或停用監視程序程序。對於Snap Creator Agent 4.1或更新版本、此參數會被忽略、因為監視程式程序一律啟用。如果參數已啟用（即設為Y）、且Snap Creator Agent版本為4.1或更新版本、則當Snap Creator代理程式收到靜止要求時、會啟動監視程序程序。
+
+Watchdog程序會使用sc_agent_unquiesceed_timeout參數做為逾時、以取消靜止應用程式。如果參數已停用（即設為N）、且Snap Creator Agent版本早於4.1、則監督程序程序會使應用程式靜止、但會使用scagent/etc/agent.properties路徑中的operation_timeout_in_msec參數（預設值：1小時）。
+
+
+NOTE: SnapCreator Agent 4.1的SC_agent_watchder_enable參數已過時、僅適用於SnapCreator Agent 4.0。從Snap Creator Agent 4.1開始、無論此參數設定的值為何、都會啟用Watchdog程序（因為它是硬編碼的）。
+ a| 
+sc_agent_unquies_timeout
+ a| 
+時間（以秒為單位）
+
+
+
+ a| 
+指定取消靜止逾時（以秒為單位）。如果使用早於4.1的Snap Creator Agent版本、此參數只會在SC_agent_watchdwatch_enable設為Y時使用使用Snap Creator Agent 4.1或更新版本時、此參數一律適用、因為Snap Creator Agent監督程序永遠開啟。如果無法與Snap Creator Agent通訊、且應用程式處於靜止狀態、 Snap Creator Agent會自動將應用程式恢復至正常操作模式、而不會與伺服器通訊。依預設、取消靜止逾時會設為SC_agent_timeout參數值的任何值、加上五秒。
+ a| 
+SC_TMP_DIR
+ a| 
+「Y」或「N」
+
+
+
+ a| 
+啟用使用者定義的替代暫存目錄、以儲存與Snap Creator相關的檔案。使用者會建立目錄並管理使用者存取權。外掛程式使用暫用檔案與資料庫互動。暫用檔案會建立在主機的預設暫存目錄中、此目錄對所有使用者都具有寫入權限。如果暫存目錄已滿、SnapCreator會在建立暫存檔案時顯示錯誤。
+ a| 
+sc_agent_log_enable
+ a| 
+「Y」或「N」
+
+|===

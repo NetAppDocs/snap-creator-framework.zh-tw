@@ -1,0 +1,41 @@
+---
+permalink: sap-hana-ops/task_configuring_sap_hana_for_san_environments.html 
+sidebar: sidebar 
+keywords: configuring, sap, hana, san, environments 
+summary: 在設定資料備份之後、您需要在SAP HANA系統使用光纖通道儲存區域網路（SAN）連接至儲存控制器的環境中、新增命令至Snap Creator組態檔案。 
+---
+= 為SAN環境設定SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在設定資料備份之後、您需要在SAP HANA系統使用光纖通道儲存區域網路（SAN）連接至儲存控制器的環境中、新增命令至Snap Creator組態檔案。
+
+當SAP HANA內的Snap Creator觸發全域同步備份儲存點時、最後一個步驟是SAP HANA寫入/HANA資料/SID/mnt001/hdb001/snapshot DataBackup _0_1檔案。此檔案是儲存設備上資料磁碟區的一部分、因此是儲存Snapshot複本的一部分。在還原備份時、執行還原時、此檔案為必要檔案。由於在Linux主機上使用「X」檔案系統（XFS）進行中繼資料快取、因此無法立即在儲存層看到該檔案。中繼資料快取的標準XFS組態為30秒。
+
+在Snap Creator中、您需要新增應用程式後靜止命令、直到將XFS中繼資料快取排清到磁碟層為止。
+
+您可以使用下列命令來檢查中繼資料快取的組態：
+
+[listing]
+----
+stlrx300s8-2:/ # sysctl -A | grep xfssyncd_centisecs
+fs.xfs.xfssyncd_centisecs = 3000
+----
+. 在組態檔（install_path/scServerversion_number/engins/configs）中、將/bin/sleepy命令新增至「Post Commands」（張貼命令）區段、如下列範例所示：
++
+[listing]
+----
+############################################################
+#     Post Commands      ############################################
+POST_NTAP_DATA_TRANSFER_CMD01=
+POST_APP_QUIESCE_CMD01=/bin/sleep 60
+POST_CLONE_CREATE_CMD01=
+----
++
+
+NOTE: 您應該允許等待時間是fs.xfs.xfssyncd_cidss參數值的兩倍。例如、使用預設值30秒時、睡眠命令應設定為60秒。
+
+

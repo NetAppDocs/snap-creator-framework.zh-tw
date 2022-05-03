@@ -1,0 +1,30 @@
+---
+permalink: administration/reference_snap_creator_agent_not_responding.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, responding, corrective, action 
+summary: Snap Creator代理程式沒有回應。 
+---
+= SnapCreator代理程式沒有回應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator代理程式沒有回應。
+
+* *問題*
++
+Snap Creator代理程式沒有回應。
+
+* *修正行動*
++
+驗證下列項目：
+
++
+** SnapCreator代理程式正在執行中。
+** 選取的連接埠尚未使用中。
+** 代理程式連接埠上的通訊可透過防火牆進行。
+
+
+

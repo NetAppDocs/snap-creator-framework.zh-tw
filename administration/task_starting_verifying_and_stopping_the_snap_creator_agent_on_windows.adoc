@@ -1,0 +1,53 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, agent, service, start, verify, stop, windows 
+summary: 您可以啟動和停止Snap Creator Agent服務、並確認Snap Creator Agent服務是否在Windows系統上執行。 
+---
+= 在Windows上啟動、驗證及停止Snap Creator Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟動和停止Snap Creator Agent服務、並確認Snap Creator Agent服務是否在Windows系統上執行。
+
+. 在命令提示字元中、啟動或停止Snap Creator Agent服務、或視情況確認Snap Creator Agent服務是否正在執行：
++
+|===
+| 如果您想要... | 輸入下列項目... 
+
+
+ a| 
+啟動SnapCreator Agent服務
+ a| 
+SC start snapcreatoragentservice
+
+
+
+ a| 
+確認SnapCreator Agent服務是否正在執行
+ a| 
+SC查詢snapcreatoragentservice
+
+
+
+ a| 
+停止SnapCreator Agent服務
+ a| 
+SC停止snapcreatoragentservice
+
+|===
++
+如果您要在前景執行SnapCreator、請執行下列步驟、而非使用SC start命令：
+
++
+.. 在安裝了Snap Creator Agent的主機上開啟命令提示字元、然後瀏覽至Snap Creator Agent目錄：CD「\install_path\scagent4.3.0\bin\」
+.. 若要啟動Snap Creator Agent服務、請執行批次指令碼：scAgent.bat start
++
+關閉命令提示字元會停止Snap Creator Agent服務。由於批次指令碼（scagent.bat）會在前景執行Snap Creator、因此只要命令提示字元開啟、Snap Creator Agent就會執行。若要在背景執行SnapCreator、您應該使用Snap Creator Agent服務。
+
+
+
+

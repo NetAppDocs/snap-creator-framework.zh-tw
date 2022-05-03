@@ -1,0 +1,60 @@
+---
+permalink: administration/reference_post_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, post, command, quiescecmde, cmd, ntap, app, post, transfer 
+summary: SnapCreator Server包含數個組態檔POST命令。 
+---
+= POST命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator Server包含數個組態檔POST命令。
+
+|===
+| 命令 | 說明 
+
+
+ a| 
+POST_APP_ QUERSCECMD ##
+ a| 
+這是應用程式後備份啟動命令、其中##是從01-99開始的數字。
+
+
+
+ a| 
+POST_NTAP_CMD ##
+ a| 
+這是POST命令、其中##是從01到99的數字。這會在所有作業完成之後執行。
+
+
+
+ a| 
+POST應用程式取消靜止_CMD ##
+ a| 
+這是應用程式後備份停止命令、其中##是從01到99的數字。
+
+
+
+ a| 
+POST_NTAP_DATA傳輸_CMD ##
+ a| 
+這是資料傳輸後的命令、會在SnapVault 進行SnapMirror或SnapMirror傳輸之後執行、其中##為01-99之間的數字。
+
+
+
+ a| 
+POST還原_ CMD ##
+ a| 
+這是可選命令、可在您完成互動式還原之後執行。它可讓您與正在還原的應用程式互動。還原完成後、您可能會想要啟動應用程式。*附註：* MySQL外掛程式不支援此功能。
+
+
+
+ a| 
+POST_CClone建立_ CMD ##
+ a| 
+這是一個選用命令、可在進行ONTAPI複製作業之後執行、其中##是從01到99的數字。這些命令用於執行諸如掛載複製檔案系統等作業。
+
+|===

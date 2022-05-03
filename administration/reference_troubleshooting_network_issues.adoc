@@ -1,0 +1,96 @@
+---
+permalink: administration/reference_troubleshooting_network_issues.html 
+sidebar: sidebar 
+keywords: network, issues, snap, creator, authorization, failure, troubleshoot, nat 
+summary: 您可能會在Snap Creator中遇到網路問題、例如授權失敗。您應該瞭解這些問題、並知道如何疑難排解這些問題。 
+---
+= 疑難排解網路問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能會在Snap Creator中遇到網路問題、例如授權失敗。您應該瞭解這些問題、並知道如何疑難排解這些問題。
+
+* *問題*
++
+在Snap Creator中、您會遇到授權失敗問題。
+
+* *原因*
++
+授權失敗的原因可能是組態、防火牆權限或網路位址轉譯（NAT）。
+
+* *修正行動*
++
+驗證下列項目：
+
++
+** IP/主機名稱
++
+除非您使用主機等效、否則控制器上主機名稱命令的儲存系統名稱應與在Snap Creator組態檔中輸入的名稱相同。
+
++
+儲存系統的主機名稱縮寫時、請勿使用完整網域名稱（FQDN）。
+
++
+確認IP解析度符合您指定的名稱。如果不相符、請使用儲存系統上的主機等效來修正。
+
++
+若要啟用主機等效、請執行下列步驟：
+
++
+... 輸入下列命令：options https.admin.hostsequiv.enable on
+... 編輯/etc/hostsequiv檔案、然後新增下列項目：ip/host_name_in_Snap_Creator config_fileSnap_Creator_user
+
+
+** NetApp管理主控台資料保護功能
++
+在Snap Creator組態參數Volume中定義的儲存控制器名稱、必須符合NetApp管理主控台資料保護功能中的儲存控制器名稱。如果儲存控制器名稱不相符、您可以使用作業系統主機檔案強制儲存控制器名稱相符。
+
+** 防火牆
++
+如果執行Snap Creator的主機與儲存系統之間有防火牆、請確認您已開啟80、443或兩者的雙向存取控制清單（ACL）。
+
++
+*** 80：用於在選取HTTP時與儲存系統通訊
+*** 443：如果選擇HTTPS使用HTTPS（443）用於Linux、Solaris或AIX、則用於與儲存系統通訊、請安裝openssl程式庫、這些程式庫是使用SSL所需的。
+
+
+
+
++
+如果Snap Creator Agent正在執行、則代理程式所在的連接埠必須開啟。請確定儲存系統的傳回流量可以移至執行Snap Creator的系統、至少在非權限連接埠上。
+
++
+** 如果Data ONTAP 停用SSL、SnapCreator Framework可以使用Data ONTAP TLS、與以7-mode運作的叢集式功能及功能進行通訊。
++
+在Snap Creator Framework中、您可以停用主機和儲存系統中的SSLv3：
+
++
+*** 若要在AIX、Unix或Windows上停用SSLv3、您應該更新java.security檔案中的JDK.TLS.disabledAlgoriths參數、如下所示：
++
+JDK.TLS.disabledAlgorithes=SSLv3
+
++
+java.security檔案位於路徑：/Java/jre/lib/security/下
+
+*** 若要在儲存系統上停用SSLv3、您應該執行系統服務Web modify命令、並設定下列參數：
++
+已啟用TLSv1：true
+
++
+啟用SSLv3：錯誤
+
++
+啟用SSLv2：假
+
+
+
+** NAT
++
+如果您使用NAT、請確定傳輸控制傳輸協定（TCP）封包中的來源/目的地IP位址並未變更。主機和儲存系統必須知道與誰通訊。顯示防火牆IP而非實際的主機或控制器IP可能會造成問題。
+
+
+
+

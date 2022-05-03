@@ -1,0 +1,38 @@
+---
+permalink: domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, changeinfo, directory 
+summary: 如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區。如此一來、IBM Domino外掛程式便會在建立資料庫檔案的Snapshot複本之後、建立變更資訊磁碟區的Snapshot複本。 
+---
+= 備份changeinfo目錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區。這樣做可讓IBM Domino外掛程式建立變更資訊磁碟區的Snapshot複本（在建立資料庫檔案的Snapshot複本之後）。
+
+您應該已經將變更資訊磁碟區識別為建立組態檔案時要備份的磁碟區。如需詳細資訊、請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["使用GUI建立組態的工作"]。
+
+您可以使用組態檔中的meta_data_volume參數、將changeinfo Volume識別為中繼資料Volume。此參數在GUI中不可用。
+
+. 在文字編輯器中開啟組態檔。
++
+組態檔位於Snap Creator安裝目錄中、位於為設定檔命名的子目錄中。例如、在Windows主機上、C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\enginer\configs\Domino \Fuji15..conf、其中Domino是設定檔的名稱、而Fuji15..conf是組態檔的名稱。
+
+. 在meta_data_volume參數中輸入changeinfo volume的名稱。
++
+變更資訊Volume應已列在Volumes參數中。
+
++
+以下範例說明如何將Fuji15_Dome ChangelInfo設定為中繼資料磁碟區：
+
++
+[listing]
+----
+VOLUMES=domino_vserver:Fuji15_DomDAOS,Fuji15_DomChangeInfo,
+Fuji15_DomTxn,Fuji15_DomData
+META_DATA_VOLUME=domino_vserver:Fuji15_DomChangeInfo
+----
+

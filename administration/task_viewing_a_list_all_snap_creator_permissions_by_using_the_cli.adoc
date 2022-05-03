@@ -1,0 +1,29 @@
+---
+permalink: administration/task_viewing_a_list_all_snap_creator_permissions_by_using_the_cli.html 
+sidebar: sidebar 
+keywords: snap, creator, snapcreator, permission, cli 
+summary: 您只能使用命令列介面（CLI）、建立所有可指派給角色的Snap Creator權限清單。 
+---
+= 使用CLI建立所有Snap Creator權限的清單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能使用命令列介面（CLI）、建立所有可指派給角色的Snap Creator權限清單。
+
+. 輸入下列命令：
++
+「napcreator --server host_name --port port_Number --usersc_use_name --passwdsc_passwd--action permosList -verbose」
+
++
+範例如下：
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permList --verbose
+----
+

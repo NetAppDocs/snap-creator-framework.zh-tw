@@ -1,0 +1,40 @@
+---
+permalink: sap-hana-ops/task_starting_the_snapvault_relationships_with_data_ontap_operating_in_7_mode.html 
+sidebar: sidebar 
+keywords: sap, hana, starting, snapvault, relationship, data, ontap, operating, 7-mode 
+summary: 您可以SnapVault 使用在二線儲存系統上執行的命令來建立一個不含資訊的關係。 
+---
+= 利用以7-Mode運作的功能來啟動SnapVault 不支援的功能Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以SnapVault 使用在二線儲存系統上執行的命令來建立一個不含資訊的關係。
+
+. 對於Data ONTAP 以7-Mode運作的儲存系統、SnapVault 您可以執行下列命令來啟動彼此之間的相依關係：
++
+[listing]
+----
+hana2b> snapvault start -S hana1a:/vol/data_00001/mnt00001 /vol/backup_data_00001/mnt00001
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+hana2b> snapvault start -S hana1a:/vol/data_00003/mnt00003 /vol/backup_data_00003/mnt00003
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+hana2b> snapvault start -S hana1b:/vol/data_00002/mnt00002 /vol/backup_data_00002/mnt00002
+Snapvault configuration for the qtree has been set.
+Transfer started.
+Monitor progress with 'snapvault status' or the snapmirror log.
+hana2b>
+----
++
+
+NOTE: 建議您使用專屬網路來處理複寫流量。在這種情況下、請在主要儲存控制器上設定此介面的主機名稱。主機名稱可以是hana1a-rep-rep-rep-and hana1b-rep-rep-.而不是hana1b和hana1a。
+
+

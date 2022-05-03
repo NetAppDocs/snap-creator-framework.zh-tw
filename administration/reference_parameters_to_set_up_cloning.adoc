@@ -1,0 +1,141 @@
+---
+permalink: administration/reference_parameters_to_set_up_cloning.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, server, cloning, operation 
+summary: 設定Snap Creator伺服器複製作業時、需要數個參數。 
+---
+= 設定複製作業的參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定Snap Creator伺服器複製作業時、需要數個參數。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+ntap_vOL_clone保留
+ a| 
+無
+| 檔案 
+
+
+| Volume  a| 
+這是複製磁碟區的空間保證。
+ a| 
+ntap_lun_clone保留
+
+
+
+ a| 
+是的
+| 錯  a| 
+如果設置爲true，則如果選擇cloneworun操作，則空間將保留給克隆的LUN。否則、不會保留空間。
+
+
+
+ a| 
+ntap_clone複製_igroup_map
+ a| 
+ a| 
+指定儲存系統、來源Volume和igroup。然後將igroup對應至位於來源磁碟區或位於磁碟區實體複製中的複製LUN（例如、「controller1：SR_volume1/igroup1、SR_volum2/igroup1、SR_volume3/igroup1；控制器2：SR_volume1/igroup2、SR_volume2/rouigrouig2、2）。*附註：*
+
+* LUN複製會採用與父Volume或LUN相同的名稱、並以_clone結束；也就是、如果磁碟區稱為myvolvol、則複本會是myvol_clone。
+* Volume複製以cl_開始、以-Y-Y-Y-Y-Y-Y-Y-Y-Y-MMDHHMMSS.結束。
+
+
+
+
+ a| 
+ntap_clone for備份
+ a| 
+（是
+| n） 
+
+
+ a| 
+如果啟用、則會建立複本（Volume和LUN）、並在其他作業完成後刪除。否則、複本會在作業完成之前刪除。*附註：*如果您要將複本備份到磁帶、則應將其設為Y如果您正在進行資料庫重新整理、則應將其設為N
+ a| 
+ntap_clone次要
+ a| 
+（是
+
+
+
+| n）  a| 
+如果已啟用、則會在SnapMirror更新完成後、在SnapMirror目的地上建立複本。*附註：*此設定應搭配NTAP_SnapMirror_US_Snapshot、NTAP_SnapMirror_Wait、NTAP_CLIN_CLUSD_Volumes及clonVol動作使用。
+ a| 
+ntap_clone、二線磁碟區
+
+
+
+ a| 
+ a| 
+這是主要或次要儲存系統與次要磁碟區的對應。這是必要的、以便Snap Creator能找到次要磁碟區（例如、控制器1：控制器1秒/ vol1；控制器1：控制器1秒/ vol2）。
+ a| 
+ntap_nm_VOL複製
+
+
+
+ a| 
+ a| 
+這是您要保留的磁碟區複本數量。這與Snapshot複本保留原則類似。*附註：*此功能僅適用於需要儲存控制器上FlexClone授權的Volume複製。
+ a| 
+nTap NFS匯出主機
+
+
+
+ a| 
+主機IP
+ a| 
+應匯出實體複本的主機名稱或IP位址。這是使用NFS掛載複製磁碟區的主機。
+ a| 
+nTap NFS匯出存取
+
+
+
+ a| 
+根
+| 讀寫 | 唯讀 
+
+
+ a| 
+NTAP_NFs_EXPROVE_host中指定的主機會接收複製Volume的存取權或權限。
+
+* 根
++
+已授予root存取權。
+
+* 唯讀
++
+授予唯讀存取權。
+
+* 讀寫
++
+已授予讀取/寫入存取權。
+
+
+ a| 
+nTap NFS匯出_持續性
+ a| 
+是的
+
+
+
+| 錯  a| 
+決定NFS匯出是否持續。如果選擇true、則會匯出實體磁碟區、並更新儲存控制器上的/etc/exports檔案。
+ a| 
+nTap CIFS匯出啟用
+
+
+
+ a| 
+（是
+| n）  a| 
+設定使用CIFS共用複製的Volume。
+
+|===

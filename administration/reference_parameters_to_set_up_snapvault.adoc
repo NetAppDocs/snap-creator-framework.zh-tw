@@ -1,0 +1,112 @@
+---
+permalink: administration/reference_parameters_to_set_up_snapvault.html 
+sidebar: sidebar 
+keywords: parameter, snapvault, update, volume, relationship 
+summary: 需要多個參數才能設定SnapVault 此功能。 
+---
+= 設定SnapVault 參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+需要多個參數才能設定SnapVault 此功能。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+ntap_SnapVault更新
+ a| 
+（是
+| n） 
+
+
+ a| 
+可讓您開啟和關閉SnapVault 更新功能。
+ a| 
+S__ Volume SnapVault
+ a| 
+
+
+
+ a| 
+列出您要執行SnapVault 更新的來源儲存系統和磁碟區（例如、控制器1：vol1、vol2、vol3；控制器2：vol1；控制器3：vol2、vol3）。*附註：*
+
+* 為了讓SnapMirror和SnapMirror更新正常運作、關係必須存在。SnapVault
++
+SnapCreator不會建立關係。
+
+* SnapMirror SnapVault 或SnapMirror關係中的主機名稱必須與Volume、SnapMirror_Volumes和SnapVault Volume選項中指定的主機名稱相同。此外、執行SnapCreator的主機必須能夠解析主機名稱。
+* 對於vSphere或vCloud、此值應設為自動：偵測。
+* 主機名稱應為簡短主機名稱（儲存控制器命令提示字元上顯示的名稱）、而非FQDN。
+
+ a| 
+SnapVault qtree包含
+ a| 
+
+
+
+ a| 
+列出SnapVault 應包含在更新中的來源儲存系統和qtree路徑。如果沒有此選項、則在存在SnapVault 關聯時、Volume下的所有qtree都會以還原為基礎。下列範例中所列的qtree是SnapVault 由支援中心所保存、其餘則由SnapVault 支援中心忽略：controller1：/vol/qtree /qtree1、/vol/volVolume /qtre2；控制器2：/vol/volVolume /qtre1。
+ a| 
+ntap_SnapVault保留
+ a| 
+
+
+
+ a| 
+決定SnapVault 您要保留給定原則的不二線資料快照複本數量（例如每日：21、每週：12、每月：3）。
+ a| 
+ntap_SnapVault、retent_age
+ a| 
+
+
+
+ a| 
+可讓您定義SnapVault 一份Snapshot複本的保留期限（以天為單位）。如果已設定SnapVault 、則只有在超過NTAP_SnapVault中定義的數字、且超過保留期限（天數）時、才能刪除Snapshot複本。
+ a| 
+ntap_SnapVault快照
+ a| 
+（是
+
+
+
+| n）  a| 
+啟用SnapVault 使用不含資料的Snapshot複本、也就是與儲存控制器SnapVault 的不含資料排程器相容的Snapshot複本。使用此選項時、快照複本刪除是由儲存控制器處理、而非由Snap Creator處理。此外、Snapshot複本的命名方式如下：SV_<policy_.<##>。原則名稱來自NTAP_snapshot保留參數、而保留集也會套用至儲存控制器SnapVault 的不完整排程。
+ a| 
+NTAP_SnapVault®NODELETE
+
+
+
+ a| 
+（是
+| n）  a| 
+覆寫NTAP_SnapVault保留、並防止刪除Snapshot複本。將此項目留在上可能會導致磁碟區滿溢。
+
+
+
+ a| 
+ntap_SnapVault還原等候
+ a| 
+（是
+| n） 
+
+
+ a| 
+在還原的情況下SnapVault 、它會強制Snap Creator等待作業完成。建議這麼做、因為SnapVault 完成還原後、Snap Creator會提示使用者刪除在主要儲存設備上建立且不再需要的還原Snapshot複本。
+ a| 
+ntap_SnapVault等待
+ a| 
+
+
+
+ a| 
+在將Snapshot複本建立到位之前、完成更新程序的等待時間（以分鐘為單位）SnapVault 。SnapVault
+ a| 
+ntap_SnapVault®MAX_transfer
+ a| 
+
+|===

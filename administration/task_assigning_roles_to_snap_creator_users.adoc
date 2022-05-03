@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_roles_to_snap_creator_users.html 
+sidebar: sidebar 
+keywords: snap, creator, user, gui, role, management 
+summary: 您可以使用Snap Creator GUI、將角色指派給Snap Creator使用者。 
+---
+= 指派角色給Snap Creator使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI、將角色指派給Snap Creator使用者。
+
+. 從Snap Creator GUI主功能表中、選取*使用者與角色*>*使用者管理*。
+. 在使用者管理索引標籤中、選取所需的使用者名稱、然後按一下*指派設定檔*。
+. 將所需的角色從左欄移至右欄、然後按一下*「Save（儲存）」*。
++
+您可以在欄之間選取並拖曳角色、或按一下箭頭、在欄之間移動角色。
+
+. 選取使用者並在「*指派的設定檔與角色*」窗格中檢視指派的角色、以確認已指派該角色。
+

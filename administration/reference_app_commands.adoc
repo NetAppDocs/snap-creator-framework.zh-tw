@@ -1,0 +1,46 @@
+---
+permalink: administration/reference_app_commands.html 
+sidebar: sidebar 
+keywords: app, command 
+summary: 下表列出應用程式（APP）命令 
+---
+= 應用程式命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下表列出應用程式（APP）命令。
+
+|===
+| 命令 | 說明 
+
+
+ a| 
+app_clone _follow（應用程式複製）_ up（後續）_ CMD ##
+ a| 
+這些是複製資料庫後要執行的指令碼或命令、其中##是介於01和99之間的數字（含）。這可用於在SAP系統上執行應用程式專屬的後續追蹤活動、例如安裝SAP授權、調整資料庫表格、刪除或更新內容、以及啟動應用程式。
+
+
+
+ a| 
+app_quiesce_CMD ##
+ a| 
+這些指令碼或命令可讓應用程式進入備份模式、其中###是介於01和99之間的數字（含）。*注意：*如果您使用APP_NAME、就會忽略此功能、因為在SnapCreator中、它是在內部處理。
+
+
+
+ a| 
+app_unquiesceed_ CMD ##
+ a| 
+這些指令碼或命令可讓您的應用程式退出備份模式、其中##是介於01到99之間的數字（含）。*附註：*如果您使用APP_NAME、則會忽略此項目、因為這是在SnapCreator內部處理的案例。
+
+
+
+ a| 
+archive（歸檔）_CMD ##
+ a| 
+此命令可處理資料庫歸檔、也可作為包裝函式來執行其他指令碼、其中###是01到99之間的數字。
+
+|===

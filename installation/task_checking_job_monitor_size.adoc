@@ -1,0 +1,29 @@
+---
+permalink: installation/task_checking_job_monitor_size.html 
+sidebar: sidebar 
+keywords: checking, check, job, monitor, size 
+summary: 在升級至最新版本的Snap Creator之前、您應該檢查目前安裝版本之Snap Creator的工作監控大小。 
+---
+= 正在檢查工作監視器大小
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在升級至最新版本的Snap Creator之前、您應該檢查目前安裝版本之Snap Creator的工作監控大小。
+
+升級Snap Creator時、請確定將工作監視器大小設為等於或大於先前的設定、以避免工作監視器資料庫中的資料遺失。SnapCreator只會擷取最大更新工作監控大小限制的工作。
+
+例如、如果Snap Creator 4.0中的工作監控大小為500、請務必在升級至最新的Snap Creator時、將工作監控大小設為等於或大於500的數字。
+
+. 執行下列其中一個選項、檢查工作監視器大小：
++
+** 開啟Snap Creator伺服器內容檔（/install_path/scServer4.1.x/engine.etc/snapcreator.properties）、然後檢查SNAPCREATOR_job_監 控大小變數。
+** 從SnapCreator GUI主功能表中、選取*管理*>*工作監控*、然後按一下*大小*。
++
+「工作監控大小」對話方塊會顯示、且頂端欄位會顯示目前大小。
+
+
+
+

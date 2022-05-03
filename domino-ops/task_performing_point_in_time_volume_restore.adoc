@@ -1,0 +1,134 @@
+---
+permalink: domino-ops/task_performing_point_in_time_volume_restore.html 
+sidebar: sidebar 
+keywords: domino, ibm, volume, restore 
+summary: 您可以使用IBM Domino外掛程式、針對所有主要儲存類型執行時間點、最新或可選取的最新Volume還原。 
+---
+= 執行Volume還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用IBM Domino外掛程式、針對所有主要儲存類型執行時間點、最新或可選取的最新Volume還原。
+
+請務必：
+
+* 將組態檔中的資料還原目錄設定為Domino資料目錄。
+* 停止Domino伺服器。
+
+
+Volume還原選項如下：
+
+|===
+| 還原類型 | 說明 
+
+
+ a| 
+Volume還原（時間點）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態。
+
+
+
+ a| 
+Volume還原（最新）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到最近的複本。
+
+
+
+ a| 
+Volume還原（可選擇最新）
+ a| 
+將整個磁碟區還原至Snapshot複本時的狀態、然後將Domino交易記錄轉送到指定時間。
+
+|===
+
+NOTE: 若要進行最新且可選擇的時間點還原、必須啟用Domino交易記錄。
+
+交易記錄只能轉送。選取建立Snapshot複本之前的時間會導致還原錯誤。
+
+. 在「設定檔與組態」窗格中、選取組態檔、然後按一下「*動作*」>「*還原*」。
++
+選取「*還原*」會自動啟動「Snap Creator Framework還原」精靈。在整個「還原」精靈中、按一下*「下一步」*以前進到下一頁。按一下*上一頁*即可返回上一頁。
+
++
+
+NOTE: 如果您是從SnapVault 還原複本還原、系統會提示您從主要或次要儲存設備還原。您的選擇取決於如何處理中所述的限制 link:concept_domino_database_restore_overview.html["還原資料庫"]。
+
+. 在「還原詳細資料」頁面上、指定還原詳細資料：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+控制器/Vserver名稱
+ a| 
+在儲存系統上選取您要還原的SVM。
+
+
+
+ a| 
+還原Volume名稱
+ a| 
+選取您要還原的磁碟區。
+
+
+
+ a| 
+原則
+ a| 
+選取您要還原的備份原則。
+
+
+
+ a| 
+SnapCreator Snapshot複本/所有Snapshot複本
+ a| 
+保留預設值。
+
+
+
+ a| 
+還原Snapshot複本名稱
+ a| 
+選取您要還原的Snapshot複本。
+
+
+
+ a| 
+還原類型
+ a| 
+選擇* Volume Restore *。
+
+|===
+. 在下一頁中、指定磁碟區還原類型：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+還原類型
+ a| 
+按一下Volume還原類型。如果您選擇*可選取的分鐘*、則會顯示新欄位、您可以在其中指定要播放Domino交易記錄的日期和時間。如果Snap Creator伺服器上的時間與儲存控制器上的時間不符、請按一下*「Ignore Validation」（忽略驗證）*。
+
+
+
+ a| 
+停用複寫
+ a| 
+選取此方塊可為還原的資料庫檔案設定新的Domino複本ID。
+
+|===
+. 檢閱摘要、然後按一下「*完成*」。
+. 在Volume Restore（Volume還原）對話框中、按一下* OK（確定）*。
++
+SnapCreator會啟動還原工作。工作資訊會顯示在主控台窗格中。
+
+
+
+還原作業完成後、重新啟動Domino伺服器。

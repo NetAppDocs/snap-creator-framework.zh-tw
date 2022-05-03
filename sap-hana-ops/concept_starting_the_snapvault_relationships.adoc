@@ -1,0 +1,14 @@
+---
+permalink: sap-hana-ops/concept_starting_the_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: starting, start, snapvault, relationships 
+summary: 您需要透過SnapVault 以7-Mode和叢集式的功能操作的支援功能來啟動「不支援的」關係Data ONTAP 。Data ONTAP 
+---
+= 開始SnapVault 建立不穩固的關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要透過SnapVault 以7-Mode和叢集式的功能操作的支援功能來啟動「不支援的」關係Data ONTAP 。Data ONTAP

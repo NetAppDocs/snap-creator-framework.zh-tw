@@ -1,0 +1,38 @@
+---
+permalink: administration/concept_what_snap_creator_does.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, unix, applications, third-party, databases, hypervisors, windows, aix, hp-ux, linux, solaris, extensibility 
+summary: 「Snap Creator Framework可讓您使用預先封裝的自訂外掛程式、在Windows和UNIX（AIX、HP-UX、Linux和Solaris）環境中、針對各種協力廠商應用程式、資料庫和Hypervisor、標準化並簡化資料保護。 
+---
+= Snap Creator Framework的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator Framework可讓您使用預先封裝的自訂外掛程式、針對Windows和UNIX（AIX、HP-UX、Linux和Solaris）環境中的各種協力廠商應用程式、資料庫和Hypervisor、標準化並簡化資料保護。
+
+SnapCreator運用Snapshot、SnapVault 物件、開放式系統SnapVault 的功能、SnapMirror功能、以及NetApp管理主控台的資料保護功能、Operations Manager主控台和FlexClone、提供下列功能：
+
+* 應用程式一致的資料保護
++
+集中式解決方案、可備份關鍵資訊、並與現有的應用程式架構整合、以確保資料一致性並降低營運成本。
+
+* 擴充性
++
+使用模組化架構和原則型自動化、實現快速整合。
+
+* 雲端整備
++
+獨立於作業系統的Snap Creator功能、可支援實體與虛擬平台、並可與IT即服務與雲端環境互通。
+
+* 複製功能
++
+支援節省空間的資料複製、以利開發與測試。
+
+
+
+下圖顯示SnapCreator架構的元件：
+
+image::../media/scfw_overview_41_refresh_administration.gif[scfw綜覽41重新整理管理]

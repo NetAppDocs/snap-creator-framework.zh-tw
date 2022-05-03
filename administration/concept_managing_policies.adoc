@@ -1,0 +1,18 @@
+---
+permalink: administration/concept_managing_policies.html 
+sidebar: sidebar 
+keywords: managing, retention, policies, list, delete, policies, snapshot, snapvault 
+summary: 您可以建立保留原則、以及列出和刪除原則。 
+---
+= 管理保留政策
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立保留原則、以及列出和刪除原則。
+
+保留原則通常會定義Snapshot保留設定、例如應保留多少Snapshot複本、以及保留多久。例如、每日原則可能會保留至少30天的Snapshot複本。（保留期限設定可防止同一天建立的多個Snapshot複本繞過服務層級協議（SLA）、該協議可能會指出Snapshot複本必須已有30天。）
+
+如果使用了此功能、則原則也會定義該還原複本的保留設定。SnapVault SnapVault

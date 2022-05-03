@@ -1,0 +1,37 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, job, status, logs, monitor 
+summary: SnapCreator工作監控器是類似儀表板的介面、適用於Snap Creator工作。您可以使用「工作監控」來檢視工作狀態和下載記錄。 
+---
+= 在工作監控器中檢視工作狀態和記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator工作監控器是類似儀表板的介面、適用於Snap Creator工作。您可以使用「工作監控」來檢視工作狀態和下載記錄。
+
+工作監控器會指出工作狀態、如下所示：
+
+* image:../media/scfw_domino_icon_job_in_progress.gif["此影像由周邊文字說明。"] 表示正在進行中的工作。
+* image:../media/scfw_domino_icon_job_successful.gif["此影像由周邊文字說明。"] 表示已成功完成的工作。
+* image:../media/scfw_domino_icon_job_completed_with_errors.gif["此影像由周邊文字說明。"] 指出已完成但有錯誤的工作。
+* image:../media/scfw_domino_icon_job_failed.gif["此影像由周邊文字說明。"] 表示作業失敗。
++
+.. 在「設定檔與組態」窗格中、選取組態檔、然後按一下「Snap Creator Framework」視窗頂端的「*管理*」>「*工作監視器*」。
++
+此時會顯示「工作監控」窗格、您可在此檢視工作狀態。
+
+.. 選取工作、然後按一下*下載記錄*>* Log_Type *、其中Log_Type為下列其中一項：
++
+*** * Out Log*提供工作的詳細層級資訊。
+*** *除錯記錄*提供詳細層級的資訊、以及在除錯時有用的資訊。
+*** * GUI Logs*提供有關Snap Creator GUI動作的資訊。GUI記錄並非特定於所選工作。
+
+
+.. 在下載對話方塊中、視需要按一下「*開啟*」或「*儲存*」。
+
+
+

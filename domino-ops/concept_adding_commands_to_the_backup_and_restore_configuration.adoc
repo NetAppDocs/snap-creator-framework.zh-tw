@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/concept_adding_commands_to_the_backup_and_restore_configuration.html 
+sidebar: sidebar 
+keywords: domino, ibm, adding, commands, backup, restore, configuration, supplemental, 
+summary: 您可能偏好使用SnapDrive 支援還原的命令來進行備份、而非使用原生的Snap Creator命令、以確保作業系統層級的檔案系統一致性。 
+---
+= 新增命令至備份與還原組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有時候、備份或還原作業可能需要執行Snap Creator中沒有的命令。例如、在使用FC或iSCSI的Windows主機上、您可能偏好使用SnapDrive 支援還原的命令來進行備份、而非使用原生的Snap Creator命令、以確保作業系統層級的檔案系統一致性。
+
+
+
+== 執行補充命令的位置
+
+根據預設、補充命令會在Snap Creator Agent上執行。您可以在伺服器上執行輔助命令、方法是在命令前面加上文字伺服器、然後加上一個分號（：）。例如、伺服器：C：\myscript.bat。
+
+如果您要在代理程式上執行補充命令、必須明確允許執行該命令、方法是將其包含在代理程式的允許命令.config檔案中。不需要在伺服器上允許附加命令。
+
+
+
+== 新增補充命令的位置
+
+您可以使用Snap Creator GUI或Snap Creator CLI、將命令新增至備份與還原組態。
+
+
+NOTE: 本指南說明如何使用GUI來新增命令。如需有關如何使用CLI的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+*相關資訊*
+
+link:concept_allowing_additional_commands_through_the_snap_creator_agent.adoc["允許對Snap Creator Agent執行補充命令"]
+link:task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc["新增輔助命令至組態"]

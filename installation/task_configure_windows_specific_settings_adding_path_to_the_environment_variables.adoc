@@ -1,0 +1,29 @@
+---
+permalink: installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html 
+sidebar: sidebar 
+keywords: configuring, configure, windows, settings, adding, add, path, environment, variables 
+summary: 如果要在Windows上安裝Snap Creator Agent、您必須將Domino二進位檔案的路徑新增至Windows的環境變數。 
+---
+= 設定Windows特定設定：新增環境變數路徑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要在Windows上安裝Snap Creator Agent、您必須將Domino二進位檔案的路徑新增至Windows的環境變數。
+
+. 存取Windows作業系統的進階設定（例如*我的電腦*>*內容*>*進階*>*環境變數*）、然後將Domino路徑新增至Path變數。
++
+
+NOTE: 如需修改系統變數的詳細資訊、請參閱Windows作業系統的說明文件。
+
+
+
+如果您在安裝Snap Creator Agent之後、將Domino路徑新增至環境變數、則必須重新啟動Snap Creator Agent服務。例如、在安裝SnapCreator Agent的主機上、開啟命令提示字元並輸入下列命令：
+
+[listing]
+----
+sc stop SnapCreatorAgentService
+sc start SnapCreatorAgentService
+----

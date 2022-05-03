@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_snap_creator_server.html 
+sidebar: sidebar 
+keywords: managing, snap, creator, server, start, veridy, stop, port, windows, unix 
+summary: 您可以在Windows和UNIX系統上啟動、驗證及停止Snap Creator Server、以及變更伺服器連接埠。 
+---
+= 管理Snap Creator伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Windows和UNIX系統上啟動、驗證及停止Snap Creator Server、以及變更伺服器連接埠。

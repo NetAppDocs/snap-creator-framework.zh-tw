@@ -1,0 +1,18 @@
+---
+permalink: sap-hana-ops/concept_sap_hana_file_based_backup_and_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, file-based, backup, database, integrity, checks 
+summary: SAP建議結合儲存型Snapshot備份與每週檔案型備份、以執行區塊完整性檢查。區塊完整性檢查可從Snap Creator圖形化使用者介面（GUI）或命令列介面（CLI）中執行。 
+---
+= SAP HANA檔案型備份與資料庫完整性檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP建議結合儲存型Snapshot備份與每週檔案型備份、以執行區塊完整性檢查。區塊完整性檢查可從Snap Creator圖形化使用者介面（GUI）或命令列介面（CLI）中執行。
+
+檔案型資料備份作業會在保留檔案備份複本時使用。當必須捨棄備份複本時、會使用「資料庫完整性檢查」作業。
+
+您可以設定其中一項或兩項作業。在隨需備份期間、您可以選擇任一項作業。

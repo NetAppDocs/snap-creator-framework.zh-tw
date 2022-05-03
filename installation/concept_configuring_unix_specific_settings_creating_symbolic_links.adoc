@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html 
+sidebar: sidebar 
+keywords: configuring, configure, unix, settings, create, creating, symbolic, links 
+summary: 如果要在UNIX作業系統（AIX、Linux和Solaris）上安裝Snap Creator Agent、IBM Domino外掛程式才能正常運作、則必須建立三個符號連結（symlinks）、才能連結至Domino的共用物件檔案。 
+---
+= 設定UNIX特定設定：建立符號連結
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要在UNIX作業系統（AIX、Linux和Solaris）上安裝Snap Creator Agent、IBM Domino外掛程式才能正常運作、則必須建立三個符號連結（symlinks）、以連結至Domino的共用物件檔案。
+
+安裝程序會因作業系統而稍有不同。請參閱適用於您作業系統的適當程序。
+
+
+NOTE: Domino不支援HP-UX作業系統。

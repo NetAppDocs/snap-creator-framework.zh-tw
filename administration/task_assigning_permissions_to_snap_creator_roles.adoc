@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_permissions_to_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: assign, permission, snap, creator, gui, role, gui, permission 
+summary: 您可以使用Snap Creator GUI來指派對Snap Creator角色的權限。 
+---
+= 指派對Snap Creator角色的權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Snap Creator GUI來指派對Snap Creator角色的權限。
+
+. 從Snap Creator GUI主功能表中、選取*使用者與角色*>*角色管理*。
+. 在角色管理索引標籤中、選取所需的角色、然後按一下*指派權限*。
+. 將所需的權限從左欄移到右欄、然後按一下*「Save（儲存）」*。
++
+您可以在欄之間選取及拖曳權限、或按一下箭頭在欄之間移動權限。
+
+. 選取角色並在「角色與指派的權限」窗格中檢視指派的權限、以驗證是否已指派權限。
+

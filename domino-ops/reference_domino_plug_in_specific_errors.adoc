@@ -1,0 +1,180 @@
+---
+permalink: domino-ops/reference_domino_plug_in_specific_errors.html 
+sidebar: sidebar 
+keywords: domino, ibm, troubleshooting, plug-ins, errors 
+summary: 常見的Snap Creator錯誤分為兩類：一般Snap Creator錯誤和Domino外掛程式特定錯誤。Domino外掛程式特定錯誤通常涉及預先安裝問題、不良資料庫或自訂還原動作的問題。 
+---
+= 疑難排解Domino外掛程式特定錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+常見的Snap Creator錯誤分為兩類：一般Snap Creator錯誤和Domino外掛程式特定錯誤。Domino外掛程式特定錯誤通常涉及預先安裝問題、不良資料庫或自訂還原動作的問題。
+
+
+NOTE: 如需一般Snap Creator錯誤的相關資訊、請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["SnapCreator Framework 4.1.2系統管理指南"]。
+
+
+
+== 此平台不支援Domino外掛程式
+
+當Domino外掛程式的先決條件尚未滿足時、您通常會收到此錯誤訊息。一般而言、錯誤訊息類似於下列內容：
+
+[listing]
+----
+Failed to load plug-in domino. Reason: ERROR: [ltd-00009] Domino plug-in
+couldn't be loaded. Reasons could be 1) Domino plug-in is not supported
+on this platform.
+----
+已知也會出現下列錯誤訊息：
+
+[listing]
+----
+ERROR: [tampico:9090(4.1.x)] SCF-00038: Application quiesce for
+plug-in [domino] failed with exit code [99], continuing with backup.
+----
+以及這項功能：
+
+[listing]
+----
+ERROR: [scf-00094] Application environment set for plug-in domino failed
+[ERROR: [scf-00060] unknown application object [app] / application domino at snapcreator.pl line 6410.
+----
+如果不符合下列任一條件、就會出現這些錯誤訊息：
+
+* 未執行預先安裝步驟、或未正確執行：
++
+** 在UNIX主機上、您必須建立指向IBM Domino共用物件檔案的符號連結。
+** 在Windows主機上、您必須將IBM Domino安裝路徑新增至path環境變數。如需詳細資訊、請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["SnapCreator Framework 4.1.2安裝指南"]。
+
+
+* Domino的位元層級與Snap Creator的位元層級不同。例如、如果您使用32位元Domino、則應該使用32位元Snap Creator。
+
+
+
+
+== SnapCreator備份因為資料庫不良而失敗
+
+根據預設、如果一個或多個資料庫處於不一致或毀損狀態、備份作業將會失敗。您可以強制外掛程式在發生錯誤的情況下繼續執行備份作業、如步驟所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["使用GUI建立組態檔的工作"]。
+
+
+
+== 使用自訂動作進行Domino還原失敗
+
+還原路徑設定不正確時、通常會發生還原錯誤。檢查路徑中是否有額外的字元和反斜槓。此外、請確認資料還原目錄設定正確。
+
+錯誤類似於以下內容：
+
+[listing]
+----
+########## Custom plug-in action ##########
+[Thu Apr 19 16:05:55 2012] DEBUG: Restoring to current time.
+[Thu Apr 19 16:05:55 2012] DEBUG: Calling dominocore::postRestoreToTime with arguments(C:\Lotus\Domino\notes.ini,F:\Domino\data\,H:\changeinfo\fuji15-daily_20120419130836,-1,F:\Domino\data\restore\mail\dadams.nsf,UP-TO-THE-MINUTE,H:\changeinfo\logs\)
+[Thu Apr 19 16:05:55 2012] TRACE: Notes API initialized
+Applying Change info for:F:\Domino\data\restore\mail\dadams.nsf
+Error: unable to open file 'H:\changeinfo\fuji15-daily_20120419130836/restore_mail_dadams.nsf.info', for path 'F:\Domino\data\restore\mail\dadams.nsf'.
+Error:5114
+NSFRecoverDatabases failed for database:F:\Domino\data\restore\mail\dadams.nsf
+Recovery Manager: Recovery only supported for Backup Files.ERROR_CODE:5114
+[Thu Apr 19 16:05:55 2012] ERROR: [ltd-00008] Restoring databases finished with errors
+[Thu Apr 19 16:05:55 2012] ERROR: [scf-00154] Action custom for plugin domino failed with exit code 1, Exiting!
+[Thu Apr 19 16:05:55 2012] DEBUG: Exiting with error code - 2
+----
+
+
+== 所有Domino外掛程式特定錯誤
+
+下表以參考格式列出IBM Domino外掛程式專屬的錯誤訊息：
+
+|===
+| 錯誤代碼 | 錯誤訊息 | 說明/解決方法 
+
+
+ a| 
+LTD 00001
+ a| 
+Domino外掛程式無法搭配snap_timestamp_only = N使用Snap_timestamp_only應設為Y
+ a| 
+如需詳細資訊、請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["task_using the _the_GUI to _create_a_configuration _file.MD#STRUD_81795CF9D6294AC891BC3D0CE4827CA3"]。
+
+
+
+ a| 
+LTS-00002
+ a| 
+靜止資料庫已完成但有錯誤
+ a| 
+Domino外掛程式無法將所有資料庫置於備份模式。檢查記錄以找出錯誤的確切原因、或在偵錯模式中執行Snap Creator以找出錯誤。
+
+
+
+ a| 
+LTC-00003
+ a| 
+取消靜止資料庫已完成錯誤
+ a| 
+Domino外掛程式無法將所有資料庫移出備份模式。檢查記錄以找出錯誤的確切原因、或在偵錯模式中執行Snap Creator以找出錯誤。
+
+
+
+ a| 
+LTC-00004
+ a| 
+探索資料庫失敗
+ a| 
+應用程式錯誤導致應用程式探索失敗。檢查組態和應用程式設定。您可以設定APP_Auto_Discovery = N並註解validation_volume來停用自動探索。
+
+
+
+ a| 
+LTC-00005
+ a| 
+收集作業系統資訊失敗-$@
+ a| 
+收集作業系統資訊時發生錯誤、導致scdump動作失敗。請檢查記錄、然後嘗試手動執行命令。
+
+
+
+ a| 
+LTC-00006
+ a| 
+收集不成功的資訊- SnapDrive $@
+ a| 
+收集SnapDrive 資訊時發生錯誤、導致scdump動作失敗。請檢查記錄、然後嘗試手動執行命令。
+
+
+
+ a| 
+LTC-00008
+ a| 
+還原資料庫已完成但發生錯誤
+ a| 
+Domino外掛程式無法成功還原所有資料庫。檢查記錄以找出錯誤的確切原因、或在偵錯模式中執行Snap Creator以找出錯誤。
+
+
+
+ a| 
+LTC-00009
+ a| 
+Domino外掛程式無法以root執行
+ a| 
+原因可能是：
+
+* 此平台不支援Domino外掛程式。
+* Domino外掛程式執行的先決條件不符合。
+
+
+如需詳細資訊、請參閱 link:reference_domino_plug_in_specific_errors.html#domino-plug-in-is-not-supported-on-this-platform["此平台不支援Domino外掛程式"]。
+
+
+
+ a| 
+LT-00010
+ a| 
+開啟資料庫時發生錯誤
+ a| 
+檢查記錄以找出錯誤的確切原因、或在偵錯模式中執行Snap Creator以找出錯誤。
+
+|===

@@ -1,0 +1,74 @@
+---
+permalink: administration/reference_pre_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap, clone, exit 
+summary: SnapCreator Server包含數個組態檔預先命令。 
+---
+= 預先命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCreator Server包含數個組態檔預先命令。
+
+
+NOTE: 對於Windows、必須在執行任何預先命令之前加入「cmd.exe /c」。
+
+|===
+| 命令 | 說明 
+
+
+ a| 
+pre_APP_quiesceed_ CMD ##
+ a| 
+這是應用程式前備份啟動命令、其中##是從01到99的數字。
+
+
+
+ a| 
+PR_NTAP_CMD ##
+ a| 
+這是「預先快照」命令、其中###是從01到99的數字；它會在執行所有作業之前執行。
+
+
+
+ a| 
+pre_APP_unquies_CMD ##
+ a| 
+這是應用程式前備份停止命令、其中##是從01到99之間的數字。
+
+
+
+ a| 
+pre_NTAP_clone _刪除_CMD ##
+ a| 
+這是預先複製刪除命令、其中###是從01到99的數字。*注意：* Clone刪除命令的目的是呼叫掛載指令碼或命令、以便掛載複製的LUN以進行備份（可能是磁帶）。
+
+
+
+ a| 
+pre_exit_CMD ##
+ a| 
+這是在發生嚴重錯誤之後、但在Snap Creator結束之前執行的選用命令。這對於恢復快照建立者執行之前的狀態非常有用。*注意：*
+
+* 此命令會在因為錯誤而結束Snap Creator之前、將應用程式恢復為正常作業模式。
+* 如果您使用APP_NAME、就會忽略此功能、因為它是在Snap Creator內部處理。
+
+
+
+
+ a| 
+pre_reete_CMD ##
+ a| 
+這是選用命令、可在您輸入互動式還原之前執行。這可讓您與正在還原的應用程式互動。例如、您可能想要在執行還原之前先關閉應用程式。*附註：* MySQL外掛程式不支援此功能。
+
+
+
+ a| 
+pre_clClone建立_ CMD ##
+ a| 
+這是一個選用命令、可在進行ONTAPI複製作業之前執行、其中##是從01-99開始的數字。
+
+|===

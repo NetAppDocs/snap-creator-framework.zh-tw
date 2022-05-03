@@ -1,0 +1,30 @@
+---
+permalink: administration/reference_snap_creator_configuration_file_variables.html 
+sidebar: sidebar 
+keywords: variable, parameter, snap, creator, configuration, file, snapshot 
+summary: 您可以在Snap Creator組態檔案中定義變數、參數和命令。 
+---
+= SnapCreator組態檔案變數、參數和命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在Snap Creator組態檔案中定義變數、參數和命令。
+
+SnapCreator組態檔案為動態檔案、表示您可以在組態檔中建立及設定變數。
+
+例如、使用SnapDrive 適用於Windows的代替ONTAPI來建立Snapshot複本時。由於Snapshot複本名稱必須是唯一的、因此您必須設定動態變數。下列範本來自SnapDrive 於Windows組態的範本：
+
+ntap_snapshot crede_CMD1="cs/Program Files/NetApp/SnapDrive/sdclie.exe" Snapcreate -m fx1b4 -s %SNAME-%snap_type_%snap_time_D E：
+
+或
+
+ntap_snapshot create_cMD1="cs/Program Files/NetApp/SnapDrive/sdclie.exe" Snapcreate -m fx1b4 -s %SNAME-%snap_type_Recent -D E：
+
+如果使用SnapDrive Windows版的支援、而Data ONTAP 非使用功能來刪除Snapshot複本、則可使用NTAP_snapshot刪除_CMDB參數。必須使用%SNAPNAME參數來取代SnapDrive 「Windows適用」命令中的Snapshot複本名稱。
+
+以下範例來自SnapDrive 於Windows組態的功能：
+
+ntap_snapshot刪除_cMD01 ="C:\Program Files\NetApp\SnapDrive \sdcl" snap刪除- s %SNAPNAME - D I：

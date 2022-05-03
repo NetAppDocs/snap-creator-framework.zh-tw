@@ -1,0 +1,23 @@
+---
+permalink: installation/concept_configuring_settings_for_the_domino_plug_in.html 
+sidebar: sidebar 
+keywords: configuring, configure, settings 
+summary: 只有當您打算使用IBM Domino外掛程式時、才需要設定特定的設定、此外掛程式會隨附於Snap Creator Agent安裝中。 
+---
+= 設定Domino外掛程式的設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+只有當您打算使用IBM Domino外掛程式時、才需要設定特定的設定、此外掛程式會隨附於Snap Creator Agent安裝中。
+
+
+NOTE: 最佳實務做法是在不同主機上安裝Snap Creator Server和Snap Creator Agent。
+
+視作業系統而定、您必須先設定這些設定、然後再安裝適用於IBM Domino外掛程式的Snap Creator Agent、才能正常運作。
+
+* 對於Windows環境、您必須將Domino路徑新增至環境變數。
+* 對於UNIX環境、您必須建立符號連結、才能連結至Domino的共用物件檔案。
+

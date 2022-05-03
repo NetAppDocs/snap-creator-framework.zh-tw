@@ -1,0 +1,143 @@
+---
+permalink: sap-hana-ops/reference_sap_hana_plug_in_parameters.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, parameters 
+summary: SAP HANA外掛程式參數 
+---
+= SAP HANA外掛程式參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+下表列出SAP HANA外掛程式參數、提供參數設定及參數說明。
+
+|===
+| 參數 | 設定 | 說明 
+
+
+ a| 
+Hana的
+ a| 
+範例：ABC
+ a| 
+Hana資料庫SID：
+
+
+
+ a| 
+HANA節點
+ a| 
+範例：node1、node2、node3
+ a| 
+以逗號分隔的HANA節點清單、可在其中執行hdbsqll陳述式。
+
+
+
+ a| 
+HANA使用者名稱
+ a| 
+範例：備份使用者
+ a| 
+Hana資料庫使用者名稱。此使用者所需的最低權限為備份管理權限。
+
+
+
+ a| 
+HANA密碼
+ a| 
+範例：hfasfh87r83r
+ a| 
+Hana資料庫密碼。
+
+
+
+ a| 
+HANA執行個體
+ a| 
+範例：42.
+ a| 
+Hana節點執行個體編號。
+
+
+
+ a| 
+HANA HDBSQL_CMD
+ a| 
+範例：usr/sa p/hdbclient/ hdbsql
+ a| 
+HANA hdbsql命令的路徑。如果未設定此參數、則會使用搜尋路徑上的hdbsql。預設值為hdbsql。
+
+
+
+ a| 
+HANA _ OSDD_USER
+ a| 
+範例：User1
+ a| 
+執行hdbsql的作業系統使用者（通常是sidadadm）必須在搜尋路徑中具有hdbsql二進位檔、並具有執行該二進位檔的權限。
+
+
+
+ a| 
+HANA _ USERSTORE_keys
+ a| 
+範例：節點1：key1、節點2：key2、節點3：ke y3
+ a| 
+以逗號分隔的HANA使用者存放區金鑰和節點配對清單、可使用hdbsql陳述式執行。
+
+
+
+ a| 
+HANA檔案備份啟用
+ a| 
+「Y」或「N」
+ a| 
+決定Snap Creator是否應為SAP HANA外掛程式啟用檔案型備份。當您想要執行SAP HANA檔案型備份作業時、此設定非常實用。
+
+
+
+ a| 
+HANA檔案備份路徑
+ a| 
+範例：/HANA / DATA / SCN/mnt00001
+ a| 
+（選用）可儲存資料庫檔案備份的目錄路徑。如果未設定此參數、請使用預設值。
+
+
+
+ a| 
+HANA檔案備份前置字元
+ a| 
+範例：SnapCreator_<HANA檔案備份前置字元>_<目前時間戳記>
+ a| 
+（選用）在備份檔案名稱中新增前置詞。預設值：SnapCreator__
+
+
+
+ a| 
+HANA完整性檢查啟用
+ a| 
+「Y」或「N」
+ a| 
+決定Snap Creator是否應啟用SAP HANA外掛程式的完整性檢查。當您想要執行SAP HANA Integrity Check作業時、通常會使用此設定。
+
+
+
+ a| 
+HANA暫存檔案備份路徑
+ a| 
+範例：/Temp
+ a| 
+（選用）可儲存Integrity Check暫用資料庫檔案的路徑。如果不確定、請使用預設值。
+
+
+
+ a| 
+HANA記錄清理啟用
+ a| 
+「Y」或「N」
+ a| 
+啟用記錄目錄清除。
+
+|===

@@ -1,0 +1,42 @@
+---
+permalink: administration/task_changing_the_snap_creator_server_port.html 
+sidebar: sidebar 
+keywords: snap, creator, server, snapcreator, properties, file, restart, server, installation, unix 
+summary: 若要變更Snap Creator Server使用的連接埠、您可以編輯snapcreator.properties檔案、然後重新啟動伺服器。 
+---
+= 安裝後變更Snap Creator伺服器連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要變更Snap Creator Server使用的連接埠、您可以編輯snapcreator.properties檔案、然後重新啟動伺服器。
+
+變更Snap Creator Server連接埠的程序與Windows和UNIX相同。下列程序使用UNIX環境的範例。
+
+. 登入執行SnapCreator Server的系統、然後切換至安裝目錄中的etc子目錄。
++
+[listing]
+----
+cd /install_path/scServer4.3.0/engine/etc
+----
+. 使用文字編輯器開啟snapcreator.properties檔案。
+. 將下列參數中的連接埠值（預設為8443）變更為新連接埠：
++
+[listing]
+----
+...
+SNAPCREATOR_STARTUP_PORT=8443
+...
+SNAPCREATOR_STORAGE_URL=https\://localhost\:8443/services/v1/StorageService
+...
+----
+. 儲存並關閉snapcreator.properties檔案。
+. 重新啟動Snap Creator伺服器。
++
+[listing]
+----
+/install_path/scServer4.3.0/bin/scServer restart
+----
+

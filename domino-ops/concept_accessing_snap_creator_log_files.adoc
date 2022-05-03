@@ -1,0 +1,64 @@
+---
+permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
+summary: 您可以在「Snap Creator工作監視器」中檢視工作狀態。您可以在工作執行時、在主控台窗格中檢視工作動作記錄、或在工作的「登出記錄」中檢視。也有許多專門的記錄可供使用。 
+---
+= 檢視工作狀態和記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在「Snap Creator工作監視器」中檢視工作狀態。您可以在工作執行時、在主控台窗格中檢視工作動作記錄、或在工作的「登出記錄」中檢視。也有許多專門的記錄可供使用。
+
+您可以在GUI中檢視下列記錄：
+
+|===
+| 記錄 | 說明 
+
+
+ a| 
+外出
+ a| 
+提供工作的詳細層級資訊。
+
+
+
+ a| 
+偵錯
+ a| 
+提供詳細層級的資訊、以及可用於偵錯的資訊。
+
+
+
+ a| 
+GUI
+ a| 
+提供有關Snap Creator GUI動作的資訊。
+
+
+
+ a| 
+stderr
+ a| 
+提供寫入標準錯誤的相關資訊（僅限「報告」窗格）。
+
+
+
+ a| 
+錯誤
+ a| 
+提供所有錯誤資訊（僅限「報告」窗格）。
+
+|===
+如果您不想使用「工作監視器」或「報告」窗格、可以在文字編輯器中檢視所有記錄。記錄位於Snap Creator Server的安裝目錄中。
+
+*相關資訊*
+
+xref:task_using_the_snap_creator_job_monitor_to_review_logs.adoc[在工作監控器中檢視工作狀態和記錄]
+
+xref:task_using_the_snap_creator_reports_option_to_view_logs.adoc[在「報告」窗格中檢視記錄]
+
+xref:task_creating_an_scdump_using_the_snap_creator_gui.adoc[使用scdump以壓縮格式收集記錄]

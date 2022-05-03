@@ -1,0 +1,14 @@
+---
+permalink: administration/index.html 
+sidebar: sidebar 
+keywords: administration, guide, snap, creator, server, agent, profiles, policies, schedule, jobs, backup, recovery 
+summary: 說明如何管理Snap Creator Server和Agent、包括使用者存取與設定檔、原則、排程工作、以及備份與還原作業 
+---
+= 系統管理指南
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+本指南說明如何管理SnapCreator Server與Agent for Snap Creator 4.4.3、包括使用者存取與設定檔、原則、排程工作、以及備份與還原作業。

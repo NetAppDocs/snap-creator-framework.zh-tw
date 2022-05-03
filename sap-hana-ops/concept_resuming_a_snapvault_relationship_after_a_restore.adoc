@@ -1,0 +1,18 @@
+---
+permalink: sap-hana-ops/concept_resuming_a_snapvault_relationship_after_a_restore.html 
+sidebar: sidebar 
+keywords: resuming, resume, restart, snapvault, relationship, after, restore 
+summary: 任何未使用最新Snapshot備份完成的還原、都會刪除SnapVault 主儲存系統的還原關係。 
+---
+= 還原後恢復SnapVault 不還原關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+任何未使用最新Snapshot備份完成的還原、都會刪除SnapVault 主儲存系統的還原關係。
+
+還原與還原程序完成後、SnapVault 必須恢復不二關係、才能使用Snap Creator再次執行備份。否則、Snap Creator會發出錯誤訊息、因為SnapVault 它無法在主要儲存系統上找到更多的相關資訊。
+
+如果來源磁碟區與目的地磁碟區之間仍有通用的Snapshot複本、則所需的資料傳輸將以差異傳輸為基礎。

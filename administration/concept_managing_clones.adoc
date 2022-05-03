@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_clones.html 
+sidebar: sidebar 
+keywords: managing, clones, creating, backup, deleting, unmounting 
+summary: 您可以建立備份複本、檢視備份複本清單、並在不再需要時刪除備份複本。 
+---
+= 管理複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立複本（使用*「Actions」（動作）*設定或以來源安裝備份複本）、刪除複本或取消掛載複本、來管理複本。

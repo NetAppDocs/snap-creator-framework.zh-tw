@@ -1,0 +1,27 @@
+---
+permalink: administration/task_creating_snap_creator_permissions.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, cli 
+summary: 您只能使用命令列介面（CLI）建立可指派給角色的Snap Creator權限。 
+---
+= 使用CLI建立Snap Creator權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您只能使用命令列介面（CLI）建立可指派給角色的Snap Creator權限。
+
+. 建立權限：
++
+「napcreator --server host_name --port port_Number --usersc_use_name --passwdsc_passwd--action permAdd -permName permission_name --perDesc permission_description --verbose'」
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permAdd --permName backup
+--permDesc "Permission to run a backup" –verbose
+----
+
