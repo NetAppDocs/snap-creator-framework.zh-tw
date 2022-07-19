@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[新增輔助命令至組態](https://docs.netapp.com/zh-tw/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/discuss-sm.svg" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/edit-sm.svg" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/snap-creator-framework/images/article-sm.svg" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/issues/new?body=Page%3A%20[新增輔助命令至組態](https://docs.netapp.com/zh-tw/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/snap-creator-framework/blob/main/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snap-creator-framework/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/snap-creator-framework/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/snap-creator-framework/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">繁體中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snap-creator-framework/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snap-creator-framework/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/zh-tw/snap-creator-framework/pdfs/fullsite-sidebar/SnapCreator_Framework_4_3_3.pdf" >
-          <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+          <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>此文件網站（PDF 格式）</a>
 
 
 
@@ -376,7 +370,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             安裝
           </a>
           
@@ -392,7 +386,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework的功能.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             Snap Creator Framework的功能
           </a>
           
@@ -408,7 +402,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator架構.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SnapCreator架構
           </a>
           
@@ -418,8 +412,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -427,8 +419,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -448,7 +438,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator的預先安裝需求.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             Snap Creator的預先安裝需求
           </a>
           
@@ -468,7 +458,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立SnapCreator使用者Data_ONTAP_以供參考.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             建立SnapCreator使用者Data ONTAP 以供參考
           </a>
           
@@ -476,8 +466,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -501,7 +489,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定Domino外掛程式的設定.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             設定Domino外掛程式的設定
           </a>
           
@@ -519,7 +507,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定UNIX特定設定_建立符號連結.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             設定UNIX特定設定：建立符號連結
           </a>
           
@@ -527,8 +515,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -536,8 +522,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -545,8 +529,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -566,7 +548,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝Snap_Creator伺服器.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             安裝Snap Creator伺服器
           </a>
           
@@ -582,14 +564,12 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/在Windows主機上安裝Snap_Creator_Server.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             在Windows主機上安裝Snap Creator Server
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -599,8 +579,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -620,7 +598,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝Snap_Creator代理程式.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             安裝Snap Creator代理程式
           </a>
           
@@ -636,14 +614,12 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/在Windows上安裝Snap_Creator_Agent.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             在Windows上安裝Snap Creator Agent
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -655,8 +631,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -676,7 +650,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/正在升級Snap_Creator.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             正在升級Snap Creator
           </a>
           
@@ -696,7 +670,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_3_6_x升級.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             從Snap Creator 3.6.x升級
           </a>
           
@@ -708,8 +682,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -729,7 +701,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_4_4_x升級.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             從Snap Creator 4.4.x升級
           </a>
           
@@ -741,8 +713,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -762,7 +732,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/從Snap_Creator_4_1_x升級.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             從Snap Creator 4.1.x升級
           </a>
           
@@ -774,8 +744,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -785,8 +753,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -806,7 +772,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/正在解除安裝Snap_Creator.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             正在解除安裝Snap Creator
           </a>
           
@@ -824,7 +790,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/在UNIX上解除安裝Snap_Creator.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             在UNIX上解除安裝Snap Creator
           </a>
           
@@ -832,8 +798,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -841,8 +805,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -862,7 +824,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI參考.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             CLI參考
           </a>
           
@@ -878,7 +840,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI命令_可在叢集Data_ONTAP_式的功能表中為Snap_Creator使用者建立角色.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             CLI命令、可在叢集Data ONTAP 式的功能表中為Snap Creator使用者建立角色
           </a>
           
@@ -886,8 +848,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -895,8 +855,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -904,8 +862,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -925,7 +881,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/IBM_Domino_外掛程式作業.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             IBM®Domino®外掛程式作業
           </a>
           
@@ -941,7 +897,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/IBM_Domino外掛程式總覽.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             IBM Domino外掛程式總覽
           </a>
           
@@ -949,8 +905,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -972,7 +926,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/準備IBM_Domino備份與還原.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             準備IBM Domino備份與還原
           </a>
           
@@ -990,7 +944,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapMirror與SnapVault_SnapMirror設定.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SnapMirror與SnapVault SnapMirror設定
           </a>
           
@@ -998,8 +952,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1007,8 +959,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1028,7 +978,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立備份與還原組態.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             建立備份與還原組態
           </a>
           
@@ -1048,25 +998,16 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/新增命令至備份與還原組態.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             新增命令至備份與還原組態
           </a>
           
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-tw/snap-creator-framework/pdfs/pages/domino-ops/task_configuring_snap_creator_to_use_snapdrive_by_using_the_gui.pdf" >
-    <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1078,8 +1019,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1099,7 +1038,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/備份資料庫.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             備份資料庫
           </a>
           
@@ -1107,8 +1046,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1128,7 +1065,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原資料庫.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             還原資料庫
           </a>
           
@@ -1148,7 +1085,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/在SAN環境中執行單一檔案還原.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             在SAN環境中執行單一檔案還原
           </a>
           
@@ -1160,8 +1097,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1169,8 +1104,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1190,7 +1123,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/檢視工作狀態和記錄.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             檢視工作狀態和記錄
           </a>
           
@@ -1200,8 +1133,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1213,8 +1144,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1234,7 +1163,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA_外掛作業.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SAP HANA®外掛作業
           </a>
           
@@ -1250,7 +1179,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA備份與還原解決方案總覽.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SAP HANA備份與還原解決方案總覽
           </a>
           
@@ -1264,8 +1193,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1285,7 +1212,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/安裝及設定必要的軟體元件.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             安裝及設定必要的軟體元件
           </a>
           
@@ -1293,8 +1220,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1314,7 +1239,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定資料備份.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             設定資料備份
           </a>
           
@@ -1334,7 +1259,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/開始SnapVault_建立不穩固的關係.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             開始SnapVault 建立不穩固的關係
           </a>
           
@@ -1342,8 +1267,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1353,8 +1276,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1376,7 +1297,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定記錄備份.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             設定記錄備份
           </a>
           
@@ -1384,8 +1305,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1405,7 +1324,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/執行資料庫備份.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             執行資料庫備份
           </a>
           
@@ -1417,8 +1336,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1438,7 +1355,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SAP_HANA檔案型備份與資料庫完整性檢查.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SAP HANA檔案型備份與資料庫完整性檢查
           </a>
           
@@ -1458,8 +1375,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1479,7 +1394,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原及還原SAP_HANA資料庫.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             還原及還原SAP HANA資料庫
           </a>
           
@@ -1499,7 +1414,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/還原後恢復SnapVault_不還原關係.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             還原後恢復SnapVault 不還原關係
           </a>
           
@@ -1507,8 +1422,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1528,7 +1441,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/在主儲存設備故障後還原資料庫.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             在主儲存設備故障後還原資料庫
           </a>
           
@@ -1536,8 +1449,13 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
         </li>
       </ul>
     
@@ -1546,22 +1464,11 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
 
 
-
-
-
-
-          
         </li>
       </ul>
     
@@ -1581,7 +1488,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/系統管理.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             系統管理
           </a>
           
@@ -1597,14 +1504,12 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/Snap_Creator_Framework的功能.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             Snap Creator Framework的功能
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1624,7 +1529,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator架構.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SnapCreator架構
           </a>
           
@@ -1634,8 +1539,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1655,7 +1558,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理Snap_Creator伺服器.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理Snap Creator伺服器
           </a>
           
@@ -1667,8 +1570,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1688,7 +1589,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理Snap_Creator代理程式.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理Snap Creator代理程式
           </a>
           
@@ -1710,7 +1611,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator代理程式安全性.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SnapCreator代理程式安全性
           </a>
           
@@ -1718,8 +1619,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1727,8 +1626,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1748,7 +1645,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/備份與還原工作流程.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             備份與還原工作流程
           </a>
           
@@ -1778,7 +1675,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立保留政策.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             建立保留政策
           </a>
           
@@ -1792,8 +1689,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1813,7 +1708,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/建立複本.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             建立複本
           </a>
           
@@ -1821,8 +1716,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1842,7 +1735,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/執行還原作業.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             執行還原作業
           </a>
           
@@ -1852,8 +1745,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1861,8 +1752,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1882,7 +1771,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理使用者存取.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理使用者存取
           </a>
           
@@ -1908,8 +1797,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1929,7 +1816,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理設定檔.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理設定檔
           </a>
           
@@ -1939,8 +1826,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1960,7 +1845,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理組態檔案.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理組態檔案
           </a>
           
@@ -1974,8 +1859,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1995,7 +1878,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理保留政策.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理保留政策
           </a>
           
@@ -2011,8 +1894,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2032,7 +1913,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理備份.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理備份
           </a>
           
@@ -2044,8 +1925,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2065,7 +1944,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理排程工作.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理排程工作
           </a>
           
@@ -2079,8 +1958,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2100,7 +1977,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/管理複本.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             管理複本
           </a>
           
@@ -2110,8 +1987,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2131,7 +2006,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/設定Snap_Creator所需的外掛程式資訊.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             設定Snap Creator所需的外掛程式資訊
           </a>
           
@@ -2171,7 +2046,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/VMware_VIBE外掛程式.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             VMware VIBE外掛程式
           </a>
           
@@ -2179,8 +2054,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2192,8 +2065,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2213,7 +2084,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator問題.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解Snap Creator問題
           </a>
           
@@ -2229,14 +2100,12 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/錯誤訊息類型和疑難排解記錄.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             錯誤訊息類型和疑難排解記錄
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2256,7 +2125,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator_GUI錯誤.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解Snap Creator GUI錯誤
           </a>
           
@@ -2264,8 +2133,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2287,7 +2154,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解安全性問題.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解安全性問題
           </a>
           
@@ -2297,8 +2164,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2318,7 +2183,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/疑難排解Snap_Creator伺服器或Snap_Creator代理程式問題.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             疑難排解Snap Creator伺服器或Snap Creator代理程式問題
           </a>
           
@@ -2328,8 +2193,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2349,7 +2212,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/CLI命令錯誤疑難排解.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             CLI命令錯誤疑難排解
           </a>
           
@@ -2361,8 +2224,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2384,7 +2245,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/錯誤訊息.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             錯誤訊息
           </a>
           
@@ -2398,8 +2259,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2407,8 +2266,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2428,7 +2285,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/SnapCreator組態檔案變數_參數和命令.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             SnapCreator組態檔案變數、參數和命令
           </a>
           
@@ -2462,8 +2319,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2485,7 +2340,7 @@
               href="/zh-tw/snap-creator-framework/pdfs/sidebar/使用Snap_Creator命令列介面的準則.pdf" 
             
           >
-            <img src="/zh-tw/snap-creator-framework/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-tw/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
             使用Snap Creator命令列介面的準則
           </a>
           
@@ -2493,8 +2348,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2502,21 +2355,18 @@
   
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/zh-tw/snap-creator-framework/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/zh-tw/snap-creator-framework/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -2549,7 +2399,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/index.html">
         主頁
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snap-creator-framework/releasenotes.html">
@@ -3263,6 +3113,9 @@
     
   
 
+<span>貢獻者
+</span>
+
 
 </p>
 
@@ -3416,16 +3269,16 @@ GUI中只能使用支援的命令子集。如需有關APP、歸檔、掛載/卸�
               <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a class="ot-sdk-show-settings">cookie-settings</a>
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
             </li>
           </ul>
         </div>
@@ -3543,4 +3396,5 @@ GUI中只能使用支援的命令子集。如需有關APP、歸檔、掛載/卸�
     </script>
     <script src='/zh-tw/snap-creator-framework/js/www-ntap.js'></script>
     <script src='/zh-tw/snap-creator-framework/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/snap-creator-framework/js/sidebar.js'></script>
   </body></html>

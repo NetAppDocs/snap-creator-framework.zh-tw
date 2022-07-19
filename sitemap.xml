@@ -580,21 +580,14 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
-      
-      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
-      
-      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/domino-ops/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
+      
+      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
       
@@ -608,14 +601,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_reference_copyright.html</loc>
-      
-      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_reference_copyright.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_concept_how_to_send_comments_about_documentation_and_receiv.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
       
@@ -629,6 +615,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_reference_copyright.html</loc>
+      
+      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/sap-hana-ops/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
@@ -636,14 +629,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_reference_trademark.html</loc>
-      
-      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_reference_trademark.html</loc>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_reference_copyright.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
       
@@ -657,6 +643,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/delete_reference_trademark.html</loc>
+      
+      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/sap-hana-ops/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
@@ -664,14 +657,7 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/</loc>
-      
-      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/</loc>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/delete_reference_trademark.html</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
       
@@ -685,7 +671,21 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/installation/</loc>
+      
+      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/sap-hana-ops/</loc>
+      
+      <lastmod>2022-05-03T11:05:17+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/snap-creator-framework/administration/</loc>
       
       <lastmod>2022-05-03T11:05:17+00:00</lastmod>
       
@@ -1177,7 +1177,7 @@
     <url>
       <loc>https://docs.netapp.com/zh-tw/snap-creator-framework//search.html</loc>
       
-      <lastmod>2022-05-03T11:05:36+00:00</lastmod>
+      <lastmod>2022-07-19T15:09:32+00:00</lastmod>
       
     </url>
   
