@@ -2231,7 +2231,6 @@
   <block id="fecc8aff3c88a0445bf428ef692f1cea" category="paragraph">ntap_SnapVault更新</block>
   <block id="dbd64b7506acb36055eca79b8b364a18" category="paragraph">可讓您開啟和關閉SnapVault 更新功能。</block>
   <block id="d1ba6e7eb95663aa596dd570add83f9a" category="paragraph">S__ Volume SnapVault</block>
-  <block id="a1fc7f749c5ea5718722bdebdc587614" category="paragraph">列出您要執行SnapVault 更新的來源儲存系統和磁碟區（例如、控制器1：vol1、vol2、vol3；控制器2：vol1；控制器3：vol2、vol3）。*附註：*</block>
   <block id="487eb327be46517fae6f993840d60362" category="list-text">為了讓SnapMirror和SnapMirror更新正常運作、關係必須存在。SnapVault</block>
   <block id="b3b87058bbcfac523b85dde91deb1c09" category="paragraph">SnapCreator不會建立關係。</block>
   <block id="1ea062b82f2f00248618134e362b06c1" category="list-text">SnapMirror SnapVault 或SnapMirror關係中的主機名稱必須與Volume、SnapMirror_Volumes和SnapVault Volume選項中指定的主機名稱相同。此外、執行SnapCreator的主機必須能夠解析主機名稱。</block>
@@ -4597,4 +4596,9 @@
   <block id="3fa7ec916163970da88e2e2759209761" category="sidebar">IBM®Domino®外掛程式作業</block>
   <block id="3cc13999b80491b390e27e7298102ccb" category="sidebar">SAP HANA®外掛作業</block>
   <block id="7258e7251413465e0a3eb58094430bde" category="sidebar">系統管理</block>
+  <block id="eae66b4b74b6b82ce35a83d2757f6d46" category="cell">（是/否）</block>
+  <block id="0fed4fd40330e62e1aa81d896b62ecb5" category="paragraph">ntap_ally_MIRRORVAUT_As_mirror</block>
+  <block id="069d4fc9438ae257bab719c9b98b55ff" category="paragraph">可讓您將Mirror_Vault保護原則類型用作SnapVault SnapMirror或SnapMirror。（預設）N：啟用SnapVault 鏡射資料庫保護原則類型以利執行。Y：啟用SnapMirror的Mirror_Vault保護原則類型。</block>
+  <block id="6235e974fbd5143adbb2a8573ca76e9a" category="paragraph">列出您要執行SnapVault 更新的來源儲存系統和磁碟區（例如、控制器1：vol1、vol2、vol3；控制器2：vol1；控制器3：vol2、vol3）。</block>
+  <block id="2a8806d1dbd2f7d98c2367f622afe0f8" category="paragraph">允許使用最大頻寬SnapVault 的速度（單位為kbps）。如果未設定SnapVault 、則使用最大可用頻寬。</block>
 </blocks>
