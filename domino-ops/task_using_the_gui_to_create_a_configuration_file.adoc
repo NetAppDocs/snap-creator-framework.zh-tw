@@ -299,7 +299,7 @@ TIP: Domino環境可能包含數百或數千個資料庫。即使單一資料庫
 
 .. 按一下「* SnapVault 」「*」「*」「建立Snapshot複本的歸
 .. 指定歸檔Snapshot複本的原則。
-.. 以下步驟提供相關指示,13.。
+.. 以下步驟提供相關指示<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13.>>。
 .. 在* SnapVault 《等候時間*》中、輸入您希望Snap Creator等待SnapVault 完成此動作的分鐘數。
 .. 您必須先設定SnapMirror和SnapVault 不相關的功能、才能將複寫作業複寫到二線儲存設備。如需詳細資訊、請參閱 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror與SnapVault SnapMirror設定]。
 
