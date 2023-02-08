@@ -1598,31 +1598,20 @@
   <block id="58ffc764d3da3ed76d1f551668c52e4f" category="cell">命令及相關參數</block>
   <block id="1414cdc093d39dd56d0b0d20049e17fc" category="paragraph">備份</block>
   <block id="b0d90a82ca84fcfbf3c23a83351f8911" category="paragraph">建立備份複本。根據與設定檔相關的組態檔執行備份作業。</block>
-  <block id="ae19d02252fab6e525be41d7a24ab9a4" category="paragraph">建立開放式系統SnapVault 的支援區。使用開放式系統SnapVault 功能區執行備份作業。這需要Snap Creator代理程式。SnapCreator Server會與Snap Creator Agent通訊、並執行SnapVault 更新。不製作主要備份複本。</block>
-  <block id="4e220b96dd8e577d7053bfbce318710a" category="paragraph">備份（續...）</block>
-  <block id="759ae98d80bec8bb94b32a7af49852ab" category="paragraph">刪除備份複本（手動）。手動刪除現有的備份。此作業是功能表驅動的。</block>
   <block id="a715e282e87b28cf2e8d5e3b03e6d017" category="paragraph">刪除備份複本（自動）。</block>
-  <block id="6c7da77432c3854b343f4679e3ce343f" category="paragraph">列出備份複本。列出主要和次要儲存系統上的Snap Creator備份複本。</block>
   <block id="37cf8e503c870262edae617855250dbc" category="paragraph">掛載備份複本。在現有備份上執行掛載作業。根據備份建立Volume Clone、並使用mount_CMD命令透過Snap Creator Agent來掛載Clone。</block>
-  <block id="94b6208dd367cf0ea19c37d40e48c977" category="paragraph">卸載備份複本。在現有備份上執行卸載作業。根據備份刪除Volume Clone、並使用umount_cmds命令、透過Snap Creator Agent卸載實體複本。</block>
   <block id="7b5fc8f40436e2a3bd39d3f81c4d938f" category="paragraph">備份類型</block>
   <block id="2aebea658be73dcdaf0dbed239095aa9" category="paragraph">建立新的備份類型。</block>
   <block id="add2ed72cee986b59a71603e9b0c9999" category="paragraph">更新現有的備份類型。</block>
   <block id="6cef2d39d4d0595fa40610ed3298ee6c" category="paragraph">刪除現有的備份類型。</block>
   <block id="6fe3c41aa573901ff5bc0a2375dc323c" category="paragraph">列出備份類型。</block>
   <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="paragraph">複製</block>
-  <block id="2a3265159137c1b4ce658bad2e7ac953" category="paragraph">複製LUN.備份主要儲存系統、然後使用LUN複製來複製備份。也會處理igroup的Volume對應。這需要SAN或Isan環境。</block>
-  <block id="ccd3e5a37ef3f0e37abe3e54790987c7" category="paragraph">複製Volume。備份主要儲存系統、然後使用Volume Clone複製備份。也會處理igroup、NFS或CIFS的Volume對應。這需要SAN、Isan或NAS環境。</block>
-  <block id="4f8556876d5f5d0d5bb2f31b85c789d2" category="paragraph">刪除複本。根據指定的保留原則執行複本刪除作業。只保留一個LUN複本。Volume複製具有與原則相關的使用量。</block>
-  <block id="6d477fc67d7f191d7b5b7af04885671a" category="paragraph">列出Snap Creator複製。列出指定組態的Snap Creator Volume複製。</block>
-  <block id="35ef1995305100b8f49d2eb6620e4aa4" category="paragraph">列出Snap Creator磁碟區。列出主儲存系統上指定組態的Snap Creator磁碟區。</block>
   <block id="75e838837e6c9719423dc7b238df4aa6" category="paragraph">組態檔</block>
   <block id="e9d07a7f7ccc788884a4d471e8088f95" category="paragraph">匯入組態。</block>
   <block id="13a557e9c38902693568e604cec61a36" category="paragraph">匯出組態。</block>
   <block id="67305a5facb7912531a9baff57505368" category="paragraph">匯入全域組態檔。</block>
   <block id="9f32503b1eaeb11cdefdca721637b490" category="paragraph">匯出全域組態檔。</block>
   <block id="07af01281dadd8afd2778b5de57f5f95" category="paragraph">從儲存庫刪除全域組態檔。</block>
-  <block id="54b0add66e2d1ea5332c598768fd32ff" category="paragraph">組態檔（續...）</block>
   <block id="04a1c0617e4542879940068a198831c8" category="paragraph">將特定設定檔的全域組態檔匯入儲存庫。</block>
   <block id="66a2c98836cfda4998de0f04207fe0bd" category="paragraph">從儲存庫匯出特定設定檔的全域組態檔。</block>
   <block id="8d4af3ffd88be26856cf135b61094220" category="paragraph">從儲存庫中刪除特定設定檔的全域組態。</block>
@@ -1631,7 +1620,6 @@
   <block id="a65e1858c0e553a047d41273fec1fd7e" category="paragraph">列出所有工作及其狀態。</block>
   <block id="51359e8b51c63b87d50cb1bab73380e2" category="paragraph">原則</block>
   <block id="8ae9d7056000bc18ed3b848d7dbf997c" category="paragraph">新增本機原則。</block>
-  <block id="c11a01e1d5906ec4e425f1bc9ca5e0f6" category="paragraph">原則（續...）</block>
   <block id="20dd368fd7df12d10a54dd5b5289610f" category="paragraph">新增SnapMirror原則。</block>
   <block id="52ac5f54a3685643f5d863afdeb46a9d" category="paragraph">新增SnapVault 功能更新原則。</block>
   <block id="5a47fb21ba31aa625ba6bc27773ab2db" category="paragraph">更新SnapMirror原則。</block>
@@ -1645,7 +1633,6 @@
   <block id="2b70e3bab43bfcae960fd9d6f706c97e" category="paragraph">原則排程</block>
   <block id="f9c0108a3ec98c963dc0acc7b8843389" category="paragraph">建立每小時原則排程。</block>
   <block id="c3e3566612d9233acfcafb8cb1c07dba" category="paragraph">建立每日原則排程。</block>
-  <block id="aa84b248723243df3494e74ee3e6c1c1" category="paragraph">原則排程（續...）</block>
   <block id="2a3d06c6735597081f7c1fe156c89c64" category="paragraph">建立每週原則排程。</block>
   <block id="967594206d106ad11aa9a9facf5c8eb1" category="paragraph">建立cron原則排程。</block>
   <block id="ee9c7a0374ae060fe32bc4fc7ba2051c" category="paragraph">更新每小時的原則排程。</block>
@@ -1657,16 +1644,11 @@
   <block id="b881035ec30a64709225c8d52bc8532c" category="paragraph">顯示原則排程的其他資訊。</block>
   <block id="d0f25115288c15321ecf672f0d6a83ea" category="paragraph">設定檔</block>
   <block id="3839dc35dfddb7669b98362a617764af" category="paragraph">建立新的設定檔。</block>
-  <block id="b6259c5a282b83a1c5e46a58820664b5" category="paragraph">刪除設定檔。*注意：*設定檔中的組態檔也會被刪除。</block>
   <block id="2bd339d85ee3b33e513359ce781b60cc" category="paragraph">還原</block>
-  <block id="c42713a4bc25c6c63611949ad1774795" category="paragraph">執行互動式還原。針對特定原則執行互動式檔案還原作業或互動式磁碟區還原作業。</block>
-  <block id="05245f4d68d1746b144a52c43e325d7c" category="paragraph">執行非互動式Volume還原。執行非互動式Volume還原。</block>
-  <block id="2095c47ef1b34f16dcb359f5e2331145" category="paragraph">執行非互動式檔案還原。執行非互動式檔案還原。</block>
   <block id="ccdb7bf9d93e5652b57cabcc8c41e061" category="paragraph">排程</block>
   <block id="8099b13a3c62c2e790dff1981b8815d5" category="paragraph">建立新的每小時排程。</block>
   <block id="ae9a1b8043dc2197eecff4db927f497c" category="paragraph">建立新的每日排程。</block>
   <block id="7eb68c4dd2d9092f8a9cb7d4556239e9" category="paragraph">建立新的每週排程。</block>
-  <block id="08759a5c8a25da844c77985595aa9356" category="paragraph">排程（續...）</block>
   <block id="6292847753bdb1eff8fef9a71dc9746a" category="paragraph">建立新的cron排程。</block>
   <block id="bfda0b0eaf3bed2717559676692cc84e" category="paragraph">執行排程。</block>
   <block id="94fef0a8b2467566daef9fc0bf660dbc" category="paragraph">刪除排程。</block>
@@ -1682,7 +1664,6 @@
   <block id="5227530d22c060fedc0719aab49c2dd5" category="paragraph">在位於Snap Creator根目錄下的名為scdump的.zip檔案中、建立scdump檔案、Dumps記錄檔、組態檔及支援特定設定檔的相關資訊。</block>
   <block id="f2a326cb22dd2fda9cce1c8dd3da303b" category="paragraph">SnapCreator伺服器與代理程式</block>
   <block id="d7377930e6de434a5218e4efb1e47b43" category="paragraph">列出Snap Creator Server已知的所有代理程式狀態。</block>
-  <block id="ed8a0a986ff10c415ff6b3cc35dd5e26" category="paragraph">SnapCreator伺服器與代理程式（續...）</block>
   <block id="73f49a67d2ca063b462cd4d6912606aa" category="paragraph">Ping Snap Creator伺服器。</block>
   <block id="cf6ee5ad59a4cbd7d557d802a9f986a8" category="paragraph">Ping Snap Creator代理程式。</block>
   <block id="e727b00944f81e1d0a95c12886ac4641" category="paragraph">歸檔</block>
@@ -2154,32 +2135,11 @@
   <block id="5748a929a8094df734c827dde9f2f81c" category="cell">RBAC區域</block>
   <block id="004bf6c9a40003140292e97330236c53" category="cell">行動</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="paragraph">使用者</block>
-  <block id="642bb112396c6bb09cda0619cb61a307" category="paragraph">建立新使用者。</block>
-  <block id="9e6a9bc413f130a4dbd0233b18e642e1" category="paragraph">刪除使用者。</block>
-  <block id="23893945829f7db1ce2bbfc871e38e6a" category="paragraph">列出所有使用者。</block>
-  <block id="782284c889135bea35b83f07f5b45362" category="paragraph">列出角色的所有指派使用者。</block>
-  <block id="f85785726eb9575b29594d5c54c2b031" category="paragraph">列出指派設定檔的所有使用者。</block>
   <block id="a5cd3ed116608dac017f14c046ea56bf" category="paragraph">角色</block>
-  <block id="cc7f006cf8f7cca8b6408e7055492632" category="paragraph">建立新角色。</block>
-  <block id="86928195cded1a6212415d4088cd0d99" category="paragraph">刪除角色。</block>
-  <block id="c0add125ba451a88b31ddfec0eddd17c" category="paragraph">指派角色給使用者。</block>
-  <block id="c380f66da415872b7ea3ed973f0d47cf" category="paragraph">取消指派使用者的角色。</block>
-  <block id="4b34db92ac23856587604df2d0151125" category="paragraph">列出使用者的所有指派角色。</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="paragraph">權限</block>
-  <block id="48fbd17939b6d924f53a92e3f9e5e503" category="paragraph">建立新權限。</block>
-  <block id="36bd93a7ac790183357b0c9a1d7790f8" category="paragraph">刪除權限。</block>
-  <block id="e73ac1ded55d5db16a92eaaf5b5a49f1" category="paragraph">指派權限給使用者。</block>
-  <block id="538a067916f76f0a4c4157c19c69aa59" category="paragraph">取消指派使用者的權限。</block>
-  <block id="40637aa3e312b127ebcaa6718a389677" category="paragraph">列出所有權限。</block>
-  <block id="cd14aebd17ec7a58162bf74ad81fd3d5" category="paragraph">列出指派給角色的所有權限。</block>
   <block id="456d0deba6a86c9585590550c797502d" category="paragraph">營運</block>
-  <block id="1c88de8733bd112a19e892c1b026f193" category="paragraph">將作業指派給權限。</block>
   <block id="1b377f25b7513305ed44f84218f572bf" category="paragraph">取消指派權限中的作業。</block>
-  <block id="fab46818b8203644ff364d4a0f5bd456" category="paragraph">列出所有作業。</block>
-  <block id="19e7f0b3cd23db60f04e5314e4d9fe8b" category="paragraph">列出指派給權限的所有作業。</block>
   <block id="25479188d9bbdb073a974c33ec6ad2d5" category="paragraph">指派設定檔給使用者。</block>
-  <block id="a3d5616efab7cd18ad541470b1aacbbb" category="paragraph">取消指派使用者的設定檔。</block>
-  <block id="7bf95797fcac4ac689012402b885bd0d" category="paragraph">列出指派給使用者的所有設定檔。</block>
   <block id="d4feede06138eac8d47f0f7c0e6db971" category="summary">您可以使用Snap Creator GUI中的scdump來收集支援資訊。</block>
   <block id="18e4cd70953ff553f58dbefbed197816" category="doc">執行SnapCreator傾印</block>
   <block id="26e594c66db172b1ad72f402c521bae0" category="paragraph">您可以從Snap Creator GUI使用* scdump *來收集支援資訊。</block>
@@ -4601,4 +4561,44 @@
   <block id="069d4fc9438ae257bab719c9b98b55ff" category="paragraph">可讓您將Mirror_Vault保護原則類型用作SnapVault SnapMirror或SnapMirror。（預設）N：啟用SnapVault 鏡射資料庫保護原則類型以利執行。Y：啟用SnapMirror的Mirror_Vault保護原則類型。</block>
   <block id="6235e974fbd5143adbb2a8573ca76e9a" category="paragraph">列出您要執行SnapVault 更新的來源儲存系統和磁碟區（例如、控制器1：vol1、vol2、vol3；控制器2：vol1；控制器3：vol2、vol3）。</block>
   <block id="2a8806d1dbd2f7d98c2367f622afe0f8" category="paragraph">允許使用最大頻寬SnapVault 的速度（單位為kbps）。如果未設定SnapVault 、則使用最大可用頻寬。</block>
+  <block id="d2cb48014444a90b7f409167d78062a4" category="paragraph">建立開放式系統SnapVault 的不限需求備份。使用開放式系統SnapVault 執行備份作業。這需要Snap Creator代理程式。SnapCreator Server會與Snap Creator Agent通訊、並執行SnapVault 更新。不製作主要備份複本。</block>
+  <block id="05d9eeaf3b5059b1dc11614014235d84" category="paragraph">刪除備份複本（手動）。手動刪除現有的備份。此作業是功能表驅動的。</block>
+  <block id="b14e3bec9837dcac356bb698073baa42" category="paragraph">列出備份複本。列出主儲存系統和次儲存系統上的Snap Creator備份複本。</block>
+  <block id="b50943ccbbe1a6e56720cb430f756119" category="paragraph">卸載備份複本。在現有備份上執行卸載作業。根據備份刪除Volume Clone、並使用umount_cmds命令、透過Snap Creator Agent卸載實體複本。</block>
+  <block id="765d29637371d7732675c452502c6c19" category="paragraph">複製LUN。備份主要儲存系統、然後使用LUN複製來複製備份。也會處理igroup的Volume對應。這需要SAN或Isan環境。</block>
+  <block id="d94df3767357badb05e8dfeb360c033d" category="paragraph">複製磁碟區。備份主要儲存系統、然後使用Volume Clone複製來複製備份。也會處理igroup、NFS或CIFS的Volume對應。這需要SAN、Isan或NAS環境。</block>
+  <block id="9eee740415660788891ac42c3149d81b" category="paragraph">刪除實體複本。根據指定的保留原則執行實體複本刪除作業。只保留一個LUN複本。Volume複製具有與原則相關的使用量。</block>
+  <block id="f83cc7f2e89d4db41749d1e25714e439" category="paragraph">列出SnapCreator複本。列出指定組態的Snap Creator Volume複本。</block>
+  <block id="87dc328b7f01b9250b10f2178c965537" category="paragraph">列出SnapCreator磁碟區。列出主儲存系統上指定組態的Snap Creator磁碟區。</block>
+  <block id="ad9ef6f9396a903ae84218f3242dac01" category="paragraph">刪除設定檔。*注意：*設定檔中的組態檔也會被刪除。</block>
+  <block id="34fd9f3e3392956017c6b166e4f205dc" category="paragraph">執行互動式還原。針對特定原則執行互動式檔案還原作業或互動式磁碟區還原作業。</block>
+  <block id="473c1f02814ff4bafc4ee934bed8b590" category="paragraph">執行非互動式Volume還原。執行非互動式Volume還原。</block>
+  <block id="a7673471bac7dd3d101614ceeb868390" category="paragraph">執行非互動式檔案還原。執行非互動式檔案還原。</block>
+  <block id="52a5b9e4d47b8fad7e48884213a1a17c" category="paragraph">儲存設備-04119</block>
+  <block id="343ccbbe06a10b1a08752d63a677c539" category="paragraph">列出Vserver失敗並顯示錯誤</block>
+  <block id="285fd1c400f8ebaf9b2818b8a20510ba" category="paragraph">檢查記錄是否有錯誤。您很可能遇到「管理ONTAP 解決方案」錯誤、可能會發現問題的原因。</block>
+  <block id="e2ee1a5d19eb9491ea0e4ae910d80c98" category="paragraph">vserver_tunnunnel_enabled_</block>
+  <block id="139039186dfd4e783ac33f89c2099f91" category="paragraph">設定Vim通道。如果設定為Y、則會啟用Vim通道功能。</block>
+  <block id="c4eda072a6b3519b02e58bbea37785df" category="paragraph">建立新使用者</block>
+  <block id="6068ec93237c9fde567e8116ebc47449" category="cell">刪除使用者</block>
+  <block id="bf094dcd0000723f821edb8980335f73" category="cell">列出所有使用者</block>
+  <block id="65f6dc0770bb611630de70cf70f1ab61" category="cell">列出角色的所有指派使用者</block>
+  <block id="184b9b5528b73a26a1cc3e2758945e15" category="cell">列出指派設定檔的所有使用者</block>
+  <block id="fc08b36bdc07ed26699904e7366b7a75" category="paragraph">建立新角色</block>
+  <block id="f2cc5a605ffd7ea1bc4dc55066b22214" category="cell">刪除角色</block>
+  <block id="8b53b00f5352fcc616e0371c614127ff" category="cell">指派角色給使用者</block>
+  <block id="284e7401d7e6dc9b1884ec672840cdc0" category="cell">取消指派使用者的角色</block>
+  <block id="0c000224d1b96818c2b203bb8e21e775" category="cell">列出使用者的所有指派角色</block>
+  <block id="429787e2293495c7515186dc16b1b46a" category="paragraph">建立新權限</block>
+  <block id="92fc715f0be420b02d4324e17ad281e8" category="cell">刪除權限</block>
+  <block id="bbefb8d491044551d8cb54441c84c875" category="cell">指派權限給使用者</block>
+  <block id="08b72a934fc9d8e33a5717ab883b6251" category="cell">取消指派使用者的權限</block>
+  <block id="175ef6dcb31594873ae5a2c0f1f9efb9" category="cell">列出所有權限</block>
+  <block id="b1d9a8550fc18c4dbc907a5238eae0f9" category="cell">列出指派給角色的所有權限</block>
+  <block id="a992e2e03f3d947cae1a04dfd0f76acd" category="paragraph">將作業指派給權限</block>
+  <block id="a42b28c923beec7e37d00fee8429908f" category="cell">列出所有作業</block>
+  <block id="89a8f602bd154359ea08870a45176d63" category="cell">列出指派給權限的所有作業</block>
+  <block id="a12965abf2d093ba56a99fab1157cba1" category="cell">取消指派使用者的設定檔</block>
+  <block id="7cdc2fb941238c11489c31f937f6aa23" category="cell">列出指派給使用者的所有設定檔</block>
+  <block id="81f196059d7908700f35e535c573135d" category="admonition">您必須在組態中新增至少一個儲存控制器或SVM。若要使用Vim通道功能、請選取「* IP通道*」核取方塊（僅適用於叢集）。</block>
 </blocks>

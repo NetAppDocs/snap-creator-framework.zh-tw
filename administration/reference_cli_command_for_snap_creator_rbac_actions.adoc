@@ -22,7 +22,7 @@ summary: 您可以使用CLI命令執行Snap Creator RBAC動作。
  a| 
 使用者
  a| 
-建立新使用者。
+建立新使用者
  a| 
 [listing]
 ----
@@ -38,9 +38,7 @@ snapcreator
 ----
 
 
- a| 
-刪除使用者。
- a| 
+|  | 刪除使用者  a| 
 [listing]
 ----
 snapcreator
@@ -51,12 +49,11 @@ snapcreator
 --action userDelete
 --username user_name
 --verbose
----- a| 
-列出所有使用者。
-
+----
 
 
  a| 
+| 列出所有使用者  a| 
 [listing]
 ----
 snapcreator
@@ -66,9 +63,11 @@ snapcreator
 --passwd Password
 --action userList
 --verbose
----- a| 
-列出角色的所有指派使用者。
+----
+
+
  a| 
+| 列出角色的所有指派使用者  a| 
 [listing]
 ----
 snapcreator
@@ -83,8 +82,7 @@ snapcreator
 
 
  a| 
-列出指派設定檔的所有使用者。
- a| 
+| 列出指派設定檔的所有使用者  a| 
 [listing]
 ----
 snapcreator
@@ -95,13 +93,13 @@ snapcreator
 --profile Profile
 --action userListForProfile
 --verbose
----- a| 
-角色
-
+----
 
 
  a| 
-建立新角色。
+角色
+ a| 
+建立新角色
  a| 
 [listing]
 ----
@@ -114,12 +112,11 @@ snapcreator
 --roleName role_name
 --roleDesc role_description
 --verbose
----- a| 
-刪除角色。
-
+----
 
 
  a| 
+| 刪除角色  a| 
 [listing]
 ----
 snapcreator
@@ -130,9 +127,11 @@ snapcreator
 --action roleDelete
 --roleName role_name
 --verbose
----- a| 
-指派角色給使用者。
+----
+
+
  a| 
+| 指派角色給使用者  a| 
 [listing]
 ----
 snapcreator
@@ -148,8 +147,7 @@ snapcreator
 
 
  a| 
-取消指派使用者的角色。
- a| 
+| 取消指派使用者的角色  a| 
 [listing]
 ----
 snapcreator
@@ -161,12 +159,11 @@ snapcreator
 --userName user_name
 --roleName role_name
 --verbose
----- a| 
-列出使用者的所有指派角色。
-
+----
 
 
  a| 
+| 列出使用者的所有指派角色  a| 
 [listing]
 ----
 snapcreator
@@ -177,13 +174,13 @@ snapcreator
 --action roleListAssigned
 --userName user_name
 --verbose
----- a| 
+----
+
+
+ a| 
 權限
  a| 
-建立新權限。
-
-
-
+建立新權限
  a| 
 [listing]
 ----
@@ -196,9 +193,11 @@ snapcreator
 --permName permission_name
 --permDesc permission_description
 --verbose
----- a| 
-刪除權限。
+----
+
+
  a| 
+| 刪除權限  a| 
 [listing]
 ----
 snapcreator
@@ -213,8 +212,7 @@ snapcreator
 
 
  a| 
-指派權限給使用者。
- a| 
+| 指派權限給使用者  a| 
 [listing]
 ----
 snapcreator
@@ -226,12 +224,11 @@ snapcreator
 --permName permission_name
 --roleName role_name
 --verbose
----- a| 
-取消指派使用者的權限。
-
+----
 
 
  a| 
+| 取消指派使用者的權限  a| 
 [listing]
 ----
 snapcreator
@@ -243,9 +240,11 @@ snapcreator
 --permName
 --roleName role_name
 --verbose
----- a| 
-列出所有權限。
+----
+
+
  a| 
+| 列出所有權限  a| 
 [listing]
 ----
 snapcreator
@@ -259,8 +258,7 @@ snapcreator
 
 
  a| 
-列出指派給角色的所有權限。
- a| 
+| 列出指派給角色的所有權限  a| 
 [listing]
 ----
 snapcreator
@@ -271,13 +269,13 @@ snapcreator
 --action permListAssigned
 --roleName role_name
 --verbose
----- a| 
-營運
-
+----
 
 
  a| 
-將作業指派給權限。
+營運
+ a| 
+將作業指派給權限
  a| 
 [listing]
 ----
@@ -290,12 +288,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-取消指派權限中的作業。
-
+----
 
 
  a| 
+| 取消指派權限中的作業。  a| 
 [listing]
 ----
 snapcreator
@@ -307,9 +304,11 @@ snapcreator
 --opName operation_name
 --permName permission_name
 --verbose
----- a| 
-列出所有作業。
+----
+
+
  a| 
+| 列出所有作業  a| 
 [listing]
 ----
 snapcreator
@@ -323,8 +322,7 @@ snapcreator
 
 
  a| 
-列出指派給權限的所有作業。
- a| 
+| 列出指派給權限的所有作業  a| 
 [listing]
 ----
 snapcreator
@@ -335,11 +333,11 @@ snapcreator
 --action opListAssigned
 --permName permission_name
 --verbose
----- a| 
+----
+
+
+ a| 
 設定檔
-
-
-
  a| 
 指派設定檔給使用者。
  a| 
@@ -354,12 +352,11 @@ snapcreator
 --action profileAssign
 --userName user_name
 --verbose
----- a| 
-取消指派使用者的設定檔。
-
+----
 
 
  a| 
+| 取消指派使用者的設定檔  a| 
 [listing]
 ----
 snapcreator
@@ -371,9 +368,11 @@ snapcreator
 --action profileUnassign
 --userName user_name
 --verbose
----- a| 
-列出指派給使用者的所有設定檔。
+----
+
+
  a| 
+| 列出指派給使用者的所有設定檔  a| 
 [listing]
 ----
 snapcreator

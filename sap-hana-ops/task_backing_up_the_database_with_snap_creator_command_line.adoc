@@ -1,7 +1,7 @@
 ---
 permalink: sap-hana-ops/task_backing_up_the_database_with_snap_creator_command_line.html 
 sidebar: sidebar 
-keywords: backing up, database, snap, creator, command, line 
+keywords: backing up, database, snap, creator, command, line, framework 
 summary: 您也可以使用Snap Creator命令列來備份資料庫。 
 ---
 = 使用Snap Creator命令列備份資料庫
