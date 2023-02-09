@@ -2439,8 +2439,6 @@
   <block id="d9e901cf2c8dec3fb3d0a7115e2d0830" category="paragraph">在遠端主機上、您可以執行&lt;path to scagent_v（至scagent_v）&gt;/bin/scAgent start（至scagent_v）命令來啟動Snap Creator Agent。</block>
   <block id="24dc7278962bcfc76401499b9f6546e8" category="paragraph">sc_clone目標</block>
   <block id="6fe7225c6d56708f0f47a722220c713a" category="paragraph">實體複本目標：連接埠的主機名稱或IP位址</block>
-  <block id="e21428a82408feee3859e8c90b5ba7de" category="paragraph">啟用複製作業。使用參數* clonewor*搭配｛pre</block>
-  <block id="542e9598c7bf93bbfd9d7a9f90ab9c8a" category="cell">POST｝_clone_create_CMDB參數、您可以管理遠端的遠端儲存物件（例如、掛載或卸載檔案系統）。若要指定複製目標、您應該輸入其名稱或IP位址、然後輸入一個分號、以及Snap Creator Agent正在偵聽的連接埠。</block>
   <block id="d13dab8170b57ba54dad29406ffbbdde" category="paragraph">sc_agent_timeout</block>
   <block id="905bbae0ebb65f97a97c06174832374d" category="paragraph">時間（以秒為單位）</block>
   <block id="5f92829937e7b13ea1de0f9f1aed0d46" category="paragraph">指定代理程式服務的逾時時間（以秒為單位）。實作的用戶端/伺服器架構使用逾時機制。這表示如果用戶端在指定的時間間隔內沒有回應、伺服器就會失敗並顯示逾時訊息。不過、用戶端上的工作不會中止、需要進一步調查。</block>
@@ -4601,4 +4599,8 @@
   <block id="a12965abf2d093ba56a99fab1157cba1" category="cell">取消指派使用者的設定檔</block>
   <block id="7cdc2fb941238c11489c31f937f6aa23" category="cell">列出指派給使用者的所有設定檔</block>
   <block id="81f196059d7908700f35e535c573135d" category="admonition">您必須在組態中新增至少一個儲存控制器或SVM。若要使用Vim通道功能、請選取「* IP通道*」核取方塊（僅適用於叢集）。</block>
+  <block id="7fc1d1689b46d654668ac4666069e9ce" category="paragraph">您應該在HANA資料庫中設定專屬的資料庫使用者、以便使用Snap Creator執行備份作業。在第二個步驟中、您應該為此備份使用者設定SAP HANA使用者存放區金鑰。此使用者存放區金鑰用於Snap Creator SAP HANA外掛程式的組態。</block>
+  <block id="5951214569068cd75f070997baaf8545" category="paragraph">啟用複製作業。使用參數* clonewor*搭配｛pre/post｝_clone_create_CMDB參數、即可管理遠端的遠端儲存物件（例如、掛載或卸載檔案系統）。</block>
+  <block id="536365244f2630ddcece364e33664d40" category="paragraph">若要指定複製目標、您應該輸入其名稱或IP位址、然後輸入一個分號、以及Snap Creator Agent正在偵聽的連接埠。</block>
+  <block id="0dda1c02ea357a92a449c913a623f7be" category="paragraph">可針對所有由Snap Creator Server執行的作業、建立記錄檔至Snap Creator代理程式。如果發生故障、您可以檢查這些記錄。SnapCreator Server會將作業傳送至SnapCreator代理程式。如果在Snap Creator Agent傳送回撥給Snap Creator Server之前發生錯誤、則Snap Creator Agent訊息可能會遺失。此參數可協助Snap Creator代理程式訊息登入Snap Creator代理程式、以避免這些訊息遺失。</block>
 </blocks>
