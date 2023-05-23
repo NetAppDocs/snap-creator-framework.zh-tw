@@ -67,7 +67,7 @@ summary: 您可以直接從UNIX系統上的Snap Creator Server 4.4.x升級。
 
 IMPORTANT: 在確定不需要還原為舊版之前、請勿刪除備份複本。
 
-您也必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 (https://IP_address:gui_port)[]。
+您也必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 。
 
 您必須使用HTTPS連線、否則連線不會自動重新導向至HTTPS連線、GUI將無法運作。
 

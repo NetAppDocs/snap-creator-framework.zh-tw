@@ -164,7 +164,7 @@ INFO: To access NetApp Snap Creator Framework release-version GUI goto https://h
 Checking Status of scServer:
 Running
 ----
-. 瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動（例如： https://10.12.123.123:8443)[]。
+. 瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動（例如：。
 +
 您必須使用HTTPS連線、否則GUI將無法運作。
 
