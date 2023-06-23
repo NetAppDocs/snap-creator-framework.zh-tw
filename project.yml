@@ -144,7 +144,7 @@ sidebar:
           url: "/installation/reference_cli_command_for_creating_cluster_roles.html"
         - title: 用於建立SVM角色的CLI命令
           url: "/installation/reference_cli_commands_for_creating_svm_roles.html"
-  - title: IBM®Domino®外掛程式作業
+  - title: IBM Domino 外掛程式作業
     url: "/domino-ops/index.html"
     entries:
     - title: IBM Domino外掛程式總覽
@@ -224,7 +224,7 @@ sidebar:
       url: "/domino-ops/reference_domino_plug_in_specific_errors.html"
     - title: 下一步
       url: "/domino-ops/reference_references.html"
-  - title: SAP HANA®外掛作業
+  - title: SAP HANA 外掛程式作業
     url: "/sap-hana-ops/index.html"
     entries:
     - title: SAP HANA備份與還原解決方案總覽

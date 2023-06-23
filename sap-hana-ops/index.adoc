@@ -4,11 +4,11 @@ sidebar: sidebar
 keywords: sap, hana, plug-in, operations, guide, configure, use, backup, back, up, restore, databases 
 summary: 說明如何設定及使用SAP HANA外掛程式來備份及還原SAP HANA資料庫。 
 ---
-= SAP HANA®外掛作業指南
+= SAP HANA 外掛程式作業指南
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="Lead"]
-本指南說明如何設定及使用適用於Snap Creator 4.3.3的SAP HANA外掛程式來備份及還原SAP HANA資料庫。
+您可以設定及使用適用於 Snap Creator 4.3.3 的 SAP HANA 外掛程式來備份及還原 SAP HANA 資料庫。
