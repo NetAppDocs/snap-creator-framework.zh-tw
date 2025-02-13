@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: preinstallation, requirements, before, install 
 summary: 在安裝Snap Creator之前、您應該考慮系統授權、軟體和硬體需求。 
 ---
-= Snap Creator的預先安裝需求
+= ONTAP Snap Creator 的預先安裝需求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ summary: 在安裝Snap Creator之前、您應該考慮系統授權、軟體和�
 
 * 下載Snap Creator軟體。
 * 建立Data ONTAP 一個不一樣的使用者。
-* 在Snap Creator Server和Agent主機上安裝Oracle Java或OpenJDK。
+* 在 Snap Creator Server 和 Agent 主機上安裝 Oracle Java 或 OpenJDK Java Runtime Environment （ JRE ） 1.8 Update 72 或更新版本。
 * 在Snap Creator伺服器和代理主機上同步時間。
 * 設定IBM Domino外掛程式的設定（僅當您使用Domino外掛程式時才需要）。
 * 為UNIX環境新增安全通訊端層（SSL）程式庫（僅在UNIX平台上使用CLI執行Snap Creator時才需要）。

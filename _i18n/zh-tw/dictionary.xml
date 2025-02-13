@@ -149,7 +149,6 @@
   <block id="2c6ce5b349ba2797c4fa0d706439f60a" category="paragraph">此外、您應該在安裝Snap Creator之前執行下列工作：</block>
   <block id="514f0646f4ac4f32305784313cc8cdb8" category="list-text">下載Snap Creator軟體。</block>
   <block id="a22ff981655293280bcb4f3d30be5b89" category="list-text">建立Data ONTAP 一個不一樣的使用者。</block>
-  <block id="5a5b4c4fc12c86700228a7c04e33b00c" category="list-text">在Snap Creator Server和Agent主機上安裝Oracle Java或OpenJDK。</block>
   <block id="f91e90f8ae064b5a2246ae7a7171f287" category="list-text">在Snap Creator伺服器和代理主機上同步時間。</block>
   <block id="ca4b78518217e66f7768c3fcb28bc1e0" category="list-text">設定IBM Domino外掛程式的設定（僅當您使用Domino外掛程式時才需要）。</block>
   <block id="80ad90a5e4ff120d2cc30409046e481d" category="list-text">為UNIX環境新增安全通訊端層（SSL）程式庫（僅在UNIX平台上使用CLI執行Snap Creator時才需要）。</block>
@@ -3469,15 +3468,6 @@
   <block id="4882c0d9418dd46f0891d1ba1f74a756" category="inline-link">NetApp技術報告3917：NetApp Domino最佳實務做法</block>
   <block id="75f73334221fa99061c15af093964999" category="list-text"><block ref="75f73334221fa99061c15af093964999" category="inline-link-rx"></block></block>
   <block id="392849ff80c051402b522ed37941bb02" category="paragraph">說明IBM Domino外掛程式的最佳實務做法。</block>
-  <block id="3ddf233671b5f67a638021b3cc39372e" category="inline-link">技術報告3588：整合Domino 8.5 for Windows 2008與NetApp儲存系統</block>
-  <block id="f55897b705ad4f312f2975eeead767d6" category="list-text"><block ref="f55897b705ad4f312f2975eeead767d6" category="inline-link-rx"></block></block>
-  <block id="338c1a1e4e0be6512495303eb3bc0bab" category="paragraph">說明如何將IBM Domino 8.5 for Windows 2008與NetApp儲存系統整合。</block>
-  <block id="d52209ce4b45633872fe1548507ebc2d" category="inline-link">技術報告3691：將IBM Domino 8.5 for Linux與NetApp儲存系統整合</block>
-  <block id="0e707561e622847b80c231517d846c9e" category="list-text"><block ref="0e707561e622847b80c231517d846c9e" category="inline-link-rx"></block></block>
-  <block id="1539b028181e57b8a38ce11fee51fa67" category="paragraph">說明如何將IBM Domino 8.0.2 for Linux與NetApp儲存系統整合。</block>
-  <block id="2edf4d2b71c54e6befe087c3e0b1576b" category="inline-link">技術報告3723：使用NFS在AIX和NetApp環境中部署Domino 8.0.2</block>
-  <block id="86ab39082091129ec8afe1b08dec276a" category="list-text"><block ref="86ab39082091129ec8afe1b08dec276a" category="inline-link-rx"></block></block>
-  <block id="41f6c38de9dd1188cd73783e789dcc24" category="paragraph">說明如何將IBM Domino 8.0.2 for AIX與NetApp儲存系統整合。</block>
   <block id="ab4c5327df4435d7b4ef37cd87785e08" category="inline-link">SnapCreator架構討論</block>
   <block id="a66c6d62fb908b3aa3b09848fafd104e" category="list-text"><block ref="a66c6d62fb908b3aa3b09848fafd104e" category="inline-link-rx"></block></block>
   <block id="b7decea4e578e5db43c72ed6d47895f6" category="paragraph">可讓您與同儕交流、提出問題、交換想法、尋找資源、以及分享Snap Creator最佳實務做法。</block>
@@ -4603,4 +4593,6 @@
   <block id="91b5d4f93ff87a8d44feaabae5e745d1" category="doc">SAP HANA 外掛程式作業指南</block>
   <block id="367423d79cfdd3fdc216a55f4bcd023d" category="paragraph">您可以設定及使用適用於 Snap Creator 4.3.3 的 SAP HANA 外掛程式來備份及還原 SAP HANA 資料庫。</block>
   <block id="fbd81bedca700187dabfca4bf4718312" category="sidebar">SAP HANA 外掛程式作業</block>
+  <block id="8712f94c0adf6f85a8f736374d93a2f4" category="doc">ONTAP Snap Creator 的預先安裝需求</block>
+  <block id="715ea6698bcadbb2aa63560067f0847c" category="list-text">在 Snap Creator Server 和 Agent 主機上安裝 Oracle Java 或 OpenJDK Java Runtime Environment （ JRE ） 1.8 Update 72 或更新版本。</block>
 </blocks>

@@ -49,18 +49,6 @@ summary: 您可以在NetApp支援網站上找到更多關於Snap Creator的資�
 +
 說明IBM Domino外掛程式的最佳實務做法。
 
-* http://www.netapp.com/us/media/tr-3588.pdf["技術報告3588：整合Domino 8.5 for Windows 2008與NetApp儲存系統"]
-+
-說明如何將IBM Domino 8.5 for Windows 2008與NetApp儲存系統整合。
-
-* http://www.netapp.com/us/media/tr-3691.pdf["技術報告3691：將IBM Domino 8.5 for Linux與NetApp儲存系統整合"]
-+
-說明如何將IBM Domino 8.0.2 for Linux與NetApp儲存系統整合。
-
-* http://www.netapp.com/us/media/tr-3723.pdf["技術報告3723：使用NFS在AIX和NetApp環境中部署Domino 8.0.2"]
-+
-說明如何將IBM Domino 8.0.2 for AIX與NetApp儲存系統整合。
-
 * http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["SnapCreator架構討論"]
 +
 可讓您與同儕交流、提出問題、交換想法、尋找資源、以及分享Snap Creator最佳實務做法。
