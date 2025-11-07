@@ -3713,7 +3713,6 @@
   <block id="4f4be5fc3553d1fae01ee20a9059f2af" category="paragraph">以下範例說明如何將Fuji15_Dome ChangelInfo設定為中繼資料磁碟區：</block>
   <block id="823fd69164963be6529d5ea1b02cbfce" category="summary">常見的Snap Creator錯誤分為兩類：一般Snap Creator錯誤和Domino外掛程式特定錯誤。Domino外掛程式特定錯誤通常涉及預先安裝問題、不良資料庫或自訂還原動作的問題。</block>
   <block id="4f4e96588318879b2e5c291b19557de6" category="doc">疑難排解Domino外掛程式特定錯誤</block>
-  <block id="614f7ecf115d81d8a01dc4b6717a82be" category="admonition">如需一般Snap Creator錯誤的相關資訊、請參閱 <block ref="399bd91a6650953c6fe4851b3dba0f37" category="inline-link-macro-rx"></block>。</block>
   <block id="a8923c43f724405f693d83285c0a2fa0" category="section-title">此平台不支援Domino外掛程式</block>
   <block id="36c6b4422b24bc73a86ca134e4e46ebf" category="paragraph">當Domino外掛程式的先決條件尚未滿足時、您通常會收到此錯誤訊息。一般而言、錯誤訊息類似於下列內容：</block>
   <block id="790cdc3394c61c58a0005bf343e94df0" category="paragraph">已知也會出現下列錯誤訊息：</block>
@@ -3722,7 +3721,6 @@
   <block id="512d257d0bc656d012a1968376b32132" category="list-text">未執行預先安裝步驟、或未正確執行：</block>
   <block id="33f3a0cdc618b254e4f98a446500da5b" category="list-text">在UNIX主機上、您必須建立指向IBM Domino共用物件檔案的符號連結。</block>
   <block id="0a2656ef06ed70792bfee61010dd4d5a" category="inline-link-macro">SnapCreator Framework 4.1.2安裝指南</block>
-  <block id="52b6c74b7dbccc8de6a8f088084dbcbf" category="list-text">在Windows主機上、您必須將IBM Domino安裝路徑新增至path環境變數。如需詳細資訊、請參閱 <block ref="53bd5e8cff945f51f28434f5020e5ffb" category="inline-link-macro-rx"></block>。</block>
   <block id="9ad524478b1e43346db798b7df29ca7d" category="list-text">Domino的位元層級與Snap Creator的位元層級不同。例如、如果您使用32位元Domino、則應該使用32位元Snap Creator。</block>
   <block id="fab2d7050c1fb6ae0a19b0c4085dc9b9" category="section-title">SnapCreator備份因為資料庫不良而失敗</block>
   <block id="3039512c0a947e1baa63b77622d683fc" category="inline-link-macro">使用GUI建立組態檔的工作</block>
@@ -4600,4 +4598,7 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
   <block id="1608083cf52ae1340c41228aed06ee43" category="paragraph">Active IQ、 AltaVault、Arch Design、ASUP、 AutoSupport 、Campaign Express、叢集FlexPodFlexClone Data ONTAP 、Customer FlexVol 、 Data ONTAP、DataMotion、Fitness、 Flash Accel、Flash Cache、Flash Pool、 FlexCache 、 FlexGroup 、Groupy SolidFire、GetSuccessful、Helix Design、LockVault、Manage ONTAP、 MetroCluster 、 MultiStore、 NetApp、 NetApp Insight、 OnCommand、 ONTAP、ONTAPI、 RAID DP、 RAID-TEC、 SANscreen、 SANshare、 SANtricity 、Sun​​pure AP​​、SV ​​ONTAP、Sirformat） SnapCenter、 SnapCopy、 SnapDrive、 SnapIntegrator、 SnapLock、 SnapManager、 SnapMirror 、 SnapProtect、 SnapRestore、 SnapValidator、 SnapVault 、 SolidFire Helix、 StorageGRID 、 SnapMover SolidFire和WAFL以及其他名稱是NetApp, Inc. 在美國和/或其他國家的商標或註冊商標。所有其他品牌或產品均為其各自所有者的商標或註冊商標，應予以同等對待。  NetApp商標的最新清單可在網上查閱。</block>
+  <block id="b76926cf8f58acc96af344359c5d2b2c" category="admonition">有關 Snap Creator 通用錯誤的信息，請參閱<block ref="3b0c025e228e0d658ee39b24066f4d94" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d7ce8621814d7cbb17fc470a4344f97" category="inline-link-macro">Snap Creator Framework安裝指南 - 將路徑新增至環境變量</block>
+  <block id="b407da2907a6b37afb80f35075ea8531" category="list-text">在 Windows 主機上，必須將 IBM Domino 安裝路徑新增至 PATH 環境變數。欲了解更多信息，請參閱<block ref="48a25fc471122170a85c7c8edf958c44" category="inline-link-macro-rx"></block>。</block>
 </blocks>
