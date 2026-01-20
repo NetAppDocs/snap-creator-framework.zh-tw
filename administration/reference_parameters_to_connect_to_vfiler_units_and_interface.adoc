@@ -47,15 +47,17 @@ NOTE: 必須設定好才能使用此次要介面的功能、才能使用此功�
  a| 
 US_PROxy
  a| 
-（是
-| n） 
-
-
+（是|否）
  a| 
 允許API呼叫透過Active IQ Unified Manager 支援服務器Proxy而非直接透過儲存控制器進行。如果使用此選項、則不需要NTAP_USER舊 有。
+
+
+
  a| 
 允許_ip_ADDR
  a| 
-（是
+（是|否）
+ a| 
+允許將 IP 位址用於儲存系統。這適用於SnapVault、 SnapMirror和NetApp管理控制台的資料保護功能。使用 IP 位址可能會造成問題，因此只能在特定條件下使用。
 
 |===

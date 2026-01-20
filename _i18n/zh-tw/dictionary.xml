@@ -1004,7 +1004,6 @@
   <block id="970b420d9bb9878af0d8e156136639db" category="list-text">LUN複製會採用與父Volume或LUN相同的名稱、並以_clone結束；也就是、如果磁碟區稱為myvolvol、則複本會是myvol_clone。</block>
   <block id="001557629ea05dbdd79ba1cc3dbc4deb" category="list-text">Volume複製以cl_開始、以-Y-Y-Y-Y-Y-Y-Y-Y-Y-MMDHHMMSS.結束。</block>
   <block id="377a088f79837db123bc156a63078186" category="paragraph">ntap_clone for備份</block>
-  <block id="b3ece1f3eecb9db7cbfc880c8f76c58d" category="paragraph">（是</block>
   <block id="702d85fa2ec6c3fb97501d4c0cd298bd" category="cell">n）</block>
   <block id="477527ab55c43cb038b076ce2d81f310" category="paragraph">如果啟用、則會建立複本（Volume和LUN）、並在其他作業完成後刪除。否則、複本會在作業完成之前刪除。*附註：*如果您要將複本備份到磁帶、則應將其設為Y如果您正在進行資料庫重新整理、則應將其設為N</block>
   <block id="2cc5aa3240d564a339508de1617f83e3" category="paragraph">ntap_clone次要</block>
@@ -1363,7 +1362,6 @@
   <block id="8c7dc9b130a71ed7c1a47474378707c8" category="paragraph">下表列出歸檔記錄外掛程式參數、提供其設定及說明：</block>
   <block id="96611acf5bf8bf22163153db770f7f60" category="paragraph">archive記錄啟用</block>
   <block id="8d9c307cb7f3c4a32822a51922d1ceaa" category="cell">n</block>
-  <block id="2fb33ec1462b9029d75715a12e44964a" category="cell">原則：年齡）</block>
   <block id="3291ad0946050f7aa4f9a9380b2bec20" category="paragraph">啟用歸檔記錄管理（刪除舊的歸檔記錄）。</block>
   <block id="0012a5e5e44a9bf77fffdc82e8b485cd" category="paragraph">archive記錄保留</block>
   <block id="21f2f76c313df826d6e15803c794ee11" category="paragraph">天數</block>
@@ -2261,7 +2259,6 @@
   <block id="70752e3d7d4fb032fbe0bfc7f608b259" category="list-text">%T =唯一時間戳記</block>
   <block id="b1503a8c8cc7db5f05947dc22ec16a6b" category="paragraph">以下是範例：「%S_%D_%T.log」</block>
   <block id="1663c45679303f56792e3727ef91fb00" category="paragraph">Sybase_Tra_dump壓縮</block>
-  <block id="6cf67f81440dbb166c74c36ba4c92808" category="cell">n）</block>
   <block id="aa282c218f8de50d8c07e673a3efba9b" category="paragraph">啟用或停用原生Sybase交易傾印壓縮。</block>
   <block id="5b00a3c4e4d7e5113c17f1cd4ed0a251" category="paragraph">Sybase_ISQM_CMD</block>
   <block id="3232ae4761663da903b11e8fe8fefd4b" category="paragraph">範例：/opt/sybase/OCS-15__0/bin/isql</block>
@@ -2831,8 +2828,6 @@
   <block id="3420213108d85f921270d8bf4116781c" category="paragraph">ora暫存</block>
   <block id="122ad43559cb7c871a7232ce20c529b1" category="paragraph">儲存暫用檔案的目錄路徑、例如/tmp.the Oracle使用者必須擁有此目錄的適當權限。</block>
   <block id="f5078f21f47485897c87d1fbf5d9e19f" category="paragraph">archive記錄檔僅限</block>
-  <block id="971063cd9d6a788d0c6a3fe3ea0df2ff" category="cell">原則：&lt;y</block>
-  <block id="ed6602eb57ddaa11f48abca427c60f87" category="cell">n&gt;）</block>
   <block id="101f18023eaa7790ef6ba727af65d6be" category="paragraph">通知Oracle外掛程式僅執行交換器記錄作業如果您要在資料備份之外處理歸檔記錄備份、此設定很有用。</block>
   <block id="e1f651debac4f720c13ae930ff3ca14a" category="paragraph">Oracle_Home</block>
   <block id="84f63854b03bc743e9613cb2423fba8f" category="paragraph">Oracle主目錄的路徑</block>
@@ -4601,4 +4596,32 @@
   <block id="b76926cf8f58acc96af344359c5d2b2c" category="admonition">有關 Snap Creator 通用錯誤的信息，請參閱<block ref="3b0c025e228e0d658ee39b24066f4d94" category="inline-link-macro-rx"></block>。</block>
   <block id="1d7ce8621814d7cbb17fc470a4344f97" category="inline-link-macro">Snap Creator Framework安裝指南 - 將路徑新增至環境變量</block>
   <block id="b407da2907a6b37afb80f35075ea8531" category="list-text">在 Windows 主機上，必須將 IBM Domino 安裝路徑新增至 PATH 環境變數。欲了解更多信息，請參閱<block ref="48a25fc471122170a85c7c8edf958c44" category="inline-link-macro-rx"></block>。</block>
+  <block id="a4b10ba4184c91876de7584578453006" category="paragraph">（Y|N|policy:age）</block>
+  <block id="6c66b4d2e5944ca886c4b9a9893da0b7" category="paragraph">（是|否）</block>
+  <block id="8d777f385d3dfec8815d20f7496026dc" category="paragraph">數據</block>
+  <block id="29052802445f7d4f3d102b5c718b66ce" category="paragraph">驗證資料庫所在的所有磁碟區是否都包含在備份作業中。目前存在一些限制：</block>
+  <block id="44d74d7cf83cd1c3bf4ab4bb1ae30dc5" category="list-text">僅支援網路檔案系統（NFS）。</block>
+  <block id="26a3433cdd66ec88654d1ebf84e4d35b" category="list-text">僅檢查受支援資料庫的資料檔案。</block>
+  <block id="9585cd9ea994c167725cd420361fa76e" category="paragraph">（是|否）</block>
+  <block id="798b04090e54a1cdf065909a17bb574e" category="paragraph">此參數適用於 MySQL 主從資料庫設定。</block>
+  <block id="ec33ae0eab0cbcf0f68a1beeebab63c0" category="paragraph">如果設定為 Y，則會將二進位日誌清除到最新的可用二進位日誌檔案中。</block>
+  <block id="489a578ac452aa637e84a849df71b5f0" category="paragraph">如果設定為 N，則使用最近的時間戳記進行清除查詢。</block>
+  <block id="dcf1732d7559ab7b8aa81bdea2e96a8c" category="paragraph">（Y|N|策略：&lt;Y|N&gt;）</block>
+  <block id="757be32f0616f9f740892c8c0fc80776" category="paragraph">如果在執行 Oracle 離線備份時設定為 Y，則會使用關機中止機制確保資料庫在一致的狀態下關閉。ORACLE_SHUTDOWNABORT 參數的關機步驟如下：</block>
+  <block id="5d1c258a7bd4c15972e657524837311b" category="list-text">關閉中止</block>
+  <block id="672525866c66061a202ac9dd9e123406" category="list-text">啟動限制</block>
+  <block id="89e2c99b632a7bfeb86bb5d15d993ac7" category="list-text">立即關閉</block>
+  <block id="ea9053cb7d9a5295733a4c597e3c402f" category="paragraph">允許將 IP 位址用於儲存系統。這適用於SnapVault、 SnapMirror和NetApp管理控制台的資料保護功能。使用 IP 位址可能會造成問題，因此只能在特定條件下使用。</block>
+  <block id="fc663145389e04ad399fafe44ed4e642" category="paragraph">使用NetApp管理控制台資料保護功能時，輔助快照副本格式的選用設定。此選項需要OnCommand 5.0 或更高版本。必填變數：</block>
+  <block id="b3d419be703283d1c8ff46f1a9162193" category="list-text">時間戳：%T</block>
+  <block id="2f865c4db2240014a15a1afb9250d27e" category="paragraph">可選變數：</block>
+  <block id="ba7a8922105719869fea7de673955831" category="list-text">保留類型：%R</block>
+  <block id="811cf16f1a1fba73bff1d3e73cc09894" category="list-text">資料集標籤：%L</block>
+  <block id="c5995da4091638026ed9470567f8c933" category="list-text">儲存控制器：%H</block>
+  <block id="cbe2e8252606346bc2a477117e7c22db" category="list-text">卷名：%N</block>
+  <block id="b49c482aa020f7e97d705602777a831b" category="list-text">應用特定數據：%A</block>
+  <block id="936fd30e8735631071cb62e403722ec4" category="paragraph">如果未設定此選項，則使用NetApp管理控制台資料保護功能的預設命名約定。命名規則只能在建立資料集時設定。</block>
+  <block id="388306add449258c47380d6b7db98378" category="paragraph">啟用或停用 Operations Manager 控制台中的事件建立。</block>
+  <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">在 OSSV 備份過程中或之前執行這些腳本或指令，其中 ## 是 01 到 99 之間的數字。這可以透過使用 OSSV 執行備份檔案系統快照副本。</block>
+  <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">啟用或停用 32 位元版本的 PowerShell。</block>
 </blocks>

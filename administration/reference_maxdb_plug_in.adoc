@@ -43,26 +43,23 @@ app_name
  a| 
 XUSER_enable
  a| 
-（是
-| n） 
-
-
+（是|否）
  a| 
 啟用或停用將xuser用於MaxDB、使資料庫使用者不需要密碼。
+
+
+
  a| 
 Handl_LOGWRITER
  a| 
-（是
-
-
-
-| n）  a| 
+（是|否）
+ a| 
 執行暫停記錄寫入器（N）或恢復記錄寫入器（Y）作業。
+
+
+
  a| 
 DBMCLICMD
-
-
-
  a| 
 path_to _dbmcli _cmd
  a| 
@@ -70,23 +67,23 @@ path_to _dbmcli _cmd
 
 
 NOTE: 如果是在Windows環境中、路徑必須包含在雙引號（"..."）內。
+
+
+
  a| 
 SQLCLICMD
-
-
-
  a| 
 path_to_sqlclin_cmd
  a| 
 指定MaxDB sqlcli命令的路徑。如果未設定、則會在搜尋路徑上使用sqlcli。
+
+
+
  a| 
 MaxDB_update_HIST_log
-
-
-
  a| 
-（是
-| n）  a| 
+（是|否）
+ a| 
 指示MaxDB備份程式是否更新MaxDB歷程記錄。
 
 

@@ -53,57 +53,54 @@ ntap_clone複製_igroup_map
  a| 
 ntap_clone for備份
  a| 
-（是
-| n） 
-
-
+（是|否）
  a| 
 如果啟用、則會建立複本（Volume和LUN）、並在其他作業完成後刪除。否則、複本會在作業完成之前刪除。*附註：*如果您要將複本備份到磁帶、則應將其設為Y如果您正在進行資料庫重新整理、則應將其設為N
+
+
+
  a| 
 ntap_clone次要
  a| 
-（是
-
-
-
-| n）  a| 
+（是|否）
+ a| 
 如果已啟用、則會在SnapMirror更新完成後、在SnapMirror目的地上建立複本。*附註：*此設定應搭配NTAP_SnapMirror_US_Snapshot、NTAP_SnapMirror_Wait、NTAP_CLIN_CLUSD_Volumes及clonVol動作使用。
+
+
+
  a| 
 ntap_clone、二線磁碟區
-
-
-
  a| 
  a| 
 這是主要或次要儲存系統與次要磁碟區的對應。這是必要的、以便Snap Creator能找到次要磁碟區（例如、控制器1：控制器1秒/ vol1；控制器1：控制器1秒/ vol2）。
+
+
+
  a| 
 ntap_nm_VOL複製
-
-
-
  a| 
  a| 
 這是您要保留的磁碟區複本數量。這與Snapshot複本保留原則類似。*附註：*此功能僅適用於需要儲存控制器上FlexClone授權的Volume複製。
+
+
+
  a| 
 nTap NFS匯出主機
-
-
-
  a| 
 主機IP
  a| 
 應匯出實體複本的主機名稱或IP位址。這是使用NFS掛載複製磁碟區的主機。
+
+
+
  a| 
 nTap NFS匯出存取
-
-
-
  a| 
 根
-| 讀寫 | 唯讀 
+| 讀寫 
 
 
- a| 
+| 唯讀  a| 
 NTAP_NFs_EXPROVE_host中指定的主機會接收複製Volume的存取權或權限。
 
 * 根
@@ -121,21 +118,21 @@ NTAP_NFs_EXPROVE_host中指定的主機會接收複製Volume的存取權或權�
 
  a| 
 nTap NFS匯出_持續性
+
+
+
  a| 
 是的
-
-
-
 | 錯  a| 
 決定NFS匯出是否持續。如果選擇true、則會匯出實體磁碟區、並更新儲存控制器上的/etc/exports檔案。
+
+
+
  a| 
 nTap CIFS匯出啟用
-
-
-
  a| 
-（是
-| n）  a| 
+（是|否）
+ a| 
 設定使用CIFS共用複製的Volume。
 
 |===

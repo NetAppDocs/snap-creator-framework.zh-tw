@@ -60,8 +60,10 @@ SMSQL_Server_name
  a| 
 SMSQL_32bit
  a| 
-（是
-| n） 
+（是|否）
+ a| 
+啟用或停用 32 位元版本的 PowerShell。
+
 |===
 *相關資訊*
 

@@ -75,11 +75,8 @@ ora暫存
  a| 
 archive記錄檔僅限
  a| 
-（是
-| n 
-
-
-| 原則：<y | n>）  a| 
+（Y|N|策略：<Y|N>）
+ a| 
 通知Oracle外掛程式僅執行交換器記錄作業如果您要在資料備份之外處理歸檔記錄備份、此設定很有用。
 
 
@@ -103,24 +100,31 @@ Oracle_home_SID
  a| 
 oracle_EX出口 參數
  a| 
-（是
-| n） 
-
-
+（是|否）
  a| 
 使用匯出命令匯出Oracle_Home和Oracle_SID環境參數。這僅適用於UNIX或Linux型環境。
+
+
+
  a| 
 Oracle_BACKUPMODE
  a| 
-
-
-
  a| 
 使用Snap Creator原則設定離線或線上備份的選項。預設選項為線上。oracle_BACKUPMODE=每小時：線上、每日：離線
+
+
+
  a| 
 Oracle_SHUTDOWNABORT
  a| 
-（是
+（是|否）
+ a| 
+如果在執行 Oracle 離線備份時設定為 Y，則會使用關機中止機制確保資料庫在一致的狀態下關閉。ORACLE_SHUTDOWNABORT 參數的關機步驟如下：
+
+* 關閉中止
+* 啟動限制
+* 立即關閉
+
 
 |===
 *相關資訊*

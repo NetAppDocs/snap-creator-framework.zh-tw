@@ -92,55 +92,52 @@ Sybase_Tra_dump格式
  a| 
 Sybase_Tra_dump壓縮
  a| 
-（是
-| n） 
-
-
+（是|否）
  a| 
 啟用或停用原生Sybase交易傾印壓縮。
+
+
+
  a| 
 Sybase_ISQM_CMD
  a| 
 範例：/opt/sybase/OCS-15__0/bin/isql
-
-
-
  a| 
 定義isql命令的路徑。
+
+
+
  a| 
 Sybase
  a| 
 範例：/Sybase
-
-
-
  a| 
 指定Sybase安裝的位置。
+
+
+
  a| 
 Sybase_LOGDIR
  a| 
 範例：/usr/local/nt點/scServer/logs
-
-
-
  a| 
 定義放置Snap Creator記錄的目錄。
+
+
+
  a| 
 Sybase_manifest
  a| 
 範例：「DBAtest2：/t_inf_nzl_devs/」
-
-
-
  a| 
 指定應建立資訊清單檔案的資料庫、以及資訊清單檔案的放置位置。
+
+
+
  a| 
 Sybase_manifest_format
  a| 
 %S__%D_%T。資訊清單範例：「%S_%D_%T。資訊清單」
-
-
-
  a| 
 可讓您指定資訊清單檔案命名慣例。可以指定下列金鑰：
 
@@ -148,23 +145,23 @@ Sybase_manifest_format
 * %D =來自Sybase_databases的資料庫
 * %T =唯一時間戳記、與Snapshot複本命名相同
 
+
+
+
  a| 
 Sybase_manifest_dete
  a| 
-（是
-
-
-
-| n）  a| 
+（是|否）
+ a| 
 可在建立Snapshot複本之後刪除資訊清單。資訊清單檔案應擷取在Snapshot複本中、以便隨時可用於備份。
+
+
+
  a| 
 Sybase_exclus_tempdb
-
-
-
  a| 
-（是
-| n）  a| 
+（是|否）
+ a| 
 自動排除使用者建立的暫用資料庫。
 
 |===

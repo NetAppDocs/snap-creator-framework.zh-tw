@@ -52,6 +52,8 @@ OM_port
  a| 
 OM_EVATE_generate
  a| 
-（是
-| n） 
+（是|否）
+ a| 
+啟用或停用 Operations Manager 控制台中的事件建立。
+
 |===
