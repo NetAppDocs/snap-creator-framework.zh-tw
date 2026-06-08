@@ -13,7 +13,7 @@ summary: 如果您打算備份changeinfo目錄、則必須將包含該目錄的�
 [role="lead"]
 如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區。這樣做可讓IBM Domino外掛程式建立變更資訊磁碟區的Snapshot複本（在建立資料庫檔案的Snapshot複本之後）。
 
-您應該已經將變更資訊磁碟區識別為建立組態檔案時要備份的磁碟區。如需詳細資訊、請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["使用GUI建立組態的工作"]。
+建立組態檔時，您應該已經將 changeinfo 磁碟區識別為要備份的磁碟區。如需詳細資訊，請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用GUI建立組態的工作"]。
 
 您可以使用組態檔中的meta_data_volume參數、將changeinfo Volume識別為中繼資料Volume。此參數在GUI中不可用。
 

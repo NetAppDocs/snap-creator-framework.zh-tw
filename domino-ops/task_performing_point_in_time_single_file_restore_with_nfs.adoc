@@ -55,7 +55,7 @@ NOTE: 若要進行最新且可選擇的時間點還原、必須啟用Domino交�
 
 +
 
-NOTE: 如果您是從SnapVault 還原複本還原、系統會提示您從主要或次要儲存設備還原。您的選擇取決於如何處理中所述的限制 link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concention_DOMIN_database_STAGE_overvice.MD#GUID-4D864E7-DE54F-4B9F-EF2F240F65D9"]。
+NOTE: 如果您要從 SnapVault 副本還原，系統會提示您從主要儲存設備或次要儲存設備還原。您的選擇取決於您如何處理 link:concept_domino_database_restore_overview.html["Concention_DOMIN_database_STAGE_overvice.MD#GUID-4D864E7-DE54F-4B9F-EF2F240F65D9"] 中所述的限制。
 
 . 在「還原詳細資料」頁面上、指定還原詳細資料：
 +

@@ -48,7 +48,6 @@
   <block id="05d1639bb77ce574920dce6d4b2862fc" category="admonition">雖然*工作監視器大小*的最大接受值為10、000、但建議的最大大小為1000。</block>
   <block id="bbf93e416f960162a1c199472da774e1" category="list-text">啟動Snap Creator Framework伺服器：</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
-  <block id="5d160ed8ae07687a00086523c3503a4e" category="list-text">瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動（例如：<block ref="4c1ad3a67f3cf2eeb8131c381a9574c4" category="inline-link-rx"></block>。</block>
   <block id="bbb6a1e01690e523a1f4ab3c70489eae" category="paragraph">您必須使用HTTPS連線、否則GUI將無法運作。</block>
   <block id="da12800860861c59633dbfc17ffe6d2a" category="paragraph">如果通訊經過防火牆、請開啟網路連接埠。</block>
   <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">*相關資訊*</block>
@@ -205,7 +204,6 @@
   <block id="c54ee80e8593e201f44b1a6e9c01d904" category="list-text">安裝完成後、按一下*下一步*。</block>
   <block id="01903e3b334cdd16d2701b61eda9e874" category="paragraph">在Snap Creator Server服務安裝期間、如果選擇某項服務做為安裝選項的一部分、則會顯示命令提示字元。此程序會嘗試啟動現有的服務、因此本步驟通常會列出失敗訊息。</block>
   <block id="5b3c9afe30619ae787968e6b584f143f" category="list-text">按一下「*完成*」以關閉Windows安裝程式。</block>
-  <block id="50e4c75af866aed1b9452d9e9751d5e1" category="list-text">瀏覽至指定連接埠上的本機主機、驗證Snap Creator Framework GUI啟動 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="82e84f69df06c74df48a9fb785545b73" category="paragraph">您必須使用HTTPS連線、否則連線不會自動重新導向至HTTPS連線、GUI將無法運作。</block>
   <block id="169674b073a9cd8a7012722e7536300b" category="inline-xref-macro">從命令提示字元啟動伺服器</block>
   <block id="1e123287cf021a38205b497b35a4de67" category="paragraph"><block ref="1e123287cf021a38205b497b35a4de67" category="inline-xref-macro-rx"></block></block>
@@ -304,7 +302,6 @@
   <block id="bd2bccd6198bdccd22e66e9485fa2289" category="paragraph">/install_path/scServer4.1.x/bin/scServer start</block>
   <block id="bac2ab3e2eef8e8dab643f76efe93116" category="paragraph">此外、請刪除Snap Creator 4.0安裝目錄。</block>
   <block id="80403f621f4c2b05686a84b5601e9ea8" category="admonition">在確定不需要還原為舊版之前、請勿刪除備份複本。</block>
-  <block id="60423eb91f721e0a33aed7e4eac50e20" category="paragraph">您也必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="4158b3408fd5cbc02c13a182201195cd" category="paragraph"><block ref="4158b3408fd5cbc02c13a182201195cd" category="inline-xref-macro-rx"></block></block>
   <block id="28ef8ce1c44568a4e821a9b26eac18b3" category="summary">如果要在Windows上安裝Snap Creator Agent、您必須將Domino二進位檔案的路徑新增至Windows的環境變數。</block>
   <block id="7c4fa8609076dc72a9a233a70224f793" category="doc">設定Windows特定設定：新增環境變數路徑</block>
@@ -694,7 +691,6 @@
   <block id="d0da6d9060d375a376877e8d69a56596" category="list-text">開啟命令提示字元、並將目錄變更為Snap Creator安裝路徑（C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\engine）中的engine子目錄。</block>
   <block id="67e6a8afa377814d428d285906805661" category="paragraph">升級程序完成後、請執行下列其中一項動作來啟動Snap Creator Server服務：</block>
   <block id="b1ddd4a0d0f04bf0099c13c36075f283" category="list-text">在命令提示字元中輸入下列命令：「c start snapcreatorserverservice」</block>
-  <block id="442e9767828a85b26ac377a4071f0799" category="paragraph">此外、您必須瀏覽至指定連接埠上的本機主機、以驗證Snap Creator Framework GUI啟動 <block ref="42630c73f8e8aa332e945497c14fb90f" category="inline-link-rx"></block>。</block>
   <block id="c9143915a0a3e586dd4f0c977fe4093e" category="paragraph"><block ref="c9143915a0a3e586dd4f0c977fe4093e" category="inline-xref-macro-rx"></block></block>
   <block id="047ac2da886af699f7dbeac60fbfcf0f" category="summary">您可以執行批次指令碼（scagent.bat）、從命令提示字元手動啟動Snap Creator Agent。</block>
   <block id="869fa1ee0bf797ec01cc3a5b803f8c06" category="doc">從命令提示字元啟動代理程式</block>
@@ -3514,8 +3510,6 @@
   <block id="2e906a1fc4d6a16c8e26307bd6cbb910" category="paragraph">您無法使用SnapCreator還原資料的SnapMirror複本。若要還原鏡射複本、您必須先中斷鏡射、然後手動還原資料。如需詳細資訊、請參閱 <block ref="77ae7c406b27cd3b7525056c4177e7bc" category="inline-link-macro-rx"></block>。</block>
   <block id="9ee26bc2d4a82589202bf23e8d486bfa" category="paragraph">當您SnapVault 從二線儲存設備還原一份還原時、只能使用時間點Volume還原功能。您無法執行最新的Volume還原或單一檔案還原。您可以先從次要儲存設備還原至主要儲存設備、藉此解決此限制。接著您可以從主要儲存設備執行最新的Volume還原、或視需要執行單一檔案還原。</block>
   <block id="46e54b4752f39069f3449eca307220cf" category="section-title">瞭解目的地目錄</block>
-  <block id="ef0b3823b79ebf9bb3590e86169e315f" category="inline-link-macro">task_using the _the_GUI to _create_a_configuration _file.MD#STRUCT_E6C507729B3647FDB2E8D0818F22D3B</block>
-  <block id="3fc45d4ffd0c24ca01102983a71df3fd" category="paragraph">Volume還原和單一檔案還原通常具有不同的目的地目錄。您可以在備份與還原組態檔的Data Restore Directory參數中指定目的地目錄（請參閱步驟 <block ref="67143f3be6464ba99ce577b07c16b02e" category="inline-link-macro-rx"></block>）：</block>
   <block id="f8b4c0dcfaae97b701b513a39f4bf73f" category="list-text">若要進行Volume還原、您必須將Data Restore Directory（資料還原目錄）設定為Domino資料目錄。</block>
   <block id="99f35710a15900a2a9fa6811f679f67f" category="list-text">若要進行單一檔案還原、您必須將資料還原目錄設定為Domino資料磁碟區的子目錄。</block>
   <block id="9565a7ad06ece04d3f20f5adecdadda9" category="paragraph">這表示、如果您要替代還原類型、則必須修改資料還原目錄、以針對每種還原類型指向正確的設定。否則、變更資訊將無法正確套用、而且資料將與您要還原的資料庫狀態不一致。當然、您也可以視需要為Volume和單一檔案還原建立不同的組態。</block>
@@ -3628,7 +3622,6 @@
   <block id="60b704346dc8e1674230c7eca7c45a51" category="inline-xref-macro">備份changeinfo目錄</block>
   <block id="6444a7987b5250fb710f5e1df916a0fd" category="admonition">如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區、如所述 <block ref="a52a18b3ffb480e5ada8a0b65641afaa" category="inline-xref-macro-rx"></block>。此選項可讓IBM Domino外掛程式建立changeinfo volume _after的Snapshot複本、以建立資料庫檔案的Snapshot複本。</block>
   <block id="243877d5557b57d0b9875c6f5696c880" category="list-text">在「控制器/虛擬伺服器認證」頁面上、如果您要指定要備份其他主要儲存系統的SVM詳細資料和磁碟區、請按一下「*新增*」。</block>
-  <block id="0e33d0f095749d70239b8072d114880e" category="list-text">在Snapshot詳細資料頁面上、指定Snapshot組態資訊：</block>
   <block id="d2e55fe2815a901d5273ef24b1df02f0" category="paragraph">Snapshot複製名稱</block>
   <block id="a41a68c5e4b3590257035029ec213a71" category="paragraph">輸入Snapshot複本的名稱。*秘訣：*如果您想在組態檔中重複使用Snapshot複製名稱、請按一下*允許重複Snapshot複製名稱*。</block>
   <block id="046a079d340e681724bcb031c0b84fe4" category="paragraph">Snapshot複製標籤</block>
@@ -3647,7 +3640,6 @@
   <block id="35eea9b89c19c0fc43a4d34027a1f92f" category="list-text">按一下「* SnapVault 」「*」「*」「建立Snapshot複本的歸</block>
   <block id="07d3cfdf2930165b1835cca001593bb3" category="list-text">指定歸檔Snapshot複本的原則。</block>
   <block id="c51ce410c124a10e0db5e4b97fc2af39" category="inline-xref">13.</block>
-  <block id="5fd345bfd34f1dbedd6eea8ecba43b53" category="list-text">以下步驟提供相關指示<block ref="dc8c8989a76c527157eaaaba08f215b4" category="inline-xref-macro-rx"></block>。</block>
   <block id="90391274a8ef2fb943542f2c5bb3f276" category="list-text">在* SnapVault 《等候時間*》中、輸入您希望Snap Creator等待SnapVault 完成此動作的分鐘數。</block>
   <block id="d5a4f1ba59f569126d478fbb7b62f69f" category="list-text">您必須先設定SnapMirror和SnapVault 不相關的功能、才能將複寫作業複寫到二線儲存設備。如需詳細資訊、請參閱 <block ref="677c6346df1833887064805e07455305" category="inline-xref-macro-rx"></block>。</block>
   <block id="48f4893c5290e5ab6988032734c66fe6" category="list-text">在「資料保護磁碟區」頁面上、按一下「*新增*」、然後選取主要儲存系統的SVM。</block>
@@ -3699,7 +3691,6 @@
   <block id="c9e9233de9450524363733c7dcb64b52" category="summary">如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區。如此一來、IBM Domino外掛程式便會在建立資料庫檔案的Snapshot複本之後、建立變更資訊磁碟區的Snapshot複本。</block>
   <block id="528f591c9fce803647c99e04c216ba50" category="paragraph">如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區。這樣做可讓IBM Domino外掛程式建立變更資訊磁碟區的Snapshot複本（在建立資料庫檔案的Snapshot複本之後）。</block>
   <block id="805179e4a7f11d19d7cd612c2379d246" category="inline-link-macro">使用GUI建立組態的工作</block>
-  <block id="c4a9b25f3868fd8e8d03e3aed8aa5ddc" category="paragraph">您應該已經將變更資訊磁碟區識別為建立組態檔案時要備份的磁碟區。如需詳細資訊、請參閱步驟 <block ref="47c62e0ad4db2535299629d225b69b91" category="inline-link-macro-rx"></block>。</block>
   <block id="c867ca66c93d3fa2afedd9a86d4962a4" category="paragraph">您可以使用組態檔中的meta_data_volume參數、將changeinfo Volume識別為中繼資料Volume。此參數在GUI中不可用。</block>
   <block id="d5ed1725653091705c56d535ed18e9a3" category="list-text">在文字編輯器中開啟組態檔。</block>
   <block id="4d06ba727c36904a50e5cc898cc0946f" category="paragraph">組態檔位於Snap Creator安裝目錄中、位於為設定檔命名的子目錄中。例如、在Windows主機上、C:\Program Files\NetApp\Snap_Creator_Framework\scServer4.1.x\enginer\configs\Domino \Fuji15..conf、其中Domino是設定檔的名稱、而Fuji15..conf是組態檔的名稱。</block>
@@ -3719,7 +3710,6 @@
   <block id="9ad524478b1e43346db798b7df29ca7d" category="list-text">Domino的位元層級與Snap Creator的位元層級不同。例如、如果您使用32位元Domino、則應該使用32位元Snap Creator。</block>
   <block id="fab2d7050c1fb6ae0a19b0c4085dc9b9" category="section-title">SnapCreator備份因為資料庫不良而失敗</block>
   <block id="3039512c0a947e1baa63b77622d683fc" category="inline-link-macro">使用GUI建立組態檔的工作</block>
-  <block id="169bde998ccd22889a188ad2688e9636" category="paragraph">根據預設、如果一個或多個資料庫處於不一致或毀損狀態、備份作業將會失敗。您可以強制外掛程式在發生錯誤的情況下繼續執行備份作業、如步驟所述 <block ref="68713facb150aaf8a16ec3bc033545b5" category="inline-link-macro-rx"></block>。</block>
   <block id="ac083052e450f94307ce17bfb9e4c0f0" category="section-title">使用自訂動作進行Domino還原失敗</block>
   <block id="b35b37e5dfd02fb2c4f68017ce62f3cf" category="paragraph">還原路徑設定不正確時、通常會發生還原錯誤。檢查路徑中是否有額外的字元和反斜槓。此外、請確認資料還原目錄設定正確。</block>
   <block id="d5d3b5388b67bf2822cc7c1e49259268" category="paragraph">錯誤類似於以下內容：</block>
@@ -3727,8 +3717,6 @@
   <block id="d947dd54ac49e308f166a0faa174fce7" category="paragraph">下表以參考格式列出IBM Domino外掛程式專屬的錯誤訊息：</block>
   <block id="db72f16b2e63a3aac561590ad879345b" category="paragraph">LTD 00001</block>
   <block id="0d0770cb57fe9fb140dff3bd4b362c28" category="paragraph">Domino外掛程式無法搭配snap_timestamp_only = N使用Snap_timestamp_only應設為Y</block>
-  <block id="8147fc928886ba91d35a3899022159e5" category="inline-link-macro">task_using the _the_GUI to _create_a_configuration _file.MD#STRUD_81795CF9D6294AC891BC3D0CE4827CA3</block>
-  <block id="26f81fcc7c8f5bf64ccf1abad19d3885" category="paragraph">如需詳細資訊、請參閱步驟 <block ref="1dfb6713ea8755b74139965c9df333ce" category="inline-link-macro-rx"></block>。</block>
   <block id="8a273526af815a83f5749723414ec744" category="paragraph">LTS-00002</block>
   <block id="b4cd68010b738e02134627a7be58a2c2" category="paragraph">靜止資料庫已完成但有錯誤</block>
   <block id="edd5c8c3a27f07220e438eacc5042616" category="paragraph">Domino外掛程式無法將所有資料庫置於備份模式。檢查記錄以找出錯誤的確切原因、或在偵錯模式中執行Snap Creator以找出錯誤。</block>
@@ -3831,8 +3819,6 @@
   <block id="1653f8d09197faddd964f0eb6e719c65" category="list-text">列出要備份之磁碟區中的資料庫、範本和信箱。</block>
   <block id="fa1251539c7cc5324177b6f6745a3d99" category="list-text">將檔案置於備份模式、一次一個資料庫。</block>
   <block id="a6b13afc8745a813586f4caf09ae7961" category="list-text">檢查資料庫是否不一致或毀損。</block>
-  <block id="064a52274f32140c04205f882712fd78" category="inline-link-macro">task_using the _the_GUI to _create_a_configuration _file.MD#STRUD_AA41331683A24598B7845367CB967F99</block>
-  <block id="0913569dece5fad64895431cefcba650" category="admonition">您可以強制外掛程式在發生錯誤的情況下繼續執行備份作業、如步驟所述 <block ref="acadadf5aacd131fbb7a4816c7029d73" category="inline-link-macro-rx"></block>。</block>
   <block id="e46a0dd5d1c9ef41b0d2f406e51dca97" category="list-text">為每個Volume建立Snapshot複本。</block>
   <block id="e17d26fc621a96f9d352fae8af3cb983" category="list-text">如果正在使用Domino交易記錄、請將Domino交易記錄的歸檔複本歸檔、以便在最新的還原作業中使用。</block>
   <block id="e5f46f136d89dd33c0ff8c6dfcb09236" category="list-text">將檔案從備份模式中移出、一次一個資料庫。</block>
@@ -3955,7 +3941,6 @@
   <block id="50aaf22c31cd5a034a44905a602cf38e" category="list-text">在「設定檔與組態」窗格中、選取組態檔、然後按一下「*動作*」&gt;「*還原*」。</block>
   <block id="3e5e0d72f574d33f42a3a54dc2f68a21" category="paragraph">選取「*還原*」會自動啟動「Snap Creator Framework還原」精靈。在整個還原精靈中、按一下*「下一步*」以前進到下一頁、然後按一下*「上一步*」以返回上一頁。</block>
   <block id="0026be306327635206bae50042c4079d" category="inline-link-macro">Concention_DOMIN_database_STAGE_overvice.MD#GUID-4D864E7-DE54F-4B9F-EF2F240F65D9</block>
-  <block id="790db2e499d327d9a188c2688b4b0ad7" category="admonition">如果您是從SnapVault 還原複本還原、系統會提示您從主要或次要儲存設備還原。您的選擇取決於如何處理中所述的限制 <block ref="0ffc1830d80e572080cbd8ec075981fd" category="inline-link-macro-rx"></block>。</block>
   <block id="9dd91aaa559a62b4d77887a3afb0f151" category="paragraph">選擇*單一檔案還原*。</block>
   <block id="c49bc64c41adaa719020cea972ebf31c" category="list-text">在下一頁中、選取您要還原的檔案。</block>
   <block id="a2a9c3d132ee3e5990df764d30bab727" category="paragraph">檔案會以完整路徑名稱顯示在*來源路徑*欄位中。</block>
@@ -4008,9 +3993,6 @@
   <block id="c65b651594cbe290578ca53308ef1569" category="list-text">%SNAME-%snap_type_%snap_time指定從組態檔名稱、Snapshot原則（每小時、每日或每月）、以及建立Snapshot複本的時間和日期來建立Snapshot複本。</block>
   <block id="0ae2161f56fadd7adc1b267bd110fa66" category="list-text">D是交換器、F G H是要備份資料的掛載點。秘訣：若要在伺服器上執行命令、請在命令前面加上文字伺服器、然後加上一個分號（：）。</block>
   <block id="16bd5c3a470a850289f84a3609e8cbdc" category="list-text">當您對輸入內容感到滿意時、請按* Enter *。</block>
-  <block id="8d59aaca41546d470ad46ddacfd14ff2" category="inline-xref">#採取 步驟_3F9C83DD05D864075AD0277213FD67C56</block>
-  <block id="a912e7fa35c4b085dbefa935ce952134" category="inline-xref">#採取 步驟_FBEDD7AE105 F42138EB35315EA9FA7CC</block>
-  <block id="9bef9a9588579445462a340a5ab8f1c9" category="list-text">重複步驟 <block ref="54cf7e79e142d6e0d2e79d5ce4457f91" category="inline-xref-macro-rx"></block> 透過 <block ref="24344f94f5c5aa5c497bbae13d30cbab" category="inline-xref-macro-rx"></block> 以新增其他命令。</block>
   <block id="226477fd40f68f3efa37935afadfb86c" category="summary">與叢集Data ONTAP 式的不一樣</block>
   <block id="1cf7b71c3651388d18991a9835809fd0" category="paragraph">下圖顯示已搭配叢集Data ONTAP 式功能使用的設定。此設定以單節點SAP HANA組態為基礎、其中儲存虛擬機器（SVM）和Volume名稱如下圖所示。</block>
   <block id="44ecbad3c288d5fab7c26463d1235169" category="image-alt">顯示已與叢集Data ONTAP 式的不二之一搭配使用的設定。此設定以單節點SAP HANA組態為基礎、其中包含儲存虛擬機器（SVM）和Volume名稱。</block>
@@ -4432,7 +4414,6 @@
   <block id="5a2be0789f0a8efe2538b6a0194e4f71" category="paragraph"><block ref="5a2be0789f0a8efe2538b6a0194e4f71" category="inline-link-rx"></block></block>
   <block id="d0485c7814c605733673c3eb73b6d38b" category="summary">您必須設定SnapCreator Framework和SAP HANA資料庫備份。</block>
   <block id="e62168db839f7eced532152bd538a398" category="doc">設定SnapCreator Framework和SAP HANA資料庫備份</block>
-  <block id="02910bd24028b122233e4482d05964fd" category="list-text">連線至SnapCreator圖形化使用者介面（GUI）：<block ref="9dc9badd5cd8ab37fd392481173e134c" category="inline-link-rx"></block>。</block>
   <block id="9c570b1c700912cd7b2e96ed902081dc" category="list-text">使用安裝期間設定的使用者名稱和密碼登入。按一下*登入*。</block>
   <block id="ebe42e5e31c12cacd2dd99c2a7331bab" category="image-alt">顯示Snap Creator GUI登入</block>
   <block id="00ae7e41c9df04aef30fcd6c4ea3c8e5" category="list-text">輸入設定檔名稱、然後按一下「*確定*」。</block>
@@ -4624,4 +4605,19 @@
   <block id="388306add449258c47380d6b7db98378" category="paragraph">啟用或停用 Operations Manager 控制台中的事件建立。</block>
   <block id="957338adada6845bcc51f661d173fbb3" category="paragraph">在 OSSV 備份過程中或之前執行這些腳本或指令，其中 ## 是 01 到 99 之間的數字。這可以透過使用 OSSV 執行備份檔案系統快照副本。</block>
   <block id="17c3a9f520927a583d184a69999e24cf" category="paragraph">啟用或停用 32 位元版本的 PowerShell。</block>
+  <block id="d686234adc6679bd997bc84acf405f7a" category="inline-link-macro">使用 GUI 建立組態檔</block>
+  <block id="389dbc83cdd33ec2f9525698c2615867" category="admonition">您可以依照步驟 <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block> 中的說明，強制外掛程式在發生錯誤的情況下繼續執行備份作業。</block>
+  <block id="5f85fca306c01161913eac827fa6977a" category="paragraph">磁碟區還原和單一檔案還原通常使用不同的目的地目錄。您需要在備份和還原組態檔中的「資料還原目錄」參數中指定目的地目錄（請參閱步驟 <block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block>）：</block>
+  <block id="b092a130c3c3d9105c19f0dff663a5c1" category="paragraph">建立組態檔時，您應該已經將 changeinfo 磁碟區識別為要備份的磁碟區。如需詳細資訊，請參閱步驟 <block ref="8e943375bddb4a1ec79831ef3c9ae1a9" category="inline-link-macro-rx"></block>。</block>
+  <block id="21d3a5e27bcde8ce5d792042cd07cbcf" category="paragraph">預設情況下，如果一個或多個資料庫處於不一致或損壞狀態，備份作業將失敗。您可以依照步驟 <block ref="92738f9d1e8860cb12901f6ce8c9efe3" category="inline-link-macro-rx"></block> 中的說明，強制外掛程式在發生錯誤的情況下繼續執行備份作業。</block>
+  <block id="22995ec68e29b5e3a880224d8117937a" category="paragraph">如需更多資訊，請參閱步驟 <block ref="ae4c2ceef95239719683584bbf3a84c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="d61982de022c35ef712a538121143630" category="list-text">重複步驟 3 和 4 以新增另一個命令。</block>
+  <block id="a1173661431508b0244246d26cb1441c" category="admonition">如果您要從 SnapVault 副本還原，系統會提示您從主要儲存設備或次要儲存設備還原。您的選擇取決於您如何處理 <block ref="ec60fee3293ee9dd2dd29a8210e13018" category="inline-link-macro-rx"></block> 中所述的限制。</block>
+  <block id="bc8a82dc9ff08c82ef1214b79d2a1443" category="list-text">[[thirteenth-step]]在 Snapshot 詳細資料頁面上、指定 Snapshot 組態資訊：</block>
+  <block id="76db4967480a049adfd4fc0c6b74e3f2" category="list-text">相關說明請參閱下列步驟<block ref="d9b421d83918fed17b926e47f4dfb9d5" category="inline-xref-macro-rx"></block>。</block>
+  <block id="6977d3a07cd73545be9fa7fb44508127" category="list-text">透過導覽至指定連接埠上的本機主機來驗證 Snap Creator Framework GUI 啟動 <block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>。</block>
+  <block id="bce09b564bd742f6b47bceaa26bdd913" category="list-text">透過導覽至指定連接埠上的本機主機來驗證 Snap Creator Framework GUI 啟動（例如，<block ref="d620275798bb903394d688f46f99577f" category="inline-link-rx"></block>。</block>
+  <block id="e86dfb50925745c4423fcca952f011c3" category="paragraph">您還必須透過導覽至指定連接埠上的本機主機來驗證 Snap Creator Framework GUI 啟動情況 +<block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>。</block>
+  <block id="a0fece1967628d0210d289574bbf0262" category="paragraph">此外，您必須透過導覽至指定連接埠上的本機主機來驗證 Snap Creator Framework GUI 啟動 <block ref="03ed9ad94b150aeeee98d3c4058cad05" category="inline-link-rx"></block>。</block>
+  <block id="1bb7a8af421762475cdc4503924535c1" category="list-text">連接到 Snap Creator Framework 圖形使用者介面（GUI）：+https://host:8443/ui/+。</block>
 </blocks>

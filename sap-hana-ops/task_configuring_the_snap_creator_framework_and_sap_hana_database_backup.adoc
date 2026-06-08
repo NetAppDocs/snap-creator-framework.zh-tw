@@ -13,7 +13,7 @@ summary: 您必須設定SnapCreator Framework和SAP HANA資料庫備份。
 [role="lead"]
 您必須設定SnapCreator Framework和SAP HANA資料庫備份。
 
-. 連線至SnapCreator圖形化使用者介面（GUI）： https://host:8443/ui/[]。
+. 連接到 Snap Creator Framework 圖形使用者介面（GUI）：+https://host:8443/ui/+。
 . 使用安裝期間設定的使用者名稱和密碼登入。按一下*登入*。
 +
 image::../media/snap_creator_gui.gif[顯示Snap Creator GUI登入]

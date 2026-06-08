@@ -25,7 +25,7 @@ IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資�
 
 == 瞭解目的地目錄
 
-Volume還原和單一檔案還原通常具有不同的目的地目錄。您可以在備份與還原組態檔的Data Restore Directory參數中指定目的地目錄（請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["task_using the _the_GUI to _create_a_configuration _file.MD#STRUCT_E6C507729B3647FDB2E8D0818F22D3B"]）：
+磁碟區還原和單一檔案還原通常使用不同的目的地目錄。您需要在備份和還原組態檔中的「資料還原目錄」參數中指定目的地目錄（請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用GUI建立組態檔的工作"]）：
 
 * 若要進行Volume還原、您必須將Data Restore Directory（資料還原目錄）設定為Domino資料目錄。
 * 若要進行單一檔案還原、您必須將資料還原目錄設定為Domino資料磁碟區的子目錄。

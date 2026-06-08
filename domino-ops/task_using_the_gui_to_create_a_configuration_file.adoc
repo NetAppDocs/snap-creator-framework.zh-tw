@@ -230,7 +230,7 @@ NOTE: 如果代理程式沒有回應、請驗證代理程式詳細資料、並�
 IMPORTANT: 如果您打算備份changeinfo目錄、則必須將包含該目錄的磁碟區設定為中繼資料磁碟區、如所述 xref:concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.adoc[備份changeinfo目錄]。此選項可讓IBM Domino外掛程式建立changeinfo volume _after的Snapshot複本、以建立資料庫檔案的Snapshot複本。
 
 . 在「控制器/虛擬伺服器認證」頁面上、如果您要指定要備份其他主要儲存系統的SVM詳細資料和磁碟區、請按一下「*新增*」。
-. 在Snapshot詳細資料頁面上、指定Snapshot組態資訊：
+. [[thirteenth-step]]在 Snapshot 詳細資料頁面上、指定 Snapshot 組態資訊：
 +
 |===
 | 針對此欄位... | 執行此動作... 
@@ -299,7 +299,7 @@ TIP: Domino環境可能包含數百或數千個資料庫。即使單一資料庫
 
 .. 按一下「* SnapVault 」「*」「*」「建立Snapshot複本的歸
 .. 指定歸檔Snapshot複本的原則。
-.. 以下步驟提供相關指示<<STEP_81795CF9D6294AC891BC3D0CE4827CA3,13.>>。
+.. 相關說明請參閱下列步驟<<thirteenth-step,13.>>。
 .. 在* SnapVault 《等候時間*》中、輸入您希望Snap Creator等待SnapVault 完成此動作的分鐘數。
 .. 您必須先設定SnapMirror和SnapVault 不相關的功能、才能將複寫作業複寫到二線儲存設備。如需詳細資訊、請參閱 xref:concept_snapmirror_and_snapvault_setup.adoc[SnapMirror與SnapVault SnapMirror設定]。
 

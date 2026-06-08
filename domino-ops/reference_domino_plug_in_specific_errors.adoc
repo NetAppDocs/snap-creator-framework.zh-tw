@@ -57,7 +57,7 @@ ERROR: [scf-00094] Application environment set for plug-in domino failed
 
 == SnapCreator備份因為資料庫不良而失敗
 
-根據預設、如果一個或多個資料庫處於不一致或毀損狀態、備份作業將會失敗。您可以強制外掛程式在發生錯誤的情況下繼續執行備份作業、如步驟所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["使用GUI建立組態檔的工作"]。
+預設情況下，如果一個或多個資料庫處於不一致或損壞狀態，備份作業將失敗。您可以依照步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用GUI建立組態檔的工作"] 中的說明，強制外掛程式在發生錯誤的情況下繼續執行備份作業。
 
 
 
@@ -97,7 +97,7 @@ LTD 00001
  a| 
 Domino外掛程式無法搭配snap_timestamp_only = N使用Snap_timestamp_only應設為Y
  a| 
-如需詳細資訊、請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_81795CF9D6294AC891BC3D0CE4827CA3["task_using the _the_GUI to _create_a_configuration _file.MD#STRUD_81795CF9D6294AC891BC3D0CE4827CA3"]。
+如需更多資訊，請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 建立組態檔"]。
 
 
 

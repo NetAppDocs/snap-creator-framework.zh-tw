@@ -22,7 +22,7 @@ summary: 與其他備份技術不同、IBM Domino外掛程式可在備份作業�
 . 檢查資料庫是否不一致或毀損。
 +
 
-NOTE: 您可以強制外掛程式在發生錯誤的情況下繼續執行備份作業、如步驟所述 link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["task_using the _the_GUI to _create_a_configuration _file.MD#STRUD_AA41331683A24598B7845367CB967F99"]。
+NOTE: 您可以依照步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用 GUI 建立組態檔"] 中的說明，強制外掛程式在發生錯誤的情況下繼續執行備份作業。
 
 . 為每個Volume建立Snapshot複本。
 . 如果正在使用Domino交易記錄、請將Domino交易記錄的歸檔複本歸檔、以便在最新的還原作業中使用。
