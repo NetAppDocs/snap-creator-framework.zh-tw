@@ -15,6 +15,7 @@ IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資�
 
 
 
+[[understanding-snapmirror-and-snapvault-restore-operations]]
 == 瞭解SnapMirror和SnapVault 還原作業
 
 您無法使用SnapCreator還原資料的SnapMirror複本。若要還原鏡射複本、您必須先中斷鏡射、然後手動還原資料。如需詳細資訊、請參閱 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["《》《 9 Volume Disaster Recovery Express 指南》 ONTAP"]。
@@ -23,6 +24,7 @@ IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資�
 
 
 
+[[understanding-destination-directories]]
 == 瞭解目的地目錄
 
 磁碟區還原和單一檔案還原通常使用不同的目的地目錄。您需要在備份和還原組態檔中的「資料還原目錄」參數中指定目的地目錄（請參閱步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用GUI建立組態檔的工作"]）：
@@ -35,6 +37,7 @@ IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資�
 
 
 
+[[where-to-run-a-restore]]
 == 執行還原的位置
 
 除了一個例外、您可以使用SnapCreator GUI或Snap Creator CLI來還原資料庫。若要在SAN環境中還原單一檔案、您必須使用CLI、如所述 xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[在SAN環境中執行單一檔案還原]。

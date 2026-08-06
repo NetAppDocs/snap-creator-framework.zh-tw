@@ -42,6 +42,7 @@ Citrix XenServer外掛程式支援Windows和XenServer。
 
 
 
+[[supported-citrix-xenserver-configurations]]
 == 支援的Citrix XenServer組態
 
 支援下列Citrix XenServer組態：
@@ -62,6 +63,7 @@ Citrix XenServer外掛程式支援Windows和XenServer。
 
 
 
+[[parameters]]
 == 參數
 
 下表列出並說明Citrix XenServer外掛程式參數：

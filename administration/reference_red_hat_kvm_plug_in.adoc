@@ -54,6 +54,7 @@ NOTE: 如果未安裝LHU套件、而且組態混合了網路附加儲存設備�
 
 
 
+[[supported-kvm-configurations]]
 == 支援的KVM組態
 
 * SAN：支援安裝在原始多重路徑裝置上的客體虛擬機器（具有多個路徑的LUN）。

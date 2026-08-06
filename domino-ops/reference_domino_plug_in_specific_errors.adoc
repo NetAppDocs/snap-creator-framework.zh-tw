@@ -18,6 +18,7 @@ NOTE: 有關 Snap Creator 通用錯誤的信息，請參閱link:../administratio
 
 
 
+[[domino-plug-in-is-not-supported-on-this-platform]]
 == 此平台不支援Domino外掛程式
 
 當Domino外掛程式的先決條件尚未滿足時、您通常會收到此錯誤訊息。一般而言、錯誤訊息類似於下列內容：
@@ -55,12 +56,14 @@ ERROR: [scf-00094] Application environment set for plug-in domino failed
 
 
 
+[[snap-creator-backup-fails-because-of-a-bad-database]]
 == SnapCreator備份因為資料庫不良而失敗
 
 預設情況下，如果一個或多個資料庫處於不一致或損壞狀態，備份作業將失敗。您可以依照步驟 link:task_using_the_gui_to_create_a_configuration_file.html["使用GUI建立組態檔的工作"] 中的說明，強制外掛程式在發生錯誤的情況下繼續執行備份作業。
 
 
 
+[[domino-restore-using-custom-action-fails]]
 == 使用自訂動作進行Domino還原失敗
 
 還原路徑設定不正確時、通常會發生還原錯誤。檢查路徑中是否有額外的字元和反斜槓。此外、請確認資料還原目錄設定正確。
@@ -84,6 +87,7 @@ Recovery Manager: Recovery only supported for Backup Files.ERROR_CODE:5114
 ----
 
 
+[[all-domino-plug-in-specific-errors]]
 == 所有Domino外掛程式特定錯誤
 
 下表以參考格式列出IBM Domino外掛程式專屬的錯誤訊息：

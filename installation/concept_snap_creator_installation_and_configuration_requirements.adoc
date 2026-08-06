@@ -15,6 +15,7 @@ summary: 在安裝Snap Creator Framework之前、您應該瞭解授權、軟體�
 
 
 
+[[license-requirements]]
 == 授權需求
 
 雖然Snap Creator不需要授權、但視您使用Snap Creator時想要執行的動作而定、可能需要下列授權：
@@ -32,6 +33,7 @@ summary: 在安裝Snap Creator Framework之前、您應該瞭解授權、軟體�
 
 
 
+[[software-information]]
 == 軟體資訊
 
 視您的環境而定、可能需要下列軟體：
@@ -76,6 +78,7 @@ NOTE: SnapCreator僅支援適用於所有UNIX平台的Bash Shell。
 
 
 
+[[hardware-requirements]]
 == 硬體需求
 
 Snap Creator硬體需求如下：

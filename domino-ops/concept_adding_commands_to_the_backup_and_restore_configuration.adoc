@@ -15,6 +15,7 @@ summary: 您可能偏好使用SnapDrive 支援還原的命令來進行備份、�
 
 
 
+[[where-to-run-supplemental-commands]]
 == 執行補充命令的位置
 
 根據預設、補充命令會在Snap Creator Agent上執行。您可以在伺服器上執行輔助命令、方法是在命令前面加上文字伺服器、然後加上一個分號（：）。例如、伺服器：C：\myscript.bat。
@@ -23,6 +24,7 @@ summary: 您可能偏好使用SnapDrive 支援還原的命令來進行備份、�
 
 
 
+[[where-to-add-supplemental-commands]]
 == 新增補充命令的位置
 
 您可以使用Snap Creator GUI或Snap Creator CLI、將命令新增至備份與還原組態。

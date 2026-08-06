@@ -22,6 +22,7 @@ IBM Domino外掛程式會從儲存資料庫的磁碟區Snapshot複本還原資�
 
 
 
+[[restore-options]]
 == 還原選項
 
 外掛程式提供多種還原選項：
